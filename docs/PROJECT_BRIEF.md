@@ -1,45 +1,31 @@
-# Project Brief - RobotMowGuide.com
+# Project brief — robotmowguide.com
 
-## Overview
-High-converting Amazon affiliate site specializing in robotic lawn mowers. Focus on high-ticket items ($1k–$5k+), strong SEO topical authority, and excellent on-page conversion elements.
+## What it is
+A plain, well-organized US guide to choosing a robot lawn mower, ranked by the lawn size and slope each model is rated for. It explains what the specs mean for a real yard (trees, slopes, front and back zones, edges, grass height) and links to amazon.com for the models it covers. It is a long-term **keeper** site in the Aivora Digital Amazon portfolio, not a site built to sell.
 
-## Domain Decision
-- Chosen: robotmowguide.com
-- Reasons: Available, descriptive yet brandable, clear relevance for SEO and user trust, .com preferred for traffic and credibility.
+## Decisions (locked Oct 10, 2026)
+| Topic | Decision |
+|---|---|
+| Market | US only. amazon.com only. US English. Acres, sq ft, inches; slope in % and °. Prices in $ only where a dated source is cited (running-costs guide). |
+| Stack | Next.js (App Router) + TypeScript + Tailwind on Vercel, team aipagesnow. Replaces the earlier Astro plan. |
+| Site type | Keeper. Joins the GSC/Bing/GA4 pulls, nightly indexing, Monday SEO pulse, Monday AEO, weekend keeper refresh and Monday clarity review at launch; REVIEW-ADD loop once GSC data appears (or at launch if Chris asks, as with Trailkit). |
+| Range | Mainly wire-free (RTK, vision, LiDAR), plus a couple of cheaper or boundary-wire picks for small yards. |
+| Skeleton | `ladder`: ranked by rated lawn area, slope as the second axis. |
+| Look | "Cyanotype site plan" (STYLE.md). Not green-on-cream soft cards. |
+| Voice | Clear reviewer (VOICE.md) for the reader described in AUDIENCE.md. |
+| Tag | New tracking ID (likely `robotmowguide-20`) under the US holdlab-20 account; set only via `AMAZON_ASSOCIATE_TAG` in Vercel. Chris to create. |
+| Images | Grok Imagine generic yard scenes (mower-free) + SVG diagrams. Every image checked by Vora before it ships (IMAGES.md). |
+| Testing | None. The site never claims hands-on testing. |
+| Commits | Aivora Digital <aipages.now@gmail.com>, push to main, never force-push. |
+| Build process | Reviewed rounds (NEXT-PROMPTS.md), run on Vora's computer, as many days as needed. No blind loop. |
 
-## Niche Rationale
-- High average order value
-- Growing market for robotic mowers (Segway Navimow, Mammotion LUBA, Husqvarna, etc.)
-- Buyers research heavily before purchase → high conversion potential with good content
-- Content opportunities: comparisons, reviews, setup guides, maintenance, vs traditional mowers
+## Why this niche can work, honestly
+- High-value products ($800–$3,000) with heavy research before purchase.
+- Real decision axes that a calm explainer can own: navigation type, lawn size, slope, tree cover, zones, edges, connectivity, running costs, and the 2026 FCC rule.
+- Hard parts: head terms are held by hands-on testers and big publications; many new spec-comparison sites exist; the Amazon cookie is 24 hours and many buyers purchase direct or at Home Depot/Lowe's. Expect a slow build, with real search signal likely from spring (US demand peaks March–June).
 
-## SEO Strategy
-- Hub-and-spoke (pillar + cluster)
-- Pillar: Best Robotic Lawn Mowers 2026
-- Money pages: Roundups, detailed comparisons, individual reviews
-- Supporting: Buying guides, how-to, maintenance, FAQs
-- Long-tail buyer intent keywords
-- Strong internal linking, E-E-A-T signals, original content and images
-- Technical: Fast Astro site, Core Web Vitals, schema markup
-
-## Conversion Elements
-- Comparison tables with key specs, pros/cons, badges (Best Overall, Best Value, etc.)
-- Clear CTAs and affiliate links (compliant)
-- Pros/cons boxes
-- Trust signals, disclosures
-- Responsive design
-- Original product images matching real products as closely as possible
-
-## Products to Feature (Research-based)
-- Segway Navimow series (X3, i series, etc.)
-- Mammotion LUBA series
-- Other top 2026 models from expert reviews (Husqvarna, etc.)
-- Accessories (boundary kits if applicable, blades, covers, etc.)
-
-## Image Policy
-Create original images/illustrations that accurately represent products and site branding. No direct Amazon product image scraping.
-
-## Affiliate Compliance
-- Clear Amazon Associates disclosure on every page
-- Proper link attributes
-- No unauthorized use of Amazon branding/images
+## Files to read
+- Rails: STYLE.md, VOICE.md, AUDIENCE.md, MARK-IMAGINE.md, IMAGES.md
+- Plan: docs/SITE_STRUCTURE.md, docs/PAGE_RECIPES.md, docs/SEO_AND_QUALITY.md, docs/AFFILIATE_COMPLIANCE.md, docs/FCC_RULE_FACTS.md
+- Data: content/products.json, content/images.json
+- Process: FIRST-PROMPT.md, NEXT-PROMPTS.md, SHIP-SCAN.md, LAUNCH-CHECKLIST.md, REVIEW-ADD.md
