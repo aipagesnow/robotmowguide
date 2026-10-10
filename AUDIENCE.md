@@ -29,22 +29,49 @@ Secondary readers: owners of small lots (under 0.25 acre) who want something che
 8. **Running costs:** replacement blades, 4G/connectivity after the free period, a garage or shelter, winter storage, battery replacement.
 9. **HOA and appearance:** stripes vs random patterns, how the lawn looks from the street, noise.
 10. **The FCC rule:** "I heard new robot mowers are banned. Can I still buy one, and will mine keep getting updates?" (See docs/FCC_RULE_FACTS.md.)
+11. **"Is it worth it at all?"** They compare it with a lawn service (often around $100 a month in their heads) and with the riding mower in the garage.
+
+## What owners actually report (research pack, Oct 2026)
+These themes come from owner threads (Reddit, brand forums) and tester write-ups. They shape every "who it's not for" block, every honest-limits section and the FAQs. Present them as "owners report…", linked and dated; never as failure rates. Ranked by how often they came up:
+1. **Satellite fix lost under trees and near walls.** RTK mowers drift, pause or stop under canopy, and moving the antenna doesn't fix it because the mower itself needs sky view. → Not for: heavily wooded lots on RTK-only models.
+2. **Setup and mapping pain.** Antenna placement trial and error, RTK that won't lock, tedious map edits, app crashes wiping maps. → Say how long setup really takes and what helps.
+3. **Firmware regressions.** Updates that broke blade control, automated mowing or tree-cover performance on some brands; others improved with updates. → Not for: buyers who want a set-and-forget appliance from a brand with a recent regression record.
+4. **Edges are never trimmer-free.** Fixed-height edge passes can scalp a band on tall-cut lawns; "cut to edge" still leaves a strip. → Always say how much trimming is left.
+5. **Heat and LiDAR.** LiDAR units pausing to cool in full Southern sun. → Not for: hot full-sun yards where midday mowing matters, without shade over the dock.
+6. **Getting stuck.** Sand, wet turf, curbs, mulch; heavy AWD units rutting. → Not for: sandy soil or often-wet lawns on heavy AWD units.
+7. **App quality** varies a lot by brand. → Mention it, linked, when it is a pattern.
+8. **Support and parts.** Some brands replace whole units; others leave owners without batteries after warranty or with slow repairs. US phone support is praised where it exists. → Support outlook line on every review.
+9. **Theft.** Built-in tracking only works while the mower is powered and connected; owners add AirTags, chains, cameras, or keep it in a fenced back yard. → Not for: open front yards near a road, unless you add your own tracking.
+10. **Vision-only grass detection.** Older camera-only mowers stopping at leaves, weeds and bald patches. → Not for: patchy or weedy lawns on vision-only models (check newer firmware).
+11. **Durability.** Reports of early failures and batteries fading after two seasons on some models. → Say what's known and what isn't (no 3+ year data yet).
+
+What owners praise: hours saved (some say it paid for itself in a season against a lawn service), the Navimow X4 "just working" on St. Augustine and Bermuda as a frequent maintainer, LiDAR mapping under canopy, Husqvarna reliability on open yards and its US phone line, ECOVACS hardware and cut quality.
+
+## Who should not buy a robot mower yet (feeds /guides/are-robot-mowers-worth-it)
+- Sandy soil or lawns that stay wet (ruts, getting stuck).
+- Heavy canopy over most of the lawn, unless the model is LiDAR or vision-led and you accept some hand mowing.
+- Steep banks beyond any model's boundary figure.
+- Unfenced front yards next to a busy road, if theft is a real worry.
+- Lawns kept very tall or very short outside a model's height range.
+- Anyone who expects zero string trimming.
 
 ## How they search
 | Intent | Example searches | Page type |
 |---|---|---|
-| Commercial | best robot lawn mower for 1 acre, best wire-free robot mower | /best |
-| Constraint | robot mower for steep hills, robot mower for St. Augustine grass, robot mower under trees, robot mower for front and back yard | Guides |
-| Comparison | Navimow X430 vs LUBA 3, Worx Vision Cloud vs Navimow | /compare (vs pages) |
+| Commercial | best robot lawn mower for 1 acre (10+ autocomplete variants), best robot mower for 1/2 acre, robot mower for small yard, cheapest robotic lawn mower | /best and /best/… |
+| Constraint | robot lawn mower for hills, best robot mower for St. Augustine grass, robot mower bermuda grass, best robot mower under trees, robot lawn mower for front and backyard | /best/… and guides |
+| Comparison | Navimow X430 vs LUBA 3, rtk vs lidar, net rtk vs lidar | /vs and guides |
+| Cost | robot lawn mower worth it reddit, how much do robot mowers cost to run, do robot mowers require a subscription | Guides + calculator |
+| Worry | robot mower theft prevention, robot mower stolen reddit, robot mower winter storage, can robot mowers cut wet grass | Guides |
 | Model check | Mammotion LUBA 3 AWD 3000 review, is the Navimow X430 worth it | /reviews |
 | Spec literacy | RTK vs LiDAR robot mower, what does 80% slope mean, network RTK 4G subscription | Guides |
-| Timely | FCC robot mower ban, can I still buy a Mammotion | FCC explainer |
+| Timely | fcc robot mower ban, are robot lawn mowers banned | FCC tracker |
 
 They rarely search the brand "RobotMowGuide". They search their yard's problem.
 
 ## Evidence they trust
 - Manufacturer US spec pages and owner's manuals, with the exact model named.
-- Independent long-term owner reviews and established publications (cited, never paraphrased into fake testing).
+- Independent long-term owner reviews and established publications (cited, never paraphrased into fake testing). Reddit threads, linked and dated: this audience reads "reddit" into its searches.
 - Plain diagrams that show what a number means (slope triangle, acre squares, tree canopy over a plan view).
 - Honest "who should skip this" lines.
 - Dated facts ("checked Oct 10, 2026").
@@ -56,7 +83,8 @@ They rarely search the brand "RobotMowGuide". They search their yard's problem.
 - Prices that turn out to be wrong.
 - Long intros before the answer.
 - Pages that exist only to hold an Amazon button.
-- European model codes or garden-centre language on a US site.
+- European model codes or garden-centre language on a US site (US Husqvarna models are "iQ", not NERA; US Worx models are WR310/WR320/WR340).
+- Lists padded with superseded models (Dreame A1/A2, LUBA 2) or obscure Amazon-only brands.
 
 ## Everyday examples to use
 - A 0.4-acre lot with a front lawn, a back lawn and a 3-ft side gate.
@@ -66,6 +94,9 @@ They rarely search the brand "RobotMowGuide". They search their yard's problem.
 - A fescue lawn in Ohio that needs to be cut tall in July.
 - Wi-Fi that reaches the patio but not the back fence.
 - A front yard visible from the street, where theft is the worry.
+- A Tampa yard with sandy soil and full sun.
+- A wooded half-acre in North Carolina where the antenna can't see enough sky.
+- A Texas Bermuda lawn kept at about 1 in.
 
 ## Reading pattern
 Smart skimmers on phones. They want the direct answer, then the table or ladder, then one detailed section, then the FAQ for leftover doubts (trees, theft, 4G, edges, grass height).

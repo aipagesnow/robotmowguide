@@ -1,27 +1,19 @@
 {
-  "_readme": "Image review manifest. Code renders a slot only when status is 'approved' and its files exist. Status flow: not-made -> made -> approved | rejected. Vora sets checkedBy/checkedOn/notes. See IMAGES.md for briefs and checks.",
+  "_readme": "Image review manifest. Code renders a slot only when status is 'approved' and its files exist. Status flow: not-made -> made -> approved | rejected. Vora sets checkedBy/checkedOn/notes. Photos must carry IPTC DigitalSourceType trainedAlgorithmicMedia. See IMAGES.md for briefs and checks.",
   "updated": "2026-10-10",
   "slots": [
     {
       "id": "hero-home",
       "kind": "photo",
-      "page": "/",
+      "pages": [
+        "/"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": "Back yard lawn sloping down from a patio toward mature trees and a side fence",
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "hero-best",
-      "kind": "photo",
-      "page": "/best",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Front lawn beside a driveway with a narrow side yard leading to the back gate",
+      "alt": "Wide front lawn of a two-story house seen from the sidewalk, with a walk to the door and a street tree",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -29,299 +21,190 @@
     {
       "id": "dia-ladder",
       "kind": "diagram",
-      "page": "/, /best",
+      "pages": [
+        "/",
+        "/best"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": "Diagram ranking robot mowers by rated lawn area, with maximum slope shown for each",
+      "alt": "Diagram ranking robot mowers by rated lawn area, with each model's maximum slope",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "card-x430",
+      "id": "dia-yard-quarter",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-small-yard"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of a flat quarter-acre suburban lot with front and back lawns",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-yard-half-zones",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-half-acre",
+        "/guides/robot-mower-front-and-back-yard"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of a half-acre lot whose front and back lawns are joined by a narrow side passage",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-yard-acre",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-1-acre"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of an open one-acre lot with a long driveway",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-yard-wooded",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-under-trees"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of a wooded lot with tree canopy over a third of the lawn",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-yard-hillside",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-for-hills"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of a hillside lot with contour lines and the steepest bank marked",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-yard-florida",
+      "kind": "diagram",
+      "pages": [
+        "/",
+        "/tools/mower-finder",
+        "/best/robot-mower-st-augustine"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Plan of a Florida yard with a pool cage, palms and St. Augustine lawn",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "hero-best",
       "kind": "photo",
-      "page": "/reviews/segway-navimow-x430",
+      "pages": [
+        "/best"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Back yard lawn sloping down from a patio toward mature trees and a side gate",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "plate-x430",
-      "kind": "diagram",
-      "page": "/reviews/segway-navimow-x430",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-luba3-3000",
+      "id": "hero-finder",
       "kind": "photo",
-      "page": "/reviews/mammotion-luba-3-awd-3000",
+      "pages": [
+        "/tools/mower-finder"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Back yard lawn with planting beds and a fence seen from an upstairs window",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "plate-luba3-3000",
-      "kind": "diagram",
-      "page": "/reviews/mammotion-luba-3-awd-3000",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-wr344",
+      "id": "photo-acre",
       "kind": "photo",
-      "page": "/reviews/worx-landroid-vision-cloud-wr344",
+      "pages": [
+        "/best/robot-mower-1-acre"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Large open lawn of about an acre beside a long driveway and split-rail fence",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "plate-wr344",
+      "id": "dia-rated-vs-real",
       "kind": "diagram",
-      "page": "/reviews/worx-landroid-vision-cloud-wr344",
+      "pages": [
+        "/best/robot-mower-1-acre",
+        "/guides/how-big-a-robot-mower-do-i-need"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-dreame-a3-2500",
-      "kind": "photo",
-      "page": "/reviews/dreame-a3-awd-pro-2500",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-dreame-a3-2500",
-      "kind": "diagram",
-      "page": "/reviews/dreame-a3-awd-pro-2500",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-luba-mini2-1500h",
-      "kind": "photo",
-      "page": "/reviews/mammotion-luba-mini-2-awd-1500h",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-luba-mini2-1500h",
-      "kind": "diagram",
-      "page": "/reviews/mammotion-luba-mini-2-awd-1500h",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-i110n",
-      "kind": "photo",
-      "page": "/reviews/segway-navimow-i110n",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-i110n",
-      "kind": "diagram",
-      "page": "/reviews/segway-navimow-i110n",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-goat-o1000",
-      "kind": "photo",
-      "page": "/reviews/ecovacs-goat-o1000-rtk",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-goat-o1000",
-      "kind": "diagram",
-      "page": "/reviews/ecovacs-goat-o1000-rtk",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-115h",
-      "kind": "photo",
-      "page": "/reviews/husqvarna-automower-115h",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-115h",
-      "kind": "diagram",
-      "page": "/reviews/husqvarna-automower-115h",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "card-wr147",
-      "kind": "photo",
-      "page": "/reviews/worx-landroid-m-wr147",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "plate-wr147",
-      "kind": "diagram",
-      "page": "/reviews/worx-landroid-m-wr147",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "dia-vs-x430-luba3",
-      "kind": "diagram",
-      "page": "/vs/navimow-x430-vs-luba-3-awd-3000",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "dia-vs-wr344-x430",
-      "kind": "diagram",
-      "page": "/vs/worx-wr344-vs-navimow-x430",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "dia-vs-dreame-luba3",
-      "kind": "diagram",
-      "page": "/vs/dreame-a3-awd-pro-2500-vs-luba-3-awd-3000",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "dia-nav-types",
-      "kind": "diagram",
-      "page": "/guides/rtk-vs-vision-vs-lidar",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "photo-lot-sizes",
-      "kind": "photo",
-      "page": "/guides/what-size-robot-mower",
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "dia-acres",
-      "kind": "diagram",
-      "page": "/guides/what-size-robot-mower",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
+      "alt": "Bar diagram comparing rated area with realistic area for a complex yard",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -329,11 +212,15 @@
     {
       "id": "photo-slope",
       "kind": "photo",
-      "page": "/guides/robot-mowers-for-slopes",
+      "pages": [
+        "/best/robot-mower-for-hills"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Grassy back yard bank dropping to a lower lawn and a short retaining wall",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -341,11 +228,47 @@
     {
       "id": "dia-slope",
       "kind": "diagram",
-      "page": "/guides/robot-mowers-for-slopes",
+      "pages": [
+        "/best/robot-mower-for-hills"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Slope ruler converting percent to degrees and rise per 10 feet, with interior and boundary limits",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-half-acre",
+      "kind": "photo",
+      "pages": [
+        "/best/robot-mower-half-acre"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Half-acre back yard with a patio, open lawn and a vegetable bed",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-small-yard",
+      "kind": "photo",
+      "pages": [
+        "/best/robot-mower-small-yard"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Small flat front lawn with a straight walk to a bungalow",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -353,83 +276,532 @@
     {
       "id": "photo-trees",
       "kind": "photo",
-      "page": "/guides/mowing-under-trees",
+      "pages": [
+        "/best/robot-mower-under-trees"
+      ],
+      "round": 3,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Lawn under mature oaks with dappled shade",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "dia-sky-view",
+      "id": "dia-canopy",
       "kind": "diagram",
-      "page": "/guides/mowing-under-trees",
+      "pages": [
+        "/best/robot-mower-under-trees",
+        "/guides/rtk-vs-lidar-vs-vision"
+      ],
+      "round": 3,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Plan showing where tree canopy weakens satellite positioning and how other navigation takes over",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "photo-side-passage",
+      "id": "photo-st-augustine",
       "kind": "photo",
-      "page": "/guides/front-and-back-yards",
+      "pages": [
+        "/best/robot-mower-st-augustine"
+      ],
+      "round": 4,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Thick St. Augustine lawn in a Florida yard with a palm and a screened pool",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "dia-zones",
-      "kind": "diagram",
-      "page": "/guides/front-and-back-yards",
-      "status": "not-made",
-      "source": "svg-in-code",
-      "files": [],
-      "alt": null,
-      "checkedBy": null,
-      "checkedOn": null,
-      "notes": null
-    },
-    {
-      "id": "photo-bed-edge",
+      "id": "photo-bermuda",
       "kind": "photo",
-      "page": "/guides/wire-free-vs-boundary-wire",
+      "pages": [
+        "/best/robot-mower-bermuda"
+      ],
+      "round": 4,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Low, dense Bermuda lawn in front of a Texas ranch house",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "dia-boundary",
+      "id": "dia-grass-heights",
       "kind": "diagram",
-      "page": "/guides/wire-free-vs-boundary-wire",
+      "pages": [
+        "/best/robot-mower-st-augustine",
+        "/best/robot-mower-bermuda"
+      ],
+      "round": 4,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Chart of recommended mowing heights by grass type against each mower's cutting range",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
-      "id": "dia-costs",
+      "id": "dia-edges",
       "kind": "diagram",
-      "page": "/guides/running-costs",
+      "pages": [
+        "/best/robot-mower-st-augustine",
+        "/reviews/dreame-a3-awd-pro",
+        "/guides/are-robot-mowers-worth-it"
+      ],
+      "round": 4,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Cross-section of a lawn edge showing the uncut strip left by different edge-cutting designs",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-x4",
+      "kind": "photo",
+      "pages": [
+        "/reviews/segway-navimow-x4"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Open back yard of about an acre with a steep grassy bank to a lower lawn",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-x4",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/segway-navimow-x4"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Segway Navimow X4 series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-luba3",
+      "kind": "photo",
+      "pages": [
+        "/reviews/mammotion-luba-3-awd"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Three-quarter-acre lawn partly shaded by two mature oaks",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-luba3",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/mammotion-luba-3-awd"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Mammotion LUBA 3 AWD series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-worx-vision-cloud",
+      "kind": "photo",
+      "pages": [
+        "/reviews/worx-landroid-vision-cloud"
+      ],
+      "round": 2,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Lawn with curved planting beds and a paver path crossing it",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-worx-vision-cloud",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/worx-landroid-vision-cloud"
+      ],
+      "round": 2,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Worx Landroid Vision Cloud series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-dreame-a3-pro",
+      "kind": "photo",
+      "pages": [
+        "/reviews/dreame-a3-awd-pro"
+      ],
+      "round": 2,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Back yard enclosed by tall trees and a privacy fence",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-dreame-a3-pro",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/dreame-a3-awd-pro"
+      ],
+      "round": 2,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Dreame A3 AWD Pro series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-luba-mini2",
+      "kind": "photo",
+      "pages": [
+        "/reviews/mammotion-luba-mini-2-awd"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Small terraced back yard with a short retaining wall",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-luba-mini2",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/mammotion-luba-mini-2-awd"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Mammotion LUBA mini 2 AWD",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-mova-lidax",
+      "kind": "photo",
+      "pages": [
+        "/reviews/mova-lidax-ultra"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Back yard with raised garden beds, a young tree and a stone path",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-mova-lidax",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/mova-lidax-ultra"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the MOVA LiDAX Ultra series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-q110h",
+      "kind": "photo",
+      "pages": [
+        "/reviews/roborock-rockneo-q110h"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Small open front lawn on a corner lot with sidewalks on two sides",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-q110h",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/roborock-rockneo-q110h"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Roborock RockNeo Q110H",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-navimow-i",
+      "kind": "photo",
+      "pages": [
+        "/reviews/segway-navimow-i-series"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Small flat back lawn behind a townhouse",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-navimow-i",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/segway-navimow-i-series"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Segway Navimow i series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-wr147",
+      "kind": "photo",
+      "pages": [
+        "/reviews/worx-landroid-m-wr147"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Small rectangular back lawn with a picket fence",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-wr147",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/worx-landroid-m-wr147"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Worx Landroid M WR147",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "card-husqvarna-iq",
+      "kind": "photo",
+      "pages": [
+        "/reviews/husqvarna-automower-iq"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Large gently rolling lawn beside a long driveway under open sky",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "plate-husqvarna-iq",
+      "kind": "diagram",
+      "pages": [
+        "/reviews/husqvarna-automower-iq"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Spec diagram for the Husqvarna Automower iQ series",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-vs-x430-luba3",
+      "kind": "diagram",
+      "pages": [
+        "/vs/navimow-x430-vs-luba-3-awd-3000"
+      ],
+      "round": 2,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Side-by-side spec diagram of the Navimow X430 and LUBA 3 AWD 3000",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-vs-dreame-luba3",
+      "kind": "diagram",
+      "pages": [
+        "/vs/dreame-a3-awd-pro-vs-luba-3-awd"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Side-by-side spec diagram of the Dreame A3 AWD Pro and LUBA 3 AWD",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-vs-wr340-x430",
+      "kind": "diagram",
+      "pages": [
+        "/vs/worx-vision-cloud-wr340-vs-navimow-x430"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Side-by-side spec diagram of the Worx WR340 and Navimow X430",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-nav-four",
+      "kind": "diagram",
+      "pages": [
+        "/guides/rtk-vs-lidar-vs-vision",
+        "all reviews (small)"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Four plan views of one yard showing boundary wire, antenna RTK, network RTK and LiDAR or camera navigation",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-antenna",
+      "kind": "diagram",
+      "pages": [
+        "/guides/rtk-vs-lidar-vs-vision"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Diagram of good and bad places to mount an RTK antenna",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-lot-sizes",
+      "kind": "photo",
+      "pages": [
+        "/guides/how-big-a-robot-mower-do-i-need"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Residential street with front lawns of different sizes",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-acres",
+      "kind": "diagram",
+      "pages": [
+        "/guides/how-big-a-robot-mower-do-i-need"
+      ],
+      "round": 1,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Squares comparing lawn sizes from an eighth of an acre to one acre",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -437,11 +809,175 @@
     {
       "id": "dia-fcc-timeline",
       "kind": "diagram",
-      "page": "/guides/fcc-robot-mower-rule",
+      "pages": [
+        "/guides/fcc-robot-mower-ban"
+      ],
+      "round": 2,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Timeline of the 2026 FCC rule for robot mowers already on sale and for new models",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-winter",
+      "kind": "photo",
+      "pages": [
+        "/guides/robot-mower-winter-storage"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Late-fall lawn with scattered leaves and bare trees beside a shed",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-seasons",
+      "kind": "diagram",
+      "pages": [
+        "/guides/robot-mower-winter-storage"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Timeline of a robot mower's year from spring setup to winter storage",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-side-passage",
+      "kind": "photo",
+      "pages": [
+        "/guides/robot-mower-front-and-back-yard"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Narrow side yard between a house and a fence leading to the back yard",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-zones",
+      "kind": "diagram",
+      "pages": [
+        "/guides/robot-mower-front-and-back-yard"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Map of a yard with front and back zones, a transit path and a no-go bed",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-passage-width",
+      "kind": "diagram",
+      "pages": [
+        "/guides/robot-mower-front-and-back-yard"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Gauge comparing mower widths with gate and side-passage widths",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-costs",
+      "kind": "diagram",
+      "pages": [
+        "/guides/robot-mower-cost-to-own"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Stacked bars of five-year running costs by mower family",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-worth-it",
+      "kind": "photo",
+      "pages": [
+        "/guides/are-robot-mowers-worth-it"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Empty patio chairs overlooking a back lawn in the morning",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-worth-it",
+      "kind": "diagram",
+      "pages": [
+        "/guides/are-robot-mowers-worth-it"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Decision flow for whether a robot mower suits your yard",
+      "iptcDigitalSourceType": null,
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "photo-front-street",
+      "kind": "photo",
+      "pages": [
+        "/guides/robot-mower-theft-protection"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "Open front lawn with no fence beside a quiet street",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": null
+    },
+    {
+      "id": "dia-theft",
+      "kind": "diagram",
+      "pages": [
+        "/guides/robot-mower-theft-protection"
+      ],
+      "round": 4,
+      "status": "not-made",
+      "source": "svg-in-code",
+      "files": [],
+      "alt": "Flow of theft protection layers from lift alarm to a separate tracker",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -449,11 +985,15 @@
     {
       "id": "photo-about",
       "kind": "photo",
-      "page": "/about",
+      "pages": [
+        "/about"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "grok-imagine",
       "files": [],
-      "alt": null,
+      "alt": "Quiet residential street with front lawns of different sizes",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -461,11 +1001,15 @@
     {
       "id": "dia-method",
       "kind": "diagram",
-      "page": "/how-picks-are-chosen",
+      "pages": [
+        "/how-picks-are-chosen"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "Flow of how picks are researched, checked and dated",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
@@ -473,35 +1017,47 @@
     {
       "id": "dia-affiliate",
       "kind": "diagram",
-      "page": "/affiliate-disclosure",
+      "pages": [
+        "/affiliate-disclosure"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "How an Amazon paid link works for the reader",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
       "id": "mark",
-      "kind": "svg",
-      "page": "sitewide",
+      "kind": "diagram",
+      "pages": [
+        "sitewide"
+      ],
+      "round": 1,
       "status": "not-made",
       "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "RobotMowGuide",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null
     },
     {
       "id": "og-default",
-      "kind": "generated",
-      "page": "sitewide",
+      "kind": "diagram",
+      "pages": [
+        "sitewide"
+      ],
+      "round": 1,
       "status": "not-made",
-      "source": "next-opengraph-image",
+      "source": "svg-in-code",
       "files": [],
-      "alt": null,
+      "alt": "RobotMowGuide",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
       "notes": null

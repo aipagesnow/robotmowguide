@@ -10,8 +10,10 @@ This repo currently holds planning docs and data only. The site is built in revi
 - **Skeleton:** ladder, ranked by rated lawn area with slope as the second axis.
 - **Look:** cyanotype site plan (STYLE.md).
 - **Voice:** clear reviewer (VOICE.md), written for the reader in AUDIENCE.md.
-- **Affiliate tag:** set only through the `AMAZON_ASSOCIATE_TAG` env var in Vercel. Never committed.
-- **Honesty:** no hands-on testing claims, no star ratings, no invented specs or prices. Every spec has a source and a checked date.
+- **Affiliate tag:** `robotmowguide-20`, set only through the `AMAZON_ASSOCIATE_TAG` env var in Vercel. Never committed. Direct links only, no redirect routes.
+- **Honesty:** research-based reviews, stated plainly; no testing claims, no star ratings, no invented specs or prices. Every spec has a source and a checked date. Byline "RobotMowGuide editors" with a fact-check line; AI assistance disclosed on the method page.
+- **Pages:** one review per model family (variant tables), best-for pages by yard size, slope, trees and grass, three vs pages, decision guides, an FCC tracker, and tools (mower finder, slope converter, running-cost calculator).
+- **Timing:** launch Nov–Dec 2026; full refresh Feb 2027.
 - **Images:** Grok Imagine yard scenes (no copies of real mowers) and SVG diagrams, each checked by Vora before it ships.
 
 ## Files
@@ -19,7 +21,7 @@ This repo currently holds planning docs and data only. The site is built in revi
 |---|---|
 | STYLE.md, VOICE.md, AUDIENCE.md, MARK-IMAGINE.md, IMAGES.md | Rails for every build round (add to the Grok Project) |
 | FIRST-PROMPT.md | Round 1 prompt for Grok Build |
-| NEXT-PROMPTS.md | Rounds 0–7 with checks between rounds, and the round log |
+| NEXT-PROMPTS.md | Rounds 0–8 with checks between rounds, and the round log |
 | SHIP-SCAN.md | Visitor-only text check after every round |
 | LAUNCH-CHECKLIST.md | Domain, tag, GA4, GSC, Bing/IndexNow, routines, QA |
 | REVIEW-ADD.md | Template for new pages after launch |
@@ -28,9 +30,12 @@ This repo currently holds planning docs and data only. The site is built in revi
 | docs/PAGE_RECIPES.md | Shape of each page type |
 | docs/SEO_AND_QUALITY.md | Helpful-content signals and technical SEO |
 | docs/AFFILIATE_COMPLIANCE.md | Amazon Associates rules for this site |
-| docs/FCC_RULE_FACTS.md | Sourced facts for the FCC explainer |
+| docs/TOOLS.md | Mower finder, slope converter, running-cost calculator, area estimator |
+| docs/FCC_RULE_FACTS.md | Sourced facts for the FCC tracker |
+| docs/research/ | Oct 2026 research packs: models, owner voice, buyer questions, competitors, FCC, image ideas, format/SEO/conversion recommendations and risks (background only) |
 | docs/REVIEW-ADD-AUTOMATION.md | Grok Automation paste pack |
-| content/products.json | Product facts with sources, checked dates and ASIN status |
+| content/products.json | One record per model family: variants, sourced specs with checked dates, ASINs, status, owner-report themes, who it's not for |
+| content/costs.json | Dated connectivity and running-cost figures |
 | content/images.json | Image review manifest (only approved images render) |
 
 ## Environment variables (Vercel)

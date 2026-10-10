@@ -11,14 +11,27 @@
     "tagSource": "Vercel env AMAZON_ASSOCIATE_TAG only. Never stored here.",
     "rules": [
       "A product with asin null gets no Amazon button, only the plain no-link line from VOICE.md.",
-      "Never show manufacturerListPrice on reviews, /best or vs pages; it is for research and the running-costs guide only.",
+      "Never show manufacturerListPrice on reviews, /best or vs pages; it is for research and the cost-to-own guide only (labelled MSRP, dated).",
       "Every spec shown on a page must carry its src and checked date; re-check anything older than 90 days before editing a page.",
       "No ratings, scores or test claims are stored or shown.",
-      "Slope degrees are as published; where computed it says so in note."
+      "Slope degrees are as published; where computed it says so in note.",
+      "Status and statusDate are required on every family and on any variant whose status differs.",
+      "ownerReports are themes with links, never counts of Amazon reviews and never Amazon star ratings. Re-open each thread before quoting.",
+      "notFor feeds the 'Who it's not for' block."
     ],
-    "verifiedAsinCount": 8,
-    "productCount": 9,
-    "fcc": "All nine models were listed for sale in the US at the Oct 10, 2026 check. The Jul 28, 2026 FCC Covered List update blocks new foreign-produced models, not models that already hold FCC authorization. If a page states that a specific model is authorized, look up its FCC ID first (https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm). See docs/FCC_RULE_FACTS.md."
+    "verifiedAsinCount": 17,
+    "fcc": "Every family here was listed for sale in the US at the Oct 10, 2026 check. The Jul 28, 2026 FCC Covered List update blocks new foreign-produced models, not models that already hold FCC authorization; those may get security and compatibility updates until at least Jan 1, 2029 (DA 26-789). Husqvarna is the only robot-mower brand with a Conditional Approval (Sep 9, 2026). If a page states that a specific model is authorized, look up its FCC ID first (https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm). See docs/FCC_RULE_FACTS.md.",
+    "schemaVersion": 2,
+    "structure": "One record per model family (one review page per family). Each family lists variants; each variant carries its own ladder figures, specs, ASIN and status. The primaryVariant drives the ladder position and the primary CTA.",
+    "statusValues": {
+      "current": "On sale in the US now",
+      "superseded": "Replaced by a newer model but still sold: banner + successor link, keep CTA while the ASIN is live",
+      "discontinued": "No longer sold: keep the page, remove the Amazon button, move to 'previous models', ping IndexNow",
+      "not-importable": "Cannot be newly authorized/imported under the FCC rule; existing stock only, dated",
+      "legacy": "Older model kept for reference; no review page"
+    },
+    "familyCount": 13,
+    "variantCount": 32
   },
   "sources": {
     "navimow-x4": {
@@ -182,1207 +195,2963 @@
       "title": "amazon.com listing B097NJ37R7",
       "method": "fetched",
       "accessed": "2026-10-10"
+    },
+    "amz-wr340": {
+      "url": "https://www.amazon.com/dp/B0GN98XMPM",
+      "title": "amazon.com listing B0GN98XMPM",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "amz-wr310": {
+      "url": "https://www.amazon.com/dp/B0GNZHMD9Q",
+      "title": "amazon.com listing B0GNZHMD9Q",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "worx-wr310-us": {
+      "url": "https://worx-us.com/products/landroid-vision-cloud-1-4-acre",
+      "title": "Landroid Vision Cloud 1/4 acre, Worx US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "wirecutter": {
+      "url": "https://www.nytimes.com/wirecutter/reviews/best-robot-lawn-mower/",
+      "title": "Wirecutter, The Best Robot Lawn Mowers (updated Aug 3, 2026)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "verge": {
+      "url": "https://www.theverge.com/tech/978664/robot-lawnmower-review-segway-mammotion-husqvarna-roborock-dreame",
+      "title": "The Verge robot mower review (Aug 13, 2026)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "amz-q110h": {
+      "url": "https://www.amazon.com/dp/B0GRVYN12B",
+      "title": "amazon.com listing B0GRVYN12B",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "aa-q110h": {
+      "url": "https://www.androidauthority.com/roborock-rockneo-q110h-features-3676266/",
+      "title": "Android Authority, RockNeo Q110H features",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "fdr-q110h": {
+      "url": "https://frontdeskreview.com/product/robot-lawn-mowers/roborock-rockneo-q110h/",
+      "title": "Spec aggregator citing Roborock US store (secondary)",
+      "method": "search-snapshot",
+      "accessed": "2026-10-10"
+    },
+    "mova-1000": {
+      "url": "https://us.mova.tech/products/mova-lidax-ultra-1000-robot-lawn-mower",
+      "title": "MOVA LiDAX Ultra 1000, MOVA US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "mova-2000": {
+      "url": "https://us.mova.tech/products/mova-lidax-ultra-2000-robot-lawn-mower",
+      "title": "MOVA LiDAX Ultra 2000, MOVA US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "mova-3000": {
+      "url": "https://us.mova.tech/products/mova-lidax-ultra-3000-awd-robotic-lawn-mower",
+      "title": "MOVA LiDAX Ultra 3000 AWD, MOVA US",
+      "method": "search-snapshot",
+      "accessed": "2026-10-10"
+    },
+    "amz-mova-1000": {
+      "url": "https://www.amazon.com/dp/B0G3CMJ78Q",
+      "title": "amazon.com listing B0G3CMJ78Q",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "amz-mova-2000": {
+      "url": "https://www.amazon.com/dp/B0G3CBW2H8",
+      "title": "amazon.com listing B0G3CBW2H8",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "amz-mova-3000": {
+      "url": "https://www.amazon.com/dp/B0GGR6NJBK",
+      "title": "amazon.com listing B0GGR6NJBK",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "navimow-i-series": {
+      "url": "https://navimow.com/collections/navimow-i-series-robot-lawn-mower",
+      "title": "Navimow i-series collection, Segway Navimow US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "navimow-ces26": {
+      "url": "https://www.prnewswire.com/news-releases/segway-navimow-expands-robotic-mower-lineup-with-smarter-more-effortless-lawn-care-solutions-debuting-at-ces-2026-302653790.html",
+      "title": "Segway Navimow CES 2026 press release",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "amz-i210": {
+      "url": "https://www.amazon.com/dp/B0G8173C6Y",
+      "title": "amazon.com listing B0G8173C6Y",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "amz-i206": {
+      "url": "https://www.amazon.com/dp/B0GQGJCKSL",
+      "title": "amazon.com listing B0GQGJCKSL (i206 + Garage S)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "amz-i105n": {
+      "url": "https://www.amazon.com/dp/B0CX8LL2PC",
+      "title": "amazon.com listing B0CX8LL2PC",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "husq-410iq": {
+      "url": "https://www.husqvarna.com/us/robotic-lawn-mowers/automower-410-iq/",
+      "title": "Automower 410 iQ, Husqvarna US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "husq-420iq": {
+      "url": "https://www.husqvarna.com/us/robotic-lawn-mowers/automower-420-iq/",
+      "title": "Automower 420 iQ, Husqvarna US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "husq-440iq": {
+      "url": "https://www.husqvarna.com/us/robotic-lawn-mowers/automower-440-iq/",
+      "title": "Automower 440 iQ, Husqvarna US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "husq-435iq": {
+      "url": "https://www.husqvarna.com/us/robotic-lawn-mowers/automower-435-iq-awd/",
+      "title": "Automower 435 iQ AWD, Husqvarna US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "husq-435x": {
+      "url": "https://www.husqvarna.com/us/robotic-lawn-mowers/automower-435x-awd/",
+      "title": "Automower 435X AWD, Husqvarna US",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "amz-435x": {
+      "url": "https://www.amazon.com/dp/B0HKC6J3PH",
+      "title": "amazon.com listing B0HKC6J3PH",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "amz-115h-4g": {
+      "url": "https://www.amazon.com/dp/B087YZCNDJ",
+      "title": "amazon.com listing B087YZCNDJ",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "fcc-covered-list": {
+      "url": "https://www.fcc.gov/supplychain/coveredlist",
+      "title": "FCC Covered List and Conditional Approvals table (updated Oct 9, 2026)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "airseekers-tron-se": {
+      "url": "https://airseekers-robotics.com/products/airseekers-tron-se-robotic-lawn-mower",
+      "title": "AIRSEEKERS TRON SE, Airseekers US",
+      "method": "search-snapshot",
+      "accessed": "2026-10-10"
+    },
+    "airseekers-compare": {
+      "url": "https://airseekers-robotics.com/blogs/news/airseekers-tron-vs-tron-se-which-wire-free-robotic-lawn-mower-is-right-for-you",
+      "title": "Airseekers TRON vs TRON SE",
+      "method": "search-snapshot",
+      "accessed": "2026-10-10"
+    },
+    "amz-luba3-bundle": {
+      "url": "https://www.amazon.com/dp/B0H1R15D83",
+      "title": "amazon.com listing B0H1R15D83",
+      "method": "fetched",
+      "accessed": "2026-10-10"
+    },
+    "specslib-fcc": {
+      "url": "https://specslib.com/en/news/fcc-robot-mower-import-ban/",
+      "title": "SpecsLib FCC robot mower article (secondary)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "ecovacs-o1000-lidar": {
+      "url": "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-o1000-lidar-pro",
+      "title": "GOAT O1000 LiDAR PRO, ECOVACS US",
+      "method": "search-snapshot",
+      "accessed": "2026-10-10"
+    },
+    "dreame-collection": {
+      "url": "https://yardcare.dreametech.com/collections/wireless-robotic-lawn-mowers",
+      "title": "Dreame US wireless robot mowers collection",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
+    },
+    "smartlawnbots-a3": {
+      "url": "https://smartlawnbots.com/reviews/dreame-a3-awd-pro-3500-review/",
+      "title": "Smart Lawn Bots, Dreame A3 AWD Pro 3500 review (evidence synthesis)",
+      "method": "research-pack",
+      "accessed": "2026-10-10"
     }
   },
   "products": [
     {
-      "id": "segway-navimow-x430",
-      "slug": "segway-navimow-x430",
+      "id": "segway-navimow-x4",
+      "slug": "segway-navimow-x4",
+      "pageType": "family-review",
       "brand": "Segway Navimow",
-      "model": "Navimow X430",
-      "displayName": "Segway Navimow X430",
-      "variantNote": "US X4-series model rated for 1.0 acre. Not the X450 (1.5 acre) or the older rear-wheel-drive X3 series (X315/X330/X390).",
+      "family": "Navimow X4 series",
+      "primaryVariant": "X430",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Sold out on navimow.com at the Oct 10, 2026 check; amazon.com listing live. Segway says all Navimow models sold in the US already hold FCC authorization (statement quoted by SpecsLib; original not located).",
       "boundary": "wire-free",
       "navigation": [
         "network-rtk",
         "vision",
         "tof"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 1.0,
-          "unit": "acre",
-          "src": [
-            "navimow-x4"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopePercent": {
-          "value": 84,
-          "unit": "%",
-          "src": [
-            "navimow-x4"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 40,
-          "unit": "deg",
-          "src": [
-            "navimow-x4"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "specs": {
-        "drive": {
-          "value": "All-wheel drive (4WD)",
-          "src": [
-            "navimow-x4",
-            "amz-x430"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "Network RTK plus 360° VSLAM vision and a time-of-flight depth sensor; base station antenna included but optional",
-          "src": [
-            "homedepot-x430"
-          ],
-          "checked": "2026-10-10"
-        },
-        "connectivityForRtk": {
-          "value": "Network RTK needs Wi-Fi or 4G; listing states one year of free 4G and free lifetime network RTK service",
-          "src": [
-            "homedepot-x430"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 17,
-          "unit": "in",
-          "src": [
-            "navimow-x4",
-            "amz-x430"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "0.75–4",
-          "unit": "in",
-          "src": [
-            "amz-x430"
-          ],
-          "checked": "2026-10-10",
-          "note": "Retailer copy gives 0.8–4 in; use the manufacturer/Amazon 0.75–4 in figure"
-        },
-        "bodyWidth": {
-          "value": 24,
-          "unit": "in",
-          "src": [
-            "navimow-x4"
-          ],
-          "checked": "2026-10-10",
-          "note": "Hard limit for side passages"
-        },
-        "obstacleClearance": {
-          "value": 2.8,
-          "unit": "in",
-          "src": [
-            "navimow-x4"
-          ],
-          "checked": "2026-10-10",
-          "note": "Up to 5.9 in on gentle slopes per Navimow"
-        },
-        "battery": {
-          "value": "21.6 V, 13 Ah; 110 min runtime",
-          "src": [
-            "homedepot-x430"
-          ],
-          "checked": "2026-10-10"
-        },
-        "zones": {
-          "value": 120,
-          "unit": "zones",
-          "src": [
-            "homedepot-x430"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B0G8Y8CNH7",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0G8Y8CNH7",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Segway Navimow X430 Robot Lawn Mower Wire Free, for up to 1 Acre, 4WD for 84% Slopes, Zero-Turn ... 0.75–4 in Cutting Height",
-        "stockNote": "Listing exists; buy box not readable from an automated check. Confirm in stock at build."
-      },
-      "otherAsins": [
+      "variants": [
         {
-          "asin": "B0GQPGH4J8",
-          "what": "X430 with Garage X bundle",
-          "status": "unverified (search result only)"
+          "model": "Navimow X430",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.0,
+              "unit": "acre",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 84,
+              "unit": "%",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 40,
+              "unit": "deg",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "All-wheel drive (4WD)",
+              "src": [
+                "navimow-x4",
+                "amz-x430"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "Network RTK plus 360° VSLAM vision and a time-of-flight depth sensor; base station antenna included but optional",
+              "src": [
+                "homedepot-x430"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivityForRtk": {
+              "value": "Network RTK needs Wi-Fi or 4G; listing states one year of free 4G and free lifetime network RTK service",
+              "src": [
+                "homedepot-x430"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 17,
+              "unit": "in",
+              "src": [
+                "navimow-x4",
+                "amz-x430"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "0.75–4",
+              "unit": "in",
+              "src": [
+                "amz-x430"
+              ],
+              "checked": "2026-10-10",
+              "note": "Retailer copy gives 0.8–4 in; use the manufacturer/Amazon 0.75–4 in figure"
+            },
+            "bodyWidth": {
+              "value": 24,
+              "unit": "in",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10",
+              "note": "Hard limit for side passages"
+            },
+            "obstacleClearance": {
+              "value": 2.8,
+              "unit": "in",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10",
+              "note": "Up to 5.9 in on gentle slopes per Navimow"
+            },
+            "battery": {
+              "value": "21.6 V, 13 Ah; 110 min runtime",
+              "src": [
+                "homedepot-x430"
+              ],
+              "checked": "2026-10-10"
+            },
+            "zones": {
+              "value": 120,
+              "unit": "zones",
+              "src": [
+                "homedepot-x430"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0G8Y8CNH7",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0G8Y8CNH7",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0G8Y8CNH7",
+            "titleAtCheck": "Segway Navimow X430 Robot Lawn Mower Wire Free, for up to 1 Acre, 4WD for 84% Slopes ...",
+            "note": "Rechecked Oct 10, 2026 19:16 BST; no redirect."
+          },
+          "manufacturerListPrice": {
+            "usd": 2499,
+            "src": [
+              "navimow-x4"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Navimow X450",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.5,
+              "unit": "acre",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10",
+              "note": "Map max 1.8 acres"
+            },
+            "maxSlopePercent": {
+              "value": 84,
+              "unit": "%",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 40,
+              "unit": "deg",
+              "src": [
+                "navimow-x4"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {},
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 2999,
+            "src": [
+              "navimow-x4"
+            ],
+            "checked": "2026-10-10"
+          }
         }
       ],
-      "manufacturerListPrice": {
-        "usd": 2499,
+      "connectivityCost": {
+        "value": "Built-in 4G; Connect+ free for 1 year (X430) or 2 years (X450), then $32.90/yr; network RTK service stated as free for life (depends on Segway's cloud).",
         "src": [
           "navimow-x4"
         ],
         "checked": "2026-10-10",
-        "note": "Navimow US store price; shown as sold out at the time of the check. Do not show on product pages."
+        "note": "From research pack MODELS.md; re-check on navimow.com before publishing."
       },
-      "plannedRole": "Ladder top: 1 acre, with the joint-highest published slope rating in this set (84%, shared with the Worx WR344).",
-      "plannedPages": [
-        "/reviews/segway-navimow-x430",
-        "/best",
-        "/vs/navimow-x430-vs-luba-3-awd-3000",
-        "/vs/worx-wr344-vs-navimow-x430"
+      "ownerReports": [
+        {
+          "theme": "Works well on St. Augustine and Bermuda when run often as a maintainer",
+          "src": [
+            "https://www.reddit.com/r/SegwayNavimow/comments/1vi3zmr/",
+            "https://www.reddit.com/r/roboticLawnmowers/comments/1uoocsz/"
+          ],
+          "tone": "praise"
+        },
+        {
+          "theme": "Still needs edge trimming; some missed strips",
+          "src": [
+            "https://www.reddit.com/r/roboticLawnmowers/comments/1uy0323/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "Locate My Mower stops once the mower powers off after a lift",
+          "src": [
+            "https://www.reddit.com/r/SegwayNavimow/comments/1ub6fc5/"
+          ],
+          "tone": "issue"
+        }
       ],
-      "watchOuts": [
-        "24 in body width will not pass many side gates",
-        "Network RTK depends on Wi-Fi or 4G coverage at the lawn",
-        "Rated area assumes a simple lawn; complex multi-zone yards may need more capacity"
+      "notFor": [
+        "Side passages narrower than about 2 ft (24 in body)",
+        "Yards with no reliable Wi-Fi or cell coverage at the lawn (network RTK)",
+        "Buyers who don't want a yearly connectivity fee after the free period"
+      ],
+      "supportOutlook": "FCC waiver allows security and compatibility updates for already-authorized models until at least Jan 1, 2029 (DA 26-789).",
+      "plannedPages": [
+        "/reviews/segway-navimow-x4",
+        "/best",
+        "/best/robot-mower-1-acre",
+        "/best/robot-mower-for-hills",
+        "/best/robot-mower-st-augustine",
+        "/vs/navimow-x430-vs-luba-3-awd-3000",
+        "/vs/worx-vision-cloud-wr340-vs-navimow-x430"
       ]
     },
     {
-      "id": "mammotion-luba-3-awd-3000",
-      "slug": "mammotion-luba-3-awd-3000",
+      "id": "mammotion-luba-3-awd",
+      "slug": "mammotion-luba-3-awd",
+      "pageType": "family-review",
       "brand": "Mammotion",
-      "model": "LUBA 3 AWD 3000",
-      "displayName": "Mammotion LUBA 3 AWD 3000",
-      "variantNote": "Standard (low-cut) version rated for 0.75 acre. The 3000H is the high-cut version (2.2–4.0 in). The 1500 has no RTK; the 5000 is rated for 1.25 acres.",
+      "family": "LUBA 3 AWD",
+      "primaryVariant": "LUBA 3 AWD 3000",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Sold out on the Mammotion US store at the Oct 10 check; amazon.com listings live. Several advertised features are marked 'launching late 2026': do not describe unshipped features as available.",
       "boundary": "wire-free",
       "navigation": [
         "lidar",
         "network-rtk",
         "vision"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.75,
-          "unit": "acre",
-          "src": [
-            "mammotion-luba3-sku",
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10",
-          "note": "3,000 m²"
-        },
-        "maxSlopePercent": {
-          "value": 80,
-          "unit": "%",
-          "src": [
-            "mammotion-luba3",
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 38.6,
-          "unit": "deg",
-          "src": [
-            "mammotion-luba3"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "specs": {
-        "drive": {
-          "value": "All-wheel drive, four independent motors",
-          "src": [
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "360° LiDAR + network RTK + dual-camera AI vision ('Tri-Fusion'); no perimeter wire and no RTK base installation",
-          "src": [
-            "mammotion-luba3",
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 15.7,
-          "unit": "in",
-          "src": [
-            "mammotion-luba3-global"
-          ],
-          "checked": "2026-10-10",
-          "note": "400 mm dual-disc system"
-        },
-        "cuttingHeight": {
-          "value": "1.0–2.7",
-          "unit": "in",
-          "src": [
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10",
-          "note": "Standard version. High-cut 3000H: 2.2–4.0 in (us.mammotion.com). Matters for St. Augustine and summer fescue."
-        },
-        "obstacleClearance": {
-          "value": 2,
-          "unit": "in",
-          "src": [
-            "mammotion-luba3-sku"
-          ],
-          "checked": "2026-10-10",
-          "note": "Standard; H version 3.2 in"
-        },
-        "narrowestGap": {
-          "value": 27.6,
-          "unit": "in",
-          "src": [
-            "mammotion-luba3"
-          ],
-          "checked": "2026-10-10",
-          "note": "70 cm"
-        },
-        "battery": {
-          "value": "Up to 12 Ah, up to 175 min per charge (3000)",
-          "src": [
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10",
-          "note": "US product page cites up to 15 Ah / 215 min for the series"
-        },
-        "zones": {
-          "value": 30,
-          "unit": "zones",
-          "src": [
-            "amz-luba3-3000"
-          ],
-          "checked": "2026-10-10",
-          "note": "Mammotion pages also cite 50 and 100 zones for the series; use the amazon.com figure for the 3000 or re-check"
-        }
-      },
-      "asin": "B0GK116TR5",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0GK116TR5",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Mammotion LUBA 3 AWD 3000 Robot Lawn Mower, Perimeter Wire Free for 0.75 Acre, 360° LiDAR+NetRTK+AI Vision, All-Wheel-Drive for 80% Slopes, 30 Multi-Zone Management, Cutting Height 1.0\"-2.7\"",
-        "stockNote": "Listing exists ('Standard version' variation). Confirm in stock at build."
-      },
-      "otherAsins": [
+      "variants": [
         {
-          "asin": "B0H1R15D83",
-          "what": "Standard version + cleaning stand",
-          "status": "seen as variation"
+          "model": "LUBA 3 AWD 1500",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.37,
+              "unit": "acre",
+              "src": [
+                "mammotion-luba3-sku"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "mammotion-luba3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "LiDAR + vision only (no network RTK)",
+              "src": [
+                "mammotion-luba3-sku"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 2399,
+            "src": [
+              "mammotion-compare"
+            ],
+            "checked": "2026-10-10"
+          }
         },
         {
-          "asin": "B0GKNQKJJQ",
-          "what": "3000 with cleaning stand (ship separately)",
-          "status": "fetched; bundle"
+          "model": "LUBA 3 AWD 3000",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.75,
+              "unit": "acre",
+              "src": [
+                "mammotion-luba3-sku",
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "3,000 m²"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "mammotion-luba3",
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 38.6,
+              "unit": "deg",
+              "src": [
+                "mammotion-luba3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "All-wheel drive, four independent motors",
+              "src": [
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "360° LiDAR + network RTK + dual-camera AI vision ('Tri-Fusion'); no perimeter wire and no RTK base installation",
+              "src": [
+                "mammotion-luba3",
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 15.7,
+              "unit": "in",
+              "src": [
+                "mammotion-luba3-global"
+              ],
+              "checked": "2026-10-10",
+              "note": "400 mm dual-disc system"
+            },
+            "cuttingHeight": {
+              "value": "1.0–2.7",
+              "unit": "in",
+              "src": [
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "Standard version. High-cut 3000H: 2.2–4.0 in (us.mammotion.com). Matters for St. Augustine and summer fescue."
+            },
+            "obstacleClearance": {
+              "value": 2,
+              "unit": "in",
+              "src": [
+                "mammotion-luba3-sku"
+              ],
+              "checked": "2026-10-10",
+              "note": "Standard; H version 3.2 in"
+            },
+            "narrowestGap": {
+              "value": 27.6,
+              "unit": "in",
+              "src": [
+                "mammotion-luba3"
+              ],
+              "checked": "2026-10-10",
+              "note": "70 cm"
+            },
+            "battery": {
+              "value": "Up to 12 Ah, up to 175 min per charge (3000)",
+              "src": [
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "US product page cites up to 15 Ah / 215 min for the series"
+            },
+            "zones": {
+              "value": 30,
+              "unit": "zones",
+              "src": [
+                "amz-luba3-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "Mammotion pages also cite 50 and 100 zones for the series; use the amazon.com figure for the 3000 or re-check"
+            }
+          },
+          "asin": "B0GK116TR5",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GK116TR5",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GK116TR5",
+            "titleAtCheck": "Mammotion LUBA 3 AWD 3000 Robot Lawn Mower, Perimeter Wire Free for 0.75 Acre ... Cutting Height 1.0\"-2.7\"",
+            "note": "Standard version; rechecked Oct 10, 2026, no redirect. B0GKNQKJJQ now redirects to the cleaning-stand bundle B0H1R15D83, so it is not used."
+          },
+          "otherAsins": [
+            {
+              "asin": "B0H1R15D83",
+              "what": "3000 + cleaning stand bundle",
+              "status": "verified Oct 10, 2026"
+            }
+          ],
+          "manufacturerListPrice": {
+            "usd": 2799,
+            "src": [
+              "mammotion-compare"
+            ],
+            "checked": "2026-10-10"
+          }
         },
         {
-          "asin": "B0GR8SSKCC",
-          "what": "3000 with garage bundle",
-          "status": "unverified (search result only)"
+          "model": "LUBA 3 AWD 5000",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.25,
+              "unit": "acre",
+              "src": [
+                "mammotion-luba3-sku"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "mammotion-luba3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {},
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 3299,
+            "src": [
+              "mammotion-compare"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "LUBA 3 AWD 3000H / 5000H (high-cut)",
+          "specs": {
+            "cuttingHeight": {
+              "value": "2.2–4.0",
+              "unit": "in",
+              "src": [
+                "mammotion-luba3"
+              ],
+              "checked": "2026-10-10",
+              "note": "Check against the manual before publishing"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified"
         }
       ],
-      "manufacturerListPrice": {
-        "usd": 2799,
+      "connectivityCost": {
+        "value": "Built-in 4G with 3 years of data, then a subscription is required (price not stated); NetRTK described as free for life (depends on Mammotion's cloud).",
         "src": [
-          "mammotion-compare",
           "mammotion-luba3"
         ],
-        "checked": "2026-10-10",
-        "note": "Mammotion US lists the LUBA 3 AWD series from $2,399 (1500), $2,799 (3000) and $3,299 (5000). The old '$4000+' figure was wrong. Do not show on product pages."
+        "checked": "2026-10-10"
       },
-      "plannedRole": "Best fit for 0.5–0.75 acre yards with mature trees and steep sections.",
-      "plannedPages": [
-        "/reviews/mammotion-luba-3-awd-3000",
-        "/best",
-        "/vs/navimow-x430-vs-luba-3-awd-3000",
-        "/vs/dreame-a3-awd-pro-2500-vs-luba-3-awd-3000"
+      "ownerReports": [
+        {
+          "theme": "Firmware 2.3.30.26 linked by owners to blade cut-outs and restarts; fix reported in testing",
+          "src": [
+            "https://www.reddit.com/r/MammotionTechnology/comments/1vtyyfi/",
+            "https://www.reddit.com/r/MammotionTechnology/comments/1vw377h/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "Slow warranty handling in several owner accounts",
+          "src": [
+            "https://www.reddit.com/r/mammotion/comments/1vhuxpl/",
+            "https://www.reddit.com/r/MammotionTechnology/comments/1vyribv/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "LiDAR mapping praised under tree cover",
+          "src": [
+            "https://smartlawnbots.com/reviews/dreame-a3-awd-pro-3500-review/"
+          ],
+          "tone": "praise",
+          "note": "Generic LiDAR praise; find a LUBA 3-specific thread before using"
+        }
       ],
-      "watchOuts": [
-        "Standard version tops out at 2.7 in; tall-grass lawns need the 3000H",
-        "Network RTK portion needs connectivity",
-        "Pick the exact SKU: 1500 has no RTK"
+      "notFor": [
+        "Tall-cut lawns (St. Augustine, summer fescue) on the standard version, which tops out at 2.7 in",
+        "Buyers who want a mature, stable app (owner reports and app-store reviews are mixed; re-check)",
+        "Anyone counting on features Mammotion lists as launching later"
+      ],
+      "supportOutlook": "Covered by the FCC update waiver until at least Jan 1, 2029. Mammotion has no Conditional Approval for new models (FCC table, Oct 9, 2026).",
+      "plannedPages": [
+        "/reviews/mammotion-luba-3-awd",
+        "/best",
+        "/best/robot-mower-under-trees",
+        "/best/robot-mower-for-hills",
+        "/vs/navimow-x430-vs-luba-3-awd-3000",
+        "/vs/dreame-a3-awd-pro-vs-luba-3-awd"
       ]
     },
     {
-      "id": "worx-landroid-vision-cloud-wr344",
-      "slug": "worx-landroid-vision-cloud-wr344",
+      "id": "worx-landroid-vision-cloud",
+      "slug": "worx-landroid-vision-cloud",
+      "pageType": "family-review",
       "brand": "Worx",
-      "model": "Landroid Vision Cloud 4WD WR344",
-      "displayName": "Worx Landroid Vision Cloud WR344",
-      "variantNote": "4WD, 1-acre model. Not the 2WD WR340 (1 acre, 30% slope) or WR310/WR320 (1/4 and 1/2 acre).",
+      "family": "Landroid Vision Cloud",
+      "primaryVariant": "WR340",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Wirecutter's top pick (WR340, updated Aug 3, 2026).",
       "boundary": "wire-free",
       "navigation": [
         "cloud-rtk",
         "vision",
         "v-slam"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 1.0,
-          "unit": "acre",
-          "src": [
-            "amz-wr344",
-            "worx-wr344-support"
-          ],
-          "checked": "2026-10-10"
+      "variants": [
+        {
+          "model": "Landroid Vision Cloud WR310 (1/4 acre)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "amz-wr310",
+                "worx-wr310-us"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "worx-wr310-us"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 17,
+              "unit": "deg",
+              "src": [
+                "worx-wr310-us"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {},
+          "asin": "B0GNZHMD9Q",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GNZHMD9Q",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GNZHMD9Q",
+            "titleAtCheck": "WORX Robot Lawn Mower for 1/4 Acre, No Perimeter Wire, WR310",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1199.99,
+            "src": [
+              "worx-wr310-us"
+            ],
+            "checked": "2026-10-10",
+            "note": "Research pack; re-check"
+          }
         },
-        "maxSlopePercent": {
-          "value": 84,
-          "unit": "%",
-          "src": [
-            "amz-wr344"
-          ],
-          "checked": "2026-10-10"
+        {
+          "model": "Landroid Vision Cloud WR320 (1/2 acre)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.5,
+              "unit": "acre",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {},
+          "asin": null,
+          "asinStatus": "unverified"
         },
-        "maxSlopeDegrees": {
-          "value": 40,
-          "unit": "deg",
-          "src": [
-            "amz-wr344"
-          ],
-          "checked": "2026-10-10",
-          "note": "Listed as ~40°"
+        {
+          "model": "Landroid Vision Cloud WR340 (1 acre, 2WD)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.0,
+              "unit": "acre",
+              "src": [
+                "worx-vision-cloud",
+                "amz-wr340"
+              ],
+              "checked": "2026-10-10",
+              "note": "Wirecutter suggests closer to 1/4 acre of complex lawn in practice"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10",
+              "note": "Wirecutter: Cut-to-Zero not recommended above 15°"
+            },
+            "maxSlopeDegrees": {
+              "value": 17,
+              "unit": "deg",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "RTK Cloud (no antenna) + stereo Vision AI; V-SLAM fallback in shade",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 8.7,
+              "unit": "in",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.57–3.54",
+              "unit": "in",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10",
+              "note": "Electric adjustment"
+            },
+            "battery": {
+              "value": "20V 5 Ah PowerShare (swappable with Worx tools)",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "Wi-Fi, Bluetooth, 4G; lifetime RTK Cloud service at no extra cost per Worx",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "theft": {
+              "value": "Find My Landroid GPS module: Amazon copy says it locates the mower even when off; Wirecutter says it is a ~$100 extra. Confirm which applies to the boxed WR340.",
+              "src": [
+                "amz-wr340",
+                "wirecutter"
+              ],
+              "checked": "2026-10-10"
+            },
+            "weight": {
+              "value": 30.9,
+              "unit": "lb",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GN98XMPM",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GN98XMPM",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GN98XMPM",
+            "titleAtCheck": "WORX Robot Lawn Mower for 1 Acre, No Perimeter Wire, WR340",
+            "note": "Checked Oct 10, 2026, no redirect"
+          },
+          "manufacturerListPrice": null
+        },
+        {
+          "model": "Landroid Vision Cloud 4WD WR344 (1 acre)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.0,
+              "unit": "acre",
+              "src": [
+                "amz-wr344",
+                "worx-wr344-support"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 84,
+              "unit": "%",
+              "src": [
+                "amz-wr344"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 40,
+              "unit": "deg",
+              "src": [
+                "amz-wr344"
+              ],
+              "checked": "2026-10-10",
+              "note": "Listed as ~40°"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "Four-wheel drive with front-wheel steering",
+              "src": [
+                "amz-wr344"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "RTK Cloud (no antenna to install) plus stereo Vision AI; V-SLAM sensor fusion takes over in shade",
+              "src": [
+                "amz-wr344",
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            },
+            "edgeCutting": {
+              "value": "Cut-to-Zero offset blade on this model",
+              "src": [
+                "amz-wr344"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 8.7,
+              "unit": "in",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10",
+              "note": "Series figure from the WR340 page; confirm on the WR344 manual before publishing"
+            },
+            "cuttingHeight": {
+              "value": "1.57–3.54",
+              "unit": "in",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10",
+              "note": "Series figure, electric adjustment; confirm for WR344"
+            },
+            "connectivity": {
+              "value": "Wi-Fi, Bluetooth, free 4G per Worx series page",
+              "src": [
+                "worx-vision-cloud"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GQ9XK7FK",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GQ9XK7FK",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GQ9XK7FK",
+            "titleAtCheck": "WORX Robot Lawn Mower 4WD for 1 Acre, No Perimeter Wire, WR344",
+            "note": "Rechecked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 2999.99,
+            "src": [
+              "amz-wr344"
+            ],
+            "checked": "2026-10-10"
+          }
         }
-      },
-      "specs": {
-        "drive": {
-          "value": "Four-wheel drive with front-wheel steering",
-          "src": [
-            "amz-wr344"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "RTK Cloud (no antenna to install) plus stereo Vision AI; V-SLAM sensor fusion takes over in shade",
-          "src": [
-            "amz-wr344",
-            "worx-vision-cloud"
-          ],
-          "checked": "2026-10-10"
-        },
-        "edgeCutting": {
-          "value": "Cut-to-Zero offset blade on this model",
-          "src": [
-            "amz-wr344"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 8.7,
-          "unit": "in",
-          "src": [
-            "worx-vision-cloud"
-          ],
-          "checked": "2026-10-10",
-          "note": "Series figure from the WR340 page; confirm on the WR344 manual before publishing"
-        },
-        "cuttingHeight": {
-          "value": "1.57–3.54",
-          "unit": "in",
-          "src": [
-            "worx-vision-cloud"
-          ],
-          "checked": "2026-10-10",
-          "note": "Series figure, electric adjustment; confirm for WR344"
-        },
-        "connectivity": {
-          "value": "Wi-Fi, Bluetooth, free 4G per Worx series page",
-          "src": [
-            "worx-vision-cloud"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B0GQ9XK7FK",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0GQ9XK7FK",
-        "checked": "2026-10-10",
-        "titleAtCheck": "WORX Robot Lawn Mower 4WD for 1 Acre, No Perimeter Wire, WR344",
-        "stockNote": "Listing exists with sibling variations (2WD and other acreages share the page). Link the WR344 ASIN only."
-      },
-      "manufacturerListPrice": {
-        "usd": 2999.99,
-        "src": [
-          "amz-wr344"
-        ],
-        "checked": "2026-10-10",
-        "note": "List price shown on amazon.com; do not show on product pages."
-      },
-      "plannedRole": "1 acre, steep, edge-heavy yards; strongest published edge-cutting approach.",
-      "plannedPages": [
-        "/reviews/worx-landroid-vision-cloud-wr344",
-        "/vs/worx-wr344-vs-navimow-x430"
       ],
-      "watchOuts": [
-        "Cutting width and height still need a WR344-specific source",
-        "Narrower 8.7 in deck means more passes than 15–17 in decks"
-      ]
-    },
-    {
-      "id": "dreame-a3-awd-pro-2500",
-      "slug": "dreame-a3-awd-pro-2500",
-      "brand": "Dreame",
-      "model": "A3 AWD Pro 2500",
-      "displayName": "Dreame A3 AWD Pro 2500",
-      "variantNote": "0.62-acre version. The 3500 (0.87 acre) and 5000 (1.20 acres) share the platform with bigger batteries.",
-      "boundary": "wire-free",
-      "navigation": [
-        "lidar",
-        "vision"
+      "ownerReports": [
+        {
+          "theme": "Older Landroid Vision stopped at leaves, weeds and bald patches; check whether Vision Cloud fixed this",
+          "src": [
+            "https://www.reddit.com/r/worxlandroid/comments/15puvcg/"
+          ],
+          "tone": "issue",
+          "note": "2023 model"
+        },
+        {
+          "theme": "Cut-to-Edge still leaves a strip of tall grass",
+          "src": [
+            "https://www.reddit.com/r/worxlandroid/comments/14xj3au/",
+            "https://www.bttr.reviews/worx-landroid-vision-review/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "Improved with later firmware",
+          "src": [
+            "https://www.reddit.com/r/worxlandroid/comments/1k1c94q/"
+          ],
+          "tone": "praise"
+        }
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.62,
-          "unit": "acre",
-          "src": [
-            "dreame-a3",
-            "amz-dreame-a3-2500"
-          ],
-          "checked": "2026-10-10",
-          "note": "2,500 m²"
-        },
-        "maxSlopePercent": {
-          "value": 80,
-          "unit": "%",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 38.7,
-          "unit": "deg",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "specs": {
-        "drive": {
-          "value": "AWD with hub motors; two omni front wheels, two off-road rear wheels",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "360° 3D LiDAR + binocular AI vision; no RTK and no perimeter wire",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 15.8,
-          "unit": "in",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10",
-          "note": "40 cm dual-disc"
-        },
-        "cuttingHeight": {
-          "value": "1.2–3.9",
-          "unit": "in",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10",
-          "note": "3–10 cm"
-        },
-        "edgeCutting": {
-          "value": "Discs extend at edges; under 1.2 in from boundary in auto mode (Dreame figure)",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "obstacleClearance": {
-          "value": 2.2,
-          "unit": "in",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "battery": {
-          "value": "5 Ah (2500)",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "connectivity": {
-          "value": "4G Link service included for 3 years, then paid; Bluetooth setup without Wi-Fi",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maps": {
-          "value": "Two separate maps; each needs its own charging station",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "noise": {
-          "value": "≤ 65 dB",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "waterproofing": {
-          "value": "IPX6",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        },
-        "weight": {
-          "value": "23.9 kg (about 52.7 lb)",
-          "src": [
-            "dreame-a3"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B0GT5CBH8H",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0GT5CBH8H",
-        "checked": "2026-10-10",
-        "titleAtCheck": "DREAME LiDAR 2500 Robot Lawn Mower A3 AWD Pro Wire Free No RTK, 4WD for 38.7° Slopes ... for 0.62 Acre",
-        "stockNote": "Listing exists. Confirm in stock at build."
-      },
-      "manufacturerListPrice": {
-        "usd": 1699.99,
-        "src": [
-          "dreame-a3"
-        ],
-        "checked": "2026-10-10",
-        "note": "Dreame US store sale price for the 2500 (regular $3,099.99) at check; prices on this model move often. Do not show on product pages."
-      },
-      "plannedRole": "LiDAR without any RTK: for yards boxed in by trees and fences, about half an acre.",
+      "notFor": [
+        "Steep yards on the 2WD models (30%); only the WR344 4WD is rated for 84%",
+        "Lawns with patchy or weedy areas that vision may read as 'not grass'",
+        "Very complex 1-acre yards: the rating is generous for multi-zone lots"
+      ],
+      "supportOutlook": "Worx has no Conditional Approval for new models; existing authorized models covered by the update waiver to at least Jan 1, 2029.",
+      "variantRule": "WR344 is a 4WD sibling with a very different slope rating; it stays on this family page as its own variant row and its own CTA.",
       "plannedPages": [
-        "/reviews/dreame-a3-awd-pro-2500",
+        "/reviews/worx-landroid-vision-cloud",
         "/best",
-        "/vs/dreame-a3-awd-pro-2500-vs-luba-3-awd-3000"
-      ],
-      "watchOuts": [
-        "Separate front/back maps need a second charging station",
-        "4G is free for 3 years, then paid",
-        "Dreame page shows conflicting warranty terms (3-year and 1-year); confirm before stating"
+        "/best/robot-mower-1-acre",
+        "/best/robot-mower-half-acre",
+        "/vs/worx-vision-cloud-wr340-vs-navimow-x430"
       ]
     },
     {
-      "id": "mammotion-luba-mini-2-awd-1500h",
-      "slug": "mammotion-luba-mini-2-awd-1500h",
-      "brand": "Mammotion",
-      "model": "LUBA mini 2 AWD 1500H",
-      "displayName": "Mammotion LUBA mini 2 AWD 1500H",
-      "variantNote": "High-cut (H) version, 2.2–4.0 in. The standard 1500 cuts about 0.8–2.6 in.",
+      "id": "dreame-a3-awd-pro",
+      "slug": "dreame-a3-awd-pro",
+      "pageType": "family-review",
+      "brand": "Dreame",
+      "family": "A3 AWD Pro",
+      "primaryVariant": "A3 AWD Pro 2500",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Dreame's US store lists only the A3 AWD and A3 AWD Pro lines; A1/A2 are legacy in the US.",
       "boundary": "wire-free",
       "navigation": [
         "lidar",
         "vision"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.37,
-          "unit": "acre",
-          "src": [
-            "mammotion-mini2",
-            "amz-mini2-1500h"
-          ],
-          "checked": "2026-10-10",
-          "note": "1,500 m²"
-        },
-        "maxSlopePercent": {
-          "value": 80,
-          "unit": "%",
-          "src": [
-            "mammotion-mini2",
-            "amz-mini2-1500h"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 38.6,
-          "unit": "deg",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "specs": {
-        "drive": {
-          "value": "All-wheel drive",
-          "src": [
-            "mammotion-mini2",
-            "amz-mini2-1500h"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "360° LiDAR + dual-camera AI vision; no wire and no antenna",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "2.2–4.0",
-          "unit": "in",
-          "src": [
-            "amz-mini2-1500h"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 7.9,
-          "unit": "in",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10",
-          "note": "Main disc about 200 mm; plus a fixed 4.7 in edge disc"
-        },
-        "edgeCutting": {
-          "value": "Fixed 4.7 in edge disc; mows to about 2.1 in from walls",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10"
-        },
-        "battery": {
-          "value": "6.1 Ah",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10"
-        },
-        "connectivity": {
-          "value": "4G module with 3 years of data included",
-          "src": [
-            "mammotion-mini2"
-          ],
-          "checked": "2026-10-10"
-        },
-        "zones": {
-          "value": 20,
-          "unit": "zones",
-          "src": [
-            "mammotion-mini2",
-            "amz-mini2-1500h"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B0GL7WVJK2",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0GL7WVJK2",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Mammotion LUBA mini 2 1500H Robot Lawn Mower, 0.37 Acre, LiDAR+AI Vision, AWD for 80% Slope, Dual Cutting Discs (Main+Edge) ... Cutting Height 2.2\"-4.0\"",
-        "stockNote": "Listing exists. Confirm in stock at build."
-      },
-      "otherAsins": [
+      "variants": [
         {
-          "asin": "B0GL8K9286",
-          "what": "1500H with cleaning stand",
-          "status": "fetched; bundle"
+          "model": "A3 AWD Pro 2500",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.62,
+              "unit": "acre",
+              "src": [
+                "dreame-a3",
+                "amz-dreame-a3-2500"
+              ],
+              "checked": "2026-10-10",
+              "note": "2,500 m²"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 38.7,
+              "unit": "deg",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "AWD with hub motors; two omni front wheels, two off-road rear wheels",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "360° 3D LiDAR + binocular AI vision; no RTK and no perimeter wire",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 15.8,
+              "unit": "in",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10",
+              "note": "40 cm dual-disc"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.9",
+              "unit": "in",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10",
+              "note": "3–10 cm"
+            },
+            "edgeCutting": {
+              "value": "Discs extend at edges; under 1.2 in from boundary in auto mode (Dreame figure)",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "obstacleClearance": {
+              "value": 2.2,
+              "unit": "in",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "battery": {
+              "value": "5 Ah (2500)",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "4G Link service included for 3 years, then paid; Bluetooth setup without Wi-Fi",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maps": {
+              "value": "Two separate maps; each needs its own charging station",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "noise": {
+              "value": "≤ 65 dB",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "waterproofing": {
+              "value": "IPX6",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            },
+            "weight": {
+              "value": "23.9 kg (about 52.7 lb)",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GT5CBH8H",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GT5CBH8H",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GT5CBH8H",
+            "titleAtCheck": "DREAME LiDAR 2500 Robot Lawn Mower A3 AWD Pro ...",
+            "note": "Rechecked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1699.99,
+            "src": [
+              "dreame-a3"
+            ],
+            "checked": "2026-10-10",
+            "note": "Dreame US store sale price for the 2500 (regular $3,099.99) at check; prices on this model move often. Do not show on product pages."
+          }
         },
         {
-          "asin": "B0GSQVFFBW",
-          "what": "1500H with garage",
-          "status": "seen as variation"
+          "model": "A3 AWD Pro 3500",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.87,
+              "unit": "acre",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10",
+              "note": "3,500 m²"
+            }
+          },
+          "specs": {
+            "battery": {
+              "value": "7.5 Ah",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified"
+        },
+        {
+          "model": "A3 AWD Pro 5000",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.2,
+              "unit": "acre",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10",
+              "note": "5,000 m²"
+            }
+          },
+          "specs": {
+            "battery": {
+              "value": "10 Ah",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified"
         }
       ],
-      "manufacturerListPrice": {
-        "usd": 1999,
+      "ownerReports": [
+        {
+          "theme": "LiDAR overheats in direct sun and Florida heat; mower docks to cool",
+          "src": [
+            "https://www.reddit.com/r/roboticLawnmowers/comments/1uoiicf/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "EdgeMaster cuts the border at a fixed ~1.2 in, leaving a scalped band on tall-cut lawns; owners switch it off",
+          "src": [
+            "https://www.reddit.com/r/Dreame_Tech/comments/1sivqul/",
+            "https://smartlawnbots.com/reviews/dreame-a3-awd-pro-3500-review/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "Heavy AWD can rut wet turf and dig into sand",
+          "src": [
+            "https://www.reddit.com/r/roboticLawnmowers/comments/1uoiicf/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "Maps confidently under tree canopy",
+          "src": [
+            "https://smartlawnbots.com/reviews/dreame-a3-awd-pro-3500-review/"
+          ],
+          "tone": "praise"
+        }
+      ],
+      "notFor": [
+        "Hot, full-sun Southern yards where midday mowing matters (owner reports of LiDAR heat pauses)",
+        "Tall-cut lawns if you want the edge mode on",
+        "Sandy soil or often-wet turf (rutting reports)"
+      ],
+      "supportOutlook": "Covered by the update waiver to at least Jan 1, 2029; no Conditional Approval for new Dreame models.",
+      "plannedPages": [
+        "/reviews/dreame-a3-awd-pro",
+        "/best/robot-mower-under-trees",
+        "/best/robot-mower-half-acre",
+        "/vs/dreame-a3-awd-pro-vs-luba-3-awd"
+      ]
+    },
+    {
+      "id": "mammotion-luba-mini-2-awd",
+      "slug": "mammotion-luba-mini-2-awd",
+      "pageType": "family-review",
+      "brand": "Mammotion",
+      "family": "LUBA mini 2 AWD",
+      "primaryVariant": "LUBA mini 2 AWD 1500H",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "boundary": "wire-free",
+      "navigation": [
+        "lidar",
+        "vision"
+      ],
+      "variants": [
+        {
+          "model": "LUBA mini 2 AWD 1500H (high-cut)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.37,
+              "unit": "acre",
+              "src": [
+                "mammotion-mini2",
+                "amz-mini2-1500h"
+              ],
+              "checked": "2026-10-10",
+              "note": "1,500 m²"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "mammotion-mini2",
+                "amz-mini2-1500h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 38.6,
+              "unit": "deg",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "All-wheel drive",
+              "src": [
+                "mammotion-mini2",
+                "amz-mini2-1500h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "360° LiDAR + dual-camera AI vision; no wire and no antenna",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "2.2–4.0",
+              "unit": "in",
+              "src": [
+                "amz-mini2-1500h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 7.9,
+              "unit": "in",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10",
+              "note": "Main disc about 200 mm; plus a fixed 4.7 in edge disc"
+            },
+            "edgeCutting": {
+              "value": "Fixed 4.7 in edge disc; mows to about 2.1 in from walls",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10"
+            },
+            "battery": {
+              "value": "6.1 Ah",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "4G module with 3 years of data included",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10"
+            },
+            "zones": {
+              "value": 20,
+              "unit": "zones",
+              "src": [
+                "mammotion-mini2",
+                "amz-mini2-1500h"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GL7WVJK2",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GL7WVJK2",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GL7WVJK2",
+            "titleAtCheck": "Mammotion LUBA mini 2 1500H Robot Lawn Mower, 0.37 Acre ... Cutting Height 2.2\"-4.0\"",
+            "note": "Rechecked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1999,
+            "src": [
+              "mammotion-mini2"
+            ],
+            "checked": "2026-10-10",
+            "note": "Regular price; sale $1,799 at check. Do not show on product pages."
+          }
+        },
+        {
+          "model": "LUBA mini 2 AWD 1500 (standard)",
+          "specs": {
+            "cuttingHeight": {
+              "value": "0.8–2.6",
+              "unit": "in",
+              "src": [
+                "mammotion-mini2"
+              ],
+              "checked": "2026-10-10",
+              "note": "Per spec aggregators citing Mammotion EU; confirm on the US page"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified"
+        }
+      ],
+      "connectivityCost": {
+        "value": "4G module with 3 years of data, then a subscription (price not stated)",
         "src": [
           "mammotion-mini2"
         ],
-        "checked": "2026-10-10",
-        "note": "Regular price; sale $1,799 at check. Do not show on product pages."
+        "checked": "2026-10-10"
       },
-      "plannedRole": "Small, steep yards with tall-kept grass (St. Augustine, summer fescue).",
-      "plannedPages": [
-        "/reviews/mammotion-luba-mini-2-awd-1500h",
-        "/best"
+      "ownerReports": [
+        {
+          "theme": "Owners ask where promised firmware updates are",
+          "src": [
+            "https://www.reddit.com/r/MammotionTechnology/comments/1w23n3o/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "H model owners report about 3.9 in as the practical top height",
+          "src": [
+            "https://us.mammotion.com/products/luba-mini-2-awd-robot-lawn-mower"
+          ],
+          "tone": "neutral"
+        }
       ],
-      "watchOuts": [
-        "Narrow 7.9 in main deck",
-        "Edges near walls still leave about 2 in"
+      "notFor": [
+        "Lawns over about a third of an acre, or complex ones near that size",
+        "Buyers who want the standard version for Bermuda but buy the H by mistake (check the height range)"
+      ],
+      "supportOutlook": "Covered by the update waiver to at least Jan 1, 2029.",
+      "plannedPages": [
+        "/reviews/mammotion-luba-mini-2-awd",
+        "/best/robot-mower-small-yard",
+        "/best/robot-mower-for-hills",
+        "/best/robot-mower-st-augustine"
       ]
     },
     {
-      "id": "segway-navimow-i110n",
-      "slug": "segway-navimow-i110n",
-      "brand": "Segway Navimow",
-      "model": "Navimow i110N",
-      "displayName": "Segway Navimow i110N",
-      "variantNote": "Quarter-acre i-series model. The i105N is the 1/8-acre version with a smaller battery.",
+      "id": "mova-lidax-ultra",
+      "slug": "mova-lidax-ultra",
+      "pageType": "family-review",
+      "brand": "MOVA",
+      "family": "LiDAX Ultra",
+      "primaryVariant": "LiDAX Ultra 2000",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Ultra 2000 is a Wirecutter budget pick; Ultra 3000 AWD is a Bob Vila pick.",
       "boundary": "wire-free",
       "navigation": [
-        "rtk-antenna",
+        "lidar",
         "vision"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.25,
-          "unit": "acre",
-          "src": [
-            "navimow-i110",
-            "homedepot-i110n"
-          ],
-          "checked": "2026-10-10"
+      "variants": [
+        {
+          "model": "LiDAX Ultra 1000",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "mova-1000",
+                "amz-mova-1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "mova-1000",
+                "amz-mova-1000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "360° 3D LiDAR + AI vision; no RTK, no wire",
+              "src": [
+                "amz-mova-1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.9",
+              "unit": "in",
+              "src": [
+                "amz-mova-1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 7.9,
+              "unit": "in",
+              "src": [
+                "mova-1000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0G3CMJ78Q",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0G3CMJ78Q",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0G3CMJ78Q",
+            "titleAtCheck": "MOVA LiDAX Ultra 1000 Robot Lawn Mower Wire Free for 1/4 Acre ...",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1299,
+            "src": [
+              "mova-1000"
+            ],
+            "checked": "2026-10-10",
+            "note": "$999 sale seen"
+          }
         },
-        "maxSlopePercent": {
-          "value": 30,
-          "unit": "%",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10",
-          "note": "Boundary limit is 10% (6°)"
+        {
+          "model": "LiDAX Ultra 2000",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.5,
+              "unit": "acre",
+              "src": [
+                "mova-2000",
+                "amz-mova-2000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "mova-2000",
+                "amz-mova-2000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "360° 3D LiDAR + AI vision; no RTK, no wire",
+              "src": [
+                "amz-mova-2000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.9",
+              "unit": "in",
+              "src": [
+                "amz-mova-2000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "4G included; Wirecutter reports MOVA GPS at $50/yr after year 1",
+              "src": [
+                "wirecutter"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0G3CBW2H8",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0G3CBW2H8",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0G3CBW2H8",
+            "titleAtCheck": "MOVA LiDAX Ultra 2000 Robot Lawn Mower with 4G for 0.5 Acre ...",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1799,
+            "src": [
+              "mova-2000"
+            ],
+            "checked": "2026-10-10",
+            "note": "$1,199 sale seen"
+          }
         },
-        "maxSlopeDegrees": {
-          "value": 17,
-          "unit": "deg",
-          "src": [
-            "navimow-i110"
+        {
+          "model": "LiDAX Ultra 3000 AWD",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.75,
+              "unit": "acre",
+              "src": [
+                "mova-3000",
+                "amz-mova-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "Dual-map: 0.75 acre × 2"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "mova-3000",
+                "amz-mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 38.6,
+              "unit": "deg",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "AWD, four hub motors",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 15.8,
+              "unit": "in",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.9",
+              "unit": "in",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10",
+              "note": "Electronic"
+            },
+            "edgeCutting": {
+              "value": "UltraTrim 2.0: under 1.2 in left at edges",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "obstacleClearance": {
+              "value": 2.4,
+              "unit": "in",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "battery": {
+              "value": "36 V 7.5 Ah (243 Wh); 150–170 min",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "4G free for 3 years",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "theft": {
+              "value": "Location tracking, off-map alarm, AirTag compatible, PIN lock",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "weight": {
+              "value": 52,
+              "unit": "lb",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "zones": {
+              "value": 150,
+              "unit": "zones",
+              "src": [
+                "mova-3000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GGR6NJBK",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GGR6NJBK",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GGR6NJBK",
+            "titleAtCheck": "MOVA LiDAX Ultra 3000 AWD Robot Lawn Mower Wire Free RTK Free for up to 0.75 Acre ...",
+            "note": "Checked Oct 10, 2026"
+          },
+          "otherAsins": [
+            {
+              "asin": "B0H7X34W7M",
+              "what": "3000 AWD + garage bundle",
+              "status": "search result only"
+            }
           ],
-          "checked": "2026-10-10"
+          "manufacturerListPrice": {
+            "usd": 2199,
+            "src": [
+              "mova-3000"
+            ],
+            "checked": "2026-10-10"
+          }
         }
-      },
-      "specs": {
-        "drive": {
-          "value": "Front-wheel drive",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "positioning": {
-          "value": "EFLS 2.0 RTK with a GNSS antenna kit, plus VisionFence camera",
-          "src": [
-            "navimow-i110",
-            "homedepot-i110n"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingWidth": {
-          "value": 7.1,
-          "unit": "in",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "2–3.6",
-          "unit": "in",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10",
-          "note": "Manual adjustment"
-        },
-        "runtime": {
-          "value": 120,
-          "unit": "min",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "chargingTime": {
-          "value": 120,
-          "unit": "min",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "noise": {
-          "value": 58,
-          "unit": "dB(A)",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "waterproofing": {
-          "value": "IP66",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "weight": {
-          "value": 24,
-          "unit": "lb",
-          "src": [
-            "navimow-i110"
-          ],
-          "checked": "2026-10-10"
-        },
-        "connectivity": {
-          "value": "4G anti-theft module is an optional add-on",
-          "src": [
-            "homedepot-i110n"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": null,
-      "asinStatus": "unverified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0CX7T6BR3",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Segway Navimow i105N Robot Lawn Mower Perimeter Wire Free 1/8 Acre ...",
-        "stockNote": "Candidate ASIN B0CX7T6BR3 is widely cited as the i110N but the amazon.com title showed the i105N at check. Bundles B0CZ3R3SJH (i110N + Garage S) and B0CZ3S4QYQ (i110N + 4G module) were not fetched. Leave null until an exact i110N listing is confirmed. No buy button."
-      },
-      "manufacturerListPrice": {
-        "usd": 1099,
-        "src": [
-          "navimow-i110"
-        ],
-        "checked": "2026-10-10",
-        "note": "Navimow US store. Do not show on product pages."
-      },
-      "plannedRole": "Wire-free for flat, open quarter-acre lawns at a lower price.",
-      "plannedPages": [
-        "/reviews/segway-navimow-i110n"
       ],
-      "watchOuts": [
-        "Only 10% slope at the boundary",
-        "Antenna needs open sky; heavy tree cover is a poor fit",
-        "No buy button until the ASIN is confirmed"
-      ]
+      "ownerReports": [],
+      "ownerReportsNote": "Few independent owner reports found (research pack gap). Say so on the page rather than padding.",
+      "notFor": [
+        "Steep yards on the 1000/2000 (45%); only the 3000 AWD is rated 80%",
+        "Hot full-sun yards: same LiDAR heat question as other LiDAR mowers (no MOVA-specific reports yet)"
+      ],
+      "relationNote": "MOVA is reported as Dreame-affiliated (unconfirmed). The Ultra 3000 AWD's published dimensions match the Dreame A3 AWD Pro (740 × 532 mm). Mention only if confirmed.",
+      "plannedPages": [
+        "/reviews/mova-lidax-ultra",
+        "/best/robot-mower-small-yard",
+        "/best/robot-mower-half-acre"
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
+    },
+    {
+      "id": "roborock-rockneo-q110h",
+      "slug": "roborock-rockneo-q110h",
+      "pageType": "family-review",
+      "brand": "Roborock",
+      "family": "RockNeo",
+      "primaryVariant": "RockNeo Q110H",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "The Verge's budget pick. Roborock also sells the newer RockMow X120H LiDAR AWD and RockMow X1 LiDAR (not covered yet).",
+      "boundary": "wire-free",
+      "navigation": [
+        "rtk-antenna-or-network",
+        "v-slam",
+        "vision"
+      ],
+      "variants": [
+        {
+          "model": "RockNeo Q110H",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "amz-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "amz-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 24.2,
+              "unit": "deg",
+              "src": [
+                "amz-q110h"
+              ],
+              "checked": "2026-10-10",
+              "note": "Calculated from 45%"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "Full-band RTK (antenna or network RTK) + VSLAM + AI vision",
+              "src": [
+                "amz-q110h",
+                "aa-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 8.7,
+              "unit": "in",
+              "src": [
+                "verge",
+                "fdr-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "CONFLICT: 0.8–2.4 in (The Verge) vs 1.6–3.1 in (spec aggregator citing Roborock US)",
+              "src": [
+                "verge",
+                "fdr-q110h"
+              ],
+              "checked": "2026-10-10",
+              "note": "Resolve from the Roborock US manual before publishing; matters for grass-type advice"
+            },
+            "connectivity": {
+              "value": "Wi-Fi + Bluetooth; 4G tracking module sold separately",
+              "src": [
+                "verge"
+              ],
+              "checked": "2026-10-10"
+            },
+            "theft": {
+              "value": "PIN lock, alarm, out-of-zone alert; GPS tracking needs the optional module",
+              "src": [
+                "fdr-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "waterproofing": {
+              "value": "IPX6",
+              "src": [
+                "fdr-q110h"
+              ],
+              "checked": "2026-10-10"
+            },
+            "warranty": {
+              "value": "2 years",
+              "src": [
+                "verge"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0GRVYN12B",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GRVYN12B",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0GRVYN12B",
+            "titleAtCheck": "Roborock RockNeo Q110H Robot Lawn Mower, Wire-Free ... 45% Slope, Covers Up to 1/4 Acre",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1299,
+            "src": [
+              "fdr-q110h"
+            ],
+            "checked": "2026-10-10",
+            "note": "Secondary; confirm on garden.roborock.com/us"
+          }
+        }
+      ],
+      "ownerReports": [],
+      "ownerReportsNote": "Use The Verge's hands-on notes (attributed) rather than owner threads until owner reports are found.",
+      "notFor": [
+        "Tall-cut lawns until the cutting-height conflict is resolved",
+        "Heavy tree cover (RTK-led navigation)"
+      ],
+      "plannedPages": [
+        "/reviews/roborock-rockneo-q110h",
+        "/best/robot-mower-small-yard"
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
+    },
+    {
+      "id": "segway-navimow-i2-awd",
+      "slug": "segway-navimow-i-series",
+      "pageType": "family-review",
+      "brand": "Segway Navimow",
+      "family": "Navimow i series (i2 AWD, with i1 as the previous generation)",
+      "primaryVariant": "Navimow i210 AWD",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Amazon's i105N listing points to the i206 AWD as the newer version. The i1 models (i105N, i110N) are treated as superseded but still sold.",
+      "boundary": "wire-free",
+      "navigation": [
+        "network-rtk",
+        "vision"
+      ],
+      "variants": [
+        {
+          "model": "Navimow i210 AWD",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "amz-i210",
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "amz-i210",
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 24,
+              "unit": "deg",
+              "src": [
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "Three-wheel AWD",
+              "src": [
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "Network RTK + vision; no antenna",
+              "src": [
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "2.0–3.6",
+              "unit": "in",
+              "src": [
+                "amz-i210"
+              ],
+              "checked": "2026-10-10",
+              "note": "From Amazon title per research pack"
+            },
+            "battery": {
+              "value": "5.1 Ah",
+              "src": [
+                "amz-i210"
+              ],
+              "checked": "2026-10-10"
+            },
+            "zones": {
+              "value": 20,
+              "unit": "zones",
+              "src": [
+                "amz-i210"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0G8173C6Y",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0G8173C6Y",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0G8173C6Y",
+            "titleAtCheck": "Segway Navimow i210 AWD Robot Lawn Mower Wire Free, 0.25 Acre, 45% Slopes",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 1299,
+            "src": [
+              "navimow-i-series"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Navimow i206 AWD",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.15,
+              "unit": "acre",
+              "src": [
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "navimow-ces26"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {},
+          "asin": null,
+          "asinStatus": "bundle-only",
+          "otherAsins": [
+            {
+              "asin": "B0GQGJCKSL",
+              "what": "i206 AWD + Garage S bundle",
+              "status": "verified by research pack Oct 10, 2026"
+            }
+          ],
+          "manufacturerListPrice": {
+            "usd": 999,
+            "src": [
+              "navimow-i-series"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Navimow i105N (previous generation)",
+          "status": "superseded",
+          "statusDate": "2026-10-10",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.125,
+              "unit": "acre",
+              "src": [
+                "amz-i105n"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10",
+              "note": "10% at boundary"
+            }
+          },
+          "specs": {},
+          "asin": "B0CX8LL2PC",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0CX8LL2PC",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0CX8LL2PC",
+            "titleAtCheck": "Segway Navimow i105N Robot Lawn Mower Perimeter Wire Free 1/8 Acre ...",
+            "note": "Checked Oct 10, 2026; Amazon flags i206 AWD as newer version"
+          }
+        },
+        {
+          "model": "Navimow i110N (previous generation)",
+          "status": "superseded",
+          "statusDate": "2026-10-10",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "navimow-i110",
+                "homedepot-i110n"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10",
+              "note": "Boundary limit is 10% (6°)"
+            },
+            "maxSlopeDegrees": {
+              "value": 17,
+              "unit": "deg",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "Front-wheel drive",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "positioning": {
+              "value": "EFLS 2.0 RTK with a GNSS antenna kit, plus VisionFence camera",
+              "src": [
+                "navimow-i110",
+                "homedepot-i110n"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 7.1,
+              "unit": "in",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "2–3.6",
+              "unit": "in",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10",
+              "note": "Manual adjustment"
+            },
+            "runtime": {
+              "value": 120,
+              "unit": "min",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "chargingTime": {
+              "value": 120,
+              "unit": "min",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "noise": {
+              "value": 58,
+              "unit": "dB(A)",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "waterproofing": {
+              "value": "IP66",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "weight": {
+              "value": 24,
+              "unit": "lb",
+              "src": [
+                "navimow-i110"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "4G anti-theft module is an optional add-on",
+              "src": [
+                "homedepot-i110n"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B0CX7T6BR3",
+            "checked": "2026-10-10",
+            "titleAtCheck": "Segway Navimow i105N Robot Lawn Mower Perimeter Wire Free 1/8 Acre ...",
+            "stockNote": "Candidate ASIN B0CX7T6BR3 is widely cited as the i110N but the amazon.com title showed the i105N at check. Bundles B0CZ3R3SJH (i110N + Garage S) and B0CZ3S4QYQ (i110N + 4G module) were not fetched. Leave null until an exact i110N listing is confirmed. No buy button."
+          }
+        }
+      ],
+      "ownerReports": [
+        {
+          "theme": "Antenna placement trial and error on the i1 (one buyer returned it after two hours)",
+          "src": [
+            "https://www.amazon.com/dp/B0CX8LL2PC"
+          ],
+          "tone": "issue",
+          "note": "Amazon review content: paraphrase the theme only, never quote or count Amazon reviews or ratings"
+        },
+        {
+          "theme": "Navimow app well regarded; support described as responsive",
+          "src": [
+            "https://www.reddit.com/r/SegwayNavimow/comments/1vgvkkq/"
+          ],
+          "tone": "praise"
+        }
+      ],
+      "notFor": [
+        "Yards over a quarter acre",
+        "Heavy tree cover",
+        "Steep banks over 45%"
+      ],
+      "plannedPages": [
+        "/reviews/segway-navimow-i-series",
+        "/best/robot-mower-small-yard"
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
     },
     {
       "id": "ecovacs-goat-o1000-rtk",
       "slug": "ecovacs-goat-o1000-rtk",
       "brand": "ECOVACS",
-      "model": "GOAT O1000 RTK",
       "displayName": "ECOVACS GOAT O1000 RTK",
-      "variantNote": "RTK version (antenna), not the O1000 LiDAR PRO.",
       "boundary": "wire-free",
       "navigation": [
         "rtk-antenna",
         "lidar-assist",
         "vision"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.25,
-          "unit": "acre",
-          "src": [
-            "ecovacs-o1000",
-            "amz-o1000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopePercent": {
-          "value": 45,
-          "unit": "%",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 24,
-          "unit": "deg",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "specs": {
-        "positioning": {
-          "value": "LiDAR-enhanced RTK with an antenna; AIVI 3D obstacle avoidance (3D-ToF + AI camera)",
-          "src": [
-            "ecovacs-o1000",
-            "ecovacs-goat-o"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "1.2–3.2",
-          "unit": "in",
-          "src": [
-            "ecovacs-goat-o"
-          ],
-          "checked": "2026-10-10",
-          "note": "0.2 in steps"
-        },
-        "cuttingWidth": {
-          "value": 8.7,
-          "unit": "in",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10",
-          "note": "Target listing; ECOVACS O-series pages give 8.66 in"
-        },
-        "narrowestPath": {
-          "value": 2.3,
-          "unit": "ft",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "edgeCutting": {
-          "value": "TruEdge edge mowing; zero-edge on passable boundaries",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "waterproofing": {
-          "value": "IPX6",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        },
-        "mowingRate": {
-          "value": "1,507–1,938",
-          "unit": "sq ft per hour",
-          "src": [
-            "ecovacs-o1000"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B0DRG2HMD2",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B0DRG2HMD2",
-        "checked": "2026-10-10",
-        "titleAtCheck": "ECOVACS Goat O1000 RTK Robot Lawn Mower, Perimeter Wire Free Vision Robotic Lawnmower for 1/4 Acres Lawn ...",
-        "stockNote": "Listing exists. Confirm in stock at build."
-      },
-      "manufacturerListPrice": {
-        "usd": 999.99,
-        "src": [
-          "ecovacs-o1000"
-        ],
-        "checked": "2026-10-10",
-        "note": "ECOVACS US list price. Do not show on product pages."
-      },
-      "plannedRole": "Lower-cost wire-free for small yards with a narrow side passage.",
       "plannedPages": [
-        "/reviews/ecovacs-goat-o1000-rtk",
-        "/best"
+        "post-launch: /reviews/ecovacs-goat (REVIEW-ADD), mention on /best/robot-mower-small-yard"
       ],
       "watchOuts": [
         "RTK antenna needs reasonable sky view",
         "45% slope limit"
+      ],
+      "pageType": "family-review",
+      "family": "GOAT O1000",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "ECOVACS' newer US line is the GOAT LiDAR PRO (O1000/A2000/A3000). The O1000 RTK is the older RTK model, still sold. Newer O1000 RTK listing B0H4PDXVLZ also seen.",
+      "ownerReports": [
+        {
+          "theme": "Hardware and cut quality praised; app maps load grey and zone edits time out",
+          "src": [
+            "https://www.reddit.com/r/automower/comments/1tphrss/"
+          ],
+          "tone": "mixed"
+        },
+        {
+          "theme": "No spare parts (batteries) once out of warranty",
+          "src": [
+            "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1v31cmf/"
+          ],
+          "tone": "issue"
+        }
+      ],
+      "notFor": [
+        "Owners who plan to keep a mower past warranty (parts reports)",
+        "Heavy tree cover (RTK antenna)"
+      ],
+      "primaryVariant": "GOAT O1000 RTK",
+      "variants": [
+        {
+          "model": "GOAT O1000 RTK",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "ecovacs-o1000",
+                "amz-o1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 24,
+              "unit": "deg",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "LiDAR-enhanced RTK with an antenna; AIVI 3D obstacle avoidance (3D-ToF + AI camera)",
+              "src": [
+                "ecovacs-o1000",
+                "ecovacs-goat-o"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.2",
+              "unit": "in",
+              "src": [
+                "ecovacs-goat-o"
+              ],
+              "checked": "2026-10-10",
+              "note": "0.2 in steps"
+            },
+            "cuttingWidth": {
+              "value": 8.7,
+              "unit": "in",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10",
+              "note": "Target listing; ECOVACS O-series pages give 8.66 in"
+            },
+            "narrowestPath": {
+              "value": 2.3,
+              "unit": "ft",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "edgeCutting": {
+              "value": "TruEdge edge mowing; zero-edge on passable boundaries",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "waterproofing": {
+              "value": "IPX6",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            },
+            "mowingRate": {
+              "value": "1,507–1,938",
+              "unit": "sq ft per hour",
+              "src": [
+                "ecovacs-o1000"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0DRG2HMD2",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B0DRG2HMD2",
+            "checked": "2026-10-10",
+            "titleAtCheck": "ECOVACS Goat O1000 RTK Robot Lawn Mower, Perimeter Wire Free Vision Robotic Lawnmower for 1/4 Acres Lawn ...",
+            "stockNote": "Listing exists. Confirm in stock at build."
+          },
+          "manufacturerListPrice": {
+            "usd": 999.99,
+            "src": [
+              "ecovacs-o1000"
+            ],
+            "checked": "2026-10-10",
+            "note": "ECOVACS US list price. Do not show on product pages."
+          },
+          "variantNote": "RTK version (antenna), not the O1000 LiDAR PRO."
+        }
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
+    },
+    {
+      "id": "worx-landroid-m-wr147",
+      "slug": "worx-landroid-m-wr147",
+      "brand": "Worx",
+      "displayName": "Worx Landroid M WR147",
+      "boundary": "boundary-wire",
+      "navigation": [
+        "boundary-wire"
+      ],
+      "plannedPages": [
+        "/reviews/worx-landroid-m-wr147",
+        "/best/robot-mower-small-yard"
+      ],
+      "watchOuts": [
+        "Bump-sensor obstacle detection only",
+        "Boundary wire setup is the hardest part"
+      ],
+      "pageType": "family-review",
+      "family": "Landroid (boundary wire): S / M / L",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "notFor": [
+        "Anyone who doesn't want to lay and maintain a boundary wire",
+        "Busy yards with toys and pets (bump-sensor obstacle detection only)"
+      ],
+      "ownerReports": [],
+      "fccNote": "Has Wi-Fi/Bluetooth app control, so it very likely meets the FCC device definition; existing authorization stands.",
+      "primaryVariant": "Landroid M WR147",
+      "variants": [
+        {
+          "model": "Landroid M WR147",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.25,
+              "unit": "acre",
+              "src": [
+                "worx-landroid-models",
+                "amz-wr147"
+              ],
+              "checked": "2026-10-10",
+              "note": "10,890 sq ft"
+            },
+            "maxSlopePercent": {
+              "value": 35,
+              "unit": "%",
+              "src": [
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopeDegrees": {
+              "value": 20,
+              "unit": "deg",
+              "src": [
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "specs": {
+            "cuttingWidth": {
+              "value": 8,
+              "unit": "in",
+              "src": [
+                "worx-landroid-models",
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "1.5–3.5",
+              "unit": "in",
+              "src": [
+                "worx-landroid-models",
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10",
+              "note": "Six positions"
+            },
+            "battery": {
+              "value": "20V 4.0 Ah PowerShare",
+              "src": [
+                "worx-landroid-models"
+              ],
+              "checked": "2026-10-10"
+            },
+            "boundaryWireIncluded": {
+              "value": 590.5,
+              "unit": "ft",
+              "src": [
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10"
+            },
+            "obstacleDetection": {
+              "value": "Bump sensor",
+              "src": [
+                "worx-landroid-models"
+              ],
+              "checked": "2026-10-10"
+            },
+            "connectivity": {
+              "value": "Wi-Fi and Bluetooth app",
+              "src": [
+                "worx-wr147-manual"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B097NJ37R7",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B097NJ37R7",
+            "checked": "2026-10-10",
+            "titleAtCheck": "Worx Landroid M 20V Robotic Lawn Mower 1/4 Acre / 10,890 Sq. Ft Power Share- WR147 (Battery & Charger Included)",
+            "stockNote": "Listing exists. Confirm in stock at build."
+          },
+          "manufacturerListPrice": null,
+          "variantNote": "20V, 1/4-acre boundary-wire model. Not the WR140 (older Landroid M) or WR155 (Landroid L, 1/2 acre)."
+        }
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
+    },
+    {
+      "id": "husqvarna-automower-iq",
+      "slug": "husqvarna-automower-iq",
+      "pageType": "family-review",
+      "brand": "Husqvarna",
+      "family": "Automower iQ (410 / 420 / 440 iQ, 435 iQ AWD) plus 435X AWD",
+      "primaryVariant": "Automower 420 iQ",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "The only robot-mower brand with FCC Conditional Approval (305V/310V/420V/440V iQ platforms, Sep 9, 2026, DA 26-957; US launch expected 2027). Existing iQ models are already authorized. 420/440 iQ out of stock online at the check.",
+      "boundary": "wire-free (EPOS RTK) or wire",
+      "navigation": [
+        "rtk-epos",
+        "radar-or-ultrasonic",
+        "wire-optional"
+      ],
+      "variants": [
+        {
+          "model": "Automower 410 iQ",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.5,
+              "unit": "acre",
+              "src": [
+                "husq-410iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "±20%"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "husq-410iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "15% at boundary"
+            }
+          },
+          "specs": {
+            "cuttingHeight": {
+              "value": "1–4",
+              "unit": "in",
+              "src": [
+                "husq-410iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "Electric"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 2599.99,
+            "src": [
+              "husq-410iq"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Automower 420 iQ",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.0,
+              "unit": "acre",
+              "src": [
+                "husq-420iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "0.5 acre irregular / 1 acre systematic"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "husq-420iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "15% at boundary"
+            }
+          },
+          "specs": {
+            "cuttingHeight": {
+              "value": "1–4",
+              "unit": "in",
+              "src": [
+                "husq-420iq"
+              ],
+              "checked": "2026-10-10"
+            },
+            "warranty": {
+              "value": "4 years",
+              "src": [
+                "husq-420iq"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 3299.99,
+            "src": [
+              "husq-420iq"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Automower 440 iQ",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 2.0,
+              "unit": "acre",
+              "src": [
+                "husq-440iq"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 45,
+              "unit": "%",
+              "src": [
+                "husq-440iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "15% at boundary"
+            }
+          },
+          "specs": {},
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 4299.99,
+            "src": [
+              "husq-440iq"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Automower 435 iQ AWD",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 1.3,
+              "unit": "acre",
+              "src": [
+                "husq-435iq"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 70,
+              "unit": "%",
+              "src": [
+                "husq-435iq"
+              ],
+              "checked": "2026-10-10",
+              "note": "50% at boundary"
+            }
+          },
+          "specs": {
+            "cuttingHeight": {
+              "value": "1.2–2.8",
+              "unit": "in",
+              "src": [
+                "husq-435iq"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "manufacturerListPrice": {
+            "usd": 4999.99,
+            "src": [
+              "husq-435iq"
+            ],
+            "checked": "2026-10-10"
+          }
+        },
+        {
+          "model": "Automower 435X AWD (boundary wire)",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.9,
+              "unit": "acre",
+              "src": [
+                "husq-435x"
+              ],
+              "checked": "2026-10-10"
+            },
+            "maxSlopePercent": {
+              "value": 70,
+              "unit": "%",
+              "src": [
+                "husq-435x"
+              ],
+              "checked": "2026-10-10",
+              "note": "50% at boundary"
+            }
+          },
+          "specs": {
+            "cuttingHeight": {
+              "value": "1.2–2.8",
+              "unit": "in",
+              "src": [
+                "husq-435x"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B0HKC6J3PH",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0HKC6J3PH",
+            "checked": "2026-10-10",
+            "url": "https://www.amazon.com/dp/B0HKC6J3PH",
+            "titleAtCheck": "Husqvarna Automower 435X AWD Robotic Lawn Mower, All-Wheel Drive",
+            "note": "Checked Oct 10, 2026"
+          },
+          "manufacturerListPrice": {
+            "usd": 2999.99,
+            "src": [
+              "husq-435x"
+            ],
+            "checked": "2026-10-10"
+          }
+        }
+      ],
+      "ownerReports": [
+        {
+          "theme": "EPOS pauses and searches under trees, then stops",
+          "src": [
+            "https://www.reddit.com/r/automower/comments/1srq9ov/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "EPOS lock and setup frustrations",
+          "src": [
+            "https://www.reddit.com/r/automower/comments/1tnd090/",
+            "https://www.reddit.com/r/automower/comments/1k2umk1/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "US phone support fixed a setup problem in about 20 minutes",
+          "src": [
+            "https://www.reddit.com/r/automower/comments/1k2umk1/"
+          ],
+          "tone": "praise"
+        },
+        {
+          "theme": "Reliable on open yards; 2WD sticks in mud and mulch",
+          "src": [
+            "https://www.reddit.com/r/automower/comments/1rnyfu6/"
+          ],
+          "tone": "mixed"
+        }
+      ],
+      "notFor": [
+        "Budgets under about $2,600 for wire-free",
+        "Steep slopes near the edges on the iQ (15% boundary limit)",
+        "Heavily wooded lots without adding wire assist"
+      ],
+      "supportOutlook": "Strongest long-term outlook in this set: existing models covered by the waiver and the brand holds Conditional Approval for new platforms.",
+      "affiliateNote": "No verified ASIN for the iQ models: the page shows the plain no-link line for them and a CTA only for the 435X AWD.",
+      "plannedPages": [
+        "/reviews/husqvarna-automower-iq",
+        "/best/robot-mower-1-acre"
       ]
     },
     {
       "id": "husqvarna-automower-115h",
       "slug": "husqvarna-automower-115h",
       "brand": "Husqvarna",
-      "model": "Automower 115H",
       "displayName": "Husqvarna Automower 115H",
-      "variantNote": "Bluetooth, self-install version with boundary wire. A 4G version exists (ASIN B087YZCNDJ on the same page).",
       "boundary": "boundary-wire",
       "navigation": [
         "boundary-wire",
         "guide-wire"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.4,
-          "unit": "acre",
-          "src": [
-            "husq-115h-support",
-            "amz-115h"
-          ],
-          "checked": "2026-10-10",
-          "note": "±20%"
-        },
-        "maxSlopePercent": {
-          "value": 30,
-          "unit": "%",
-          "src": [
-            "husq-115h-support"
-          ],
-          "checked": "2026-10-10",
-          "note": "15% at the boundary"
-        },
-        "maxSlopeDegrees": {
-          "value": 16.7,
-          "unit": "deg",
-          "src": [
-            "husq-115h-support"
-          ],
-          "checked": "2026-10-10",
-          "note": "Calculated from 30%"
-        }
-      },
-      "specs": {
-        "cuttingWidth": {
-          "value": 8.7,
-          "unit": "in",
-          "src": [
-            "husq-115h-support"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "2.0–3.6",
-          "unit": "in",
-          "src": [
-            "husq-115h-manual"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingSystem": {
-          "value": "Three pivoting razor blades",
-          "src": [
-            "husq-115h-support"
-          ],
-          "checked": "2026-10-10"
-        },
-        "boundary": {
-          "value": "Perimeter boundary wire plus one guide wire; steep areas over 30% must be wired off",
-          "src": [
-            "husq-115h-manual"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B07PGBSGXQ",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B07PGBSGXQ",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Husqvarna Automower® 115H Robotic Lawn Mower, Small – Medium Yards (0.4 Acres)",
-        "stockNote": "Listing exists (Bluetooth variation). Confirm seller and stock at build."
-      },
-      "manufacturerListPrice": null,
-      "plannedRole": "Proven boundary-wire option for small, simple yards; useful contrast for the wire vs wire-free guide.",
       "plannedPages": [
-        "/reviews/husqvarna-automower-115h",
-        "/guides/wire-free-vs-boundary-wire"
+        "/guides/rtk-vs-lidar-vs-vision (wire example)"
       ],
       "watchOuts": [
         "Wire install takes time and wire can be cut by edging or aeration",
         "Random mowing pattern rather than stripes"
+      ],
+      "pageType": "reference-only",
+      "family": "Automower 115H",
+      "status": "legacy",
+      "statusDate": "2026-10-10",
+      "statusNote": "Older boundary-wire model; still listed (Bluetooth B07PGBSGXQ, 4G B087YZCNDJ). No review planned; used as a wire example in the navigation guide.",
+      "primaryVariant": "Automower 115H",
+      "variants": [
+        {
+          "model": "Automower 115H",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.4,
+              "unit": "acre",
+              "src": [
+                "husq-115h-support",
+                "amz-115h"
+              ],
+              "checked": "2026-10-10",
+              "note": "±20%"
+            },
+            "maxSlopePercent": {
+              "value": 30,
+              "unit": "%",
+              "src": [
+                "husq-115h-support"
+              ],
+              "checked": "2026-10-10",
+              "note": "15% at the boundary"
+            },
+            "maxSlopeDegrees": {
+              "value": 16.7,
+              "unit": "deg",
+              "src": [
+                "husq-115h-support"
+              ],
+              "checked": "2026-10-10",
+              "note": "Calculated from 30%"
+            }
+          },
+          "specs": {
+            "cuttingWidth": {
+              "value": 8.7,
+              "unit": "in",
+              "src": [
+                "husq-115h-support"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingHeight": {
+              "value": "2.0–3.6",
+              "unit": "in",
+              "src": [
+                "husq-115h-manual"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingSystem": {
+              "value": "Three pivoting razor blades",
+              "src": [
+                "husq-115h-support"
+              ],
+              "checked": "2026-10-10"
+            },
+            "boundary": {
+              "value": "Perimeter boundary wire plus one guide wire; steep areas over 30% must be wired off",
+              "src": [
+                "husq-115h-manual"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": "B07PGBSGXQ",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B07PGBSGXQ",
+            "checked": "2026-10-10",
+            "titleAtCheck": "Husqvarna Automower® 115H Robotic Lawn Mower, Small – Medium Yards (0.4 Acres)",
+            "stockNote": "Listing exists (Bluetooth variation). Confirm seller and stock at build."
+          },
+          "manufacturerListPrice": null,
+          "variantNote": "Bluetooth, self-install version with boundary wire. A 4G version exists (ASIN B087YZCNDJ on the same page)."
+        }
       ]
     },
     {
-      "id": "worx-landroid-m-wr147",
-      "slug": "worx-landroid-m-wr147",
-      "brand": "Worx",
-      "model": "Landroid M WR147",
-      "displayName": "Worx Landroid M WR147",
-      "variantNote": "20V, 1/4-acre boundary-wire model. Not the WR140 (older Landroid M) or WR155 (Landroid L, 1/2 acre).",
-      "boundary": "boundary-wire",
+      "id": "airseekers-tron-se",
+      "slug": "airseekers-tron-se",
+      "pageType": "candidate",
+      "brand": "Airseekers",
+      "family": "TRON",
+      "primaryVariant": "TRON SE",
+      "status": "current",
+      "statusDate": "2026-10-10",
+      "statusNote": "Bob Vila's value pick. Not in the launch set.",
+      "boundary": "wire-free",
       "navigation": [
-        "boundary-wire"
+        "network-rtk",
+        "v-slam",
+        "vision"
       ],
-      "ladder": {
-        "ratedAreaAcres": {
-          "value": 0.25,
-          "unit": "acre",
-          "src": [
-            "worx-landroid-models",
-            "amz-wr147"
-          ],
-          "checked": "2026-10-10",
-          "note": "10,890 sq ft"
-        },
-        "maxSlopePercent": {
-          "value": 35,
-          "unit": "%",
-          "src": [
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10"
-        },
-        "maxSlopeDegrees": {
-          "value": 20,
-          "unit": "deg",
-          "src": [
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10"
+      "variants": [
+        {
+          "model": "TRON SE",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.37,
+              "unit": "acre",
+              "src": [
+                "airseekers-tron-se"
+              ],
+              "checked": "2026-10-10",
+              "note": "Optimum area 1,500 m²; some Amazon listings say 0.45"
+            },
+            "maxSlopePercent": {
+              "value": 60,
+              "unit": "%",
+              "src": [
+                "airseekers-tron-se"
+              ],
+              "checked": "2026-10-10",
+              "note": "Working grade 60% (31°); driving grade 65% (33°)"
+            }
+          },
+          "specs": {
+            "drive": {
+              "value": "Dual rear-wheel drive",
+              "src": [
+                "airseekers-tron-se"
+              ],
+              "checked": "2026-10-10"
+            },
+            "cuttingWidth": {
+              "value": 8.66,
+              "unit": "in",
+              "src": [
+                "airseekers-compare"
+              ],
+              "checked": "2026-10-10"
+            },
+            "battery": {
+              "value": "10 Ah, 120 min",
+              "src": [
+                "airseekers-compare"
+              ],
+              "checked": "2026-10-10"
+            },
+            "warranty": {
+              "value": "3 years",
+              "src": [
+                "airseekers-tron-se"
+              ],
+              "checked": "2026-10-10"
+            }
+          },
+          "asin": null,
+          "asinStatus": "unverified",
+          "asinCheck": {
+            "checked": "2026-10-10",
+            "note": "Several TRON SE listings exist (B0H5J4BHJT, B0H2YZR34J, B0H5W6CWW6) with conflicting titles (0.37 vs 0.45 acre), conflicting box contents (one lists an RTK base station although the official SE is antenna-free) and one with an EU-style model number. Not verified as the official US TRON SE; B0H5W6CWW6 returned no page. Leave null."
+          },
+          "manufacturerListPrice": {
+            "usd": 1099,
+            "src": [
+              "airseekers-tron-se"
+            ],
+            "checked": "2026-10-10",
+            "note": "Regular $1,299"
+          }
         }
-      },
-      "specs": {
-        "cuttingWidth": {
-          "value": 8,
-          "unit": "in",
-          "src": [
-            "worx-landroid-models",
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10"
-        },
-        "cuttingHeight": {
-          "value": "1.5–3.5",
-          "unit": "in",
-          "src": [
-            "worx-landroid-models",
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10",
-          "note": "Six positions"
-        },
-        "battery": {
-          "value": "20V 4.0 Ah PowerShare",
-          "src": [
-            "worx-landroid-models"
-          ],
-          "checked": "2026-10-10"
-        },
-        "boundaryWireIncluded": {
-          "value": 590.5,
-          "unit": "ft",
-          "src": [
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10"
-        },
-        "obstacleDetection": {
-          "value": "Bump sensor",
-          "src": [
-            "worx-landroid-models"
-          ],
-          "checked": "2026-10-10"
-        },
-        "connectivity": {
-          "value": "Wi-Fi and Bluetooth app",
-          "src": [
-            "worx-wr147-manual"
-          ],
-          "checked": "2026-10-10"
-        }
-      },
-      "asin": "B097NJ37R7",
-      "asinStatus": "verified",
-      "asinCheck": {
-        "url": "https://www.amazon.com/dp/B097NJ37R7",
-        "checked": "2026-10-10",
-        "titleAtCheck": "Worx Landroid M 20V Robotic Lawn Mower 1/4 Acre / 10,890 Sq. Ft Power Share- WR147 (Battery & Charger Included)",
-        "stockNote": "Listing exists. Confirm in stock at build."
-      },
-      "manufacturerListPrice": null,
-      "plannedRole": "Lowest-cost route to robot mowing for a small, simple lawn, if you accept a boundary wire.",
+      ],
+      "notFor": [],
       "plannedPages": [
-        "/reviews/worx-landroid-m-wr147",
-        "/best",
-        "/guides/wire-free-vs-boundary-wire"
+        "candidate for REVIEW-ADD after launch"
       ],
-      "watchOuts": [
-        "Bump-sensor obstacle detection only",
-        "Boundary wire setup is the hardest part"
-      ]
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
     }
   ]
 }

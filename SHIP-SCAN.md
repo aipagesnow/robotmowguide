@@ -21,9 +21,24 @@ we tested|in our testing|hands-on|our test lawn|lab test|tested by us
 \b\d(\.\d)?/10\b|★|☆|stars? rating|editor'?s choice
 amazon\.com/s\?|tag=yourtag|tag=\$\{|tag=undefined|tag=&|tag=$|amazon\.co\.uk
 localhost|vercel\.app|127\.0\.0\.1
+/go/|/out/|/recommends/
+stars? on amazon|rated on amazon|amazon rating|customers say|\d[\d,]* (ratings|reviews) on amazon
+banned brand|illegal to buy|chinese ban
+coming in (late )?20\d\d|launching (late )?20\d\d
 ```
+Extra checks the script runs:
+- **Prices:** any `$` followed by a digit on review, /best, best-for, vs or tool pages fails, except inside the running-cost calculator and the cost-to-own guide, where each figure must sit next to a source link and a checked date.
+- **Schema:** any JSON-LD `@type` of `FAQPage`, `Review`, `AggregateRating`, `Rating`, `Product` or `Offer` fails.
+- **Redirects:** every Amazon `href` must start with `https://www.amazon.com/dp/`; any internal route that issues a redirect to amazon.com fails.
+- **CTA labels:** every Amazon link has visible text or an `aria-label` that includes a model name.
+- **Disclosure:** on every page with an Amazon link, the disclosure line appears in the HTML before the first Amazon link, and "Paid links" appears within the same section as each CTA cluster.
+- **Status:** a variant whose products.json status is `discontinued` renders no Amazon link anywhere on the site.
+- **Owner reports:** every "What owners report" item contains at least one external link.
+- **Tool pages:** no URL with a query string or result path appears in the sitemap; tool pages have a single canonical.
 Notes:
-- "Aivora Digital" as the publisher name on About/footer is allowed; the pattern targets internal notes.
+- "Aivora Digital" as the publisher name on About/footer/byline is allowed; the pattern targets internal notes.
+- Honest negations are allowed and stripped before matching: "have not tested", "haven't tested", "not tested", "no hands-on testing", "research-based". Everything else in the testing line fails.
+- If Chris later becomes the named editor, remove `Chris\b` from the pattern list in the same commit that adds his byline.
 - `null` may appear legitimately inside JSON-LD; the script should ignore JSON-LD `null` values but flag visible "null".
 - Check every Amazon `href` separately: it must match `^https://www\.amazon\.com/dp/[A-Z0-9]{10}\?tag=<the production tag>$` on production, and every product with `asin: null` must render no Amazon link.
 

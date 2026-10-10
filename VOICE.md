@@ -8,7 +8,9 @@ Write like a knowledgeable person explaining what the specifications mean for so
 The reader should finish a page thinking: "I understand this mower, and I understand whether it will work in my yard."
 
 ## Who is speaking
-A careful researcher who has read the manufacturer spec pages, the owner's manuals and the independent long-term reviews, and who explains them plainly. This site does **not** test mowers. It never implies that it has. "We" appears mainly on the About, method and disclosure pages.
+A careful researcher who has read the manufacturer spec pages, the owner's manuals, independent long-term reviews and owner threads, and who explains them plainly. This site does **not** test mowers. Reviews are research-based, and the site says so. It never implies otherwise. "We" appears mainly on the About, method and disclosure pages.
+
+Byline on every page: **By the RobotMowGuide editors**, with the fact-check line from PAGE_RECIPES.md. Never invent a person, a bio or a headshot.
 
 ## Core rules
 1. Lead with the yard, not the product: lawn size, slope, tree cover, front and back zones, how the edges meet beds and paths.
@@ -27,7 +29,8 @@ A careful researcher who has read the manufacturer spec pages, the owner's manua
 - Area: acres first, with square feet in brackets the first time on a page (for example "0.25 acre (about 10,900 sq ft)"). Convert metric manufacturer figures and say so if the maker publishes metric.
 - Slope: give percent and degrees together the first time ("80% (about 38.7°)"), then percent. Explain once per guide that 100% slope is 45°.
 - Lengths: inches and feet. Cutting heights in inches with one decimal.
-- Prices: no Amazon prices anywhere, and no dollar figures for products on reviews, /best or vs pages. The running-costs guide may use dated, sourced manufacturer list prices and bands ("as of Oct 2026, Mammotion listed the LUBA 3 AWD from $2,399") and link to the source.
+- Slope extras: give rise per 10 ft where it helps ("80% is a rise of 8 ft over 10 ft"), and always say whether a figure is the interior or the boundary limit.
+- Prices: no Amazon prices anywhere, and no dollar figures for products on reviews, /best or vs pages. The cost-to-own guide and calculator may use dated, sourced manufacturer list prices labelled MSRP ("as of Oct 2026, Mammotion listed the LUBA 3 AWD 3000 at $2,799 MSRP") and published subscription fees, linked to the source.
 
 ## Words this audience uses
 Yard, front yard, back yard, side yard, acre, quarter acre, wire-free, no perimeter wire, boundary wire, RTK, antenna, base station, network RTK, LiDAR, camera/vision, slope, hill, grade, shade, under trees, St. Augustine, Bermuda, zoysia, fescue, Kentucky bluegrass, cut height, edging, string trimmer, HOA, 4G, Wi-Fi, app, theft, garage/shelter, blades.
@@ -40,10 +43,19 @@ Yard, front yard, back yard, side yard, acre, quarter acre, wire-free, no perime
 - Reviewer stamps (use only if they truly help): clear winner, the one to beat, buy it if / skip it if as stamped headers, on paper, in the real world, practical catch.
 - Repeated "not X, but Y" constructions.
 - Urgency: "before it sells out", "limited time", "deal".
+- Amazon review talk: "4.5 stars on Amazon", "highly rated on Amazon", "thousands of happy buyers", "customers say".
+- Scare words about the FCC rule: "banned brand", "illegal to buy", "Chinese ban".
+- Owner-report inflation: "many owners", "most owners", "X% fail", "notorious". Use counts from the threads read and link them.
 
 ## Fixed microcopy
-- Disclosure line (under H1 meta, before the first affiliate link): **As an Amazon Associate we earn from qualifying purchases.** followed by a link: "How this site makes money".
-- Primary button: **See on Amazon**. Allowed alternative: **Check price on Amazon**.
+- Disclosure line (under H1 meta, before the first affiliate link): **As an Amazon Associate I earn from qualifying purchases.** (the Agreement's exact wording) followed by: "Links to Amazon are paid links. How this site makes money" (link).
+- Disclosure repeat next to CTA clusters and in any sticky bar: **Paid links: see disclosure** (link).
+- Primary button: **See {model} on Amazon** (e.g. "See Navimow X430 on Amazon"). In table cells: **See on Amazon** with an `aria-label` naming the model. Allowed alternative: **Check price on Amazon**.
+- Byline: **By the RobotMowGuide editors**. Fact-check line: **Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on {date}.**
+- Status lines: **On sale in the US as of {date}.** / **Replaced by {successor} in {month year}. Still sold while stock lasts.** / **No longer sold. This page stays up for owners.** / **No longer importable under the 2026 FCC rule; existing stock only, as of {date}.**
+- Owner reports intro: **In the owner threads we read between {month} and {month year}:** followed by linked themes.
+- Researched box title: **How this page was researched**.
+- Research-based label on reviews (in the researched box and on /how-picks-are-chosen): **This is a research-based review. We have not tested this mower.**
 - Product with no verified ASIN (no button, plain text instead): **"There's no Amazon link for this model yet because we couldn't confirm a current amazon.com listing for this exact version."** Keep it to that, or a close plain variant. Do not apologise further or promise a date.
 - Source line under spec tables: "Specs from the manufacturer's US product page and owner's manual, checked [Mon D, YYYY]." List the sources with links on review pages.
 - Updated line in the meta row: "Updated Oct 14, 2026" (the date the page content last changed for real, not the build date).
@@ -61,6 +73,7 @@ Prefer: "It's worth considering if you have a simple quarter-acre lawn and want 
 ## Final check for every page
 - Would a knowledgeable person actually say this to a neighbor who asked?
 - Is any sentence written for effect? Make it plain.
-- Does any line imply testing, a score, or a price? Remove it.
+- Does any line imply testing, a score, an Amazon rating or a price? Remove it.
+- Is every owner claim linked and dated?
 - Is "we" necessary here?
 - Is there any text a visitor isn't meant to see? Remove it.

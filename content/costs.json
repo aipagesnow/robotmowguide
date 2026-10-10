@@ -1,0 +1,185 @@
+{
+  "_readme": "Dated running-cost and connectivity figures for /guides/robot-mower-cost-to-own and the running-cost calculator. Seeded from the Oct 2026 research pack; every row must be re-checked on the source before round 4 and shown with its checked date. null = not published: show 'Not published', never a guess. No Amazon prices.",
+  "updated": "2026-10-10",
+  "rows": [
+    {
+      "family": "segway-navimow-x4",
+      "item": "Connect+ (4G) free period",
+      "value": "1 year (X430) / 2 years (X450)",
+      "unit": null,
+      "src": [
+        "https://navimow.com/products/navimow-x4-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "segway-navimow-x4",
+      "item": "Connect+ after free period",
+      "value": 32.9,
+      "unit": "usd/year",
+      "src": [
+        "https://navimow.com/products/navimow-x4-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "mammotion-luba-3-awd",
+      "item": "4G data free period",
+      "value": "3 years",
+      "unit": null,
+      "src": [
+        "https://us.mammotion.com/products/luba-3-awd-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "mammotion-luba-3-awd",
+      "item": "4G after free period",
+      "value": null,
+      "unit": "usd/year",
+      "src": [
+        "https://us.mammotion.com/products/luba-3-awd-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official",
+      "note": "Mammotion says a subscription is required; price not stated. Ask Mammotion US (manufacturer Q&A)."
+    },
+    {
+      "family": "mammotion-luba-mini-2-awd",
+      "item": "4G data free period",
+      "value": "3 years",
+      "unit": null,
+      "src": [
+        "https://us.mammotion.com/products/luba-mini-2-awd-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "dreame-a3-awd-pro",
+      "item": "4G data free period",
+      "value": "3 years (Pro); 1 year (A3 AWD non-Pro)",
+      "unit": null,
+      "src": [
+        "https://yardcare.dreametech.com/collections/wireless-robotic-lawn-mowers"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "mova-lidax-ultra",
+      "item": "4G free period (Ultra 3000 AWD)",
+      "value": "3 years",
+      "unit": null,
+      "src": [
+        "https://us.mova.tech/products/mova-lidax-ultra-3000-awd-robotic-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (search snapshot)"
+    },
+    {
+      "family": "mova-lidax-ultra",
+      "item": "GPS service after year 1 (as reported)",
+      "value": 50,
+      "unit": "usd/year",
+      "src": [
+        "https://www.nytimes.com/wirecutter/reviews/best-robot-lawn-mower/"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "secondary",
+      "note": "Wirecutter; confirm which MOVA models and whether it conflicts with the 3-year 4G on the 3000 AWD."
+    },
+    {
+      "family": "worx-landroid-vision-cloud",
+      "item": "RTK Cloud service",
+      "value": "No extra cost (lifetime), per Worx",
+      "unit": null,
+      "src": [
+        "https://www.amazon.com/dp/B0GN98XMPM",
+        "https://www.nytimes.com/wirecutter/reviews/best-robot-lawn-mower/"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official + secondary",
+      "note": "Depends on Worx's cloud continuing."
+    },
+    {
+      "family": "worx-landroid-vision-cloud",
+      "item": "Find My Landroid GPS module",
+      "value": 100,
+      "unit": "usd one-off (approx.)",
+      "src": [
+        "https://www.nytimes.com/wirecutter/reviews/best-robot-lawn-mower/"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "secondary",
+      "note": "Amazon WR340 copy describes Find My Landroid as included; confirm."
+    },
+    {
+      "family": "husqvarna-automower-iq",
+      "item": "Automower Connect cellular",
+      "value": "Free for life (as reported)",
+      "unit": null,
+      "src": [
+        "https://www.theverge.com/tech/978664/robot-lawnmower-review-segway-mammotion-husqvarna-roborock-dreame"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "secondary",
+      "note": "Confirm on husqvarna.com/us."
+    },
+    {
+      "family": "husqvarna-automower-iq",
+      "item": "Blades",
+      "value": "First year of blades included (as reported)",
+      "unit": null,
+      "src": [
+        "docs/research/BUYER-QUESTIONS.md"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "secondary",
+      "note": "Confirm on husqvarna.com/us."
+    },
+    {
+      "family": "segway-navimow-i2-awd",
+      "item": "4G anti-theft module",
+      "value": "Optional add-on (price not collected)",
+      "unit": null,
+      "src": [
+        "https://navimow.com/collections/navimow-i-series-robot-lawn-mower"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack)"
+    },
+    {
+      "family": "roborock-rockneo-q110h",
+      "item": "4G tracking module",
+      "value": "Sold separately (price not collected)",
+      "unit": null,
+      "src": [
+        "https://www.theverge.com/tech/978664/robot-lawnmower-review-segway-mammotion-husqvarna-roborock-dreame"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "secondary"
+    },
+    {
+      "family": "segway-navimow",
+      "item": "MowGate accessory",
+      "value": 449.99,
+      "unit": "usd",
+      "src": [
+        "https://navimow.com"
+      ],
+      "checked": "2026-10-10",
+      "confidence": "official (research pack, verified Oct 10)"
+    }
+  ],
+  "toCollect": [
+    "Blade replacement packs per brand (official part numbers and list prices)",
+    "Battery replacement list prices where published",
+    "Dock standby power and battery Wh for an electricity estimate (document assumptions or leave electricity out)",
+    "Mammotion 4G subscription price after year 3",
+    "Garage/shelter list prices per brand"
+  ]
+}

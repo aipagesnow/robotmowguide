@@ -31,7 +31,8 @@ The site skeleton is the **ladder**: products are ranked by rated lawn area, wit
 | Ink | `#14202b` | Body text and headings on paper |
 | Graphite | `#566472` | Meta text, captions-in-UI (never under photos), dates |
 | Rule | `#c9d3dc` | Hairlines, table borders, card edges |
-| Flag pink | `#e2186f` | Surveyor flagging tape: Amazon CTA fill and the single "this one" marker on the ladder. Nothing else. |
+| Flag pink | `#e2186f` | Surveyor flagging tape: the single "this one" marker on the ladder and diagram highlights. Not for text. |
+| Flag ink | `#c8125f` | Amazon CTA fill (white text on it measures 5.7:1; `#e2186f` only reaches 4.6:1, too close to the 4.5:1 floor). Hover: `#a90f50`. |
 | On-flag | `#ffffff` | Text on pink buttons |
 | Caution yellow | `#f2c230` | Rare inline warnings in diagrams only (for example "boundary slope limit"). Not for buttons or headings. |
 
@@ -50,16 +51,21 @@ Grass green is not a brand colour. If a diagram needs to show lawn, use a cyanot
 3. **Blueprint panels** (cyanotype ground, linework diagrams) are used for diagrams, the ladder and the hero band. Body copy sits on Paper or Sheet.
 4. **Picks** are numbered with drawing-style callout tags (a circle with a leader line, or a square tag), in Ink or Linework. No medals, no stars, no score badges.
 5. **Tables:** hairline rules, DM Mono for figures, sticky first column on mobile, horizontal scroll only inside the table with a visible scroll cue. Never a full-width nav scrollbar.
-6. **Disclosure:** one slim line under the H1 meta row: "As an Amazon Associate we earn from qualifying purchases." plus a link to the full disclosure page. Full text lives on the disclosure page and as a short footer line.
-7. **Amazon CTA:** Flag-pink fill, square corners, label **See on Amazon** (or "Check price on Amazon"), white text, 44px minimum tap height, `rel="nofollow sponsored"`. One primary CTA per product block.
+6. **Disclosure:** one slim line under the H1 meta row (wording in VOICE.md) plus a link to the full disclosure page, and a short "Paid links: see disclosure" repeat in Graphite beside each CTA cluster. Full text lives on the disclosure page and as a short footer line.
+7. **Amazon CTA:** Flag-ink fill, square corners, label **See {model} on Amazon** (table cells: "See on Amazon" with a model-specific `aria-label`), white text, 44px minimum tap height, `rel="nofollow sponsored noopener"`. One primary CTA per product block.
+7a. **Quick-pick box:** a title-block strip on Sheet with one row per yard type (yard label in Archivo caps, model name, CTA). Sits directly under the direct answer so the first CTA is inside the first two mobile screens.
+7b. **Key-numbers box:** a small dimensioned panel (DM Mono figures, hairline rules) styled like a drawing's dimension table. **Owner-report block:** plain list with linked sources in Graphite; no quote marks styling, no avatars, no stars.
+7c. **Researched box:** a quiet Sheet panel with a thin Rule border near the end of the page.
+7d. **Tools:** form controls look like a plan sheet's input boxes (square, 1px Rule, DM Mono values). Results appear in a blueprint panel. Visible focus ring in Linework on Paper and in white on Cyanotype.
+7e. **Sticky CTA bar** (optional, reviews only, behind a flag): ≤56px, Sheet background, model name + Flag-ink button + disclosure link, dismissible, never covers focused elements, no layout shift.
 8. **Products with no verified ASIN** show no button at all. They show a plain line in Graphite instead (wording in VOICE.md). Never a disabled button.
 9. **Updated dates** sit in the meta row under each H1 in DM Mono ("Updated 14 Oct 2026" style, US order is fine: "Updated Oct 14, 2026").
 10. **Hero:** a real Imagine yard photograph (see IMAGES.md) with the H1 visible on mobile without scrolling, or a blueprint panel with the ladder drawing. No vanity counters ("9 mowers compared") as decoration.
-11. **Navigation:** Best · Reviews · Head-to-head · Guides · How picks are chosen. Wraps on small screens; no horizontal scroll strip.
+11. **Navigation:** Best · Find my mower · Reviews · Head-to-head · Guides · How picks are chosen (only items whose pages are live). Wraps on small screens; no horizontal scroll strip.
 12. **Spacing:** generous but orderly, like a drawing sheet with margins. Align to a visible 8px grid; hairline dividers instead of big coloured blocks.
 
 ## Mobile
-- H1 and the first answer visible on a 390px-wide screen without scrolling past a giant image.
+- H1 and the first answer visible on a 390px-wide screen without scrolling past a giant image; the first CTA (quick-pick box or review primary CTA) within the first two screens.
 - Tables stack or scroll cleanly; never crush 6 columns.
 - Sticky header stays slim (56px or less).
 
@@ -69,3 +75,5 @@ Grass green is not a brand colour. If a diagram needs to show lawn, use a cyanot
 - No star ratings or scores of any kind.
 - No captions printed under photos (alt text only). No words baked into images.
 - No dev text, notes, TODOs or sample content on any public page.
+- No shared templates, components or footers copied from other Aivora sites.
+- Ladder highlights never rely on colour alone (add a tag or label).

@@ -38,6 +38,8 @@ Wordmark: "RobotMowGuide" in Archivo, expanded width (~118), weight 650, slightl
 - **Color grading:** natural greens are fine in photographs; keep them slightly cool and true, never neon or oversaturated. Photos sit inside STYLE.md chrome, which carries the brand color.
 - **Composition:** leave clear space for the H1 on hero images (left or lower third). Shoot from a person's eye height or a low drone-ish angle that shows the yard's layout.
 - **Format:** generate large (at least 2400px wide for heroes), export to AVIF/WebP at the sizes listed in IMAGES.md.
+- **AI metadata:** set IPTC `DigitalSourceType = trainedAlgorithmicMedia` on every exported file (IMAGES.md has the exiftool line). Photos are decorative; never present them as photos of tested mowers.
+- **US cues:** wide front yards, sidewalks, curbside mailboxes without numbers, US house styles; St. Augustine and palms for Florida pages, low Bermuda for Texas pages.
 
 ## Anti-spam
 Do not wallpaper sections with filler photos. Each image must help the reader understand a yard situation (slope, trees, zones, size). Diagrams usually explain better than photos on guides.
