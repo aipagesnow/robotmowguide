@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "id": "segway-navimow-x3",
+      "name": "Segway Navimow X3 Series",
+      "brand": "Segway",
+      "category": "Wire-free / Advanced",
+      "lawnSize": "Medium to Large",
+      "priceRange": "$2000–$4000+",
+      "keyFeatures": ["Wire-free navigation", "App control", "GPS / RTK", "Quiet operation"],
+      "pros": ["Reliable navigation", "Good app", "Handles slopes well"],
+      "cons": ["Higher price point", "Requires good GPS signal"],
+      "badge": "Best Overall",
+      "amazonSearch": "Segway Navimow X3"
+    },
+    {
+      "id": "mammotion-luba",
+      "name": "Mammotion LUBA Series",
+      "brand": "Mammotion",
+      "category": "Premium Wire-free",
+      "lawnSize": "Medium to Large",
+      "priceRange": "$2500–$5000+",
+      "keyFeatures": ["Advanced navigation", "High capacity", "App control", "All-wheel drive options"],
+      "pros": ["Strong performance on complex lawns", "Modern features"],
+      "cons": ["Premium pricing"],
+      "badge": "Best Premium",
+      "amazonSearch": "Mammotion LUBA"
+    },
+    {
+      "id": "husqvarna-automower",
+      "name": "Husqvarna Automower",
+      "brand": "Husqvarna",
+      "category": "Established Brand",
+      "lawnSize": "Various",
+      "priceRange": "$1500–$4000",
+      "keyFeatures": ["Proven reliability", "Boundary wire options", "Good support"],
+      "pros": ["Brand trust", "Durable"],
+      "cons": ["Some models require boundary wire"],
+      "badge": "Most Trusted",
+      "amazonSearch": "Husqvarna Automower"
+    }
+  ]
+}
