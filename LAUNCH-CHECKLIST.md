@@ -16,7 +16,7 @@ robotmowguide.com was registered at GoDaddy on Oct 10, 2026 (nameservers ns27/ns
 - [ ] **Vora:** HTTPS certificate issued; `https://robotmowguide.com` returns 200; `http://` and `www` redirect in one hop.
 
 ## 3. Amazon tag
-- [ ] **Chris:** create a new tracking ID under the US Associates account (holdlab-20, OneLink already on). Suggested: `robotmowguide-20`. Add the site URL to the account's website list.
+- [x] **Chris (10 Oct 2026):** tracking ID `robotmowguide-20` created under the US Associates account (holdlab-20, OneLink on). Still to do: confirm robotmowguide.com is in the account's website list.
 - [ ] **Chris/Vora:** set `AMAZON_ASSOCIATE_TAG` in Vercel (Production; Preview optional) and redeploy.
 - [ ] **Vora:** **verify live:** open one CTA of each type (primary, table, alternative) on home, /best, a review, a vs page and a guide. Every link is `https://www.amazon.com/dp/{ASIN}?tag=<new tag>`. The i110N (null ASIN) page shows no Amazon link.
 - [ ] **Vora:** ship scan run on production (SHIP-SCAN.md) finds no untagged, search-style or `.co.uk` links.
