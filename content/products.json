@@ -1,43 +1,44 @@
 {
   "products": [
     {
-      "id": "segway-navimow-x3",
-      "name": "Segway Navimow X3 Series",
+      "id": "segway-navimow-x430",
+      "name": "Segway Navimow X430",
       "brand": "Segway",
-      "category": "Wire-free / Advanced",
-      "lawnSize": "Medium to Large",
-      "priceRange": "$2000–$4000+",
-      "keyFeatures": ["Wire-free navigation", "App control", "GPS / RTK", "Quiet operation"],
-      "pros": ["Reliable navigation", "Good app", "Handles slopes well"],
-      "cons": ["Higher price point", "Requires good GPS signal"],
+      "category": "Premium Wire-free / 4WD",
+      "lawnSize": "Up to ~1 acre",
+      "priceRange": "$2100–$2500",
+      "keyFeatures": ["4WD / high slope rating (~84%)", "Network RTK + vision", "17\" cutting width", "Wire-free", "App control"],
+      "pros": ["Excellent on complex and sloped lawns", "Strong navigation", "Quiet", "No separate antenna in many cases"],
+      "cons": ["Higher price", "Vision can skip tall weeds", "Heavy"],
       "badge": "Best Overall",
-      "amazonSearch": "Segway Navimow X3"
+      "amazonSearch": "Segway Navimow X430"
     },
     {
-      "id": "mammotion-luba",
-      "name": "Mammotion LUBA Series",
+      "id": "mammotion-luba-3",
+      "name": "Mammotion LUBA 3 AWD",
       "brand": "Mammotion",
-      "category": "Premium Wire-free",
-      "lawnSize": "Medium to Large",
-      "priceRange": "$2500–$5000+",
-      "keyFeatures": ["Advanced navigation", "High capacity", "App control", "All-wheel drive options"],
-      "pros": ["Strong performance on complex lawns", "Modern features"],
-      "cons": ["Premium pricing"],
-      "badge": "Best Premium",
-      "amazonSearch": "Mammotion LUBA"
+      "category": "Premium Wire-free / LiDAR",
+      "lawnSize": "Medium to Large (varies by model)",
+      "priceRange": "$2300–$4000+",
+      "keyFeatures": ["LiDAR + RTK + vision", "High slope (~80%)", "All-wheel drive", "Advanced mapping"],
+      "pros": ["Great for complex, tree-covered, or steep lawns", "Strong performance"],
+      "cons": ["Premium price", "Some models require specific setup"],
+      "badge": "Best for Complex Lawns",
+      "amazonSearch": "Mammotion LUBA 3"
     },
     {
-      "id": "husqvarna-automower",
-      "name": "Husqvarna Automower",
-      "brand": "Husqvarna",
-      "category": "Established Brand",
-      "lawnSize": "Various",
-      "priceRange": "$1500–$4000",
-      "keyFeatures": ["Proven reliability", "Boundary wire options", "Good support"],
-      "pros": ["Brand trust", "Durable"],
-      "cons": ["Some models require boundary wire"],
-      "badge": "Most Trusted",
-      "amazonSearch": "Husqvarna Automower"
+      "id": "worx-landroid-vision",
+      "name": "Worx Landroid Vision",
+      "brand": "Worx",
+      "category": "Vision / Mid-range",
+      "lawnSize": "Small to Medium",
+      "priceRange": "$1000–$2000",
+      "keyFeatures": ["Camera vision + RTK options", "Easier setup", "App"],
+      "pros": ["More accessible price", "Good for simpler yards"],
+      "cons": ["May struggle more on extreme terrain"],
+      "badge": "Best Value",
+      "amazonSearch": "Worx Landroid Vision"
     }
-  ]
+  ],
+  "notes": "Prices and availability fluctuate. Always verify current Amazon listings. Expand with more models as site grows."
 }
