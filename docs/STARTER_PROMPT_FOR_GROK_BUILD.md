@@ -1,6 +1,6 @@
 # Starter Prompt for Grok Build
 
-Copy and paste the following into your Grok Build / AI coding tool:
+Copy and paste the following into your Grok Build / AI coding tool after cloning the repo:
 
 ---
 
@@ -20,16 +20,16 @@ Key requirements:
 - Responsive design
 
 Please:
-1. Initialize or continue the Astro project in this repository.
+1. Initialize the Astro project in this repository (if not already present).
 2. Set up the basic site layout (header, footer with disclosure, navigation).
 3. Create the homepage and the main pillar page "Best Robotic Lawn Mowers".
-4. Build reusable components for comparison tables and product cards.
-5. Add a few supporting guide pages.
-6. Include clear Amazon affiliate disclosure.
-7. Make it ready for Vercel deployment.
+4. Build reusable components for comparison tables, product cards, pros/cons, and CTAs.
+5. Add sample content for 2–3 products and supporting guides using the data in content/products.json and outlines in /docs/.
+6. Include clear Amazon affiliate disclosure site-wide.
+7. Make it ready for Vercel deployment (proper config, sitemap, etc.).
 
-Refer to the files in /docs/ for full research, structure, product ideas, and content outlines. Follow those specs closely.
+Refer to ALL files in /docs/ for full research, structure, product ideas, SEO checklist, image guidelines, compliance, component specs, and content outlines. Follow those specs closely. Use the products.json data as a starting point for content.
 
-Start by scaffolding the Astro project and core pages.
+Start by scaffolding the Astro project, core layout, and main pages.
 
 ---
