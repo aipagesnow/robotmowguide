@@ -54,7 +54,7 @@ export default function X4Review() {
       description={description}
       path="/reviews/segway-navimow-x4"
       crumbs={crumbs}
-      whatChanged="October 13, 2026: split the status line into short sentences, pointed the slope row at the hills page, and linked the Worx review."
+      whatChanged="October 13, 2026: the slope row points at the hills page, and the Worx review is linked."
       disclosure
     >
       <StatusLine>

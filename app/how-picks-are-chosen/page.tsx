@@ -19,7 +19,7 @@ export default function MethodPage() {
       description={description}
       path="/how-picks-are-chosen"
       updated={RECHECKED}
-      whatChanged="October 13, 2026: documented the mower finder filters."
+      whatChanged="October 13, 2026: explains which yard facts the mower finder uses."
     >
       <p className="measure">
         A pick starts from the yard. The ladder places each current model at the lawn area its maker rates,

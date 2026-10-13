@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       description={description}
       path="/privacy"
       updated={RECHECKED}
-      whatChanged="October 13, 2026: named the tool_use event for the finder and the slope converter."
+      whatChanged="October 13, 2026: spells out what the finder and the slope converter send, and what they leave out."
     >
       <p className="measure">
         {PUBLISHER} publishes RobotMowGuide. For a privacy question, email{" "}
