@@ -238,31 +238,72 @@ a:hover {
 
 .home-hero-scrim {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -1.25rem;
-  right: -1.25rem;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background: rgb(244 246 248 / 0.96);
 }
 
+.home-hero-fade {
+  z-index: 2;
+}
+
+.home-hero-copy {
+  z-index: 3;
+}
+
 @media (max-width: 767px) {
-  .home-hero {
-    padding-bottom: 4.75rem;
+  .home-hero-media {
+    position: relative;
+    inset: auto;
+    height: 5.5rem;
   }
 
-  .home-hero-scrim {
-    bottom: -1.15rem;
-    background: linear-gradient(
-      to bottom,
-      rgb(244 246 248 / 0.96) 0,
-      rgb(244 246 248 / 0.96) calc(100% - 1.15rem),
-      rgb(244 246 248 / 0) 100%
-    );
+  .home-hero-media img {
+    object-position: center 34%;
   }
 
+  .home-hero-media::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.25rem;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgb(244 246 248 / 0), #f4f6f8);
+  }
+
+  .home-hero-scrim,
   .home-hero-fade {
-    height: 1.15rem;
+    display: none;
+  }
+
+  .home-hero-copy {
+    padding: 0.05rem 0 0.15rem;
+    background: #f4f6f8;
+  }
+
+  .home-hero-copy h1 {
+    font-size: 1.55rem;
+    line-height: 1.06;
+    margin-bottom: 0.15rem;
+  }
+
+  .home-hero-copy .meta-row {
+    font-size: 0.78rem;
+    line-height: 1.22;
+  }
+
+  .home-hero-copy > p {
+    margin-top: 0.25rem;
+    font-size: 0.92rem;
+    line-height: 1.3;
+  }
+
+  .home-hero + .wrap > :first-child {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -276,15 +317,15 @@ a:hover {
   }
 
   .home-hero-scrim {
-    right: -18rem;
+    --hero-copy-end: calc((100% - min(1120px, 100% - 2rem)) / 2 + 41rem);
     background: linear-gradient(
       to right,
       rgb(244 246 248 / 0.96) 0,
-      rgb(244 246 248 / 0.96) calc(100% - 18rem),
-      rgb(244 246 248 / 0.88) calc(100% - 14rem),
-      rgb(244 246 248 / 0.45) calc(100% - 9rem),
-      rgb(244 246 248 / 0.12) calc(100% - 4rem),
-      rgb(244 246 248 / 0) 100%
+      rgb(244 246 248 / 0.96) var(--hero-copy-end),
+      rgb(244 246 248 / 0.78) calc(var(--hero-copy-end) + 8rem),
+      rgb(244 246 248 / 0.42) calc(var(--hero-copy-end) + 16rem),
+      rgb(244 246 248 / 0.14) calc(var(--hero-copy-end) + 24rem),
+      rgb(244 246 248 / 0) calc(var(--hero-copy-end) + 34rem)
     );
   }
 

@@ -67,10 +67,10 @@ export default function HomePage() {
       />
       <section className="home-hero">
         <HomeHeroPhoto />
+        <div className="home-hero-scrim" aria-hidden="true" />
         <div className="home-hero-fade" aria-hidden="true" />
         <div className="wrap">
           <div className="home-hero-copy">
-            <div className="home-hero-scrim" aria-hidden="true" />
             <h1>{title}</h1>
             <MetaRow
               updated={PUBLISHED}
