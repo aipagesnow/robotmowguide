@@ -340,6 +340,106 @@ export function AffiliateDiagram() {
   );
 }
 
+export function CanopyDiagram() {
+  return (
+    <Slot id="dia-canopy">
+      <Frame
+        title="Plan showing where tree canopy weakens satellite positioning and how other navigation takes over"
+        desc="Example plan, not a survey. A canopy circle is marked as a weak satellite fix. A mower glyph in the open is labeled satellite or network RTK. A mower glyph under the canopy is labeled LiDAR or camera. The mower needs sky along its path, not only at an antenna."
+        viewBox="0 0 720 460"
+      >
+        <rect x="60" y="40" width="600" height="340" fill="none" stroke="#ffffff" />
+        <text x="76" y="68" fill="#ffffff" fontSize="16">Example lawn</text>
+        <circle cx="430" cy="210" r="110" fill="#1d4f80" stroke="#dbe7f3" />
+        <text x="430" y="200" fill="#ffffff" fontSize="14" textAnchor="middle">Canopy</text>
+        <text x="430" y="222" fill="#dbe7f3" fontSize="12" textAnchor="middle">Weak satellite fix</text>
+        <rect x="120" y="160" width="36" height="22" fill="none" stroke="#f2c230" />
+        <text x="168" y="176" fill="#f2c230" fontSize="13">Open sky: RTK</text>
+        <rect x="400" y="250" width="36" height="22" fill="none" stroke="#ffffff" />
+        <text x="360" y="300" fill="#ffffff" fontSize="13" textAnchor="middle">Under canopy: LiDAR or camera</text>
+        <text x="70" y="420" fill="#dbe7f3" fontSize="13">The mower needs sky along its path, not only at an antenna.</text>
+      </Frame>
+    </Slot>
+  );
+}
+
+export function ZonesMap() {
+  return (
+    <Slot id="dia-zones">
+      <Frame
+        title="Map of a yard with front and back zones, a transit path and a no-go bed"
+        desc="Example map, not a brand app and not a survey. A front zone and a back zone are joined by a side passage. A flower bed is marked no-go. A bed beyond a fence is marked as a zone you would carry the mower to."
+        viewBox="0 0 720 460"
+      >
+        <rect x="70" y="40" width="250" height="160" fill="none" stroke="#ffffff" />
+        <text x="84" y="68" fill="#ffffff" fontSize="15">Front zone</text>
+        <rect x="400" y="220" width="250" height="160" fill="none" stroke="#ffffff" />
+        <text x="414" y="248" fill="#ffffff" fontSize="15">Back zone</text>
+        <rect x="250" y="150" width="160" height="90" fill="none" stroke="#dbe7f3" strokeDasharray="5 4" />
+        <text x="330" y="200" fill="#dbe7f3" fontSize="13" textAnchor="middle">Side passage</text>
+        <rect x="110" y="120" width="70" height="40" fill="none" stroke="#e2186f" />
+        <text x="145" y="144" fill="#e2186f" fontSize="12" textAnchor="middle">No-go bed</text>
+        <rect x="560" y="50" width="90" height="60" fill="none" stroke="#f2c230" />
+        <text x="605" y="76" fill="#f2c230" fontSize="12" textAnchor="middle">Carry zone</text>
+        <text x="605" y="92" fill="#f2c230" fontSize="11" textAnchor="middle">past a fence</text>
+        <text x="70" y="430" fill="#dbe7f3" fontSize="13">Example only. A passage the mower cannot use splits the yard into two maps, or into a carry.</text>
+      </Frame>
+    </Slot>
+  );
+}
+
+export function PassageDiagram() {
+  return (
+    <Slot id="dia-passage-width">
+      <Frame
+        title="Gauge comparing mower widths with gate and side-passage widths"
+        desc="Dimension lines only. The Navimow X430 body width is 24 inches. The LUBA 3 AWD 3000 narrowest gap is 27.6 inches. The LiDAX Ultra 2000 listing says 23.6 inch paths. Example gates at 36 and 32 inches are not product specs."
+        viewBox="0 0 720 420"
+      >
+        <text x="40" y="40" fill="#ffffff" fontSize="16">Published limits, then two example gates</text>
+        {[
+          ["LiDAX Ultra 2000 path", 23.6, 236],
+          ["X430 body width", 24, 240],
+          ["LUBA 3 gap", 27.6, 276],
+          ["Wider example gate", 32, 320],
+          ["Wider example gate, 36 in", 36, 360],
+        ].map(([label, inches, width], index) => (
+          <g key={index}>
+            <text x="40" y={80 + index * 60} fill="#dbe7f3" fontSize="14">{label} · {inches} in</text>
+            <line x1="40" y1={96 + index * 60} x2={40 + Number(width)} y2={96 + index * 60} stroke="#ffffff" strokeWidth="8" />
+          </g>
+        ))}
+        <text x="40" y="390" fill="#dbe7f3" fontSize="13">Measure your passage. The bars are the published figures, not a promise the mower fits.</text>
+      </Frame>
+    </Slot>
+  );
+}
+
+export function SeasonsDiagram() {
+  const steps = [
+    "Spring: put the dock back and check the map",
+    "Summer: daily mowing on the schedule",
+    "Fall: leaves can hide edges and stop a camera",
+    "Winter: use the storage temperature in that model's manual",
+  ];
+  return (
+    <Slot id="dia-seasons">
+      <Frame
+        title="Timeline of a robot mower's year from spring setup to winter storage"
+        desc="Four seasons. Winter points at the storage temperature in the model's manual. This diagram does not invent a charge level."
+        viewBox="0 0 720 400"
+      >
+        {steps.map((step, index) => (
+          <g key={step}>
+            <rect x="40" y={30 + index * 80} width="640" height="60" fill="none" stroke="#ffffff" />
+            <text x="56" y={66 + index * 80} fill="#ffffff" fontSize="16">{step}</text>
+          </g>
+        ))}
+      </Frame>
+    </Slot>
+  );
+}
+
 export function SpecPlate({ familyId, slotId, modelName }: { familyId: string; slotId: string; modelName: string }) {
   const family = getFamily(familyId);
   const variant = family.variants.find((item) => item.model === modelName) || primaryVariant(family);

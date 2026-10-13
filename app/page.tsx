@@ -51,7 +51,7 @@ export default function HomePage() {
           <h1>{title}</h1>
           <MetaRow
             updated={PUBLISHED}
-            whatChanged="October 13, 2026: added a quick pick under the answer and removed the empty caption panel."
+            whatChanged="October 13, 2026: linked the new family reviews, the winter guide, and the front-and-back guide."
           />
           <p className="measure">
             Start with the lawn, not the brand. These rankings use the area each current model is rated for,
@@ -182,6 +182,12 @@ export default function HomePage() {
             <li>
               <Link href="/guides/fcc-robot-mower-ban">Are robot mowers banned in the US? The 2026 FCC rule, tracked</Link>
             </li>
+            <li>
+              <Link href="/guides/robot-mower-winter-storage">How do I store a robot mower for winter?</Link>
+            </li>
+            <li>
+              <Link href="/guides/robot-mower-front-and-back-yard">Can one robot mower do the front yard and the back yard?</Link>
+            </li>
           </ul>
         </section>
         <section>
@@ -199,11 +205,19 @@ export default function HomePage() {
             <li>
               <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review: LiDAR on a steep half acre</Link>
             </li>
+            <li>
+              <Link href="/reviews/segway-navimow-i-series">Navimow i series review: a quarter acre, with the i1 models as the previous generation</Link>
+            </li>
+            <li>
+              <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD review: a small yard and a high cut</Link>
+            </li>
+            <li>
+              <Link href="/reviews/mova-lidax-ultra">MOVA LiDAX Ultra review: LiDAR from a quarter acre to three-quarters</Link>
+            </li>
+            <li>
+              <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H review: a quarter acre on RTK</Link>
+            </li>
           </ul>
-          <p className="measure">
-            The Navimow i210 AWD does not have a family review yet. It is a pick on{" "}
-            <Link href="/best">the best-mowers page</Link>.
-          </p>
         </section>
       </div>
     </article>

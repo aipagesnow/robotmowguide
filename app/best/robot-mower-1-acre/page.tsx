@@ -61,7 +61,7 @@ export default function AcrePage() {
         { name: "1 acre", path: "/best/robot-mower-1-acre" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published."
+      whatChanged="October 13, 2026: first published. Linked the half-acre page."
       disclosure
     >
       <p className="measure">
@@ -205,6 +205,7 @@ export default function AcrePage() {
           { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
+          { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },

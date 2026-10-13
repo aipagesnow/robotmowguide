@@ -7,7 +7,7 @@ import { RECHECKED } from "@/lib/site";
 
 const title = "Robot mower guides";
 const description =
-  "US guides on mower size, navigation, and the 2026 FCC rule for robot mowers already on sale.";
+  "US guides on mower size, navigation, winter storage, front and back yards, and the 2026 FCC rule.";
 
 export const metadata: Metadata = pageMeta({ title, description, path: "/guides" });
 
@@ -18,11 +18,11 @@ export default function GuidesIndex() {
       description={description}
       path="/guides"
       updated={RECHECKED}
-      whatChanged="October 13, 2026: added the FCC rule tracker."
+      whatChanged="October 13, 2026: added winter storage and the front-and-back yard guide."
     >
       <p className="measure">
         These guides answer a yard question before they name a mower. Specs they cite were checked on Oct 10,
-        2026.
+        2026, except where a page names a later check.
       </p>
       <ul className="grid gap-4 pl-5">
         <li>
@@ -41,6 +41,18 @@ export default function GuidesIndex() {
           <Link href="/guides/fcc-robot-mower-ban">Are robot mowers banned in the US? The 2026 FCC rule, tracked</Link>
           <p className="m-0">
             What the July 28, 2026 Covered List change does, and does not do, for mowers already on sale.
+          </p>
+        </li>
+        <li>
+          <Link href="/guides/robot-mower-winter-storage">How do I store a robot mower for winter?</Link>
+          <p className="m-0">
+            The Q110H storage temperature, and the US pages that do not include a winter checklist.
+          </p>
+        </li>
+        <li>
+          <Link href="/guides/robot-mower-front-and-back-yard">Can one robot mower do the front yard and the back yard?</Link>
+          <p className="m-0">
+            A zones map and a passage-width gauge that compares your opening with published figures.
           </p>
         </li>
       </ul>

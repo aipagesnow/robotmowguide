@@ -37,7 +37,7 @@ export default function HillsPage() {
         { name: "Hills", path: "/best/robot-mower-for-hills" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published."
+      whatChanged="October 13, 2026: first published. Linked the half-acre page."
       disclosure
     >
       <p className="measure">
@@ -139,6 +139,7 @@ export default function HillsPage() {
           { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
           { href: "/best/robot-mower-1-acre", label: "Robot mowers for about 1 acre" },
+          { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
         ]}
       />

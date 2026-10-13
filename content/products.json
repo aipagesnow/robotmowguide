@@ -244,6 +244,20 @@
       "method": "search-snapshot",
       "accessed": "2026-10-10"
     },
+    "q110h-manual": {
+      "url": "https://manuals.plus/roborock/q1-series-rockneo-robotic-lawn-mower-manual",
+      "title": "RockNeo Q1 series user manual, English technical data naming the Q110H",
+      "method": "fetched",
+      "accessed": "2026-10-13",
+      "note": "English table: Q110H, model RRTR1BUT, 1/4 acre, cutting height 40–80 mm (1.57–3.15 in), storage temperature −20–55°C."
+    },
+    "q110h-manual-ce": {
+      "url": "https://www.sabre-france.com/wp-content/uploads/2026/04/Manuel-RockNeo-Q1-Series-CE-Version-EN-FR.pdf",
+      "title": "RockNeo Q1 series CE manual (Q105 and Q110, not the Q110H)",
+      "method": "fetched",
+      "accessed": "2026-10-13",
+      "note": "Technical data lists cutting height 20–60 mm for the Q105 and Q110."
+    },
     "mova-1000": {
       "url": "https://us.mova.tech/products/mova-lidax-ultra-1000-robot-lawn-mower",
       "title": "MOVA LiDAX Ultra 1000, MOVA US",
@@ -1592,10 +1606,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GL7WVJK2",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GL7WVJK2",
             "titleAtCheck": "Mammotion LUBA mini 2 1500H Robot Lawn Mower, 0.37 Acre ... Cutting Height 2.2\"-4.0\"",
-            "note": "Rechecked Oct 10, 2026"
+            "note": "Rechecked Oct 13, 2026. Title still names the LUBA mini 2 1500H, 0.37 acre, cutting height 2.2–4.0 in."
           },
           "manufacturerListPrice": {
             "usd": 1999,
@@ -1635,6 +1649,13 @@
           "theme": "Owners ask where promised firmware updates are",
           "src": [
             "https://www.reddit.com/r/MammotionTechnology/comments/1w23n3o/"
+          ],
+          "tone": "issue"
+        },
+        {
+          "theme": "A new LUBA mini 2 AWD owner on sandy Bahia grass says tank-style turns tore thin shaded edges",
+          "src": [
+            "https://www.reddit.com/r/MammotionTechnology/comments/1sxiz3u/"
           ],
           "tone": "issue"
         },
@@ -1725,10 +1746,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0G3CMJ78Q",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0G3CMJ78Q",
-            "titleAtCheck": "MOVA LiDAX Ultra 1000 Robot Lawn Mower Wire Free for 1/4 Acre ...",
-            "note": "Checked Oct 10, 2026"
+            "titleAtCheck": "MOVA LiDAX Ultra 1000 Robot Lawn Mower Wire Free for 1/4 Acre, RTK-Free ... Cutting Height 1.2\"-3.9\"",
+            "note": "Rechecked Oct 13, 2026. Title still names the LiDAX Ultra 1000."
           },
           "manufacturerListPrice": {
             "usd": 1299,
@@ -1775,7 +1796,16 @@
               "src": [
                 "amz-mova-2000"
               ],
-              "checked": "2026-10-10"
+              "checked": "2026-10-13"
+            },
+            "passage": {
+              "value": 23.6,
+              "unit": "in",
+              "src": [
+                "amz-mova-2000"
+              ],
+              "checked": "2026-10-13",
+              "note": "Listing bullet says it handles 23.6 in paths. Not a measured body width."
             },
             "connectivity": {
               "value": "4G included; Wirecutter reports MOVA GPS at $50/yr after year 1",
@@ -1789,10 +1819,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0G3CBW2H8",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0G3CBW2H8",
-            "titleAtCheck": "MOVA LiDAX Ultra 2000 Robot Lawn Mower with 4G for 0.5 Acre ...",
-            "note": "Checked Oct 10, 2026"
+            "titleAtCheck": "MOVA LiDAX Ultra 2000 Robot Lawn Mower with 4G for 0.5 Acre, No Wire No RTK ... Cut Height 1.2\"-3.9\", 45% Slope",
+            "note": "Rechecked Oct 13, 2026. Title still names the LiDAX Ultra 2000. A bullet says 23.6 in paths."
           },
           "manufacturerListPrice": {
             "usd": 1799,
@@ -1916,10 +1946,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GGR6NJBK",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GGR6NJBK",
-            "titleAtCheck": "MOVA LiDAX Ultra 3000 AWD Robot Lawn Mower Wire Free RTK Free for up to 0.75 Acre ...",
-            "note": "Checked Oct 10, 2026"
+            "titleAtCheck": "MOVA LiDAX Ultra 3000 AWD Robot Lawn Mower Wire Free RTK Free for up to 0.75 Acre ... 80% Slopes, Cutting Height 1.2–3.9",
+            "note": "Rechecked Oct 13, 2026. Title still names the LiDAX Ultra 3000 AWD."
           },
           "otherAsins": [
             {
@@ -1937,8 +1967,23 @@
           }
         }
       ],
-      "ownerReports": [],
-      "ownerReportsNote": "Few independent owner reports found (research pack gap). Say so on the page rather than padding.",
+      "ownerReports": [
+        {
+          "theme": "A buyer who paid for a LiDAX Ultra 2000, one month in, skipped the AWD because the yard has little slope and plans a second map for steeper side yards",
+          "src": [
+            "https://www.reddit.com/r/MOVASmartGardenHub/comments/1ujt6ch/"
+          ],
+          "tone": "mixed"
+        },
+        {
+          "theme": "A LiDAX Ultra 1000 owner, about two weeks in, describes auto-mapping on a yard with slopes, beds, and trees",
+          "src": [
+            "https://www.reddit.com/r/roboticLawnmowers/comments/1sg5idw/"
+          ],
+          "tone": "mixed"
+        }
+      ],
+      "ownerReportsNote": "Few independent owner reports exist yet. Several other posts on r/MOVASmartGardenHub say MOVA provided the unit. Do not treat those as ordinary owner reports. Say plainly that few owner reports exist yet.",
       "notFor": [
         "Steep yards on the 1000/2000 (45%); only the 3000 AWD is rated 80%",
         "Hot full-sun yards: same LiDAR heat question as other LiDAR mowers (no MOVA-specific reports yet)"
@@ -2007,22 +2052,39 @@
               "checked": "2026-10-10"
             },
             "cuttingWidth": {
-              "value": 8.7,
+              "value": 8.66,
               "unit": "in",
               "src": [
-                "verge",
-                "fdr-q110h"
+                "q110h-manual"
               ],
-              "checked": "2026-10-10"
+              "checked": "2026-10-13",
+              "note": "22 cm in the Q110H technical data. Secondary pages round this to 8.7 in."
+            },
+            "bodyWidth": {
+              "value": 16.54,
+              "unit": "in",
+              "src": [
+                "q110h-manual"
+              ],
+              "checked": "2026-10-13",
+              "note": "Manual L×W×H is 625×420×270 mm. The 420 mm side is the width. Not a minimum passage."
             },
             "cuttingHeight": {
-              "value": "CONFLICT: 0.8–2.4 in (The Verge) vs 1.6–3.1 in (spec aggregator citing Roborock US)",
+              "value": "1.57–3.15",
+              "unit": "in",
               "src": [
-                "verge",
-                "fdr-q110h"
+                "q110h-manual"
               ],
-              "checked": "2026-10-10",
-              "note": "Resolve from the Roborock US manual before publishing; matters for grass-type advice"
+              "checked": "2026-10-13",
+              "note": "Q110H line in the English technical data: 40–80 mm. The CE Q105/Q110 manual lists 20–60 mm (about 0.8–2.4 in). Show both. Do not average."
+            },
+            "storageTemperature": {
+              "value": "−4°F to 131°F, with 50–95°F recommended",
+              "src": [
+                "q110h-manual"
+              ],
+              "checked": "2026-10-13",
+              "note": "Manual: storage −20–55°C (−4–131°F); 10–35°C recommended. Same band for the battery."
             },
             "connectivity": {
               "value": "Wi-Fi + Bluetooth; 4G tracking module sold separately",
@@ -2057,10 +2119,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GRVYN12B",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GRVYN12B",
             "titleAtCheck": "Roborock RockNeo Q110H Robot Lawn Mower, Wire-Free ... 45% Slope, Covers Up to 1/4 Acre",
-            "note": "Checked Oct 10, 2026"
+            "note": "Rechecked Oct 13, 2026. Title still names the RockNeo Q110H."
           },
           "manufacturerListPrice": {
             "usd": 1299,
@@ -2073,9 +2135,9 @@
         }
       ],
       "ownerReports": [],
-      "ownerReportsNote": "Use The Verge's hands-on notes (attributed) rather than owner threads until owner reports are found.",
+      "ownerReportsNote": "Checked r/Roborock and r/roboticLawnmowers on Oct 13, 2026. Threads that turned up name the Q110 or Q105, not the US Q110H. Do not use those as Q110H owner reports. Say that few Q110H owner reports exist yet.",
       "notFor": [
-        "Tall-cut lawns until the cutting-height conflict is resolved",
+        "Lawns kept taller than 3.15 in",
         "Heavy tree cover (RTK-led navigation)"
       ],
       "plannedPages": [
@@ -2174,10 +2236,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0G8173C6Y",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0G8173C6Y",
-            "titleAtCheck": "Segway Navimow i210 AWD Robot Lawn Mower Wire Free, 0.25 Acre, 45% Slopes",
-            "note": "Checked Oct 10, 2026"
+            "titleAtCheck": "Segway Navimow i210 AWD Robot Lawn Mower Wire Free, 0.25 Acre, 45% Slopes | ... 2–3.6-Inch Cutting Height",
+            "note": "Rechecked Oct 13, 2026. Title still names the i210 AWD."
           },
           "manufacturerListPrice": {
             "usd": 1299,
@@ -2253,10 +2315,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0CX8LL2PC",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0CX8LL2PC",
-            "titleAtCheck": "Segway Navimow i105N Robot Lawn Mower Perimeter Wire Free 1/8 Acre ...",
-            "note": "Checked Oct 10, 2026; Amazon flags i206 AWD as newer version"
+            "titleAtCheck": "Segway Navimow i105N Robot Lawn Mower Perimeter Wire Free 1/8 Acre RTK+Vision ...",
+            "note": "Rechecked Oct 13, 2026. Title still names the i105N. Treated as the previous generation."
           }
         },
         {

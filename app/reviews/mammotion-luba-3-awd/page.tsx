@@ -56,7 +56,7 @@ export default function LubaReview() {
       description={description}
       path="/reviews/mammotion-luba-3-awd"
       crumbs={crumbs}
-      whatChanged="October 13, 2026: split the status line into short sentences, pointed the slope row at the hills page, and linked the Dreame review."
+      whatChanged="October 13, 2026: linked the Dreame 2500 comparison beside the X430 comparison."
       disclosure
     >
       <StatusLine>
@@ -350,6 +350,7 @@ export default function LubaReview() {
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
           { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
+          { href: "/vs/dreame-a3-awd-pro-vs-luba-3-awd", label: "Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
         ]}

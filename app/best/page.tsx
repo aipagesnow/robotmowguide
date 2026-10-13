@@ -133,7 +133,7 @@ export default function BestPage() {
       title={title}
       description={description}
       path="/best"
-      whatChanged="October 13, 2026: added the finder, linked the hills converter and the new reviews, and cited the WR344 listing for cutting width and height."
+      whatChanged="October 13, 2026: linked the Navimow i series review and the half-acre, small-yard, and under-trees pages."
       disclosure
     >
       <p className="measure">
@@ -313,8 +313,9 @@ export default function BestPage() {
         />
         <p className="measure">
           The i105N and i110N are the previous generation. The i105N listing points to the i206 AWD as a
-          newer version. This page does not add Amazon buttons for those older models. The i210 is the one
-          rated {formatAcres(i210.acres)} at {publishedSlope(i210.slope, i210.degrees)}.
+          newer version. This page does not add Amazon buttons for those older models. The family write-up
+          is the <Link href="/reviews/segway-navimow-i-series">Navimow i series review</Link>. The i210 is
+          the one rated {formatAcres(i210.acres)} at {publishedSlope(i210.slope, i210.degrees)}.
         </p>
         <h3>Who it is not for</h3>
         <ul className="grid gap-2 pl-5">
@@ -744,12 +745,15 @@ export default function BestPage() {
           </li>
           <li>
             If trees cover the path, read{" "}
-            <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link> before you pick a
-            network-RTK mower.
+            <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link> and the{" "}
+            <Link href="/best/robot-mower-under-trees">under-trees page</Link> before you pick a network-RTK
+            mower.
           </li>
           <li>
             Measure the narrowest passage. The X430 body is 24 in. The LUBA 3 gap is 27.6 in. The other three
-            picks have no passage width on the sheets we checked.
+            picks have no passage width on the sheets we checked. The{" "}
+            <Link href="/guides/robot-mower-front-and-back-yard">front-and-back guide</Link> compares a gap
+            you measure with the figures that are published.
           </li>
           <li>
             Read the owner threads on the two reviews, and the status line, before you use a button.
@@ -761,7 +765,14 @@ export default function BestPage() {
           items={[
             {
               q: "How big a mower do I need for a half acre?",
-              a: "Add the front and back grass first. A half acre is 21,780 sq ft. The Dreame 2500 is rated 0.62 acre. If the yard is wooded and split into two zones, our 1.25× rule plans on less than the rated acre. The size guide shows the arithmetic.",
+              a: (
+                <>
+                  Add the front and back grass first. A half acre is 21,780 sq ft. The{" "}
+                  <Link href="/best/robot-mower-half-acre">half-acre page</Link> compares the ratings. If the
+                  yard is wooded and split into two zones, our 1.25× rule plans on less than the rated acre.
+                  The size guide shows the arithmetic.
+                </>
+              ),
             },
             {
               q: "What if the yard is steep?",
@@ -800,11 +811,21 @@ export default function BestPage() {
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
           { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },
           { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/reviews/segway-navimow-i-series", label: "Navimow i series review" },
+          { href: "/reviews/mammotion-luba-mini-2-awd", label: "LUBA mini 2 AWD review" },
+          { href: "/reviews/mova-lidax-ultra", label: "MOVA LiDAX Ultra review" },
+          { href: "/reviews/roborock-rockneo-q110h", label: "RockNeo Q110H review" },
           { href: "/best/robot-mower-1-acre", label: "Which robot mower for about 1 acre?" },
+          { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
+          { href: "/best/robot-mower-small-yard", label: "Which robot mower for a small yard?" },
+          { href: "/best/robot-mower-under-trees", label: "Which robot mower under trees?" },
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
+          { href: "/vs/dreame-a3-awd-pro-vs-luba-3-awd", label: "Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
+          { href: "/guides/robot-mower-winter-storage", label: "How do I store a robot mower for winter?" },
+          { href: "/guides/robot-mower-front-and-back-yard", label: "Front yard and back yard" },
           { href: "/how-picks-are-chosen", label: "How picks are chosen" },
         ]}
       />

@@ -22,6 +22,17 @@ function slopeCell(variant: Variant): string {
   return note ? `${base}. ${note}` : base;
 }
 
+function statusCell(family: Family, variant: Variant): string {
+  const date = formatDate(variant.statusDate || family.statusDate);
+  if (variant.status === "superseded") {
+    return `Replaced by a newer model but still sold as of ${date}. Current model on this page: ${family.primaryVariant}.`;
+  }
+  if (variant.status === "discontinued") {
+    return `No longer sold as of ${date}.`;
+  }
+  return `On sale in the US as of ${date}.`;
+}
+
 function publicNote(note?: string): string | undefined {
   if (!note) return undefined;
   if (/research pack|before publishing|confirm|re-check|MODELS|Amazon title|aggregator|manual/i.test(note)) {
@@ -66,7 +77,7 @@ export function VariantTable({
                   <td className="dim">{areaCell(variant)}</td>
                   <td className="dim">{slopeCell(variant)}</td>
                   <td>{differences[variant.model] || "Not published"}</td>
-                  <td>On sale in the US as of {formatDate(family.statusDate)}.</td>
+                  <td>{statusCell(family, variant)}</td>
                   <td>
                     <ProductLink
                       asin={variant.asin}

@@ -297,7 +297,7 @@
         "/guides/rtk-vs-lidar-vs-vision"
       ],
       "round": 3,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan showing where tree canopy weakens satellite positioning and how other navigation takes over",
@@ -845,7 +845,7 @@
         "/guides/robot-mower-winter-storage"
       ],
       "round": 3,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Timeline of a robot mower's year from spring setup to winter storage",
@@ -877,7 +877,7 @@
         "/guides/robot-mower-front-and-back-yard"
       ],
       "round": 3,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Map of a yard with front and back zones, a transit path and a no-go bed",
@@ -893,7 +893,7 @@
         "/guides/robot-mower-front-and-back-yard"
       ],
       "round": 3,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Gauge comparing mower widths with gate and side-passage widths",

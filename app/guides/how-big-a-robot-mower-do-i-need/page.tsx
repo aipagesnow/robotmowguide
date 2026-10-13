@@ -42,7 +42,7 @@ export default function SizeGuide() {
       description={description}
       path="/guides/how-big-a-robot-mower-do-i-need"
       crumbs={crumbs}
-      whatChanged="October 13, 2026: linked the acre page and the mower finder."
+      whatChanged="October 13, 2026: linked the front-and-back guide for a yard split by the house."
     >
       <p className="measure">
         Buy for the grass you mow, not the lot on the deed. Use the maker’s rated acres as the ceiling, then
@@ -176,7 +176,14 @@ export default function SizeGuide() {
           },
           {
             q: "My front yard and back yard are separate. Does that count as one area?",
-            a: "Add the grass, then ask whether the mower can pass between them or needs a second map and a second dock. The Dreame 2500 page says two maps each need a charging station. Passage width is a separate check on the review pages that publish a body width or a minimum gap.",
+            a: (
+              <>
+                Add the grass, then ask whether the mower can pass between them or needs a second map and a
+                second dock. The Dreame 2500 page says two maps each need a charging station. The{" "}
+                <Link href="/guides/robot-mower-front-and-back-yard">front-and-back guide</Link> compares your
+                opening with the published widths.
+              </>
+            ),
           },
         ]}
       />
@@ -184,6 +191,8 @@ export default function SizeGuide() {
         links={[
           { href: "/best", label: "Best robot lawn mowers for US yards" },
           { href: "/best/robot-mower-1-acre", label: "Which robot mower for about 1 acre?" },
+          { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
+          { href: "/guides/robot-mower-front-and-back-yard", label: "Front yard and back yard" },
           { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/how-picks-are-chosen", label: "How picks are chosen" },

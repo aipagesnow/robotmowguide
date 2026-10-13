@@ -18,6 +18,7 @@ export type Variant = {
   specs?: Record<string, Sourced>;
   asin: string | null;
   status?: string;
+  statusDate?: string;
 };
 
 export type OwnerReport = {
@@ -167,6 +168,10 @@ const REVIEW_HREF: Record<string, string> = {
   "mammotion-luba-3-awd": "/reviews/mammotion-luba-3-awd",
   "worx-landroid-vision-cloud": "/reviews/worx-landroid-vision-cloud",
   "dreame-a3-awd-pro": "/reviews/dreame-a3-awd-pro",
+  "mammotion-luba-mini-2-awd": "/reviews/mammotion-luba-mini-2-awd",
+  "mova-lidax-ultra": "/reviews/mova-lidax-ultra",
+  "roborock-rockneo-q110h": "/reviews/roborock-rockneo-q110h",
+  "segway-navimow-i2-awd": "/reviews/segway-navimow-i-series",
 };
 
 export function reviewHref(familyId: string): string | undefined {

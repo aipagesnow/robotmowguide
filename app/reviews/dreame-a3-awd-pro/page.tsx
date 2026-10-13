@@ -58,7 +58,7 @@ export default function DreameReview() {
       path="/reviews/dreame-a3-awd-pro"
       crumbs={crumbs}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published."
+      whatChanged="October 13, 2026: first published. Linked the comparison with the LUBA 3 AWD 3000."
       factCheck={FACT}
       disclosure
     >
@@ -327,6 +327,7 @@ export default function DreameReview() {
           { href: "/best#dreame-a3-2500", label: "Dreame A3 AWD Pro 2500 on the best-mowers page" },
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
+          { href: "/vs/dreame-a3-awd-pro-vs-luba-3-awd", label: "Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
         ]}
