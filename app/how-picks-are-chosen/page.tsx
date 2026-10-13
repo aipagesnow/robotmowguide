@@ -93,7 +93,8 @@ export default function MethodPage() {
         Yard photographs are licensed photos from Pexels of real yards. They do not show a mower, and they
         are not from a test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
         Lost Mike, James Anthony, Viktoria B., Clay Elliot, Pixabay, Max Vakhtbovych, Jonathan, Magda
-        Ehlers, and Dianne, on Pexels.
+        Ehlers, Dianne, Viaceslav Kat, Alexander F Ungerer, wr heustis, Al Rashed, and Anastasiya
+        Pavlova, on Pexels.
       </p>
       <Faq
         items={[

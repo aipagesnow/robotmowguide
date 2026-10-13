@@ -87,7 +87,7 @@ export default function FrontAndBackGuide() {
           pageType="guide"
         />
       </CtaCluster>
-      <YardPhoto id="photo-front-street" />
+      <YardPhoto id="photo-front-back" />
       <ZonesMap />
       <p className="measure">A passage the mower cannot use splits the yard.</p>
       <h2>Published widths, and what each one is</h2>

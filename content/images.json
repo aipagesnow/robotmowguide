@@ -764,15 +764,15 @@
         "/images/card-q110h-1200.avif",
         "/images/card-q110h-1200.webp"
       ],
-      "alt": "Green front lawns in front of two-story houses on a sunny street",
+      "alt": "A wide green lawn and curved steps in front of a brick house under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Crop leaves out the house number beside the door. Same photograph as photo-small-yard.",
-      "sourceUrl": "https://www.pexels.com/photo/photo-of-a-house-exterior-5071177/",
-      "photographer": "Curtis Adams",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/8143683/",
+      "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
-      "attribution": "Photo by Curtis Adams on Pexels"
+      "attribution": "Photo by Max Vakhtbovych on Pexels"
     },
     {
       "id": "plate-q110h",
@@ -1213,7 +1213,6 @@
       "id": "photo-front-street",
       "kind": "photo",
       "pages": [
-        "/guides/robot-mower-front-and-back-yard",
         "/guides/robot-mower-theft-protection"
       ],
       "round": 4,
@@ -1236,6 +1235,33 @@
       "photographer": "Curtis Adams",
       "licence": "Pexels License",
       "attribution": "Photo by Curtis Adams on Pexels"
+    },
+    {
+      "id": "photo-front-back",
+      "kind": "photo",
+      "pages": [
+        "/guides/robot-mower-front-and-back-yard"
+      ],
+      "round": 4,
+      "status": "approved",
+      "source": "pexels",
+      "files": [
+        "/images/photo-front-back-480.avif",
+        "/images/photo-front-back-480.webp",
+        "/images/photo-front-back-800.avif",
+        "/images/photo-front-back-800.webp",
+        "/images/photo-front-back-1200.avif",
+        "/images/photo-front-back-1200.webp"
+      ],
+      "alt": "A brick house with a green backyard lawn and a covered patio under a blue sky",
+      "iptcDigitalSourceType": null,
+      "checkedBy": "Chris (pre-approved brief)",
+      "checkedOn": "2026-10-13",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/a-house-with-a-large-yard-and-grass-21297784/",
+      "photographer": "Alexander F Ungerer",
+      "licence": "Pexels License",
+      "attribution": "Photo by Alexander F Ungerer on Pexels"
     },
     {
       "id": "dia-theft",
@@ -1361,15 +1387,15 @@
         "/images/photo-cost-1200.avif",
         "/images/photo-cost-1200.webp"
       ],
-      "alt": "A gray two-story house with a green back lawn, a concrete walk, and a wooden fence",
+      "alt": "A white farmhouse in a green field, with trees and a forested hill under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as photo-half-acre.",
-      "sourceUrl": "https://www.pexels.com/photo/concrete-house-with-green-grass-on-the-lawn-5502214/",
-      "photographer": "Curtis Adams",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/white-and-brown-house-on-green-grass-field-13130597/",
+      "photographer": "Anastasiya Pavlova",
       "licence": "Pexels License",
-      "attribution": "Photo by Curtis Adams on Pexels"
+      "attribution": "Photo by Anastasiya Pavlova on Pexels"
     },
     {
       "id": "photo-reviews",
@@ -1388,15 +1414,15 @@
         "/images/photo-reviews-1200.avif",
         "/images/photo-reviews-1200.webp"
       ],
-      "alt": "Green front lawns in front of two-story houses on a sunny street",
+      "alt": "Two wood-and-dark houses beside a green lawn scattered with yellow leaves under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Crop leaves out the house number beside the door. Same photograph as photo-small-yard.",
-      "sourceUrl": "https://www.pexels.com/photo/photo-of-a-house-exterior-5071177/",
-      "photographer": "Curtis Adams",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/beautiful-wooden-houses-with-lawns-1643389/",
+      "photographer": "Viaceslav Kat",
       "licence": "Pexels License",
-      "attribution": "Photo by Curtis Adams on Pexels"
+      "attribution": "Photo by Viaceslav Kat on Pexels"
     },
     {
       "id": "photo-guides",
@@ -1415,12 +1441,12 @@
         "/images/photo-guides-1200.avif",
         "/images/photo-guides-1200.webp"
       ],
-      "alt": "A brick ranch house with a striped green front lawn, shrubs, and a concrete walk under a blue sky",
+      "alt": "A brick ranch house with a striped green front lawn, a basketball hoop, and flower beds under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as hero-home.",
-      "sourceUrl": "https://www.pexels.com/photo/green-grass-lawn-near-white-and-brown-house-under-blue-sky-6267516/",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/white-and-brown-concrete-house-under-blue-sky-5587959/",
       "photographer": "Get Lost Mike",
       "licence": "Pexels License",
       "attribution": "Photo by Get Lost Mike on Pexels"
@@ -1442,12 +1468,12 @@
         "/images/photo-vs-1200.avif",
         "/images/photo-vs-1200.webp"
       ],
-      "alt": "A wide striped green lawn and stone walks in front of a modern house under a bright sky",
+      "alt": "A striped green lawn between a tall hedge and a dark modern house, with a covered deck",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as photo-acre.",
-      "sourceUrl": "https://www.pexels.com/photo/picturesque-landscape-against-cloudy-blue-sky-7031598/",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/7587880/",
       "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
       "attribution": "Photo by Max Vakhtbovych on Pexels"
@@ -1469,12 +1495,12 @@
         "/images/photo-vs-wr340-x430-1200.avif",
         "/images/photo-vs-wr340-x430-1200.webp"
       ],
-      "alt": "A striped green lawn with a stepping-stone path beside a pool and a modern house",
+      "alt": "A long green lawn between a tall hedge and a dark modern house under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as card-worx-vision-cloud.",
-      "sourceUrl": "https://www.pexels.com/photo/green-grass-lawn-near-swimming-pool-8134751/",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/7587882/",
       "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
       "attribution": "Photo by Max Vakhtbovych on Pexels"
@@ -1496,12 +1522,12 @@
         "/images/photo-vs-x430-luba-1200.avif",
         "/images/photo-vs-x430-luba-1200.webp"
       ],
-      "alt": "A sloping green lawn rising toward a brick house, with a pool along the lower edge",
+      "alt": "A modern wood-and-tile house with green lawns and paved walks under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as card-x4.",
-      "sourceUrl": "https://www.pexels.com/photo/brown-concrete-building-near-green-grass-field-under-blue-sky-8143675/",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/courtyard-of-modern-residential-house-in-summer-7031608/",
       "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
       "attribution": "Photo by Max Vakhtbovych on Pexels"
@@ -1523,12 +1549,12 @@
         "/images/photo-vs-dreame-luba-1200.avif",
         "/images/photo-vs-dreame-luba-1200.webp"
       ],
-      "alt": "A green lawn between a tall hedge and a modern house, with pines behind",
+      "alt": "A striped green lawn beside a brick house among pines",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as card-dreame-a3-pro.",
-      "sourceUrl": "https://www.pexels.com/photo/house-with-lawn-7587878/",
+      "notes": "Licensed photograph, not generated. Bright daylight. Cropped to leave a door number out of frame.",
+      "sourceUrl": "https://www.pexels.com/photo/lawn-near-buildings-7598368/",
       "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
       "attribution": "Photo by Max Vakhtbovych on Pexels"
@@ -1550,15 +1576,15 @@
         "/images/photo-rtk-1200.avif",
         "/images/photo-rtk-1200.webp"
       ],
-      "alt": "A beige single-story house with a wide green front lawn and pines under a clear blue sky",
+      "alt": "A wide green lawn and a tiled pool in front of a wood-and-tile house under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Crop leaves out the sign at the left edge. Same photograph as hero-best.",
-      "sourceUrl": "https://www.pexels.com/photo/white-and-brown-concrete-bungalow-under-clear-blue-sky-210617/",
-      "photographer": "Pixabay",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/building-with-green-grass-in-yard-under-blue-sky-7031596/",
+      "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
-      "attribution": "Photo by Pixabay on Pexels"
+      "attribution": "Photo by Max Vakhtbovych on Pexels"
     },
     {
       "id": "photo-fcc",
@@ -1577,15 +1603,15 @@
         "/images/photo-fcc-1200.avif",
         "/images/photo-fcc-1200.webp"
       ],
-      "alt": "A wide green lawn in front of a white house, with tall trees and flower beds under a blue sky",
+      "alt": "A brick-and-white house with a curved green lawn, stone paths, and pines",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as card-luba3.",
-      "sourceUrl": "https://www.pexels.com/photo/house-surrounded-by-green-grass-below-clouds-and-sky-226407/",
-      "photographer": "Dianne",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/house-near-plants-and-trees-on-lawn-7174110/",
+      "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
-      "attribution": "Photo by Dianne on Pexels"
+      "attribution": "Photo by Max Vakhtbovych on Pexels"
     },
     {
       "id": "photo-privacy",
@@ -1604,15 +1630,15 @@
         "/images/photo-privacy-1200.avif",
         "/images/photo-privacy-1200.webp"
       ],
-      "alt": "A brick ranch house with a striped green front lawn, shrubs, and a concrete walk under a blue sky",
+      "alt": "A green lawn and a paved drive in front of a white house, with clipped hedges and a wooden bench",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as hero-home.",
-      "sourceUrl": "https://www.pexels.com/photo/green-grass-lawn-near-white-and-brown-house-under-blue-sky-6267516/",
-      "photographer": "Get Lost Mike",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/a-large-white-house-with-a-green-lawn-27430073/",
+      "photographer": "wr heustis",
       "licence": "Pexels License",
-      "attribution": "Photo by Get Lost Mike on Pexels"
+      "attribution": "Photo by wr heustis on Pexels"
     },
     {
       "id": "photo-affiliate",
@@ -1631,15 +1657,15 @@
         "/images/photo-affiliate-1200.avif",
         "/images/photo-affiliate-1200.webp"
       ],
-      "alt": "A lush green back lawn in front of a single-story house with a covered patio",
+      "alt": "A stone mansion with a wide green lawn and a central stone stair under a clear sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as card-mova-lidax.",
-      "sourceUrl": "https://www.pexels.com/photo/house-backyard-with-lawn-green-grass-7546775/",
-      "photographer": "Max Vakhtbovych",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/a-grand-gothic-style-mansion-with-intricate-stonework-surrounded-by-manicured-lawns-and-lush-greenery-featuring-a-prominent-staircase-leading-to-its-ornate-entrance-27940308/",
+      "photographer": "Al Rashed",
       "licence": "Pexels License",
-      "attribution": "Photo by Max Vakhtbovych on Pexels"
+      "attribution": "Photo by Al Rashed on Pexels"
     },
     {
       "id": "photo-method",
@@ -1658,15 +1684,15 @@
         "/images/photo-method-1200.avif",
         "/images/photo-method-1200.webp"
       ],
-      "alt": "Aerial view of a two-story brick house, curved walks, and green lawns, with a golf course beyond the trees",
+      "alt": "A white cottage with a brick path and a green lawn under a partly cloudy sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight. Same photograph as hero-finder.",
-      "sourceUrl": "https://www.pexels.com/photo/house-with-green-grass-lawn-5178034/",
-      "photographer": "Curtis Adams",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/residential-cottage-house-with-courtyard-5997993/",
+      "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
-      "attribution": "Photo by Curtis Adams on Pexels"
+      "attribution": "Photo by Max Vakhtbovych on Pexels"
     }
   ]
 }
