@@ -25,8 +25,8 @@ The site skeleton is the **ladder**: products are ranked by rated lawn area, wit
 |---|---|---|
 | Paper | `#f4f6f8` | Page background (cool white, never cream) |
 | Sheet | `#ffffff` | Content panels and tables |
-| Cyanotype | `#123a63` | Header bar, and blueprint panels for diagrams, the ladder, and finder visuals |
-| Cyanotype deep | `#0b2643` | Hover on blueprint panels only. Not the footer. Not the hero. |
+| Cyanotype | `#123a63` | Blueprint panels for diagrams, the ladder, and finder visuals. Small accents only: a header rule, the mark, or an active-nav underline. Not a header bar. |
+| Cyanotype deep | `#0b2643` | Hover on blueprint panels only. Not the header. Not the footer. Not the hero. |
 | Linework | `#dbe7f3` | Lines and labels drawn on cyanotype |
 | Ink | `#14202b` | Body text and headings on paper |
 | Graphite | `#566472` | Meta text, captions-in-UI (never under photos), dates |
@@ -48,7 +48,7 @@ Grass green is not a brand colour. If a diagram needs to show lawn, use a cyanot
 ## Layout rules
 1. **Cards are plan sheets:** square corners, 1px Rule border, no soft shadows. A small title block strip at the bottom of each card holds the model name and two dimensions (rated area, max slope).
 2. **The ladder is the spine.** On home and /best, a horizontal or vertical scale in acres (0 → 1+ ac) with each model plotted at its rated area; slope shown as a small angle glyph next to it. It is a drawing with measurements, not a chart with bars racing each other.
-3. **Blueprint panels** (cyanotype ground, linework diagrams) are used for diagrams, the ladder, and picker or finder visuals only. Body copy sits on Paper or Sheet. The hero is not a blueprint panel.
+3. **Blueprint panels** (cyanotype ground, linework diagrams) are used for diagrams, the ladder, and picker or finder visuals only. Body copy sits on Paper or Sheet. The hero and the header are not blueprint panels.
 4. **Picks** are numbered with drawing-style callout tags (a circle with a leader line, or a square tag), in Ink or Linework. No medals, no stars, no score badges.
 5. **Tables:** hairline rules, DM Mono for figures, sticky first column on mobile, horizontal scroll only inside the table with a visible scroll cue. Never a full-width nav scrollbar.
 6. **Disclosure:** one slim line under the H1 meta row (wording in VOICE.md) plus a link to the full disclosure page, and a short "Paid links: see disclosure" repeat in Graphite beside each CTA cluster. Full text lives on the disclosure page and as a short footer line.
@@ -61,9 +61,10 @@ Grass green is not a brand colour. If a diagram needs to show lawn, use a cyanot
 8. **Products with no verified ASIN** show no button at all. They show a plain line in Graphite instead (wording in VOICE.md). Never a disabled button.
 9. **Updated dates** sit in the meta row under each H1 in DM Mono ("Updated 14 Oct 2026" style, US order is fine: "Updated Oct 14, 2026").
 10. **Hero:** a bright daylight yard photo once that slot is `approved` in `content/images.json` (photo direction in IMAGERY.md). Until then, a light, fresh background: Paper, Sheet, or a very light sky or lawn tint. No deep cyanotype band. The H1 stays visible on mobile without scrolling. No vanity counters ("9 mowers compared") as decoration.
-11. **Navigation:** Best · Find my mower · Reviews · Head-to-head · Guides · How picks are chosen (only items whose pages are live). Wraps on small screens; no horizontal scroll strip.
-12. **Spacing:** generous but orderly, like a drawing sheet with margins. Align to a visible 8px grid; hairline dividers instead of big coloured blocks.
-13. **Footer:** light. Sheet or Paper background, Ink text, Cyanotype links, a hairline along the top. Graphite only where it still clears WCAG AA on that background. Not Cyanotype deep. Not Linework text on a light ground.
+11. **Header:** light, same family as the hero and the footer. Sheet or Paper background, Ink text. No deep cyanotype bar. A thin Cyanotype accent is allowed: a bottom rule, the mark, or the active-nav underline. Focus rings stay visible and meet WCAG AA on that light ground. Wraps on small screens; tap targets stay at least 44px. Not Linework text on a light ground.
+12. **Navigation:** Best · Find my mower · Reviews · Head-to-head · Guides · How picks are chosen (only items whose pages are live). Wraps on small screens; no horizontal scroll strip.
+13. **Spacing:** generous but orderly, like a drawing sheet with margins. Align to a visible 8px grid; hairline dividers instead of big coloured blocks.
+14. **Footer:** light. Sheet or Paper background, Ink text, Cyanotype links, a hairline along the top. Graphite only where it still clears WCAG AA on that background. Not Cyanotype deep. Not Linework text on a light ground.
 
 ## Mobile
 - H1 and the first answer visible on a 390px-wide screen without scrolling past a giant image; the first CTA (quick-pick box or review primary CTA) within the first two screens.
