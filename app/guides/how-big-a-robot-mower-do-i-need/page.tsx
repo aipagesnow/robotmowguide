@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
-import { Faq, Related, SourceLine } from "@/components/Blocks";
+import { AreaEstimate } from "@/components/AreaEstimate";
+import { CtaCluster, Faq, Related, SourceLine } from "@/components/Blocks";
+import { ProductLink } from "@/components/ProductLink";
+import { currentCandidates } from "@/lib/candidates";
 import { AcreSquares, YardAcre, YardHalf, YardQuarter, YardWooded } from "@/components/Diagrams";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres, realisticAcres } from "@/lib/format";
 import { getFamily, modelFacts } from "@/lib/products";
 import { publishedSlope, realisticLine } from "@/lib/speak";
+import { RECHECKED } from "@/lib/site";
 
 const title = "How big a robot mower do I need?";
 const description =
@@ -43,13 +47,31 @@ export default function SizeGuide() {
       description={description}
       path="/guides/how-big-a-robot-mower-do-i-need"
       crumbs={crumbs}
-      whatChanged="October 13, 2026: linked the front-and-back guide for a yard split by the house."
+      updated={RECHECKED}
+      whatChanged="October 13, 2026: added an area check that uses only the 1.25× rule, with Husqvarna’s own notes left beside it."
+      disclosure
     >
       <p className="measure">
         Buy for the grass you mow, not the lot on the deed. Use the maker’s rated acres as the ceiling, then
         cut that number when the yard has heavy trees or a front lawn and a back lawn. Our rule for that
         case is rated area divided by 1.25. A 1 acre rating then plans on about {formatAcres(realisticAcres(1))}.
       </p>
+      <CtaCluster>
+        <ProductLink
+          asin={i210.variant.asin}
+          model="Navimow i210 AWD"
+          productSlug={i210.family.slug}
+          placement="inline"
+          pageType="guide"
+        />
+        <ProductLink
+          asin={x430.variant.asin}
+          model="Navimow X430"
+          productSlug={x430.family.slug}
+          placement="inline"
+          pageType="guide"
+        />
+      </CtaCluster>
       <YardPhoto id="photo-lot-sizes" />
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
@@ -111,7 +133,8 @@ export default function SizeGuide() {
       <p className="measure">
         Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres)} and{" "}
         {publishedSlope(iq420.slope, iq420.degrees)}, and 15% at the boundary. The same page describes 0.5
-        acre for an irregular lawn and 1 acre for systematic mowing.{" "}
+        acre for an irregular lawn and 1 acre for systematic mowing. Those notes are not folded into the
+        1.25× box below. <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
         <SourceLine ids={["husq-420iq"]} checked="2026-10-10" />
       </p>
       <p className="measure">
@@ -129,6 +152,20 @@ export default function SizeGuide() {
         whose maker rates it at {formatAcres(worx.acres)}.{" "}
         <SourceLine ids={["wirecutter"]} checked="2026-10-10" />
       </p>
+      <h2>Check a lawn against current ratings</h2>
+      <p className="measure">
+        Worked examples, with JavaScript off or on, use the same rule. An open 0.5 acre in one zone needs a
+        rating of 0.5 acre. The same 0.5 acre with heavy trees, or with more than one zone, needs 0.625 acre.
+        A 0.4 acre lawn with two zones needs 0.5 acre. Husqvarna’s ±20% and the 420 iQ split of 0.5 acre
+        irregular / 1 acre systematic are not folded into these numbers.
+      </p>
+      <AreaEstimate
+        models={currentCandidates().map((row) => ({
+          name: row.shortName,
+          acres: row.acres,
+          href: row.href,
+        }))}
+      />
       <h2>Trees shrink the useful area</h2>
       <YardWooded />
       <p className="measure">

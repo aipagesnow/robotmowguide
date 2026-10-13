@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { DecisionTable } from "@/components/DecisionTable";
-import { Faq, Related } from "@/components/Blocks";
+import { CtaCluster, Faq, Related } from "@/components/Blocks";
 import { MowerFinder } from "@/components/MowerFinder";
+import { ProductLink } from "@/components/ProductLink";
 import { currentCandidates } from "@/lib/candidates";
+import { modelFacts } from "@/lib/products";
 import { pageMeta } from "@/lib/metadata";
 import { RECHECKED } from "@/lib/site";
 
@@ -16,6 +19,7 @@ export const metadata: Metadata = pageMeta({ title, description, path: "/tools/m
 
 export default function FinderPage() {
   const candidates = currentCandidates();
+  const x430 = modelFacts("segway-navimow-x4", "Navimow X430");
 
   return (
     <ArticleFrame
@@ -27,13 +31,25 @@ export default function FinderPage() {
         { name: "Find my mower", path: "/tools/mower-finder" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published."
+      whatChanged="October 13, 2026: the form can include the WR147 and the Automower iQ models. The printed table stays wire-free."
       disclosure
     >
       <p className="measure">
         The short list uses current models only. A superseded model never appears. If nothing clears the
-        area and the slope, the result says so, including yards over about 2 acres.
+        area and the slope, the result says so, including yards over about 2 acres. The form includes
+        boundary-wire models, including the Worx Landroid M WR147, when you allow a boundary wire. The
+        printed table below is wire-free and one zone only.
       </p>
+      <CtaCluster>
+        <ProductLink
+          asin={x430.variant.asin}
+          model="Navimow X430"
+          productSlug={x430.family.slug}
+          placement="inline"
+          pageType="tool"
+        />
+      </CtaCluster>
+      <YardPhoto id="hero-finder" />
       <div id="results">
         <MowerFinder candidates={candidates} />
       </div>

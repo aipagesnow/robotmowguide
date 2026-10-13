@@ -5,6 +5,7 @@ import { CtaCluster, Disclosure, Faq, Related, ResearchedBox, SourceLine } from 
 import { PassageDiagram, ZonesMap } from "@/components/Diagrams";
 import { PassageGauge } from "@/components/PassageGauge";
 import { ProductLink } from "@/components/ProductLink";
+import { YardPhoto } from "@/components/YardPhoto";
 import { pageMeta } from "@/lib/metadata";
 import { modelFacts } from "@/lib/products";
 import { specText } from "@/lib/speak";
@@ -86,6 +87,7 @@ export default function FrontAndBackGuide() {
           pageType="guide"
         />
       </CtaCluster>
+      <YardPhoto id="photo-front-street" />
       <ZonesMap />
       <p className="measure">A passage the mower cannot use splits the yard.</p>
       <h2>Published widths, and what each one is</h2>

@@ -64,10 +64,17 @@ export function getFamily(id: string): Family {
   return family;
 }
 
-export function modelFacts(familyId: string, model: string) {
+export function findVariant(familyId: string, model: string): Variant {
   const family = getFamily(familyId);
   const variant = family.variants.find((item) => item.model === model);
-  if (!variant?.ladder?.ratedAreaAcres || !variant.ladder.maxSlopePercent) {
+  if (!variant) throw new Error(`Missing variant ${model}`);
+  return variant;
+}
+
+export function modelFacts(familyId: string, model: string) {
+  const family = getFamily(familyId);
+  const variant = findVariant(familyId, model);
+  if (!variant.ladder?.ratedAreaAcres || !variant.ladder.maxSlopePercent) {
     throw new Error(`Missing ladder figures for ${model}`);
   }
   const degrees = variant.ladder.maxSlopeDegrees?.value;
@@ -172,6 +179,8 @@ const REVIEW_HREF: Record<string, string> = {
   "mova-lidax-ultra": "/reviews/mova-lidax-ultra",
   "roborock-rockneo-q110h": "/reviews/roborock-rockneo-q110h",
   "segway-navimow-i2-awd": "/reviews/segway-navimow-i-series",
+  "worx-landroid-m-wr147": "/reviews/worx-landroid-m-wr147",
+  "husqvarna-automower-iq": "/reviews/husqvarna-automower-iq",
 };
 
 export function reviewHref(familyId: string): string | undefined {
@@ -180,6 +189,22 @@ export function reviewHref(familyId: string): string | undefined {
 
 export function pickAnchor(model: string): string | undefined {
   return PICK_ANCHOR[model]?.anchor;
+}
+
+export function discontinuedMentions(): { name: string; href?: string }[] {
+  const rows: { name: string; href?: string }[] = [];
+  for (const family of families) {
+    const href = REVIEW_HREF[family.id];
+    if (family.status === "discontinued") {
+      rows.push({ name: family.family, href });
+    }
+    for (const variant of family.variants) {
+      if (variant.status === "discontinued") {
+        rows.push({ name: variant.model, href });
+      }
+    }
+  }
+  return rows;
 }
 
 export function ladderRows(): LadderRow[] {

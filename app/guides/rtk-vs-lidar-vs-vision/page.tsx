@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { CtaCluster, Faq, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import { AntennaDiagram, NavFour } from "@/components/Diagrams";
@@ -71,14 +72,15 @@ export default function RtkGuide() {
           pageType="guide"
         />
       </CtaCluster>
+      <YardPhoto id="photo-rtk" />
       <h2>Four setups, one yard</h2>
       <NavFour />
       <h3>Boundary wire</h3>
       <p className="measure">
         A wire is buried or pegged around the lawn, and the mower follows it. It does not need sky. It fails
         when the wire is cut, or when a bed moves and nobody moves the wire. On the ladder, the Worx Landroid
-        M WR147 is a boundary-wire model rated {formatAcres(0.25)}. The Husqvarna Automower 420 iQ can run
-        wire-free or with a boundary wire.
+        M <Link href="/reviews/worx-landroid-m-wr147">WR147</Link> is a boundary-wire model rated {formatAcres(0.25)}. The Husqvarna{" "}
+        <Link href="/reviews/husqvarna-automower-iq">Automower 420 iQ</Link> can run wire-free or with a boundary wire.
       </p>
       <h3>Antenna RTK</h3>
       <p className="measure">

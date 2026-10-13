@@ -2737,9 +2737,9 @@
           "asinStatus": "verified",
           "asinCheck": {
             "url": "https://www.amazon.com/dp/B097NJ37R7",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "titleAtCheck": "Worx Landroid M 20V Robotic Lawn Mower 1/4 Acre / 10,890 Sq. Ft Power Share- WR147 (Battery & Charger Included)",
-            "stockNote": "Listing exists. Confirm in stock at build."
+            "stockNote": "Oct 13, 2026: the amazon.com title still named the WR147. The listing showed unavailable. Not treated as discontinued."
           },
           "manufacturerListPrice": null,
           "variantNote": "20V, 1/4-acre boundary-wire model. Not the WR140 (older Landroid M) or WR155 (Landroid L, 1/2 acre)."
@@ -2967,7 +2967,7 @@
             "checked": "2026-10-10",
             "url": "https://www.amazon.com/dp/B0HKC6J3PH",
             "titleAtCheck": "Husqvarna Automower 435X AWD Robotic Lawn Mower, All-Wheel Drive",
-            "note": "Checked Oct 10, 2026"
+            "note": "Title confirmed Oct 10, 2026. The exact product page was not opened again on Oct 13, 2026."
           },
           "manufacturerListPrice": {
             "usd": 2999.99,

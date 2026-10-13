@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
-import { Related } from "@/components/Blocks";
+import { YardPhoto } from "@/components/YardPhoto";
+import { CtaCluster, Related } from "@/components/Blocks";
+import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
-import { modelFacts } from "@/lib/products";
+import { discontinuedMentions, modelFacts } from "@/lib/products";
 import { formatAcres } from "@/lib/format";
 import { publishedSlope, specText } from "@/lib/speak";
 import { RECHECKED } from "@/lib/site";
 
 const title = "Robot mower reviews";
 const description =
-  "Research-based reviews of robot lawn mowers for US yards, including the Navimow X4 and i series, both LUBA families, MOVA, the RockNeo Q110H, Worx, and Dreame.";
+  "Research-based reviews of robot lawn mowers for US yards, including Worx, Husqvarna Automower iQ, Navimow, LUBA, MOVA, Dreame, and the RockNeo Q110H.";
 
 export const metadata: Metadata = pageMeta({ title, description, path: "/reviews" });
 
@@ -24,19 +26,37 @@ export default function ReviewsIndex() {
   const mova = modelFacts("mova-lidax-ultra", "LiDAX Ultra 2000");
   const mova3000 = modelFacts("mova-lidax-ultra", "LiDAX Ultra 3000 AWD");
   const q110 = modelFacts("roborock-rockneo-q110h", "RockNeo Q110H");
+  const wr147 = modelFacts("worx-landroid-m-wr147", "Landroid M WR147");
+  const iq = modelFacts("husqvarna-automower-iq", "Automower 420 iQ");
+  const previous = discontinuedMentions();
 
   return (
     <ArticleFrame
       title={title}
       description={description}
       path="/reviews"
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "Reviews", path: "/reviews" },
+      ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: added the LUBA mini 2, MOVA LiDAX Ultra, RockNeo Q110H, and Navimow i series reviews."
+      whatChanged="October 13, 2026: added the Worx Landroid M WR147 and Husqvarna Automower iQ reviews."
+      disclosure
     >
       <p className="measure">
-        Eight family reviews are up. Each one says who the mower suits, prints the checked specs, and links
-        the owner threads we read. We have not tested these mowers.
+        Ten family reviews are up. Each one says who the mower suits, prints the checked specs, and links the
+        owner threads we read. We have not tested these mowers.
       </p>
+      <CtaCluster>
+        <ProductLink
+          asin={x430.variant.asin}
+          model="Navimow X430"
+          productSlug={x430.family.slug}
+          placement="inline"
+          pageType="review"
+        />
+      </CtaCluster>
+      <YardPhoto id="photo-reviews" />
       <h2>
         <Link href="/reviews/segway-navimow-x4">Navimow X4 series</Link>
       </h2>
@@ -97,6 +117,34 @@ export default function ReviewsIndex() {
         English technical data gives a cut of {specText(q110.specs.cuttingHeight)}. Few Q110H owner reports
         exist yet.
       </p>
+      <h2>
+        <Link href="/reviews/worx-landroid-m-wr147">Worx Landroid M WR147</Link>
+      </h2>
+      <p className="measure">
+        The WR147 is rated {formatAcres(wr147.acres)} and {publishedSlope(wr147.slope, wr147.degrees)}. It is
+        the boundary-wire quarter acre. Obstacle detection is a bump sensor. The amazon.com listing showed
+        unavailable on Oct 13, 2026, and the title still named the WR147.
+      </p>
+      <h2>
+        <Link href="/reviews/husqvarna-automower-iq">Husqvarna Automower iQ</Link>
+      </h2>
+      <p className="measure">
+        The 420 iQ is rated {formatAcres(iq.acres)} for systematic mowing, with 0.5 acre named for an
+        irregular lawn, and {publishedSlope(iq.slope, iq.degrees)} with 15% at the boundary. The iQ rows have
+        no Amazon button. The 435X AWD does.
+      </p>
+      {previous.length ? (
+        <section>
+          <h2>Previous models</h2>
+          <ul className="grid gap-2 pl-5">
+            {previous.map((row) => (
+              <li key={row.name}>
+                {row.href ? <Link href={row.href}>{row.name}</Link> : row.name}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       <Related
         links={[
           { href: "/best", label: "Best robot lawn mowers for US yards" },

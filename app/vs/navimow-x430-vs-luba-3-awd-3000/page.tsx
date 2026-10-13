@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { EndLinks, Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
@@ -98,6 +99,7 @@ export default function VsPage() {
           />
         </div>
       </div>
+      <YardPhoto id="photo-vs-x430-luba" />
       <h2>Where they differ</h2>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>

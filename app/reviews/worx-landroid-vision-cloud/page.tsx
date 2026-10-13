@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import {
   CtaCluster,
   EndLinks,
@@ -89,6 +90,7 @@ export default function WorxReview() {
           pageType="review"
         />
       </CtaCluster>
+      <YardPhoto id="card-worx-vision-cloud" />
       <h2>Key numbers for your yard</h2>
       <KeyNumbers
         rows={[

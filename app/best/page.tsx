@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import {
   CtaCluster,
   Faq,
@@ -133,7 +134,11 @@ export default function BestPage() {
       title={title}
       description={description}
       path="/best"
-      whatChanged="October 13, 2026: linked the Navimow i series review and the half-acre, small-yard, and under-trees pages."
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "Best", path: "/best" },
+      ]}
+      whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the new guides."
       disclosure
     >
       <p className="measure">
@@ -182,6 +187,7 @@ export default function BestPage() {
           },
         ]}
       />
+      <YardPhoto id="hero-best" />
       <div className="mt-6">
         <FinderEmbed />
       </div>
@@ -206,7 +212,8 @@ export default function BestPage() {
         Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres)} and{" "}
         {publishedSlope(iq420.slope, iq420.degrees)}, and 15% at the boundary. The same page says 0.5 acre
         for an irregular lawn and 1 acre for systematic mowing. The 410 iQ area note is ±20%. Neither iQ
-        model had a confirmed amazon.com listing at the check, so this page does not link them.{" "}
+        model had a confirmed amazon.com listing at the check, so this page does not put an Amazon button on
+        them. The write-up is the <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
         <SourceLine ids={["husq-420iq", "husq-410iq"]} checked={SPEC_CHECKED} />
       </p>
       <h2 id="compare">Comparison</h2>
@@ -815,6 +822,14 @@ export default function BestPage() {
           { href: "/reviews/mammotion-luba-mini-2-awd", label: "LUBA mini 2 AWD review" },
           { href: "/reviews/mova-lidax-ultra", label: "MOVA LiDAX Ultra review" },
           { href: "/reviews/roborock-rockneo-q110h", label: "RockNeo Q110H review" },
+          { href: "/reviews/worx-landroid-m-wr147", label: "Worx Landroid M WR147 review" },
+          { href: "/reviews/husqvarna-automower-iq", label: "Automower iQ review" },
+          { href: "/best/robot-mower-st-augustine", label: "Which robot mower for St. Augustine grass?" },
+          { href: "/best/robot-mower-bermuda", label: "Which robot mower for Bermuda grass?" },
+          { href: "/vs/worx-vision-cloud-wr340-vs-navimow-x430", label: "Worx WR340 vs Navimow X430" },
+          { href: "/guides/robot-mower-cost-to-own", label: "What does a robot mower cost to own?" },
+          { href: "/guides/are-robot-mowers-worth-it", label: "Are robot mowers worth it?" },
+          { href: "/guides/robot-mower-theft-protection", label: "Robot mower theft protection" },
           { href: "/best/robot-mower-1-acre", label: "Which robot mower for about 1 acre?" },
           { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
           { href: "/best/robot-mower-small-yard", label: "Which robot mower for a small yard?" },

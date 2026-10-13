@@ -52,7 +52,7 @@ export default function HomePage() {
           <h1>{title}</h1>
           <MetaRow
             updated={PUBLISHED}
-            whatChanged="October 13, 2026: linked the new family reviews, the winter guide, and the front-and-back guide."
+            whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
           />
           <p className="measure">
             Start with the lawn, not the brand. These rankings use the area each current model is rated for,
@@ -161,7 +161,9 @@ export default function HomePage() {
             kept tall, so cutting height matters. The Navimow X430 listing gives{" "}
             {specText(x430.specs.cuttingHeight)}. The LUBA 3 AWD 3000 listing gives{" "}
             {specText(luba.specs.cuttingHeight)}, and the high-cut variants are a separate row in the{" "}
-            <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
+            <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
+            <Link href="/best/robot-mower-st-augustine">Which robot mower for St. Augustine grass?</Link>{" "}
+            <Link href="/best/robot-mower-bermuda">Bermuda grass</Link>.
           </p>
           <AcreSquares />
           <p className="measure">
@@ -188,6 +190,15 @@ export default function HomePage() {
             </li>
             <li>
               <Link href="/guides/robot-mower-front-and-back-yard">Can one robot mower do the front yard and the back yard?</Link>
+            </li>
+            <li>
+              <Link href="/guides/robot-mower-cost-to-own">What does a robot mower cost to own?</Link>
+            </li>
+            <li>
+              <Link href="/guides/are-robot-mowers-worth-it">Are robot mowers worth it?</Link>
+            </li>
+            <li>
+              <Link href="/guides/robot-mower-theft-protection">How do I keep a robot mower from being stolen?</Link>
             </li>
           </ul>
         </section>
@@ -218,7 +229,16 @@ export default function HomePage() {
             <li>
               <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H review: a quarter acre on RTK</Link>
             </li>
+            <li>
+              <Link href="/reviews/worx-landroid-m-wr147">Worx Landroid M WR147 review: a quarter acre on boundary wire</Link>
+            </li>
+            <li>
+              <Link href="/reviews/husqvarna-automower-iq">Husqvarna Automower iQ review: EPOS on an open acre</Link>
+            </li>
           </ul>
+          <p className="measure">
+            <Link href="/vs/worx-vision-cloud-wr340-vs-navimow-x430">Worx WR340 vs Navimow X430</Link>
+          </p>
         </section>
       </div>
     </article>

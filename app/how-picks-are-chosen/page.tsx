@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { MethodDiagram } from "@/components/Diagrams";
 import { Faq, Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
@@ -26,6 +27,7 @@ export default function MethodPage() {
         then shows the maximum slope that maker publishes. We have not tested these mowers. The work is
         research-based.
       </p>
+      <YardPhoto id="photo-method" />
       <MethodDiagram />
       <h2>Sources</h2>
       <p className="measure">
@@ -90,7 +92,8 @@ export default function MethodPage() {
       <p className="measure">
         Yard photographs are licensed photos from Pexels of real yards. They do not show a mower, and they
         are not from a test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
-        Lost Mike, James Anthony, Viktoria B., and Clay Elliot, on Pexels.
+        Lost Mike, James Anthony, Viktoria B., Clay Elliot, Pixabay, Max Vakhtbovych, Jonathan, Magda
+        Ehlers, and Dianne, on Pexels.
       </p>
       <Faq
         items={[
@@ -100,7 +103,7 @@ export default function MethodPage() {
           },
           {
             q: "Why is a model missing?",
-            a: "The live pages cover five picks, four family reviews, one head-to-head, and the finder. A model stays off a page until its specs are in the checked data.",
+            a: "The live pages cover five picks, ten family reviews, three head-to-head pages, the grass pages, and the finder. A model stays off a page until its specs are in the checked data.",
           },
           {
             q: "Who do I write about a wrong figure?",

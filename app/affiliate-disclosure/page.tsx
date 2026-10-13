@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { AffiliateDiagram } from "@/components/Diagrams";
 import { Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
@@ -21,6 +22,7 @@ export default function AffiliatePage() {
       disclosure
     >
       <p className="measure">{DISCLOSURE_SENTENCE}</p>
+      <YardPhoto id="photo-affiliate" />
       <p className="measure">
         Some pages link to a model on amazon.com. The link goes straight to that product page. The associate
         tag is added when the site is built, from the site configuration. There is no in-between redirect on

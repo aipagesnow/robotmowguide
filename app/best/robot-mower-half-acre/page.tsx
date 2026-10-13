@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres, formatSqFt } from "@/lib/format";
@@ -82,6 +83,7 @@ export default function HalfAcrePage() {
           },
         ]}
       />
+      <YardPhoto id="photo-half-acre" />
       <h2>Rated area against a half acre</h2>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>

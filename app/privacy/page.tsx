@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
 import { CONTACT_EMAIL, PUBLISHER, RECHECKED } from "@/lib/site";
@@ -22,6 +23,7 @@ export default function PrivacyPage() {
         {PUBLISHER} publishes RobotMowGuide. For a privacy question, email{" "}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>
+      <YardPhoto id="photo-privacy" />
       <h2>Hosting</h2>
       <p className="measure">
         The site is hosted on Vercel. A hosting provider can keep request logs, which may include an IP

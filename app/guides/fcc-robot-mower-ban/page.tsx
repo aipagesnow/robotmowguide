@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
 import { FCC_COVERED_LIST, FCC_DA_26_789, FCC_SEARCH, FCC_TABLE_CHECKED, RECHECKED } from "@/lib/site";
@@ -50,6 +51,7 @@ export default function FccPage() {
         word in the title is the search term. The FCC documents below do not stop the import, sale, or use
         of models the FCC had already authorized.
       </p>
+      <YardPhoto id="photo-fcc" />
       <h2>What the FCC added on July 28, 2026</h2>
       <p className="measure">
         On July 28, 2026, the FCC added foreign-produced advanced robotic devices to the Covered List. The

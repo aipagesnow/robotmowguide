@@ -57,7 +57,7 @@ export default function ISeriesReview() {
       path="/reviews/segway-navimow-i-series"
       crumbs={crumbs}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published. The i210 AWD and i105N listings were rechecked, and the i1 rows keep the superseded status."
+      whatChanged="October 13, 2026: added the replacement note for the i105N and i110N. The i210 AWD stays the current model."
       disclosure
     >
       <StatusLine>
@@ -67,6 +67,12 @@ export default function ISeriesReview() {
           <NoConditionalApproval brand="Segway Navimow" />
         </p>
       </StatusLine>
+      <p className="measure">
+        Replaced by the Navimow i210 AWD in October 2026: here’s what changed. The i210 AWD is all-wheel
+        drive and rated {publishedSlope(i210.slope, i210.degrees)}. The i105N is rated {formatAcres(i105.acres)}{" "}
+        at {publishedSlope(i105.slope, i105.degrees)}, and the i110N is rated {formatAcres(i110.acres)} at{" "}
+        {publishedSlope(i110.slope, i110.degrees)}.
+      </p>
       <p className="measure">
         Read the i210 AWD for a quarter acre and banks inside {publishedSlope(i210.slope, i210.degrees)}. It
         is three-wheel all-wheel drive, with network RTK and vision, and no antenna to mount. The i206 AWD

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
@@ -18,7 +19,7 @@ export const metadata: Metadata = pageMeta({
   path: "/best/robot-mower-small-yard",
 });
 
-const sources = ["amz-i210", "navimow-ces26", "amz-q110h", "q110h-manual", "mammotion-mini2", "amz-mini2-1500h", "amz-mova-1000"];
+const sources = ["amz-i210", "navimow-ces26", "amz-q110h", "q110h-manual", "mammotion-mini2", "amz-mini2-1500h", "amz-mova-1000", "worx-landroid-models", "worx-wr147-manual"];
 
 export default function SmallYardPage() {
   const i210 = modelFacts("segway-navimow-i2-awd", "Navimow i210 AWD");
@@ -26,6 +27,7 @@ export default function SmallYardPage() {
   const q = modelFacts("roborock-rockneo-q110h", "RockNeo Q110H");
   const mini = modelFacts("mammotion-luba-mini-2-awd", "LUBA mini 2 AWD 1500H (high-cut)");
   const mova = modelFacts("mova-lidax-ultra", "LiDAX Ultra 1000");
+  const wr147 = modelFacts("worx-landroid-m-wr147", "Landroid M WR147");
 
   return (
     <ArticleFrame
@@ -38,7 +40,7 @@ export default function SmallYardPage() {
         { name: "Small yard", path: "/best/robot-mower-small-yard" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published. The i1 models stay off this list because they are the previous generation."
+      whatChanged="October 13, 2026: added the Worx Landroid M WR147 as the boundary-wire quarter acre. The i1 models stay off the short list."
       disclosure
     >
       <p className="measure">
@@ -80,11 +82,12 @@ export default function SmallYardPage() {
           },
         ]}
       />
-      <h2>Four current small-yard ratings</h2>
+      <YardPhoto id="photo-small-yard" />
+      <h2>Current small-yard ratings</h2>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Current models around a quarter acre. The i105N is not in this table.</caption>
+          <caption>Current models around a quarter acre. The WR147 is the boundary-wire row. The i105N is not in this table.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -130,6 +133,15 @@ export default function SmallYardPage() {
               <td>{publishedSlope(mova.slope, mova.degrees)}</td>
               <td className="dim">{specText(mova.specs.cuttingHeight)}</td>
               <td>LiDAR and vision. No RTK.</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <Link href="/reviews/worx-landroid-m-wr147">Worx Landroid M WR147</Link>
+              </th>
+              <td className="dim">{formatAcres(wr147.acres)}</td>
+              <td>{publishedSlope(wr147.slope, wr147.degrees)}</td>
+              <td className="dim">{specText(wr147.specs.cuttingHeight)}</td>
+              <td>Boundary wire. Bump sensor.</td>
             </tr>
           </tbody>
         </table>
@@ -183,6 +195,7 @@ export default function SmallYardPage() {
           { href: "/best/robot-mower-half-acre", label: "Which robot mower for a half acre?" },
           { href: "/best/robot-mower-under-trees", label: "Which robot mower under trees?" },
           { href: "/reviews/segway-navimow-i-series", label: "Navimow i series review" },
+          { href: "/reviews/worx-landroid-m-wr147", label: "Worx Landroid M WR147 review" },
           { href: "/guides/robot-mower-front-and-back-yard", label: "Front yard and back yard" },
         ]}
       />
