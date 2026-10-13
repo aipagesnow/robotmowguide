@@ -1,6 +1,6 @@
 {
-  "_readme": "Image review manifest. Code renders a slot only when status is 'approved' and its files exist. Status flow: not-made -> made -> approved | rejected. Vora sets checkedBy/checkedOn/notes. Photos must carry IPTC DigitalSourceType trainedAlgorithmicMedia. See IMAGES.md for briefs and checks.",
-  "updated": "2026-10-10",
+  "_readme": "Image review manifest. A slot renders when status is approved and any required files exist. Status made also renders when the deploy is not production, so a preview can be checked. Production hides made. Photos need IPTC DigitalSourceType trainedAlgorithmicMedia. See IMAGES.md.",
+  "updated": "2026-10-13",
   "slots": [
     {
       "id": "hero-home",
@@ -26,7 +26,7 @@
         "/best"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Diagram ranking robot mowers by rated lawn area, with each model's maximum slope",
@@ -44,7 +44,7 @@
         "/best/robot-mower-small-yard"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of a flat quarter-acre suburban lot with front and back lawns",
@@ -63,7 +63,7 @@
         "/guides/robot-mower-front-and-back-yard"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of a half-acre lot whose front and back lawns are joined by a narrow side passage",
@@ -81,7 +81,7 @@
         "/best/robot-mower-1-acre"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of an open one-acre lot with a long driveway",
@@ -99,7 +99,7 @@
         "/best/robot-mower-under-trees"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of a wooded lot with tree canopy over a third of the lawn",
@@ -117,7 +117,7 @@
         "/best/robot-mower-for-hills"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of a hillside lot with contour lines and the steepest bank marked",
@@ -135,7 +135,7 @@
         "/best/robot-mower-st-augustine"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Plan of a Florida yard with a pool cage, palms and St. Augustine lawn",
@@ -396,7 +396,7 @@
         "/reviews/segway-navimow-x4"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Spec diagram for the Segway Navimow X4 series",
@@ -428,7 +428,7 @@
         "/reviews/mammotion-luba-3-awd"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Spec diagram for the Mammotion LUBA 3 AWD series",
@@ -749,7 +749,7 @@
         "all reviews (small)"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Four plan views of one yard showing boundary wire, antenna RTK, network RTK and LiDAR or camera navigation",
@@ -765,7 +765,7 @@
         "/guides/rtk-vs-lidar-vs-vision"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Diagram of good and bad places to mount an RTK antenna",
@@ -797,7 +797,7 @@
         "/guides/how-big-a-robot-mower-do-i-need"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Squares comparing lawn sizes from an eighth of an acre to one acre",
@@ -1005,7 +1005,7 @@
         "/how-picks-are-chosen"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Flow of how picks are researched, checked and dated",
@@ -1021,7 +1021,7 @@
         "/affiliate-disclosure"
       ],
       "round": 1,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "How an Amazon paid link works for the reader",

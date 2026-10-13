@@ -2,7 +2,7 @@
 
 A US guide to choosing a robot lawn mower, ranked by the lawn size and slope each model is rated for. It explains what the specs mean for a real yard and links to amazon.com for the models it covers. Published by Aivora Digital as a long-term keeper site.
 
-This repo currently holds planning docs and data only. The site is built in reviewed Grok Build rounds (see NEXT-PROMPTS.md).
+The Next.js site lives in this repo. Add a public page by adding its path to content/routes.json and a matching file under app/. Planning docs and the round log are in NEXT-PROMPTS.md.
 
 ## Decisions
 - **Market:** US only, amazon.com only, US English, acres/sq ft/inches, slope in % and °.

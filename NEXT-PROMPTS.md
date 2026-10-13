@@ -110,7 +110,7 @@ Before: re-check every ASIN and spec, the FCC Conditional Approvals table, CES 2
 | Round | Date | Commit | Build | Ship scan | Images approved | Notes |
 |---|---|---|---|---|---|---|
 | 0 | | | n/a | n/a | | |
-| 1 | | | | | | |
+| 1 | 2026-10-13 | | pass | pass | 0 approved; 14 diagrams made, not approved | Ship scan: pass. Photos not made. Production hides diagrams until they are approved. |
 | 2 | | | | | | |
 | 3 | | | | | | |
 | 4 | | | | | | |

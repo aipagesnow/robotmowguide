@@ -1,0 +1,9 @@
+# RobotMowGuide
+
+RobotMowGuide is a US guide to choosing a robot lawn mower, ranked by the lawn size and slope each model is rated for.
+
+- [Best robot lawn mowers](https://robotmowguide.com/best)
+- [Reviews](https://robotmowguide.com/reviews)
+- [Guides](https://robotmowguide.com/guides)
+- [How picks are chosen](https://robotmowguide.com/how-picks-are-chosen)
+- [About](https://robotmowguide.com/about)
