@@ -246,6 +246,26 @@ a:hover {
   background: rgb(244 246 248 / 0.96);
 }
 
+@media (max-width: 767px) {
+  .home-hero {
+    padding-bottom: 4.75rem;
+  }
+
+  .home-hero-scrim {
+    bottom: -1.15rem;
+    background: linear-gradient(
+      to bottom,
+      rgb(244 246 248 / 0.96) 0,
+      rgb(244 246 248 / 0.96) calc(100% - 1.15rem),
+      rgb(244 246 248 / 0) 100%
+    );
+  }
+
+  .home-hero-fade {
+    height: 1.15rem;
+  }
+}
+
 @media (min-width: 900px) {
   .home-hero {
     min-height: 26rem;
@@ -256,17 +276,16 @@ a:hover {
   }
 
   .home-hero-scrim {
-    right: 0;
-  }
-
-  .home-hero-scrim::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    width: 7rem;
-    background: linear-gradient(to right, rgb(244 246 248 / 0.96), rgb(244 246 248 / 0));
+    right: -18rem;
+    background: linear-gradient(
+      to right,
+      rgb(244 246 248 / 0.96) 0,
+      rgb(244 246 248 / 0.96) calc(100% - 18rem),
+      rgb(244 246 248 / 0.88) calc(100% - 14rem),
+      rgb(244 246 248 / 0.45) calc(100% - 9rem),
+      rgb(244 246 248 / 0.12) calc(100% - 4rem),
+      rgb(244 246 248 / 0) 100%
+    );
   }
 
   .home-hero-fade {
