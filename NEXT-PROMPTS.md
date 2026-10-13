@@ -113,7 +113,7 @@ Before: re-check every ASIN and spec, the FCC Conditional Approvals table, CES 2
 | 1 | 2026-10-13 | 2f0352a | pass | pass | 0 approved; 14 diagrams made, not approved | Ship scan: pass. Photos not made. Production hides diagrams until they are approved. |
 | 2 | 2026-10-13 | 0651d6d | pass | pass | 0 approved; dia-slope and dia-rated-vs-real made, not approved | Ship scan: pass. Light hero and footer. Finder, FCC tracker, 1-acre, hills, Worx and Dreame reviews, X430 vs LUBA. Photos not made. Production hides diagrams until they are approved. Reported 2026-10-13. |
 | 3 | 2026-10-13 | affa32e | pass | pass | 0 approved; dia-canopy, dia-zones, dia-passage-width, and dia-seasons made, not approved | Ship scan: pass. Half acre, small yard, under trees, four family reviews, winter storage, front-and-back, Dreame vs LUBA. Photos not made. Production hides diagrams until they are approved. Q110H cut is 1.57–3.15 in from the English technical data; the CE Q105/Q110 band stays a separate conflict. Reported 2026-10-13. |
-| 4 | | | | | | |
+| 4 | 2026-10-13 | f1441be | pass | pass | 28 newly approved daylight photos; 37 approved photos on the site; diagrams stay unapproved | Ship scan: pass. St. Augustine, Bermuda, cost calculator, worth-it, theft, WR147, Automower iQ, WR340 vs X430. Finder finished. Area estimator states the 1.25× rule as ours. Home quick picks stay above the hero. Greener home lawn. Winter photo kept. The 435X page was not re-opened on Oct 13. The WR147 listing showed unavailable and stays current. Reported 2026-10-13. |
 | 5 | | | | | | |
 | 6 | | | | | | |
 | 7 | | | | | | GSC gen-AI baseline: · Bing AI Performance baseline: |
