@@ -213,8 +213,8 @@ export default function LubaReview() {
       <h2>Trees and LiDAR</h2>
       <NavFour highlight={["network", "lidar"]} />
       <p className="measure">
-        Two panels apply to the 3000: network RTK, and LiDAR or a camera. Vision is the camera half of that
-        second panel, not a separate product. The 1500 drops network RTK and keeps LiDAR and vision. That
+        The 3000 uses network RTK, and LiDAR or a camera. Vision is the camera half of that second setup, not
+        a separate product. The 1500 drops network RTK and keeps LiDAR and vision. That
         split matters under canopy, where a satellite fix weakens and a scanned map can still see the yard.{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">How those setups fail</Link>.{" "}
         <SourceLine ids={["mammotion-luba3-sku"]} checked={SPEC_CHECKED} />

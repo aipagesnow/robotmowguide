@@ -75,10 +75,31 @@ export default function VsPage() {
       <p className="measure">
         Buy the X430 for an open acre and banks up to {publishedSlope(x430.slope, x430.degrees)}. Buy the
         LUBA 3 AWD 3000 when trees cover a lawn rated around {formatAcres(luba.acres, false)} and you want
-        LiDAR with network RTK. Neither sentence is a score. We have not tested these mowers.
+        LiDAR with network RTK. We have not tested these mowers.
       </p>
+      <div data-cta-cluster="true" className="grid gap-2">
+        <p className="paid m-0">
+          Paid links: <Link href="/affiliate-disclosure">see disclosure</Link>
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <ProductLink
+            asin={x430.variant.asin}
+            model="Navimow X430"
+            productSlug={x430.family.slug}
+            placement="vs_top"
+            pageType="vs"
+          />
+          <ProductLink
+            asin={luba.variant.asin}
+            model="LUBA 3 AWD 3000"
+            productSlug={luba.family.slug}
+            placement="vs_top"
+            pageType="vs"
+          />
+        </div>
+      </div>
       <h2>Where they differ</h2>
-      <div className="table-scroll" data-cta-cluster="true">
+      <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
           <caption>Five differences between the Navimow X430 and the LUBA 3 AWD 3000. Specs checked Oct 10, 2026.</caption>
@@ -101,25 +122,6 @@ export default function VsPage() {
             ))}
           </tbody>
         </table>
-        <div className="flex flex-wrap gap-3 px-3 py-3">
-          <p className="paid m-0 w-full">
-            Paid links: <Link href="/affiliate-disclosure">see disclosure</Link>
-          </p>
-          <ProductLink
-            asin={x430.variant.asin}
-            model="Navimow X430"
-            productSlug={x430.family.slug}
-            placement="vs_top"
-            pageType="vs"
-          />
-          <ProductLink
-            asin={luba.variant.asin}
-            model="LUBA 3 AWD 3000"
-            productSlug={luba.family.slug}
-            placement="vs_top"
-            pageType="vs"
-          />
-        </div>
       </div>
       <h2>An open acre against a wooded three-quarter acre</h2>
       <p className="measure">

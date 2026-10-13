@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
-import { Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
+import { CtaCluster, Disclosure, Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { PassageDiagram, ZonesMap } from "@/components/Diagrams";
 import { PassageGauge } from "@/components/PassageGauge";
+import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
 import { modelFacts } from "@/lib/products";
 import { specText } from "@/lib/speak";
@@ -66,28 +67,33 @@ export default function FrontAndBackGuide() {
         { name: "Front and back yard", path: "/guides/robot-mower-front-and-back-yard" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published, with the zones map and the passage-width gauge."
+      whatChanged="October 13, 2026: added a passage-width check and the Dreame 2500 for two maps."
     >
       <p className="measure">
         Add the front grass and the back grass, then measure the narrowest opening between them, gate
         hardware included. If that opening is narrower than the published figure, treat the yards as separate
-        maps or as a carry. The gauge below says “at least as wide” or “narrower.” It does not say the mower
-        fits.
+        maps or as a carry. For two maps, the Dreame A3 AWD Pro 2500 is the model here that publishes two
+        separate maps, and each map needs its own charging station.{" "}
+        <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
+      <Disclosure />
+      <CtaCluster>
+        <ProductLink
+          asin={dreame.variant.asin}
+          model="Dreame A3 AWD Pro 2500"
+          productSlug={dreame.family.slug}
+          placement="quick_pick"
+          pageType="guide"
+        />
+      </CtaCluster>
       <ZonesMap />
-      <p className="measure">
-        The map is an example, not a survey and not a copy of a brand app. It shows a front zone, a back
-        zone, a side passage between them, a no-go bed, and a patch past a fence that you would carry the
-        mower to. A passage the mower cannot use splits the yard.
-      </p>
+      <p className="measure">A passage the mower cannot use splits the yard.</p>
       <h2>Published widths, and what each one is</h2>
       <PassageDiagram />
       <p className="measure">
-        The bars are the LiDAX Ultra 2000 path claim at {specText(mova.specs.passage)}, the X430 body at{" "}
-        {specText(x430.specs.bodyWidth)}, and the LUBA 3 gap at {specText(luba.specs.narrowestGap)}. The 32
-        in and 36 in bars are example gates, not product specs. The Q110H body is{" "}
-        {specText(q110.specs.bodyWidth)}. It is on the gauge and not on those bars, because it is a body
-        width, not a minimum passage.{" "}
+        The LiDAX Ultra 2000 listing claims paths of {specText(mova.specs.passage)}. The X430 body is{" "}
+        {specText(x430.specs.bodyWidth)}. The LUBA 3 gap is {specText(luba.specs.narrowestGap)}. The Q110H
+        body is {specText(q110.specs.bodyWidth)}, and that figure is a body width, not a minimum passage.{" "}
         <SourceLine ids={["q110h-manual", "amz-mova-2000"]} checked={RECHECKED} />{" "}
         <SourceLine ids={["navimow-x4", "mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
@@ -141,6 +147,9 @@ export default function FrontAndBackGuide() {
         </table>
       </div>
       <h2>Compare your opening</h2>
+      <p className="measure">
+        The gauge says “at least as wide” or “narrower.” It does not say the mower fits.
+      </p>
       <PassageGauge limits={limits} />
       <h2>Two maps are not free on every brand</h2>
       <p className="measure">
@@ -167,7 +176,7 @@ export default function FrontAndBackGuide() {
           },
           {
             q: "What about a bed I cannot reach without lifting the mower?",
-            a: "The map marks that as a carry zone. It is an example. It is not a feature list from an app.",
+            a: "Treat it as a carry. A bed you can reach only by lifting the mower is not a second mapped zone.",
           },
         ]}
       />

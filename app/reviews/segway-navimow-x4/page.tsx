@@ -207,7 +207,7 @@ export default function X4Review() {
       <h2>Trees and network RTK</h2>
       <NavFour highlight={["network"]} />
       <p className="measure">
-        The X430’s panel is network RTK. Vision and a time-of-flight sensor are also on the spec. Network RTK
+        The X430 uses network RTK. Vision and a time-of-flight sensor are also on the spec. Network RTK
         needs Wi-Fi or 4G at the lawn. Canopy over the path can still drop the fix, which is why a wooded
         acre is a reason to read the <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>{" "}
         before this one. The antenna ships in the box and the listing calls it optional.{" "}

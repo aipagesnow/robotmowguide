@@ -9,14 +9,27 @@
         "/"
       ],
       "round": 1,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Wide front lawn of a two-story house seen from the sidewalk, with a walk to the door and a street tree",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/hero-home-640.avif",
+        "/images/hero-home-640.webp",
+        "/images/hero-home-1024.avif",
+        "/images/hero-home-1024.webp",
+        "/images/hero-home-1600.avif",
+        "/images/hero-home-1600.webp",
+        "/images/hero-home-2400.avif",
+        "/images/hero-home-2400.webp"
+      ],
+      "alt": "Bright front lawn of a two-story house under a blue sky, with a walk to the porch",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Daylight is bright. The foreground grass is dry rather than deep green. No sidewalk, mailbox, or mower is in the frame. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/american-style-suburban-mansion-with-empty-lawn-4469156/",
+      "photographer": "Curtis Adams",
+      "licence": "Pexels License",
+      "attribution": "Photo by Curtis Adams on Pexels"
     },
     {
       "id": "dia-ladder",
@@ -216,14 +229,25 @@
         "/best/robot-mower-for-hills"
       ],
       "round": 2,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Grassy back yard bank dropping to a lower lawn and a short retaining wall",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-slope-480.avif",
+        "/images/photo-slope-480.webp",
+        "/images/photo-slope-800.avif",
+        "/images/photo-slope-800.webp",
+        "/images/photo-slope-1200.avif",
+        "/images/photo-slope-1200.webp"
+      ],
+      "alt": "Bright green lawn rising toward a house and flower beds under a blue sky",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. The grade is a front lawn, not a backyard bank with a retaining wall. Solar panels are on the roof. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/a-large-home-with-lush-green-grass-and-flowers-18559625/",
+      "photographer": "Stephen Leonardi",
+      "licence": "Pexels License",
+      "attribution": "Photo by Stephen Leonardi on Pexels"
     },
     {
       "id": "dia-slope",
@@ -280,14 +304,25 @@
         "/best/robot-mower-under-trees"
       ],
       "round": 3,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Lawn under mature oaks with dappled shade",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-trees-480.avif",
+        "/images/photo-trees-480.webp",
+        "/images/photo-trees-800.avif",
+        "/images/photo-trees-800.webp",
+        "/images/photo-trees-1200.avif",
+        "/images/photo-trees-1200.webp"
+      ],
+      "alt": "Green lawn under mature oaks with dappled daylight",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. This is a park lawn in Savannah, not a fenced home yard. A few people are far in the background. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/lush-oak-trees-in-forsyth-park-savannah-31096876/",
+      "photographer": "Dominik Gryzbon",
+      "licence": "Pexels License",
+      "attribution": "Photo by Dominik Gryzbon on Pexels"
     },
     {
       "id": "dia-canopy",
@@ -313,14 +348,25 @@
         "/best/robot-mower-st-augustine"
       ],
       "round": 4,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Thick St. Augustine lawn in a Florida yard with a palm and a screened pool",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-st-augustine-480.avif",
+        "/images/photo-st-augustine-480.webp",
+        "/images/photo-st-augustine-800.avif",
+        "/images/photo-st-augustine-800.webp",
+        "/images/photo-st-augustine-1200.avif",
+        "/images/photo-st-augustine-1200.webp"
+      ],
+      "alt": "Bright Florida front lawn with a palm, a sidewalk, and a stucco house",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Photographer places it in Odessa, Florida. No screened pool cage is in the frame. No readable house number at card size. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/view-of-a-modern-family-house-in-the-suburbs-20708166/",
+      "photographer": "Ron Greenberg",
+      "licence": "Pexels License",
+      "attribution": "Photo by Ron Greenberg on Pexels"
     },
     {
       "id": "photo-bermuda",
@@ -604,14 +650,25 @@
         "/reviews/segway-navimow-i-series"
       ],
       "round": 3,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Small flat back lawn behind a townhouse",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/card-navimow-i-480.avif",
+        "/images/card-navimow-i-480.webp",
+        "/images/card-navimow-i-800.avif",
+        "/images/card-navimow-i-800.webp",
+        "/images/card-navimow-i-1200.avif",
+        "/images/card-navimow-i-1200.webp"
+      ],
+      "alt": "Small green lawn in front of attached townhouses in bright daylight",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. This is a front lawn, not the back patio in the slot brief. Doormats are in the frame; any lettering was not readable at 800 px. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/a-house-with-a-lawn-grass-and-concrete-driveway-in-front-6303131/",
+      "photographer": "Get Lost Mike",
+      "licence": "Pexels License",
+      "attribution": "Photo by Get Lost Mike on Pexels"
     },
     {
       "id": "plate-navimow-i",
@@ -636,14 +693,25 @@
         "/reviews/worx-landroid-m-wr147"
       ],
       "round": 4,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Small rectangular back lawn with a picket fence",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/card-wr147-480.avif",
+        "/images/card-wr147-480.webp",
+        "/images/card-wr147-800.avif",
+        "/images/card-wr147-800.webp",
+        "/images/card-wr147-1200.avif",
+        "/images/card-wr147-1200.webp"
+      ],
+      "alt": "Green lawn behind a white picket fence at a house in bright daylight",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Photographer places it in Maine. A dark car sits at the right edge; a plate is not readable at card size. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/a-house-with-a-white-picket-fence-11693890/",
+      "photographer": "James Anthony",
+      "licence": "Pexels License",
+      "attribution": "Photo by James Anthony on Pexels"
     },
     {
       "id": "plate-wr147",
@@ -781,14 +849,25 @@
         "/guides/how-big-a-robot-mower-do-i-need"
       ],
       "round": 1,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Residential street with front lawns of different sizes",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-lot-sizes-480.avif",
+        "/images/photo-lot-sizes-480.webp",
+        "/images/photo-lot-sizes-800.avif",
+        "/images/photo-lot-sizes-800.webp",
+        "/images/photo-lot-sizes-1200.avif",
+        "/images/photo-lot-sizes-1200.webp"
+      ],
+      "alt": "Aerial view of a sunny suburban street with houses and lawns of different sizes",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Cars are visible from above; plates are not readable. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/aerial-view-of-suburban-neighborhood-on-a-sunny-day-34287635/",
+      "photographer": "Viktoria B.",
+      "licence": "Pexels License",
+      "attribution": "Photo by Viktoria B. on Pexels"
     },
     {
       "id": "dia-acres",
@@ -829,14 +908,25 @@
         "/guides/robot-mower-winter-storage"
       ],
       "round": 3,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Late-fall lawn with scattered leaves and bare trees beside a shed",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-winter-480.avif",
+        "/images/photo-winter-480.webp",
+        "/images/photo-winter-800.avif",
+        "/images/photo-winter-800.webp",
+        "/images/photo-winter-1200.avif",
+        "/images/photo-winter-1200.webp"
+      ],
+      "alt": "Bright winter front lawn with dormant grass, a bare tree, and patches of snow",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Bright blue sky. The grass is dormant, not green, and there is no shed or leaf litter. A white truck is at the right edge. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/a-front-yard-of-a-house-8894802/",
+      "photographer": "Clay Elliot",
+      "licence": "Pexels License",
+      "attribution": "Photo by Clay Elliot on Pexels"
     },
     {
       "id": "dia-seasons",
@@ -957,14 +1047,25 @@
         "/guides/robot-mower-theft-protection"
       ],
       "round": 4,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Open front lawn with no fence beside a quiet street",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-front-street-480.avif",
+        "/images/photo-front-street-480.webp",
+        "/images/photo-front-street-800.avif",
+        "/images/photo-front-street-800.webp",
+        "/images/photo-front-street-1200.avif",
+        "/images/photo-front-street-1200.webp"
+      ],
+      "alt": "Bright green front lawn and driveway of a two-story house with pines behind it",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. The slot brief asks for an open front yard with no fence. This frame includes a wooden fence at the left and does not show the street. No mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/blue-house-on-green-lawn-5008399/",
+      "photographer": "Curtis Adams",
+      "licence": "Pexels License",
+      "attribution": "Photo by Curtis Adams on Pexels"
     },
     {
       "id": "dia-theft",
@@ -989,14 +1090,25 @@
         "/about"
       ],
       "round": 1,
-      "status": "not-made",
-      "source": "grok-imagine",
-      "files": [],
-      "alt": "Quiet residential street with front lawns of different sizes",
-      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "status": "UNAPPROVED",
+      "source": "pexels",
+      "files": [
+        "/images/photo-about-480.avif",
+        "/images/photo-about-480.webp",
+        "/images/photo-about-800.avif",
+        "/images/photo-about-800.webp",
+        "/images/photo-about-1200.avif",
+        "/images/photo-about-1200.webp"
+      ],
+      "alt": "Suburban sidewalk and white picket fences in front of houses with small green lawns",
+      "iptcDigitalSourceType": null,
       "checkedBy": null,
       "checkedOn": null,
-      "notes": null
+      "notes": "Licensed photograph, not generated. Bright daylight. Lawns are narrow front strips. No people and no mower. Not approved.",
+      "sourceUrl": "https://www.pexels.com/photo/houses-in-the-suburb-5587941/",
+      "photographer": "Get Lost Mike",
+      "licence": "Pexels License",
+      "attribution": "Photo by Get Lost Mike on Pexels"
     },
     {
       "id": "dia-method",

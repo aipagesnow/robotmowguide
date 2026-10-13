@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
-import { Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
+import { CtaCluster, Disclosure, Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { SeasonsDiagram } from "@/components/Diagrams";
+import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
 import { modelFacts } from "@/lib/products";
 import { specText } from "@/lib/speak";
@@ -35,19 +36,25 @@ export default function WinterGuide() {
         { name: "Winter storage", path: "/guides/robot-mower-winter-storage" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published, using the Q110H storage temperature from the English technical data."
+      whatChanged="October 13, 2026: added the RockNeo Q110H, the mower whose manual prints a storage temperature."
     >
       <p className="measure">
         Use the storage temperature in that model’s manual. The only one in our spec set is the RockNeo
-        Q110H: {storage}. The same manual gives that band for the battery. This page does not add a charge
-        level, and it does not tell every brand to bring the mower inside.{" "}
+        Q110H: {storage}. The same manual gives that band for the battery. No charge percent is published on
+        the pages used here.{" "}
         <SourceLine ids={["q110h-manual"]} checked={RECHECKED} />
       </p>
+      <Disclosure />
+      <CtaCluster>
+        <ProductLink
+          asin={q110.variant.asin}
+          model="RockNeo Q110H"
+          productSlug={q110.family.slug}
+          placement="quick_pick"
+          pageType="guide"
+        />
+      </CtaCluster>
       <SeasonsDiagram />
-      <p className="measure">
-        The drawing names spring, summer, fall, and winter. Winter points back at the manual. It is a set of
-        labels, not a brand procedure, and it does not name a charge percent.
-      </p>
       <h2>What the Q110H manual actually prints</h2>
       <p className="measure">
         Storage is {storage}. That is −20–55°C, with 10–35°C recommended, written here in Fahrenheit as the
@@ -59,16 +66,16 @@ export default function WinterGuide() {
       <h2>The other US pages do not include a checklist</h2>
       <p className="measure">
         Checked Oct 13, 2026: the Mammotion LUBA 3, MOVA LiDAX, Navimow, and Dreame US pages already used for
-        specs on this site do not include a winter storage checklist. This page does not invent steps for
-        those brands. If you own one of them, use that model’s manual.{" "}
+        specs on this site do not include a winter storage checklist. If you own one of them, use that
+        model’s manual.{" "}
         <SourceLine ids={["mammotion-luba3", "mova-2000", "mova-3000", "navimow-x4", "navimow-i-series", "dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>A garage is not a positioning claim</h2>
       <p className="measure">
-        Store the mower where the manual’s temperature fits. This page does not claim that a garage blocks a
-        satellite fix. Sky along the mowing path is a different question, covered in{" "}
+        Store the mower where the manual’s temperature fits. A garage is a temperature question, not a
+        positioning claim. Sky along the mowing path is covered in{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link>. An antenna still needs open
-        sky, and the mower still needs a fix along the grass. Neither sentence is a winter storage rule.
+        sky, and the mower still needs a fix along the grass.
       </p>
       <Faq
         items={[
@@ -78,11 +85,11 @@ export default function WinterGuide() {
           },
           {
             q: "What charge should the battery sit at?",
-            a: "Not published on the pages used here. This guide does not fill that gap with a percent.",
+            a: "Not published on the pages used here.",
           },
           {
             q: "Does the dock stay outside?",
-            a: "The US pages in the source list do not say. This guide does not add a rule to leave the dock out or to take it in.",
+            a: "The US pages in the source list do not say whether the dock stays outside.",
           },
         ]}
       />

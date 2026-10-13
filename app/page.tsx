@@ -105,10 +105,9 @@ export default function HomePage() {
         <FinderEmbed />
         <Ladder />
         <section>
-          <h2>Six example yards</h2>
+          <h2>Six yard sizes</h2>
           <p className="measure">
-            These plans are examples, not surveys. The acre math is exact: one acre is 43,560 sq ft. Links go
-            to a live guide, a review, or a pick on the best-mowers page.
+            One acre is 43,560 sq ft. Links go to a live guide, a review, or a pick on the best-mowers page.
           </p>
           <h3>A flat quarter acre</h3>
           <YardQuarter />
@@ -121,10 +120,10 @@ export default function HomePage() {
           <h3>A half acre with a side passage</h3>
           <YardHalf />
           <p className="measure">
-            A lot 132 ft by 165 ft is {formatAcres(0.5)}. The example passage is 3 ft, which is 36 in. The
-            Dreame A3 AWD Pro 2500 is rated {formatAcres(dreame.acres)} and{" "}
-            {publishedSlope(dreame.slope, dreame.degrees)}. A published body width was not on the sheet we
-            checked, so this page does not claim the mower fits that gap.{" "}
+            A lot 132 ft by 165 ft is {formatAcres(0.5)}. A 3 ft side opening is 36 in. The Dreame A3 AWD Pro
+            2500 is rated {formatAcres(dreame.acres)} and {publishedSlope(dreame.slope, dreame.degrees)}. A
+            published body width was not on the sheet we checked, so a 36 in opening is not cleared for that
+            mower here.{" "}
             <Link href="/reviews/dreame-a3-awd-pro">Read the Dreame A3 AWD Pro review</Link>.
           </p>
           <h3>An open acre</h3>
@@ -138,16 +137,16 @@ export default function HomePage() {
           <h3>A wooded lawn</h3>
           <YardWooded />
           <p className="measure">
-            The shaded circles cover about one third of the example lawn. Canopy is where a satellite fix
-            often weakens. The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and adds LiDAR to network
+            When trees cover about a third of the lawn, canopy is where a satellite fix often weakens. The
+            LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and adds LiDAR to network
             RTK. <Link href="/reviews/mammotion-luba-3-awd">Read the LUBA 3 AWD review</Link>.{" "}
             <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link>.
           </p>
           <h3>A hillside bank</h3>
           <YardHillside />
           <p className="measure">
-            The example bank rises 4 ft over 10 ft. That is 40%, or {formatDegrees(bank)}, computed from the
-            percent. It is not a product rating. Published slopes for the picks: Worx Landroid Vision Cloud
+            A bank that rises 4 ft over 10 ft is 40%, or {formatDegrees(bank)}, computed from the percent. It
+            is not a product rating. Published slopes for the picks: Worx Landroid Vision Cloud
             WR340 {publishedSlope(worx.slope, worx.degrees)}, Dreame A3 AWD Pro 2500{" "}
             {publishedSlope(dreame.slope, dreame.degrees)}, LUBA 3 AWD 3000{" "}
             {publishedSlope(luba.slope, luba.degrees)}, Navimow X430 {publishedSlope(x430.slope, x430.degrees)}.{" "}
@@ -156,7 +155,7 @@ export default function HomePage() {
           <h3>A Florida yard</h3>
           <YardFlorida />
           <p className="measure">
-            The plan shows a screened pool cage, two palms, and a St. Augustine lawn. St. Augustine is often
+            A Florida yard often has a screened pool cage, palms, and a St. Augustine lawn. St. Augustine is often
             kept tall, so cutting height matters. The Navimow X430 listing gives{" "}
             {specText(x430.specs.cuttingHeight)}. The LUBA 3 AWD 3000 listing gives{" "}
             {specText(luba.specs.cuttingHeight)}, and the high-cut variants are a separate row in the{" "}
@@ -164,7 +163,7 @@ export default function HomePage() {
           </p>
           <AcreSquares />
           <p className="measure">
-            The squares compare 0.125, 0.25, 0.5, 0.75, and 1 acre. In the worked example, a quarter-acre lot
+            Sizes run from 0.125 acre to 1 acre. In the worked example, a quarter-acre lot
             of 10,890 sq ft minus a 1,200 sq ft house, a 600 sq ft drive, and 400 sq ft of beds leaves about
             8,690 sq ft of lawn.{" "}
             <Link href="/guides/how-big-a-robot-mower-do-i-need">The size guide walks through that math.</Link>

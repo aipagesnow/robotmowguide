@@ -73,10 +73,6 @@ export default function RtkGuide() {
       </CtaCluster>
       <h2>Four setups, one yard</h2>
       <NavFour />
-      <p className="measure">
-        The drawing uses short labels. The differences that change a purchase are below. A highlighted panel
-        is not set here, because this page is comparing setups rather than one mower.
-      </p>
       <h3>Boundary wire</h3>
       <p className="measure">
         A wire is buried or pegged around the lawn, and the mower follows it. It does not need sky. It fails

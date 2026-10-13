@@ -77,26 +77,26 @@ export default function SizeGuide() {
       <h2>What an acre looks like on a lot</h2>
       <AcreSquares />
       <p className="measure">
-        The squares scale from an eighth of an acre to one acre. A quarter acre is 10,890 sq ft. In the
+        Sizes run from an eighth of an acre to one acre. A quarter acre is 10,890 sq ft. In the
         worked example, subtract a 1,200 sq ft house, a 600 sq ft drive, and 400 sq ft of beds from that lot
         and about 8,690 sq ft of lawn remains. That lawn is smaller than the 0.25 acre a maker might assume.
       </p>
       <YardQuarter />
       <p className="measure">
-        The quarter-acre plan is 90 ft by 121 ft, with a front lawn and a back lawn. The Navimow i210 AWD is
+        A lot 90 ft by 121 ft is a quarter acre, with a front lawn and a back lawn. The Navimow i210 AWD is
         rated {formatAcres(i210.acres)}. {realisticLine(i210.acres)}{" "}
         <Link href="/best#navimow-i210">i210 pick</Link>.
       </p>
       <YardHalf />
       <p className="measure">
-        The half-acre plan is 132 ft by 165 ft, {formatAcres(0.5)}, with a 3 ft side passage between the
+        A lot 132 ft by 165 ft is a half acre, {formatAcres(0.5)}, with a 3 ft side passage between the
         front and the back. Two zones matter even when the total grass is inside a rating. The Dreame A3 AWD
         Pro 2500 is rated {formatAcres(dreame.acres)}. Its page also says each of two maps needs its own
         charging station. <Link href="/best#dreame-a3-2500">Dreame pick</Link>.
       </p>
       <YardAcre />
       <p className="measure">
-        The open-acre plan is 180 ft by 242 ft, {formatAcres(1)}. The Navimow X430 and the Worx Landroid
+        A lot 180 ft by 242 ft is one acre, {formatAcres(1)}. The Navimow X430 and the Worx Landroid
         Vision Cloud WR340 are both rated {formatAcres(1)}. {realisticLine(1)} The slope and the trees decide
         which of those two ratings is the honest one.{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.

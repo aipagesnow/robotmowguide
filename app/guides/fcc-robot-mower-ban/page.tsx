@@ -218,12 +218,11 @@ export default function FccPage() {
       <h2>What to buy now</h2>
       <p className="measure">
         Choose for the lawn you have. The rankings are on <Link href="/best">the best-mowers page</Link>.
-        This guide does not add a product link.
       </p>
       <h2>Open questions</h2>
       <p className="measure">
-        This page does not describe an FCC proposal to stop sales of already-authorized mowers. The documents
-        cited here do not name one. New models still need authorization, or a Conditional Approval, before
+        The documents cited here do not name a proposal to stop sales of already-authorized mowers. New models
+        still need authorization, or a Conditional Approval, before
         they can be sold. What happens to software updates after January 1, 2029 depends on further FCC
         action (<a href={FCC_DA_26_789}>DA 26-789</a>).
       </p>

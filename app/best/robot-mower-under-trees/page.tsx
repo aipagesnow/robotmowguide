@@ -40,13 +40,14 @@ export default function TreesPage() {
         { name: "Under trees", path: "/best/robot-mower-under-trees" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published, with a canopy diagram of where a satellite fix weakens."
+      whatChanged="October 13, 2026: first published, for yards where a satellite fix weakens under canopy."
       disclosure
     >
       <p className="measure">
         Canopy over the path is the problem, not a tree at the edge of an open lawn. A satellite fix weakens
         under that cover. LiDAR models are the ones to read for that part of the yard. An RTK mower can still
-        be the right machine for the open part. This page does not pretend one mower covers both.
+        be the right machine for the open part. Read a LiDAR model for the shaded part and an RTK model for
+        the open part.
       </p>
       <QuickPick
         pageType="best_for"
@@ -84,8 +85,7 @@ export default function TreesPage() {
       <h2>Where the fix weakens</h2>
       <CanopyDiagram />
       <p className="measure">
-        The drawing is an example, not a survey. The shaded circle is canopy. The mower needs sky along its
-        path, not only at an antenna in the open.{" "}
+        The mower needs sky along its path, not only at an antenna in the open.{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">How RTK, LiDAR, and vision fail</Link>.
       </p>
       <h2>LiDAR rows, then the RTK rows</h2>
@@ -145,7 +145,7 @@ export default function TreesPage() {
           },
           {
             q: "Will an antenna in the open fix a shaded lawn?",
-            a: "No. The antenna’s sky does not give the mower a fix under the canopy. The diagram marks that split.",
+            a: "No. The antenna’s sky does not give the mower a fix under the canopy.",
           },
           {
             q: "Which shaded yard is too big for these LiDAR rows?",

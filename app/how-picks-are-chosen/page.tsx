@@ -87,10 +87,6 @@ export default function MethodPage() {
         Drafts are written with AI assistance. A person checks every figure against the linked source before
         a page is published or updated.
       </p>
-      <p className="measure">
-        Yard photos are AI-generated scenes, not photos of tested mowers. Diagrams are our own. A photo or
-        diagram appears only after it is approved. Until then, the page keeps the written figures.
-      </p>
       <Faq
         items={[
           {

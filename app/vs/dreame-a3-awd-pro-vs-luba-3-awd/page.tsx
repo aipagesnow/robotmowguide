@@ -75,10 +75,31 @@ export default function VsPage() {
       <p className="measure">
         Buy the Dreame A3 AWD Pro 2500 for about {formatAcres(dreame.acres, false)} of grass, LiDAR, and no
         RTK. Buy the LUBA 3 AWD 3000 when the lawn is closer to {formatAcres(luba.acres, false)} and you want
-        LiDAR with network RTK. Neither sentence is a score. We have not tested these mowers.
+        LiDAR with network RTK. We have not tested these mowers.
       </p>
+      <div data-cta-cluster="true" className="grid gap-2">
+        <p className="paid m-0">
+          Paid links: <Link href="/affiliate-disclosure">see disclosure</Link>
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <ProductLink
+            asin={dreame.variant.asin}
+            model="Dreame A3 AWD Pro 2500"
+            productSlug={dreame.family.slug}
+            placement="vs_top"
+            pageType="vs"
+          />
+          <ProductLink
+            asin={luba.variant.asin}
+            model="LUBA 3 AWD 3000"
+            productSlug={luba.family.slug}
+            placement="vs_top"
+            pageType="vs"
+          />
+        </div>
+      </div>
       <h2>Where they differ</h2>
-      <div className="table-scroll" data-cta-cluster="true">
+      <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
           <caption>
@@ -104,25 +125,6 @@ export default function VsPage() {
             ))}
           </tbody>
         </table>
-        <div className="flex flex-wrap gap-3 px-3 py-3">
-          <p className="paid m-0 w-full">
-            Paid links: <Link href="/affiliate-disclosure">see disclosure</Link>
-          </p>
-          <ProductLink
-            asin={dreame.variant.asin}
-            model="Dreame A3 AWD Pro 2500"
-            productSlug={dreame.family.slug}
-            placement="vs_top"
-            pageType="vs"
-          />
-          <ProductLink
-            asin={luba.variant.asin}
-            model="LUBA 3 AWD 3000"
-            productSlug={luba.family.slug}
-            placement="vs_top"
-            pageType="vs"
-          />
-        </div>
       </div>
       <h2>Choose the Dreame 2500 if the lawn stays inside its rating</h2>
       <p className="measure">
