@@ -168,6 +168,112 @@ a:hover {
   background: #f3f7f4;
 }
 
+.home-hero {
+  position: relative;
+  background: #f4f6f8;
+  overflow: hidden;
+}
+
+.home-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.home-hero-media img {
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.home-hero-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 2.5rem;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgb(244 246 248 / 0), #f4f6f8);
+}
+
+.home-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 40rem;
+  padding: 0.5rem 0 0.65rem;
+}
+
+.home-hero-copy h1 {
+  margin-bottom: 0.2rem;
+  line-height: 1.08;
+}
+
+.home-hero-copy .meta-row {
+  line-height: 1.28;
+}
+
+.home-hero-copy .meta-row p,
+.home-hero-copy > p {
+  margin: 0;
+}
+
+.home-hero-copy > p {
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 899px) {
+  .home-hero-copy h1 {
+    font-size: 1.7rem;
+  }
+
+  .home-hero-copy .meta-row {
+    font-size: 0.8rem;
+  }
+
+  .home-hero-copy > p {
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+}
+
+.home-hero-scrim {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -1.25rem;
+  right: -1.25rem;
+  background: rgb(244 246 248 / 0.96);
+}
+
+@media (min-width: 900px) {
+  .home-hero {
+    min-height: 26rem;
+  }
+
+  .home-hero-copy {
+    padding: 2.25rem 0 3rem;
+  }
+
+  .home-hero-scrim {
+    right: 0;
+  }
+
+  .home-hero-scrim::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 7rem;
+    background: linear-gradient(to right, rgb(244 246 248 / 0.96), rgb(244 246 248 / 0));
+  }
+
+  .home-hero-fade {
+    height: 4.5rem;
+  }
+}
+
 .yard-photo {
   margin: 1.5rem 0 0;
 }

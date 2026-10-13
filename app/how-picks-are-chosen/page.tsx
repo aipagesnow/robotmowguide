@@ -94,7 +94,7 @@ export default function MethodPage() {
         are not from a test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
         Lost Mike, James Anthony, Viktoria B., Clay Elliot, Pixabay, Max Vakhtbovych, Jonathan, Magda
         Ehlers, Dianne, Viaceslav Kat, Alexander F Ungerer, wr heustis, Al Rashed, Matheus Bertelli,
-        and Anastasiya Pavlova, on Pexels.
+        hi room, Polina Chistyakova, and Anastasiya Pavlova, on Pexels.
       </p>
       <Faq
         items={[

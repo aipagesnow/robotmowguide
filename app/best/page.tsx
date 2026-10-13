@@ -767,6 +767,7 @@ export default function BestPage() {
           </li>
         </ol>
       </section>
+      <YardPhoto id="photo-best-choose" />
       <div id="questions">
         <Faq
           items={[
@@ -796,6 +797,7 @@ export default function BestPage() {
           ]}
         />
       </div>
+      <YardPhoto id="photo-best-faq" />
       <ResearchedBox
         scope="group"
         sources={researched.map((id) => ({ id }))}

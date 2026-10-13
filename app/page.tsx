@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Disclosure, MetaRow, QuickPick } from "@/components/Blocks";
-import { YardPhoto } from "@/components/YardPhoto";
 import { FinderEmbed } from "@/components/FinderEmbed";
+import { getSlot, slotVisible } from "@/lib/images";
 import { Ladder } from "@/components/Ladder";
 import { JsonLd } from "@/components/JsonLd";
 import {
@@ -27,6 +28,23 @@ const description =
 
 export const metadata: Metadata = pageMeta({ title, description, path: "/", type: "website" });
 
+function HomeHeroPhoto() {
+  if (!slotVisible("hero-home")) return null;
+  const slot = getSlot("hero-home");
+  if (!slot?.alt) return null;
+  return (
+    <div className="home-hero-media">
+      <Image
+        src="/images/hero-home-2400.webp"
+        alt={slot.alt}
+        fill
+        priority
+        sizes="100vw"
+      />
+    </div>
+  );
+}
+
 export default function HomePage() {
   const i210 = modelFacts("segway-navimow-i2-awd", "Navimow i210 AWD");
   const dreame = modelFacts("dreame-a3-awd-pro", "A3 AWD Pro 2500");
@@ -47,22 +65,30 @@ export default function HomePage() {
           modified: PUBLISHED,
         })}
       />
-      <div className="hero-band">
-        <div className="wrap py-8">
-          <h1>{title}</h1>
-          <MetaRow
-            updated={PUBLISHED}
-            whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
-          />
-          <p className="measure">
-            Start with the lawn, not the brand. These rankings use the area each current model is rated for,
-            then the steepest slope the maker publishes. Specs were checked on Oct 10, 2026. The reviews are
-            research-based. We have not tested these mowers.
-          </p>
-          <Disclosure />
-          <QuickPick
-            pageType="home"
-            items={[
+      <section className="home-hero">
+        <HomeHeroPhoto />
+        <div className="home-hero-fade" aria-hidden="true" />
+        <div className="wrap">
+          <div className="home-hero-copy">
+            <div className="home-hero-scrim" aria-hidden="true" />
+            <h1>{title}</h1>
+            <MetaRow
+              updated={PUBLISHED}
+              whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
+            />
+            <p className="measure">
+              Start with the lawn, not the brand. These rankings use the area each current model is rated for,
+              then the steepest slope the maker publishes. Specs were checked on Oct 10, 2026. The reviews are
+              research-based. We have not tested these mowers.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div className="wrap pb-10">
+        <Disclosure />
+        <QuickPick
+          pageType="home"
+          items={[
               {
                 yard: `Up to ${formatAcres(i210.acres, false)}, banks to ${publishedSlope(i210.slope, i210.degrees)}`,
                 model: "Navimow i210 AWD",
@@ -98,12 +124,8 @@ export default function HomePage() {
                 asin: x430.variant.asin,
                 productSlug: x430.family.slug,
               },
-            ]}
-          />
-          <YardPhoto id="hero-home" priority />
-        </div>
-      </div>
-      <div className="wrap pb-10">
+          ]}
+        />
         <FinderEmbed />
         <Ladder />
         <section>

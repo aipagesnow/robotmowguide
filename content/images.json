@@ -21,15 +21,15 @@
         "/images/hero-home-2400.avif",
         "/images/hero-home-2400.webp"
       ],
-      "alt": "A brick ranch house with a striped green front lawn, shrubs, and a concrete walk under a blue sky",
+      "alt": "A striped green lawn in front of a pale twin-gable house under a blue sky",
       "iptcDigitalSourceType": null,
       "checkedBy": "Chris (pre-approved brief)",
       "checkedOn": "2026-10-13",
-      "notes": "Licensed photograph, not generated. Bright daylight.",
-      "sourceUrl": "https://www.pexels.com/photo/green-grass-lawn-near-white-and-brown-house-under-blue-sky-6267516/",
-      "photographer": "Get Lost Mike",
+      "notes": "Licensed photograph, not generated. Bright daylight. Wide garden behind the home heading.",
+      "sourceUrl": "https://www.pexels.com/photo/white-and-gray-wooden-house-near-grass-field-and-trees-280222/",
+      "photographer": "Pixabay",
       "licence": "Pexels License",
-      "attribution": "Photo by Get Lost Mike on Pexels"
+      "attribution": "Photo by Pixabay on Pexels"
     },
     {
       "id": "dia-ladder",
@@ -1693,6 +1693,60 @@
       "photographer": "Max Vakhtbovych",
       "licence": "Pexels License",
       "attribution": "Photo by Max Vakhtbovych on Pexels"
+    },
+    {
+      "id": "photo-best-choose",
+      "kind": "photo",
+      "pages": [
+        "/best"
+      ],
+      "round": 4,
+      "status": "approved",
+      "source": "pexels",
+      "files": [
+        "/images/photo-best-choose-480.avif",
+        "/images/photo-best-choose-480.webp",
+        "/images/photo-best-choose-800.avif",
+        "/images/photo-best-choose-800.webp",
+        "/images/photo-best-choose-1200.avif",
+        "/images/photo-best-choose-1200.webp"
+      ],
+      "alt": "A bright green backyard with a patio, a playset, and a gray house under a blue sky",
+      "iptcDigitalSourceType": null,
+      "checkedBy": "Chris (pre-approved brief)",
+      "checkedOn": "2026-10-13",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/lawn-near-house-17240699/",
+      "photographer": "hi room",
+      "licence": "Pexels License",
+      "attribution": "Photo by hi room on Pexels"
+    },
+    {
+      "id": "photo-best-faq",
+      "kind": "photo",
+      "pages": [
+        "/best"
+      ],
+      "round": 4,
+      "status": "approved",
+      "source": "pexels",
+      "files": [
+        "/images/photo-best-faq-480.avif",
+        "/images/photo-best-faq-480.webp",
+        "/images/photo-best-faq-800.avif",
+        "/images/photo-best-faq-800.webp",
+        "/images/photo-best-faq-1200.avif",
+        "/images/photo-best-faq-1200.webp"
+      ],
+      "alt": "A sunlit green lawn under trees in front of a low stone building and a blue sky",
+      "iptcDigitalSourceType": null,
+      "checkedBy": "Chris (pre-approved brief)",
+      "checkedOn": "2026-10-13",
+      "notes": "Licensed photograph, not generated. Bright daylight.",
+      "sourceUrl": "https://www.pexels.com/photo/sunlit-modern-building-with-lush-greenery-36129306/",
+      "photographer": "Polina Chistyakova",
+      "licence": "Pexels License",
+      "attribution": "Photo by Polina Chistyakova on Pexels"
     }
   ]
 }
