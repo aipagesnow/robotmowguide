@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
-import { Faq, Related } from "@/components/Blocks";
+import { CtaCluster, Disclosure, Faq, Related } from "@/components/Blocks";
+import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
+import { modelFacts } from "@/lib/products";
 import { FCC_COVERED_LIST, FCC_DA_26_789, FCC_SEARCH, FCC_TABLE_CHECKED, RECHECKED } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 
@@ -32,6 +34,10 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function FccPage() {
+  const i210 = modelFacts("segway-navimow-i2-awd", "Navimow i210 AWD");
+  const luba = modelFacts("mammotion-luba-3-awd", "LUBA 3 AWD 3000");
+  const x430 = modelFacts("segway-navimow-x4", "Navimow X430");
+
   return (
     <ArticleFrame
       title={title}
@@ -43,7 +49,7 @@ export default function FccPage() {
         { name: "FCC rule", path: "/guides/fcc-robot-mower-ban" },
       ]}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published."
+      whatChanged="October 13, 2026: first published, with links to three current models that already have a listing."
       factCheck={FACT}
     >
       <p className="measure">
@@ -51,6 +57,33 @@ export default function FccPage() {
         word in the title is the search term. The FCC documents below do not stop the import, sale, or use
         of models the FCC had already authorized.
       </p>
+      <p className="measure">
+        For a mower you can buy now, these current models have a confirmed amazon.com listing.
+      </p>
+      <Disclosure />
+      <CtaCluster>
+        <ProductLink
+          asin={i210.variant.asin}
+          model="Navimow i210 AWD"
+          productSlug={i210.family.slug}
+          placement="inline"
+          pageType="guide"
+        />
+        <ProductLink
+          asin={luba.variant.asin}
+          model="LUBA 3 AWD 3000"
+          productSlug={luba.family.slug}
+          placement="inline"
+          pageType="guide"
+        />
+        <ProductLink
+          asin={x430.variant.asin}
+          model="Navimow X430"
+          productSlug={x430.family.slug}
+          placement="inline"
+          pageType="guide"
+        />
+      </CtaCluster>
       <YardPhoto id="photo-fcc" />
       <h2>What the FCC added on July 28, 2026</h2>
       <p className="measure">
@@ -260,7 +293,8 @@ export default function FccPage() {
       <ul className="grid gap-2 pl-5">
         <li>
           October 13, 2026: page first published. The Covered List appendix date cited is October 9, 2026.
-          The FAQ page date cited is October 2, 2026.
+          The FAQ page date cited is October 2, 2026. Links added for three current models that already
+          have an amazon.com listing.
         </li>
       </ul>
       <Related
