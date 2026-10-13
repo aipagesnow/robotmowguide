@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, Related, SourceLine } from "@/components/Blocks";
 import { AcreSquares, YardAcre, YardHalf, YardQuarter, YardWooded } from "@/components/Diagrams";
 import { pageMeta } from "@/lib/metadata";
@@ -49,6 +50,7 @@ export default function SizeGuide() {
         cut that number when the yard has heavy trees or a front lawn and a back lawn. Our rule for that
         case is rated area divided by 1.25. A 1 acre rating then plans on about {formatAcres(realisticAcres(1))}.
       </p>
+      <YardPhoto id="photo-lot-sizes" />
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">

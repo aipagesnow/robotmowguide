@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import {
   CtaCluster,
   EndLinks,
@@ -84,6 +85,7 @@ export default function ISeriesReview() {
           pageType="review"
         />
       </CtaCluster>
+      <YardPhoto id="card-navimow-i" />
       <h2>Key numbers for your yard</h2>
       <KeyNumbers
         rows={[

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
 import { CONTACT_EMAIL, PUBLISHER } from "@/lib/site";
@@ -23,6 +24,7 @@ export default function AboutPage() {
         the slope the maker publishes, and the navigation that yard can support. {PUBLISHER} publishes the
         site.
       </p>
+      <YardPhoto id="photo-about" />
       <p className="measure">
         Reviews are research-based. We have not tested these mowers. There is no hands-on testing. Figures
         come from manufacturer pages, listing text, and owner threads, each with a checked date.

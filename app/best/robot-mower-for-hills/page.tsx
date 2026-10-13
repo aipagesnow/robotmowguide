@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox } from "@/components/Blocks";
 import { Slot } from "@/components/Slot";
 import { SlopeConverter } from "@/components/SlopeTools";
@@ -78,6 +79,7 @@ export default function HillsPage() {
           },
         ].filter((item): item is NonNullable<typeof item> => Boolean(item))}
       />
+      <YardPhoto id="photo-slope" />
       <h2>How to measure with a phone</h2>
       <p className="measure">
         Lay a straight board on the bank. Open the phone’s level app and set it on the board. Read the

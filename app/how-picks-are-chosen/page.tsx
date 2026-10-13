@@ -19,7 +19,7 @@ export default function MethodPage() {
       description={description}
       path="/how-picks-are-chosen"
       updated={RECHECKED}
-      whatChanged="October 13, 2026: explains which yard facts the mower finder uses."
+      whatChanged="October 13, 2026: names the licensed yard photographs."
     >
       <p className="measure">
         A pick starts from the yard. The ladder places each current model at the lawn area its maker rates,
@@ -86,6 +86,11 @@ export default function MethodPage() {
       <p className="measure">
         Drafts are written with AI assistance. A person checks every figure against the linked source before
         a page is published or updated.
+      </p>
+      <p className="measure">
+        Yard photographs are licensed photos from Pexels of real yards. They do not show a mower, and they
+        are not from a test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
+        Lost Mike, James Anthony, Viktoria B., and Clay Elliot, on Pexels.
       </p>
       <Faq
         items={[

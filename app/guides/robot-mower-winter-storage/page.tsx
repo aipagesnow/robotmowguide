@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { CtaCluster, Disclosure, Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { SeasonsDiagram } from "@/components/Diagrams";
 import { ProductLink } from "@/components/ProductLink";
@@ -54,6 +55,7 @@ export default function WinterGuide() {
           pageType="guide"
         />
       </CtaCluster>
+      <YardPhoto id="photo-winter" />
       <SeasonsDiagram />
       <h2>What the Q110H manual actually prints</h2>
       <p className="measure">

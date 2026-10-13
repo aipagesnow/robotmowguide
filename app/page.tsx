@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Disclosure, MetaRow, QuickPick } from "@/components/Blocks";
+import { YardPhoto } from "@/components/YardPhoto";
 import { FinderEmbed } from "@/components/FinderEmbed";
 import { Ladder } from "@/components/Ladder";
 import { JsonLd } from "@/components/JsonLd";
@@ -99,6 +100,7 @@ export default function HomePage() {
               },
             ]}
           />
+          <YardPhoto id="hero-home" priority />
         </div>
       </div>
       <div className="wrap pb-10">

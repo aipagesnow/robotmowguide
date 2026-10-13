@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
+import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { CanopyDiagram } from "@/components/Diagrams";
 import { pageMeta } from "@/lib/metadata";
@@ -82,6 +83,7 @@ export default function TreesPage() {
           },
         ]}
       />
+      <YardPhoto id="photo-trees" />
       <h2>Where the fix weakens</h2>
       <CanopyDiagram />
       <p className="measure">
