@@ -31,9 +31,13 @@ export const HUSQ_ANTENNA =
 
 export type Crumb = { name: string; path: string };
 
+export const RECHECKED = "2026-10-13";
+
 export const NAV = [
   { href: "/best", label: "Best" },
+  { href: "/tools/mower-finder", label: "Find my mower" },
   { href: "/reviews", label: "Reviews" },
+  { href: "/vs", label: "Head-to-head" },
   { href: "/guides", label: "Guides" },
   { href: "/how-picks-are-chosen", label: "How picks are chosen" },
 ] as const;

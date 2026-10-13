@@ -111,7 +111,7 @@ Before: re-check every ASIN and spec, the FCC Conditional Approvals table, CES 2
 |---|---|---|---|---|---|---|
 | 0 | | | n/a | n/a | | |
 | 1 | 2026-10-13 | 2f0352a | pass | pass | 0 approved; 14 diagrams made, not approved | Ship scan: pass. Photos not made. Production hides diagrams until they are approved. |
-| 2 | | | | | | |
+| 2 | 2026-10-13 | | pass | pass | 0 approved; dia-slope and dia-rated-vs-real made, not approved | Ship scan: pass. Light hero and footer. Finder, FCC tracker, 1-acre, hills, Worx and Dreame reviews, X430 vs LUBA. Photos not made. Production hides diagrams until they are approved. |
 | 3 | | | | | | |
 | 4 | | | | | | |
 | 5 | | | | | | |

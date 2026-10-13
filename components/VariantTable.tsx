@@ -1,7 +1,7 @@
 import { CtaCluster } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import type { PageType } from "@/lib/amazon";
-import { degreesFromPercent, formatAcres, formatDate, formatDegrees } from "@/lib/format";
+import { formatAcres, formatDate, formatDegrees } from "@/lib/format";
 import type { Family, Variant } from "@/lib/products";
 
 function areaCell(variant: Variant): string {
@@ -16,10 +16,7 @@ function slopeCell(variant: Variant): string {
   const percent = variant.ladder?.maxSlopePercent?.value;
   if (typeof percent !== "number") return "Not published";
   const published = variant.ladder?.maxSlopeDegrees?.value;
-  const deg =
-    typeof published === "number"
-      ? formatDegrees(published)
-      : `about ${formatDegrees(degreesFromPercent(Number(percent)))}, computed`;
+  const deg = typeof published === "number" ? formatDegrees(published) : "degrees not published";
   const note = publicNote(variant.ladder?.maxSlopePercent?.note);
   const base = `${percent}% (${deg})`;
   return note ? `${base}. ${note}` : base;

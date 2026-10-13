@@ -13,6 +13,7 @@ export function ArticleFrame({
   whatChanged,
   disclosure = false,
   extra,
+  factCheck,
   children,
 }: {
   title: string;
@@ -23,6 +24,7 @@ export function ArticleFrame({
   whatChanged: string;
   disclosure?: boolean;
   extra?: unknown;
+  factCheck?: string;
   children: ReactNode;
 }) {
   return (
@@ -32,7 +34,7 @@ export function ArticleFrame({
       {extra ? <JsonLd data={extra} /> : null}
       {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}
       <h1>{title}</h1>
-      <MetaRow updated={updated} whatChanged={whatChanged} />
+      <MetaRow updated={updated} whatChanged={whatChanged} factCheck={factCheck} />
       {disclosure ? <Disclosure /> : null}
       {children}
     </article>

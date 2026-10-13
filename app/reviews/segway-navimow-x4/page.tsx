@@ -54,14 +54,20 @@ export default function X4Review() {
       description={description}
       path="/reviews/segway-navimow-x4"
       crumbs={crumbs}
-      whatChanged="October 2026: first published."
+      whatChanged="October 13, 2026: split the status line into short sentences, pointed the slope row at the hills page, and linked the Worx review."
       disclosure
     >
       <StatusLine>
-        On sale in the US as of Oct 10, 2026. Sold out on navimow.com at that check. The amazon.com listing
-        was live. A secondary article quotes Segway as saying US Navimow models already hold FCC
-        authorization. We did not find that statement on a Segway page, so this review does not treat the
-        X430 as authorized on that basis. <FccWaiver />
+        <p>On sale in the US as of Oct 10, 2026.</p>
+        <p>Sold out on navimow.com at that check. The amazon.com listing was live.</p>
+        <p>
+          A secondary article quotes Segway as saying US Navimow models already hold FCC authorization. We
+          did not find that statement on a Segway page, so this review does not treat the X430 as authorized
+          on that basis.
+        </p>
+        <p>
+          <FccWaiver />
+        </p>
       </StatusLine>
       <p className="measure">
         The X430 is the acre mower in this series for an open lawn with steep banks: {formatAcres(x430.acres)}{" "}
@@ -136,7 +142,7 @@ export default function X4Review() {
             value: publishedSlope(x430.slope, x430.degrees),
             sources: ["navimow-x4"],
             checked: SPEC_CHECKED,
-            href: "#slope",
+            href: "/best/robot-mower-for-hills",
             note: interiorOrBoundary(),
           },
           {
@@ -280,7 +286,8 @@ export default function X4Review() {
       </p>
       <p className="measure">
         The Worx Landroid Vision Cloud WR340 is the comparison for an open acre whose banks stay within{" "}
-        {publishedSlope(worx.slope, worx.degrees)}. <Link href="/best#worx-wr340">WR340 pick</Link>.
+        {publishedSlope(worx.slope, worx.degrees)}.{" "}
+        <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.
       </p>
       <Faq
         items={[
@@ -324,7 +331,10 @@ export default function X4Review() {
       <Related
         links={[
           { href: "/best#navimow-x430", label: "Navimow X430 on the best-mowers page" },
+          { href: "/best/robot-mower-1-acre", label: "Which robot mower for about 1 acre?" },
+          { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
+          { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
         ]}

@@ -20,9 +20,7 @@ export function Newsletter() {
         window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Newsletter note")}&body=${encodeURIComponent(body)}`;
       }}
     >
-      <p className="label" style={{ color: "#dbe7f3" }}>
-        Newsletter
-      </p>
+      <p className="label">Newsletter</p>
       <p className="m-0 max-w-[66ch] text-[0.95rem]">
         There is no mailing list yet. Email {CONTACT_EMAIL} if you want a note when one starts. Sending this
         form opens your email app. It does not add you to a list.

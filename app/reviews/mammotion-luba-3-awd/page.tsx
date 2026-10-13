@@ -56,16 +56,24 @@ export default function LubaReview() {
       description={description}
       path="/reviews/mammotion-luba-3-awd"
       crumbs={crumbs}
-      whatChanged="October 2026: first published."
+      whatChanged="October 13, 2026: split the status line into short sentences, pointed the slope row at the hills page, and linked the Dreame review."
       disclosure
     >
       <StatusLine>
-        On sale in the US as of {formatDate(family.statusDate)}. Sold out on the Mammotion US store at that
-        check. The amazon.com listing was live. Some features on the Mammotion page are marked as not
-        available yet. This review does not describe those features as available. Mammotion has no
-        Conditional Approval for new models on the{" "}
-        <a href={FCC_COVERED_LIST}>FCC Covered List and Conditional Approvals table</a>, checked{" "}
-        {formatDate(FCC_TABLE_CHECKED)}. <FccWaiver />
+        <p>On sale in the US as of {formatDate(family.statusDate)}.</p>
+        <p>Sold out on the Mammotion US store at that check. The amazon.com listing was live.</p>
+        <p>
+          Some features on the Mammotion page are marked as not available yet. This review does not describe
+          those features as available.
+        </p>
+        <p>
+          Mammotion has no Conditional Approval for new models on the{" "}
+          <a href={FCC_COVERED_LIST}>FCC Covered List and Conditional Approvals table</a>, checked{" "}
+          {formatDate(FCC_TABLE_CHECKED)}.
+        </p>
+        <p>
+          <FccWaiver />
+        </p>
       </StatusLine>
       <p className="measure">
         The 3000 is the LUBA 3 to read first when trees cover the lawn: {formatAcres(m3000.acres)} and{" "}
@@ -142,7 +150,7 @@ export default function LubaReview() {
             value: publishedSlope(m3000.slope, m3000.degrees),
             sources: ["mammotion-luba3", "amz-luba3-3000"],
             checked: SPEC_CHECKED,
-            href: "#slope",
+            href: "/best/robot-mower-for-hills",
             note: `${interiorOrBoundary()} Degrees are the published 38.6°, not a computed stand-in.`,
           },
           {
@@ -288,7 +296,8 @@ export default function LubaReview() {
       <h2>Two other yards</h2>
       <p className="measure">
         The Dreame A3 AWD Pro 2500 is LiDAR and vision without RTK, rated {formatAcres(dreame.acres)} and{" "}
-        {publishedSlope(dreame.slope, dreame.degrees)}. <Link href="/best#dreame-a3-2500">Dreame pick</Link>.
+        {publishedSlope(dreame.slope, dreame.degrees)}.{" "}
+        <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link>.
       </p>
       <p className="measure">
         The Navimow X430 is the open acre with a steeper published slope,{" "}
@@ -337,7 +346,10 @@ export default function LubaReview() {
       <Related
         links={[
           { href: "/best#luba-3-3000", label: "LUBA 3 AWD 3000 on the best-mowers page" },
+          { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
+          { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
         ]}

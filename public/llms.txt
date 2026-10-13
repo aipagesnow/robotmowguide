@@ -3,7 +3,17 @@
 RobotMowGuide is a US guide to choosing a robot lawn mower, ranked by the lawn size and slope each model is rated for.
 
 - [Best robot lawn mowers](https://robotmowguide.com/best)
+- [Which robot mower for about 1 acre?](https://robotmowguide.com/best/robot-mower-1-acre)
+- [What robot mower can climb my yard?](https://robotmowguide.com/best/robot-mower-for-hills)
+- [Which mower fits my yard?](https://robotmowguide.com/tools/mower-finder)
 - [Reviews](https://robotmowguide.com/reviews)
+- [Navimow X4 review](https://robotmowguide.com/reviews/segway-navimow-x4)
+- [LUBA 3 AWD review](https://robotmowguide.com/reviews/mammotion-luba-3-awd)
+- [Worx Landroid Vision Cloud review](https://robotmowguide.com/reviews/worx-landroid-vision-cloud)
+- [Dreame A3 AWD Pro review](https://robotmowguide.com/reviews/dreame-a3-awd-pro)
+- [Head-to-head](https://robotmowguide.com/vs)
+- [Navimow X430 vs LUBA 3 AWD 3000](https://robotmowguide.com/vs/navimow-x430-vs-luba-3-awd-3000)
 - [Guides](https://robotmowguide.com/guides)
+- [Are robot mowers banned in the US?](https://robotmowguide.com/guides/fcc-robot-mower-ban)
 - [How picks are chosen](https://robotmowguide.com/how-picks-are-chosen)
 - [About](https://robotmowguide.com/about)

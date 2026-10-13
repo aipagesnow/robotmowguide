@@ -109,8 +109,7 @@ a:hover {
 }
 
 .blueprint :focus-visible,
-.site-header :focus-visible,
-.site-footer :focus-visible {
+.site-header :focus-visible {
   outline-color: #ffffff;
 }
 
@@ -155,13 +154,18 @@ a:hover {
 }
 
 .site-footer {
-  background: var(--color-cyanotype-deep);
-  color: var(--color-linework);
+  background: var(--color-sheet);
+  color: var(--color-ink);
   margin-top: 4rem;
+  border-top: 1px solid var(--color-rule);
 }
 
 .site-footer a {
-  color: #ffffff;
+  color: var(--color-cyanotype);
+}
+
+.hero-band {
+  background: #f3f7f4;
 }
 
 .sheet {
@@ -313,9 +317,9 @@ table.data thead th:first-child {
 
 .newsletter input[type="email"] {
   min-height: 44px;
-  border: 1px solid var(--color-linework);
-  background: transparent;
-  color: #ffffff;
+  border: 1px solid var(--color-rule);
+  background: var(--color-paper);
+  color: var(--color-ink);
   padding: 0.4rem 0.6rem;
   font-family: var(--font-mono);
   width: min(100%, 280px);
@@ -323,13 +327,17 @@ table.data thead th:first-child {
 
 .newsletter button {
   min-height: 44px;
-  border: 1px solid var(--color-linework);
-  background: transparent;
-  color: #ffffff;
+  border: 1px solid var(--color-cyanotype);
+  background: var(--color-sheet);
+  color: var(--color-ink);
   padding: 0.4rem 0.75rem;
   font-family: var(--font-display);
   font-stretch: 112%;
   cursor: pointer;
+}
+
+.status-copy p {
+  margin: 0.45rem 0 0;
 }
 
 .tag {

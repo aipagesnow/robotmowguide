@@ -13,13 +13,14 @@ import {
   StatusLine,
 } from "@/components/Blocks";
 import { NoConditionalApproval } from "@/components/FccNote";
+import { FinderEmbed } from "@/components/FinderEmbed";
 import { Ladder } from "@/components/Ladder";
 import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
 import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
-import { SPEC_CHECKED } from "@/lib/site";
+import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Best robot lawn mowers for US yards";
 const description =
@@ -132,7 +133,7 @@ export default function BestPage() {
       title={title}
       description={description}
       path="/best"
-      whatChanged="October 2026: first published."
+      whatChanged="October 13, 2026: added the finder, linked the hills converter and the new reviews, and cited the WR344 listing for cutting width and height."
       disclosure
     >
       <p className="measure">
@@ -181,6 +182,9 @@ export default function BestPage() {
           },
         ]}
       />
+      <div className="mt-6">
+        <FinderEmbed />
+      </div>
       <details className="mt-6">
         <summary>On this page</summary>
         <ul className="grid gap-2 pl-5">
@@ -346,7 +350,9 @@ export default function BestPage() {
         <p className="measure">
           The pick when the lawn is about {formatAcres(dreame.acres)}, the banks are steep, and you would
           rather have LiDAR than an RTK antenna. There is no RTK and no perimeter wire. Drive is all-wheel,
-          with hub motors. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
+          with hub motors. The family write-up is the{" "}
+          <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link>.{" "}
+          <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
         </p>
         <KeyNumbers
           rows={[
@@ -514,8 +520,11 @@ export default function BestPage() {
           ]}
         />
         <StatusLine>
-          On sale in the US as of Oct 10, 2026. Sold out on the Mammotion US store at that check. The
-          amazon.com listing was live. <NoConditionalApproval brand="Mammotion" />
+          <p>On sale in the US as of Oct 10, 2026.</p>
+          <p>Sold out on the Mammotion US store at that check. The amazon.com listing was live.</p>
+          <p>
+            <NoConditionalApproval brand="Mammotion" />
+          </p>
         </StatusLine>
         <CtaCluster>
           <ProductLink
@@ -533,7 +542,9 @@ export default function BestPage() {
           The open-acre pick when the banks stay within {publishedSlope(worx.slope, worx.degrees)}. Cloud RTK
           needs no antenna. Stereo vision is part of the same setup, and Worx says V-SLAM takes over in
           shade. Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre than the 1
-          acre rating. <SourceLine ids={["worx-vision-cloud", "wirecutter"]} checked={SPEC_CHECKED} />
+          acre rating. The family write-up is the{" "}
+          <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.{" "}
+          <SourceLine ids={["worx-vision-cloud", "wirecutter"]} checked={SPEC_CHECKED} />
         </p>
         <KeyNumbers
           rows={[
@@ -560,16 +571,17 @@ export default function BestPage() {
             {
               label: "Cut and battery",
               value: `${specText(worx.specs.cuttingHeight)}. ${specText(worx.specs.battery)}.`,
-              detail: "The amazon.com listing and Wirecutter disagree about whether a GPS module is in the box. This page does not settle that.",
+              detail: "The amazon.com comparison chart marks Find My Landroid as included. Wirecutter treats a GPS module as an extra. This page does not settle that, and it does not print a price.",
             },
           ]}
         />
         <p className="measure">
           The WR344 is the 4WD sibling, also rated {formatAcres(wr344.acres)}, at{" "}
           {publishedSlope(wr344.slope, wr344.degrees)}. Its listing describes a Cut-to-Zero offset blade.
-          Width {specText(wr344.specs.cuttingWidth)} and height {specText(wr344.specs.cuttingHeight)} are
-          series figures from the WR340 page, not a WR344-only sheet.{" "}
-          <SourceLine ids={["amz-wr344", "worx-wr344-support", "worx-vision-cloud"]} checked={SPEC_CHECKED} />
+          Width {specText(wr344.specs.cuttingWidth)} and height {specText(wr344.specs.cuttingHeight)} are on
+          the amazon.com product information for that listing, checked Oct 13, 2026. A European WR344E sheet
+          lists 20 mm to 70 mm and is not used here.{" "}
+          <SourceLine ids={["amz-wr344"]} checked={RECHECKED} />
         </p>
         <h3>Who it is not for</h3>
         <ul className="grid gap-2 pl-5">
@@ -694,9 +706,12 @@ export default function BestPage() {
           ]}
         />
         <StatusLine>
-          On sale in the US as of Oct 10, 2026. Sold out on navimow.com at that check. The amazon.com listing
-          was live. The review explains why this page does not call the X430 FCC-authorized.{" "}
-          <NoConditionalApproval brand="Segway Navimow" />
+          <p>On sale in the US as of Oct 10, 2026.</p>
+          <p>Sold out on navimow.com at that check. The amazon.com listing was live.</p>
+          <p>The review explains why this page does not call the X430 FCC-authorized.</p>
+          <p>
+            <NoConditionalApproval brand="Segway Navimow" />
+          </p>
         </StatusLine>
         <CtaCluster>
           <ProductLink
@@ -724,7 +739,8 @@ export default function BestPage() {
           </li>
           <li>
             Measure the steepest bank as rise over 10 ft, then compare it with the slope column above. The
-            maker may not say whether the number is the interior or only the boundary.
+            maker may not say whether the number is the interior or only the boundary.{" "}
+            <Link href="/best/robot-mower-for-hills">The hills page converts percent, degrees, and rise.</Link>
           </li>
           <li>
             If trees cover the path, read{" "}
@@ -779,8 +795,14 @@ export default function BestPage() {
       </ul>
       <Related
         links={[
+          { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
+          { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },
+          { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/best/robot-mower-1-acre", label: "Which robot mower for about 1 acre?" },
+          { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
+          { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },
           { href: "/how-picks-are-chosen", label: "How picks are chosen" },

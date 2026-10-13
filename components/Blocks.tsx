@@ -25,13 +25,21 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
   );
 }
 
-export function MetaRow({ updated, whatChanged }: { updated: string; whatChanged: string }) {
+export function MetaRow({
+  updated,
+  whatChanged,
+  factCheck = FACT_CHECK,
+}: {
+  updated: string;
+  whatChanged: string;
+  factCheck?: string;
+}) {
   return (
     <div className="meta-row measure">
       <p className="m-0">
         By the <Link href="/about">RobotMowGuide editors</Link>
       </p>
-      <p className="m-0">{FACT_CHECK}</p>
+      <p className="m-0">{factCheck}</p>
       <p className="dim m-0">Updated {formatDate(updated)}</p>
       <p className="m-0">
         <span className="label">What changed</span> {whatChanged}
@@ -68,9 +76,10 @@ export function CtaCluster({ children }: { children: React.ReactNode }) {
 
 export function StatusLine({ children }: { children: React.ReactNode }) {
   return (
-    <p className="measure">
-      <span className="label">Status</span> {children}
-    </p>
+    <div className="measure">
+      <p className="label m-0">Status</p>
+      <div className="status-copy">{children}</div>
+    </div>
   );
 }
 
@@ -167,12 +176,14 @@ export function ResearchedBox({
   threads,
   questions,
   scope = "one",
+  specsLine = "Specs checked Oct 10, 2026.",
 }: {
   sources: { id: string }[];
   manuals: string;
   threads: string;
   questions: string;
   scope?: "one" | "group";
+  specsLine?: string;
 }) {
   const unique = [...new Map(sources.map((item) => [item.id, item])).values()];
   return (
@@ -201,7 +212,7 @@ export function ResearchedBox({
         <li>{manuals}</li>
         <li>{threads}</li>
         <li>{questions}</li>
-        <li>Specs checked Oct 10, 2026.</li>
+        <li>{specsLine}</li>
       </ul>
       <p className="m-0">
         <Link href="/how-picks-are-chosen">How picks are chosen</Link>

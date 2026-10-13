@@ -4,7 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { MethodDiagram } from "@/components/Diagrams";
 import { Faq, Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_EMAIL, RECHECKED } from "@/lib/site";
 
 const title = "How picks are chosen";
 const description =
@@ -18,7 +18,8 @@ export default function MethodPage() {
       title={title}
       description={description}
       path="/how-picks-are-chosen"
-      whatChanged="October 2026: first published."
+      updated={RECHECKED}
+      whatChanged="October 13, 2026: documented the mower finder filters."
     >
       <p className="measure">
         A pick starts from the yard. The ladder places each current model at the lawn area its maker rates,
@@ -41,6 +42,21 @@ export default function MethodPage() {
         the page quotes that note instead of folding it into the 1.25× rule. Husqvarna’s 420 iQ page is one
         example, and it is explained in the{" "}
         <Link href="/guides/how-big-a-robot-mower-do-i-need">size guide</Link>.
+      </p>
+      <h2>The mower finder</h2>
+      <p className="measure">
+        The <Link href="/tools/mower-finder">mower finder</Link> uses the same current models as the ladder.
+        It leaves out superseded and discontinued models. A current model with no published slope is left
+        out, because the filter will not guess one.
+      </p>
+      <p className="measure">
+        Area: an open single lawn needs a rating at least as large as the lawn. Heavy trees, or more than
+        one zone, use the 1.25× rule above. Slope: the published maximum has to be at least the steepest
+        slope you enter. If you mark that slope as an edge, and the model prints a lower boundary figure,
+        the row stays and the note says the boundary is lower. Heavy trees prefer LiDAR or vision. An
+        RTK-only model can still appear, with a note about satellite fix under canopy. A passage uses a
+        published body width or minimum gap. If that width is missing, the note says to check the manual.
+        If nothing clears the checks, the result says nothing fits, including a lawn past every rated area.
       </p>
       <h2>Slope</h2>
       <p className="measure">
@@ -83,7 +99,7 @@ export default function MethodPage() {
           },
           {
             q: "Why is a model missing?",
-            a: "The first pages cover five picks and two family reviews. A model stays off the site until its specs are in the checked data and a page is written for it.",
+            a: "The live pages cover five picks, four family reviews, one head-to-head, and the finder. A model stays off a page until its specs are in the checked data.",
           },
           {
             q: "Who do I write about a wrong figure?",
@@ -100,6 +116,7 @@ export default function MethodPage() {
         links={[
           { href: "/about", label: "About RobotMowGuide" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
+          { href: "/tools/mower-finder", label: "Which mower fits my yard?" },
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
         ]}
       />

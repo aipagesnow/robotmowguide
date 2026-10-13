@@ -200,7 +200,7 @@
         "/guides/how-big-a-robot-mower-do-i-need"
       ],
       "round": 2,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Bar diagram comparing rated area with realistic area for a complex yard",
@@ -232,7 +232,7 @@
         "/best/robot-mower-for-hills"
       ],
       "round": 2,
-      "status": "not-made",
+      "status": "made",
       "source": "svg-in-code",
       "files": [],
       "alt": "Slope ruler converting percent to degrees and rise per 10 feet, with interior and boundary limits",

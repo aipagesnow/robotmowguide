@@ -148,7 +148,7 @@ export type LadderRow = {
   pick?: number;
 };
 
-function lineKind(boundary: string): LineKind {
+export function lineKind(boundary: string): LineKind {
   if (/wire-free/i.test(boundary) && /or wire/i.test(boundary)) return "either";
   if (/boundary[- ]wire/i.test(boundary)) return "boundary-wire";
   return "wire-free";
@@ -165,7 +165,17 @@ const PICK_ANCHOR: Record<string, { anchor: string; pick: number }> = {
 const REVIEW_HREF: Record<string, string> = {
   "segway-navimow-x4": "/reviews/segway-navimow-x4",
   "mammotion-luba-3-awd": "/reviews/mammotion-luba-3-awd",
+  "worx-landroid-vision-cloud": "/reviews/worx-landroid-vision-cloud",
+  "dreame-a3-awd-pro": "/reviews/dreame-a3-awd-pro",
 };
+
+export function reviewHref(familyId: string): string | undefined {
+  return REVIEW_HREF[familyId];
+}
+
+export function pickAnchor(model: string): string | undefined {
+  return PICK_ANCHOR[model]?.anchor;
+}
 
 export function ladderRows(): LadderRow[] {
   const rows: LadderRow[] = [];

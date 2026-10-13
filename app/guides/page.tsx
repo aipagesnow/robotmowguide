@@ -3,10 +3,11 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { Related } from "@/components/Blocks";
 import { pageMeta } from "@/lib/metadata";
+import { RECHECKED } from "@/lib/site";
 
 const title = "Robot mower guides";
 const description =
-  "Two US guides: how big a robot mower to buy, and how RTK, LiDAR, and vision behave in a real yard.";
+  "US guides on mower size, navigation, and the 2026 FCC rule for robot mowers already on sale.";
 
 export const metadata: Metadata = pageMeta({ title, description, path: "/guides" });
 
@@ -16,7 +17,8 @@ export default function GuidesIndex() {
       title={title}
       description={description}
       path="/guides"
-      whatChanged="October 2026: first published."
+      updated={RECHECKED}
+      whatChanged="October 13, 2026: added the FCC rule tracker."
     >
       <p className="measure">
         These guides answer a yard question before they name a mower. Specs they cite were checked on Oct 10,
@@ -33,6 +35,12 @@ export default function GuidesIndex() {
           <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision: which navigation fits your yard</Link>
           <p className="m-0">
             Boundary wire, an antenna, network RTK, and LiDAR or a camera, and what makes each one fail.
+          </p>
+        </li>
+        <li>
+          <Link href="/guides/fcc-robot-mower-ban">Are robot mowers banned in the US? The 2026 FCC rule, tracked</Link>
+          <p className="m-0">
+            What the July 28, 2026 Covered List change does, and does not do, for mowers already on sale.
           </p>
         </li>
       </ul>

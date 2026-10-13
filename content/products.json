@@ -956,10 +956,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GNZHMD9Q",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GNZHMD9Q",
             "titleAtCheck": "WORX Robot Lawn Mower for 1/4 Acre, No Perimeter Wire, WR310",
-            "note": "Checked Oct 10, 2026"
+            "note": "Rechecked Oct 13, 2026. Listing is the WR310."
           },
           "manufacturerListPrice": {
             "usd": 1199.99,
@@ -1065,12 +1065,12 @@
               "checked": "2026-10-10"
             },
             "theft": {
-              "value": "Find My Landroid GPS module: Amazon copy says it locates the mower even when off; Wirecutter says it is a ~$100 extra. Confirm which applies to the boxed WR340.",
+              "value": "The amazon.com comparison chart on the WR340 listing marks Find My Landroid as included. Wirecutter’s Aug 3, 2026 review treats a GPS module as an extra. The two sources are not settled here.",
               "src": [
                 "amz-wr340",
                 "wirecutter"
               ],
-              "checked": "2026-10-10"
+              "checked": "2026-10-13"
             },
             "weight": {
               "value": 30.9,
@@ -1085,10 +1085,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GN98XMPM",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GN98XMPM",
             "titleAtCheck": "WORX Robot Lawn Mower for 1 Acre, No Perimeter Wire, WR340",
-            "note": "Checked Oct 10, 2026, no redirect"
+            "note": "Rechecked Oct 13, 2026. Listing is the WR340."
           },
           "manufacturerListPrice": null
         },
@@ -1149,19 +1149,18 @@
               "value": 8.7,
               "unit": "in",
               "src": [
-                "worx-vision-cloud"
+                "amz-wr344"
               ],
-              "checked": "2026-10-10",
-              "note": "Series figure from the WR340 page; confirm on the WR344 manual before publishing"
+              "checked": "2026-10-13"
             },
             "cuttingHeight": {
               "value": "1.57–3.54",
               "unit": "in",
               "src": [
-                "worx-vision-cloud"
+                "amz-wr344"
               ],
-              "checked": "2026-10-10",
-              "note": "Series figure, electric adjustment; confirm for WR344"
+              "checked": "2026-10-13",
+              "note": "US listing product information, 7 positions. A European WR344E sheet lists 20 mm to 70 mm and is not used."
             },
             "connectivity": {
               "value": "Wi-Fi, Bluetooth, free 4G per Worx series page",
@@ -1175,10 +1174,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GQ9XK7FK",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GQ9XK7FK",
             "titleAtCheck": "WORX Robot Lawn Mower 4WD for 1 Acre, No Perimeter Wire, WR344",
-            "note": "Rechecked Oct 10, 2026"
+            "note": "Rechecked Oct 13, 2026. Listing is the WR344. Product information lists cutting width 8.7 in and height 1.57–3.54 in."
           },
           "manufacturerListPrice": {
             "usd": 2999.99,
@@ -1370,10 +1369,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0GT5CBH8H",
-            "checked": "2026-10-10",
+            "checked": "2026-10-13",
             "url": "https://www.amazon.com/dp/B0GT5CBH8H",
             "titleAtCheck": "DREAME LiDAR 2500 Robot Lawn Mower A3 AWD Pro ...",
-            "note": "Rechecked Oct 10, 2026"
+            "note": "Rechecked Oct 13, 2026. Listing is the A3 AWD Pro 2500."
           },
           "manufacturerListPrice": {
             "usd": 1699.99,

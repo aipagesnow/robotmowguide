@@ -40,7 +40,7 @@ export default function RtkGuide() {
       description={description}
       path="/guides/rtk-vs-lidar-vs-vision"
       crumbs={crumbs}
-      whatChanged="October 2026: first published."
+      whatChanged="October 13, 2026: linked the new family reviews and the hills page."
       disclosure
     >
       <p className="measure">
@@ -156,6 +156,9 @@ export default function RtkGuide() {
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
+          { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },
+          { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
         ]}
       />

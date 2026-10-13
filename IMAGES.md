@@ -2,10 +2,10 @@
 
 This is the binding image plan for robotmowguide.com. Every page has a planned image (photo, diagram or both). No image goes live until Vora has checked it and marked it **approved** in `content/images.json`.
 
-Read with MARK-IMAGINE.md (style rules) and STYLE.md (colors, type).
+Read with MARK-IMAGINE.md (mark rules), STYLE.md (colors, type), and IMAGERY.md (photo direction: daylight, subjects, crops, alt text).
 
 ## Allowed sources
-1. **Grok Imagine (grok.com)** photographs of generic US yards, made for this site. Mower-free by default.
+1. **Grok Imagine (grok.com)** photographs of generic US yards, made for this site. Subjects, light, crops, and alt text follow IMAGERY.md. A slot brief below can still forbid a mower for that slot.
 2. **SVG diagrams built in code** for this site (blueprint style per STYLE.md), drawn from the numbers in `content/products.json`, `content/costs.json` and the guides. Concepts are redrawn from first principles: never trace or adapt a brand-made diagram. Where a diagram needs a mower, use the **generic archetype glyph**: a plain rounded-rectangle body with two wheels and an optional generic antenna puck, no logo, no colourway, no distinctive shape (never the X4's, the LUBA's or Husqvarna orange).
 3. Nothing else at launch. No manufacturer press images, no stock, no Amazon images (Creators API/PA-API access needs qualifying sales first; revisit after launch), no Amazon CDN images, no screenshots of apps or listings.
 
