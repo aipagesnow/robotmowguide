@@ -1,5 +1,3 @@
-"use client";
-
 import type { PageType, Placement } from "@/lib/amazon";
 
 type Props = {
@@ -30,17 +28,11 @@ export function AmazonCta({
       target="_blank"
       rel="nofollow sponsored noopener"
       aria-label={ariaLabel || label}
-      onClick={() => {
-        if (typeof window.gtag !== "function") return;
-        window.gtag("event", "amazon_click", {
-          asin,
-          product_slug: productSlug,
-          variant,
-          placement,
-          page_type: pageType,
-          transport_type: "beacon",
-        });
-      }}
+      data-asin={asin}
+      data-product-slug={productSlug}
+      data-variant={variant}
+      data-placement={placement}
+      data-page-type={pageType}
     >
       {label}
     </a>

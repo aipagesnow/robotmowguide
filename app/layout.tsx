@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Archivo, DM_Mono, Public_Sans } from "next/font/google";
+import { AmazonClicks } from "@/components/AmazonClicks";
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="content">{children}</main>
         <Footer />
+        <AmazonClicks />
         <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
