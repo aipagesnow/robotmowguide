@@ -84,7 +84,12 @@ export function sendAmazonClick(options: {
 }): void {
   if (typeof options.gtag !== "function") return;
 
-  const fields = { ...options.params, transport_type: "beacon" };
+  const fields = {
+    ...options.params,
+    link_url: options.href,
+    page_path: window.location.pathname,
+    transport_type: "beacon",
+  };
   if (!options.sameTab) {
     options.gtag("event", "amazon_click", fields);
     return;
