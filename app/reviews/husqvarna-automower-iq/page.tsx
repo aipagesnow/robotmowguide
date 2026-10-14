@@ -150,7 +150,7 @@ export default function IqReview() {
             sources: ["husq-420iq"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "0.5 acre irregular / 1 acre systematic. That split is Husqvarna’s. It is not our 1.25× rule.",
+            note: "0.5 acre irregular / 1 acre systematic. That split is Husqvarna’s own figure, so use it rather than our trees-or-zones rule of thumb.",
           },
           {
             label: "Max slope",

@@ -36,13 +36,12 @@ export default function MethodPage() {
         line names the page and the date it was checked. An owner-report line links the thread or the
         independent review it came from. If a manual was not in the source list, the page says so.
       </p>
-      <h2>The ladder and the 1.25× rule</h2>
+      <h2>How we size picks</h2>
       <p className="measure">
         Rated area is the maker’s number, shown in acres and, the first time, in square feet. One acre is
         43,560 sq ft. Heavy trees or two zones use the rule of thumb in{" "}
-        <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. Where a maker prints its own
-        fine print, the page quotes that note instead of folding it into that rule. Husqvarna’s 420 iQ page
-        is one example.
+        <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. Where a maker publishes its own figure for a complex lawn, as Husqvarna does
+        for the 420 iQ, we give you that figure instead.
       </p>
       <h2>The mower finder</h2>
       <p className="measure">

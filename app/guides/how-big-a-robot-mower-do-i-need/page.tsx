@@ -49,10 +49,10 @@ export default function SizeGuide() {
       path="/guides/how-big-a-robot-mower-do-i-need"
       crumbs={crumbs}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: added an area check that uses only the 1.25× rule, with Husqvarna’s own notes left beside it."
+      whatChanged="October 13, 2026: added an area check for trees or two zones."
       disclosure
     >
-      <p className="measure">
+      <p className="measure" id="trees-or-two-zones">
         Rated area assumes an open, simple lawn. If yours has heavy tree cover or is split into two zones, a
         sensible rule of thumb is to divide the rating by 1.25. On that basis a 1-acre mower is a comfortable
         fit for about 0.8 acres. This is our own rule of thumb rather than a manufacturer figure.
@@ -127,8 +127,8 @@ export default function SizeGuide() {
       </p>
       <h2>When the maker already discounts the rating</h2>
       <p className="measure">
-        Do not stack our 1.25× rule on top of a maker’s own discount unless you mean to be that conservative.
-        Say which number you are using.
+        If the maker already gives a smaller figure for a complex lawn, use that figure as it is. Dividing it
+        by 1.25 again would leave you buying a bigger mower than you need.
       </p>
       <p className="measure">
         Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres, false)} and{" "}

@@ -139,7 +139,7 @@ export default function WorxReview() {
             sources: ["worx-vision-cloud", "amz-wr340"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "Wirecutter suggests a complex lawn closer to a quarter acre. That note is not our 1.25× rule.",
+            note: "Wirecutter suggests a complex lawn closer to a quarter acre. That is Wirecutter’s view, separate from our trees-or-zones rule of thumb.",
           },
           {
             label: "Max slope",
@@ -288,7 +288,7 @@ export default function WorxReview() {
         items={[
           {
             q: "Does the WR340 mow a full acre?",
-            a: "The rating is 1 acre. Wirecutter’s Aug 3, 2026 note suggests a complex lawn closer to a quarter acre. Our 1.25× rule is a separate planning figure for heavy trees or two zones.",
+            a: "The rating is 1 acre. Wirecutter’s Aug 3, 2026 note suggests a complex lawn closer to a quarter acre. For heavy trees or two zones, see how we size on the size guide.",
           },
           {
             q: "Which Worx model climbs a steep bank?",

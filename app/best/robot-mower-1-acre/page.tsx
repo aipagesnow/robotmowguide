@@ -13,7 +13,7 @@ import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Which robot mower for about 1 acre?";
 const description =
-  "Which current robot mowers are rated for an open acre, and which fall short once trees or a second zone use the 1.25× rule.";
+  "Which current robot mowers are rated for an open acre, and which fall short once trees or a second zone come in.";
 
 export const metadata: Metadata = pageMeta({
   title,
@@ -41,9 +41,9 @@ export default function AcrePage() {
     { name: "Navimow i210 AWD", acres: i210.acres, slope: publishedSlope(i210.slope, i210.degrees), note: "Under an acre.", href: "/best#navimow-i210" },
     { name: "Dreame A3 AWD Pro 2500", acres: dreame.acres, slope: publishedSlope(dreame.slope, dreame.degrees), note: "Under an acre.", href: "/reviews/dreame-a3-awd-pro" },
     { name: "LUBA 3 AWD 3000", acres: luba.acres, slope: publishedSlope(luba.slope, luba.degrees), note: "Under an acre. LiDAR is the reason to read it for trees.", href: "/reviews/mammotion-luba-3-awd" },
-    { name: "Worx WR340", acres: worx.acres, slope: publishedSlope(worx.slope, worx.degrees), note: "Covers an open acre. Misses the 1.25× case. Wirecutter’s complex-lawn note is separate.", href: "/reviews/worx-landroid-vision-cloud" },
-    { name: "Worx WR344", acres: wr344.acres, slope: publishedSlope(wr344.slope, wr344.degrees), note: "Same 1 acre rating, 4WD slope. Misses the 1.25× case.", href: "/reviews/worx-landroid-vision-cloud" },
-    { name: "Navimow X430", acres: x430.acres, slope: publishedSlope(x430.slope, x430.degrees), note: "Covers an open acre. Misses the 1.25× case.", href: "/reviews/segway-navimow-x4" },
+    { name: "Worx WR340", acres: worx.acres, slope: publishedSlope(worx.slope, worx.degrees), note: "Covers an open acre. Not enough for trees or two zones. Wirecutter’s complex-lawn note is separate.", href: "/reviews/worx-landroid-vision-cloud" },
+    { name: "Worx WR344", acres: wr344.acres, slope: publishedSlope(wr344.slope, wr344.degrees), note: "Same 1 acre rating, 4WD slope. Not enough for trees or two zones.", href: "/reviews/worx-landroid-vision-cloud" },
+    { name: "Navimow X430", acres: x430.acres, slope: publishedSlope(x430.slope, x430.degrees), note: "Covers an open acre. Not enough for trees or two zones.", href: "/reviews/segway-navimow-x4" },
     { name: "Automower 420 iQ", acres: iq420.acres, slope: `${publishedSlope(iq420.slope, iq420.degrees)}. ${interiorOrBoundary(iq420.variant.ladder?.maxSlopePercent?.note)}`, note: iq420.variant.ladder?.ratedAreaAcres?.note || "Maker note on the area.", href: "/reviews/husqvarna-automower-iq" },
     { name: "A3 AWD Pro 5000", acres: Number(dreame5000?.ladder?.ratedAreaAcres?.value), slope: "Not published", note: "Dreame doesn't publish a slope figure for the 5000.", href: "/reviews/dreame-a3-awd-pro" },
     { name: "LUBA 3 AWD 5000", acres: luba5000.acres, slope: publishedSlope(luba5000.slope, luba5000.degrees), note: "Rated area meets 1.25 acres. Degrees are not published on this row.", href: "/reviews/mammotion-luba-3-awd" },
@@ -106,7 +106,7 @@ export default function AcrePage() {
         ]}
       />
       <YardPhoto id="photo-acre" />
-      <h2>Rated area and the 1.25× case</h2>
+      <h2>Rated area with trees or two zones</h2>
       <p className="measure">
         The Rated ÷ 1.25 column is the planning figure for heavy trees or two zones.{" "}
         <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
@@ -168,8 +168,8 @@ export default function AcrePage() {
         {formatAcres(dreame.acres, false)}. The i210 is rated {formatAcres(i210.acres, false)}.
       </p>
       <p className="measure">
-        The 420 iQ area note says 0.5 acre for an irregular lawn and 1 acre for systematic mowing. This page
-        quotes that note instead of folding it into the 1.25× rule. The same page puts 15% at the boundary
+        The 420 iQ area note says 0.5 acre for an irregular lawn and 1 acre for systematic mowing. Use
+        Husqvarna’s figure for this model rather than <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. The same page puts 15% at the boundary
         beside the higher slope figure, so that higher figure is the interior and 15% is the boundary.{" "}
         <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
       </p>

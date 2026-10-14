@@ -12,7 +12,7 @@ import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Which robot mower for a half acre?";
 const description =
-  "A half acre of grass is 21,780 sq ft. Which current ratings cover that lawn, and which fall short once trees or a second zone use the 1.25× rule.";
+  "A half acre of grass is 21,780 sq ft. Which current ratings cover that lawn, and which fall short once trees or a second zone come in.";
 
 export const metadata: Metadata = pageMeta({
   title,

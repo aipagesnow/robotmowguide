@@ -30,7 +30,7 @@ export function DecisionTable() {
       <table className="data">
         <caption>
           Wire-free matches for one zone. The slope column is the bank you enter, and this table treats that
-          bank as an interior limit. Heavy trees use the 1.25× area rule. Open yards use 1.0×.
+          bank as an interior limit. With heavy trees, a mower needs more rated area than your lawn (<Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>).
         </caption>
         <thead>
           <tr>
