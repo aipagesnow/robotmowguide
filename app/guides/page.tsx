@@ -31,8 +31,8 @@ export default function GuidesIndex() {
       disclosure
     >
       <p className="measure">
-        These guides answer a question about your yard before they name a mower. The specs we cite were read on Oct 10,
-        2026, unless that guide names a later date.
+        These guides answer a question about your yard before they name a mower. We last checked the specs on Oct 10,
+        2026, unless a guide says otherwise.
       </p>
       <CtaCluster>
         <ProductLink
