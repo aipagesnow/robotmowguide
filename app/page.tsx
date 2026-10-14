@@ -17,7 +17,7 @@ import {
 } from "@/components/Diagrams";
 import { articleSchema, homeSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/metadata";
-import { degreesFromPercent, formatAcres, formatDegrees } from "@/lib/format";
+import { degreesFromPercent, formatAcres, formatDate, formatDegrees } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
 import { publishedSlope, specText } from "@/lib/speak";
 import { PUBLISHED } from "@/lib/site";
@@ -72,14 +72,21 @@ export default function HomePage() {
         <div className="wrap">
           <div className="home-hero-copy">
             <h1>{title}</h1>
+            <p className="home-meta-short">
+              By the RobotMowGuide editors · Updated {formatDate(PUBLISHED)} ·{" "}
+              <Link href="/how-picks-are-chosen">How picks are chosen</Link>
+            </p>
             <MetaRow
               updated={PUBLISHED}
               whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
             />
             <p className="measure">
               Start with the lawn, not the brand. These rankings use the area each current model is rated for,
-              then the steepest slope the maker publishes. Specs were checked on Oct 10, 2026. The reviews are
-              research-based. We have not tested these mowers.
+              then the steepest slope the maker publishes.
+              <span className="home-intro-more">
+                {" "}
+                Specs were checked on Oct 10, 2026. The reviews are research-based. We have not tested these mowers.
+              </span>
             </p>
           </div>
         </div>
@@ -126,6 +133,15 @@ export default function HomePage() {
               },
           ]}
         />
+        <div className="home-meta-mobile">
+          <MetaRow
+            updated={PUBLISHED}
+            whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
+          />
+          <p className="measure">
+            Specs were checked on Oct 10, 2026. The reviews are research-based. We have not tested these mowers.
+          </p>
+        </div>
         <FinderEmbed />
         <Ladder />
         <section>

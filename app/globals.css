@@ -548,3 +548,93 @@ table.data thead th:first-child {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/* Phone home hero: short photo strip, one-line meta, short intro, single-row nav */
+.home-meta-short,
+.home-meta-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-header nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header nav a {
+    flex: 0 0 auto;
+  }
+
+  .home-hero-media {
+    height: 9.5rem;
+  }
+
+  .home-hero-media img {
+    object-position: center 45%;
+  }
+
+  .home-hero-copy .meta-row,
+  .home-intro-more {
+    display: none;
+  }
+
+  .home-meta-short {
+    display: block;
+    margin: 0.1rem 0 0;
+    font-size: 0.74rem;
+    line-height: 1.3;
+    color: #4a5563;
+  }
+
+  .home-meta-mobile {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .home-hero + .wrap [aria-label="Quick picks"] > .grid > div {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    gap: 0.35rem;
+  }
+
+  .home-hero + .wrap [aria-label="Quick picks"] > div:first-child {
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero-media {
+    height: 8.75rem;
+  }
+
+  .home-hero + .wrap > p:first-child {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .home-hero + .wrap [aria-label="Quick picks"] > .grid > div {
+    padding: 0.5rem 0.75rem;
+    gap: 0.2rem;
+  }
+
+  .home-hero + .wrap [aria-label="Quick picks"] > .grid > div > p:nth-child(2) {
+    line-height: 1.3;
+  }
+
+  .home-hero + .wrap [aria-label="Quick picks"] .cta {
+    width: 100%;
+    font-size: 0.84rem;
+    font-stretch: 100%;
+    letter-spacing: 0;
+    padding: 0.4rem 0.6rem;
+  }
+}
