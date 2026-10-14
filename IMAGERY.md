@@ -12,10 +12,10 @@ Imagery is bright, natural daylight in US home yards.
 
 ## Subjects to use
 - Green lawns that look mowed and slightly imperfect.
-- Real gardens: a front yard, a back yard, or both. Include slopes, trees, fences, walks, and driveways when the page is about those.
+- Real yards: a front yard, a back yard, or both. Include slopes, trees, fences, walks, and driveways when the page is about those.
 - US home cues: siding or brick, a sidewalk, a curb, a wooden fence, a curbside mailbox with no name and no number. Southern pages may show warm-season grass. Northern pages may show taller cool-season grass.
 - Mowers working on the lawn: cutting, turning, or docked at the edge of the grass in daylight.
-- Clean, well-lit product shots: the same kind of mower on a light ground, in daylight, with nothing else in the frame.
+- Product-style shots are generic, unbranded, and resemble no real model. They are never a packshot. Show that kind of mower on a light ground, in daylight, with nothing else in the frame.
 
 ## Subjects to avoid
 - Cartoon robots.
@@ -33,7 +33,7 @@ A slot brief in IMAGES.md may still say “no mower” for that slot. Follow the
 - In-article: the same daylight. Crop tight on the yard feature the section is about. Do not mat the photo with a dark border.
 
 ## Alt text
-- One sentence. Name the yard, the light, and the feature a buyer would recognise.
+- One sentence. Name the yard, the light, and the feature a buyer would recognize.
 - Do not name a brand or a model in photo alt text. Do not say the picture is a test or the reader’s yard.
 - Mood photos still get accurate alt. Diagrams get a `<title>` and a `<desc>` that match the numbers on the page.
 - No words baked into the image. Alt text carries the description.

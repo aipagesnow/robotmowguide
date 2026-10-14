@@ -10,10 +10,11 @@ export function ArticleFrame({
   path,
   crumbs,
   updated = PUBLISHED,
-  whatChanged,
+  whatChanged: _whatChanged,
   disclosure = false,
   extra,
   factCheck,
+  status,
   children,
 }: {
   title: string;
@@ -21,10 +22,11 @@ export function ArticleFrame({
   path: string;
   crumbs?: Crumb[];
   updated?: string;
-  whatChanged: string;
+  whatChanged?: string;
   disclosure?: boolean;
   extra?: unknown;
   factCheck?: string;
+  status?: ReactNode;
   children: ReactNode;
 }) {
   return (
@@ -34,7 +36,7 @@ export function ArticleFrame({
       {extra ? <JsonLd data={extra} /> : null}
       {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}
       <h1>{title}</h1>
-      <MetaRow updated={updated} whatChanged={whatChanged} factCheck={factCheck} />
+      <MetaRow updated={updated} factCheck={factCheck} status={status} />
       {disclosure ? <Disclosure /> : null}
       {children}
     </article>

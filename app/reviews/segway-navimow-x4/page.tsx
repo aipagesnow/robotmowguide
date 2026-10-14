@@ -11,18 +11,17 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { NavFour, SpecPlate } from "@/components/Diagrams";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
-import { SPEC_CHECKED } from "@/lib/site";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { FCC_COVERED_LIST, FCC_DA_26_789, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Navimow X4 series review: an open acre with steep slopes";
 const description =
@@ -57,19 +56,8 @@ export default function X4Review() {
       crumbs={crumbs}
       whatChanged="October 13, 2026: the slope row points at the hills page, and the Worx review is linked."
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of Oct 10, 2026.</p>
-        <p>Sold out on navimow.com at that check. The amazon.com listing was live.</p>
-        <p>
-          A secondary article quotes Segway as saying US Navimow models already hold FCC authorization. We
-          did not find that statement on a Segway page, so this review does not treat the X430 as authorized
-          on that basis.
-        </p>
-        <p>
-          <FccWaiver />
-        </p>
-      </StatusLine>
       <p className="measure">
         The X430 is the acre mower in this series for an open lawn with steep banks: {formatAcres(x430.acres)}{" "}
         and {publishedSlope(x430.slope, x430.degrees)}.
@@ -94,12 +82,11 @@ export default function X4Review() {
           {
             label: "Rated area",
             value: formatAcres(x430.acres),
-            detail: realisticLine(x430.acres),
+            detail: <ComfortableFor rated={x430.acres} />,
           },
           {
             label: "Max slope",
             value: slopeWithRise(x430.slope, x430.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Passage",
@@ -124,7 +111,7 @@ export default function X4Review() {
         differences={{
           "Navimow X430":
             "Primary model on this page. Antenna included but optional. Home Depot listing: 120 zones, and one year of free 4G.",
-          "Navimow X450": `Rated ${x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value)) : "Not published"}. The X4 page lists a map maximum of 1.8 acres for the X450 only. Same ${x450 && typeof x450.ladder?.maxSlopePercent?.value === "number" ? publishedSlope(Number(x450.ladder.maxSlopePercent.value), typeof x450.ladder.maxSlopeDegrees?.value === "number" ? Number(x450.ladder.maxSlopeDegrees.value) : undefined) : "Not published"} slope. Connect+ is free for 2 years, then a yearly fee. Other specs were not on the sheet we checked.`,
+          "Navimow X450": `Rated ${x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value)) : "Not published"}. The X4 page lists a map maximum of 1.8 acres for the X450 only. Same ${x450 && typeof x450.ladder?.maxSlopePercent?.value === "number" ? publishedSlope(Number(x450.ladder.maxSlopePercent.value), typeof x450.ladder.maxSlopeDegrees?.value === "number" ? Number(x450.ladder.maxSlopeDegrees.value) : undefined) : "Not published"} slope. Connect+ is free for 2 years, then a yearly fee. Other specs are not published.`,
         }}
       />
       <h2>Specs we checked</h2>
@@ -145,7 +132,6 @@ export default function X4Review() {
             sources: ["navimow-x4"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: interiorOrBoundary(),
           },
           {
             label: "Navigation",
@@ -196,10 +182,11 @@ export default function X4Review() {
       />
       <h2 id="slope">Slope and size</h2>
       <p className="measure">
-        The published slope is {slopeWithRise(x430.slope, x430.degrees)}. {interiorOrBoundary()} The rated
-        area is {formatAcres(x430.acres)}. {realisticLine(x430.acres)}{" "}
+        The published slope is {x430.slope}%, a rise of {risePer10Ft(x430.slope)}. The rated area is{" "}
+        {formatAcres(x430.acres, false)}. <ComfortableFor rated={x430.acres} />{" "}
         <SourceLine ids={["navimow-x4"]} checked={SPEC_CHECKED} />
       </p>
+      <SlopeMarginNote />
       <p className="measure">
         The X450 is the larger sibling, rated{" "}
         {x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value)) : "Not published"}, with a map
@@ -217,30 +204,29 @@ export default function X4Review() {
       </p>
       <h2>A 24 in body, and the zone count</h2>
       <p className="measure">
-        The body is {specText(x430.specs.bodyWidth)}. A gate or a side yard under about 2 ft is a stop, not a
-        setting. The Home Depot listing gives {specText(x430.specs.zones)} and a battery of{" "}
+        The body is 24 in wide, so it won't fit through a gate or side passage narrower than that. The Home
+        Depot listing gives {specText(x430.specs.zones)} and a battery of{" "}
         {specText(x430.specs.battery)}. The cut is {specText(x430.specs.cuttingWidth)} wide.{" "}
         <SourceLine ids={["navimow-x4", "homedepot-x430"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Grass height</h2>
       <p className="measure">
         Cutting height is {specText(x430.specs.cuttingHeight)} on the amazon.com listing. A retailer copy
-        gives 0.8–4 in. Use 0.75–4 in unless the box sheet in front of you says otherwise. That range can
-        reach a short cut and a 4 in cut. This page does not match it to a university mowing height.{" "}
+        gives 0.8–4 in. That range covers both a short Bermuda cut and a tall St. Augustine cut.{" "}
         <SourceLine ids={["amz-x430"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Edges</h2>
       <p className="measure">
-        A distance-from-the-edge figure is not published on the pages we checked. Owner threads, below, still
+        Segway doesn't publish a distance-from-the-edge figure. Owner threads, below, still
         describe trimming and missed strips. Obstacle clearance is {specText(x430.specs.obstacleClearance)},
         and the X4 page says up to 5.9 in on gentle slopes.{" "}
         <SourceLine ids={["navimow-x4"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
-        intro="In the owner threads we read for the October 10, 2026 check. Four threads, not a survey."
+        intro="In the 4 owner threads we read in October 2026:"
         items={[
           {
-            text: "Writers say it maintains St. Augustine and Bermuda when it runs often.",
+            text: "Owners say it maintains St. Augustine and Bermuda when it runs often.",
             href: "https://www.reddit.com/r/SegwayNavimow/comments/1vi3zmr/",
             linkLabel: "Navimow thread on warm-season grass",
             extra: [
@@ -251,7 +237,7 @@ export default function X4Review() {
             ],
           },
           {
-            text: "Writers still trim edges, and some describe missed strips.",
+            text: "Owners still trim edges, and some describe missed strips.",
             href: "https://www.reddit.com/r/roboticLawnmowers/comments/1uy0323/",
             linkLabel: "Thread on edges and missed strips",
           },
@@ -274,21 +260,28 @@ export default function X4Review() {
         The Navimow X4 page says Connect+ is free for 1 year on the X430, or 2 years on the X450, and then a
         yearly fee. It also says network RTK is free for life, and that this depends on Segway’s cloud. The
         Home Depot X430 listing says one year of free 4G and free lifetime network RTK. Those two pages do
-        not use the same words. The fee amount is omitted here on purpose.{" "}
+        not use the same words. Neither page states the fee amount.{" "}
         <SourceLine ids={["navimow-x4", "homedepot-x430"]} checked={SPEC_CHECKED} />
       </p>
+      <h2>Support outlook</h2>
       <p className="measure">
-        <FccWaiver /> We are not stating that this unit’s FCC ID is on file.
+        Segway has no <a href={FCC_COVERED_LIST}>FCC Conditional Approval</a> for new models, but models
+        already authorized can keep receiving updates until at least <a href={FCC_DA_26_789}>Jan 1, 2029</a>.
+        A secondary article says Segway's US models are already authorized; we couldn't find that on a Segway
+        page.
+      </p>
+      <p className="measure">
+        Segway's own site was sold out on Oct 10, 2026. The amazon.com listing was live.
       </p>
       <h2>Two other yards</h2>
       <p className="measure">
-        The LUBA 3 AWD 3000 is the comparison when trees cover the lawn. It is rated {formatAcres(luba.acres)},
+        The LUBA 3 AWD 3000 is the comparison when trees cover the lawn. It is rated {formatAcres(luba.acres, false)},
         not a full acre, and it adds LiDAR.{" "}
         <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
       </p>
       <p className="measure">
         The Worx Landroid Vision Cloud WR340 is the comparison for an open acre whose banks stay within{" "}
-        {publishedSlope(worx.slope, worx.degrees)}.{" "}
+        {worx.slope}%.{" "}
         <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.
       </p>
       <Faq
@@ -303,14 +296,14 @@ export default function X4Review() {
           },
           {
             q: "What happens after the free year?",
-            a: "The X4 page says a yearly fee for Connect+ after one year on the X430, or two years on the X450. Network RTK is described as free for life, depending on Segway’s cloud. This site does not print the fee.",
+            a: "The X4 page says a yearly fee for Connect+ after one year on the X430, or two years on the X450. Network RTK is described as free for life, depending on Segway’s cloud. Segway doesn't print the fee amount on the X4 page.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Four owner threads, read for the October 10, 2026 check."
+        threads="Four owner threads, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />
       <h2>See these models</h2>

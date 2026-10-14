@@ -156,8 +156,8 @@ export default function FrontAndBackGuide() {
       <h2>Two maps are not free on every brand</h2>
       <p className="measure">
         The Dreame 2500 page says two separate maps, and each map needs its own charging station. A side
-        passage that fails the width check can mean a second dock, not only a second zone name. The i210 and
-        the Worx picks still have no passage width on the sheets we checked.{" "}
+        passage that fails the width check can mean a second dock, not only a second zone name. Body width
+        not published for the i210 or the Worx picks.{" "}
         <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">

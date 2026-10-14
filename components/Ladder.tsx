@@ -29,15 +29,17 @@ function shortName(name: string): string {
     .replace(" (1 acre)", "");
 }
 
-export function Ladder() {
+export function Ladder({ picks = "elsewhere" }: { picks?: "below" | "elsewhere" }) {
   const rows = ladderRows();
   return (
     <section aria-labelledby="ladder-heading">
       <h2 id="ladder-heading">The ladder: rated area, then slope</h2>
       <p className="measure">
         Each current model sits at the lawn area its maker rates it for. The percent beside it is that
-        model’s published maximum slope. A solid mark is wire-free. A dashed mark uses a boundary wire.
-        A numbered tag is one of the five picks on the best-mowers page.
+        model’s published maximum slope. A solid mark is wire-free. A dashed mark uses a boundary wire.{" "}
+        {picks === "below"
+          ? "A numbered tag marks one of the five picks below."
+          : "A numbered tag marks one of the five picks on the best-mowers page."}
       </p>
       <Slot id="dia-ladder">
         <LadderDrawing rows={rows} />

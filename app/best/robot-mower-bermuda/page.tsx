@@ -47,8 +47,7 @@ export default function BermudaPage() {
         For a Bermuda home lawn kept near 1 inch, start with a published low cut at or under 1.5 inches. The
         Navimow X430 goes to {specText(x430.specs.cuttingHeight)}. The standard LUBA 3 AWD 3000 goes to{" "}
         {specText(luba.specs.cuttingHeight)}. The Automower 420 iQ goes to {specText(iq.specs.cuttingHeight)}.
-        High-cut models that start at 2.2 inches stay above the short Bermuda band. We have not tested these
-        mowers.
+        High-cut models that start at 2.2 inches stay above the short Bermuda band.
       </p>
       <QuickPick
         pageType="best_for"
@@ -138,7 +137,7 @@ export default function BermudaPage() {
           },
           {
             q: "Which Texas A&M number should I use?",
-            a: "Use the one that matches your lawn. The home-lawn calendar says 1 to 2 inches. ESC-052 says 1.5 to 3 inches for common Bermuda lawns. This page does not pick a midpoint.",
+            a: "Use the range that matches your lawn. The home-lawn calendar says 1 to 2 inches. ESC-052 says 1.5 to 3 inches for common Bermuda lawns.",
           },
         ]}
       />

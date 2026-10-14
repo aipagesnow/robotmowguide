@@ -64,8 +64,8 @@ export default function CostGuide() {
       <p className="measure">
         The only official yearly dollar figure in this set is Navimow Connect+ after the free period, $32.90
         per year. Everything else is a free-period length, a one-time accessory, a secondary report, or Not
-        published. This page does not print Amazon prices, and it does not guess a blade price, a battery
-        price, or an electricity bill. We have not tested these mowers.
+        published. Amazon prices are not listed. No blade price, battery price, or electricity bill is
+        guessed.
       </p>
       <CtaCluster>
         <ProductLink
@@ -113,8 +113,8 @@ export default function CostGuide() {
       <h2>Where two sources disagree</h2>
       <p className="measure">
         MOVA’s Ultra 3000 AWD page says 4G is free for 3 years. Wirecutter, updated Aug 3, 2026, reports a
-        GPS service of $50 per year after year 1. Both lines are in the table. This page does not average
-        them and does not add the $50 line into the official sum.{" "}
+        GPS service of $50 per year after year 1. Both lines are in the table. The two GPS lines disagree, so
+        they are not averaged, and the $50 line is not in the official sum.{" "}
         <SourceLine ids={["mova-3000", "wirecutter"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
@@ -125,7 +125,7 @@ export default function CostGuide() {
       </p>
       <p className="measure">
         The Verge reported Automower Connect cellular as free for life. The Husqvarna US pages used for the
-        iQ specs do not state a cellular price, so this page does not treat that report as an official fee.
+        iQ specs do not state a cellular price, so that report is not an official fee.
         Blade prices are Not published.
       </p>
       <p className="measure">
@@ -149,8 +149,8 @@ export default function CostGuide() {
         With the form left as it first appears, five years of the Connect+ fee, if it were charged every
         year and the free period were ignored, is $164.50. That figure is $32.90 times 5. It is not a full
         five-year cost, because blades, batteries, and the mower’s purchase price are Not published. A free
-        year on the X430, or two free years on the X450, would make the paid span shorter. This page does
-        not subtract those years for you, because the two models do not share one free period.
+        year on the X430, or two free years on the X450, would make the paid span shorter. Those free years
+        are not subtracted here, because the two models do not share one free period.
       </p>
       <CostCalculator rows={rows} />
       <Faq

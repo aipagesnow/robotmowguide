@@ -3,10 +3,11 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres, formatSqFt } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope } from "@/lib/speak";
+import { publishedSlope } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Which robot mower for a half acre?";
@@ -45,10 +46,10 @@ export default function HalfAcrePage() {
     >
       <p className="measure">
         A half acre of grass is {formatSqFt(0.5)}. An open half acre needs a rating of at least{" "}
-        {formatAcres(0.5, false)}. Heavy trees or two zones use our 1.25× rule, so the rating then needs to
-        be at least {formatAcres(need, false)}. That divisor is ours, not the maker’s. The LiDAX Ultra 2000
-        covers the open case and misses the complex one. The LUBA 3 AWD 3000 and the LiDAX Ultra 3000 AWD
-        cover both.
+        {formatAcres(0.5, false)}. Heavy trees or two zones need a rating of at least {formatAcres(need, false)}.{" "}
+        <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The LiDAX Ultra 2000 covers
+        the open case and misses the complex one. The LUBA 3 AWD 3000 and the LiDAX Ultra 3000 AWD cover
+        both.
       </p>
       <QuickPick
         pageType="best_for"
@@ -122,24 +123,25 @@ export default function HalfAcrePage() {
           </tbody>
         </table>
       </div>
+      <SlopeMarginNote />
       <h2>What a half-acre rating leaves out</h2>
       <p className="measure">
-        The Ultra 2000 is rated {formatAcres(mova.acres)} and {publishedSlope(mova.slope, mova.degrees)}.{" "}
-        {interiorOrBoundary()} It matches an open half acre and stops short of {formatAcres(need, false)}.
-        The i210 is rated {formatAcres(i210.acres)}. It is the quarter-acre mower, not a half-acre one. If
-        the lot is half an acre and the grass is only the back yard, measure the grass and use the{" "}
+        The Ultra 2000 is rated {formatAcres(mova.acres, false)} and {publishedSlope(mova.slope, mova.degrees)}.
+        It matches an open half acre and stops short of {formatAcres(need, false)}. The i210 is rated{" "}
+        {formatAcres(i210.acres, false)}. It is the quarter-acre mower, not a half-acre one. If the lot is
+        half an acre and the grass is only the back yard, measure the grass and use the{" "}
         <Link href="/best/robot-mower-small-yard">small-yard page</Link>.{" "}
         <SourceLine ids={["mova-2000", "amz-i210"]} checked="2026-10-13" />
       </p>
       <p className="measure">
-        The Dreame 2500 is rated {formatAcres(dreame.acres)} and {publishedSlope(dreame.slope, dreame.degrees)}.
-        That area is just under {formatAcres(need, false)}, so this page does not mark the complex half acre
-        as covered. It is still the LiDAR comparison when the bank is steeper than the Ultra 2000’s 45%.{" "}
+        The Dreame 2500 is rated {formatAcres(dreame.acres, false)} and {dreame.slope}%. That area is just
+        under {formatAcres(need, false)}, so a complex half acre is not covered. It is still the LiDAR
+        comparison when the bank is steeper than the Ultra 2000’s 45%.{" "}
         <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
-        The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and adds network RTK beside LiDAR. The Ultra
-        3000 AWD is rated {formatAcres(movaAwd.acres)} and {publishedSlope(movaAwd.slope, movaAwd.degrees)}.
+        The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres, false)} and adds network RTK beside LiDAR. The
+        Ultra 3000 AWD is rated {formatAcres(movaAwd.acres, false)} and {movaAwd.slope}%.
         Few owner reports exist yet for the MOVA family.{" "}
         <Link href="/reviews/mova-lidax-ultra">The MOVA review</Link> says that in plain words.{" "}
         <SourceLine ids={["mammotion-luba3", "mova-3000"]} checked={SPEC_CHECKED} />
@@ -152,11 +154,17 @@ export default function HalfAcrePage() {
           },
           {
             q: "Which half-acre mower is for a steep bank?",
-            a: "The Ultra 2000 publishes 45%. The Dreame 2500 and the LUBA 3000 publish 80%. The Ultra 3000 AWD publishes 80% (38.6°). The hills page converts a measured bank.",
+            a: "The Ultra 2000 publishes 45%. The Dreame 2500 and the LUBA 3000 publish 80%. The Ultra 3000 AWD publishes 80%. The hills page converts a measured bank.",
           },
           {
             q: "What if the half acre is split by the house?",
-            a: "That is two zones. Our rule asks for a 0.625 acre rating. The front-and-back guide is where passage width decides whether one map can join them.",
+            a: (
+              <>
+                That is two zones. The rating then needs to be at least 0.625 acre.{" "}
+                <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The front-and-back
+                guide is where passage width decides whether one map can join them.
+              </>
+            ),
           },
         ]}
       />

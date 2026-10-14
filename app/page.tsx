@@ -17,7 +17,7 @@ import {
 } from "@/components/Diagrams";
 import { articleSchema, homeSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/metadata";
-import { degreesFromPercent, formatAcres, formatDate, formatDegrees } from "@/lib/format";
+import { formatAcres, formatDate } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
 import { publishedSlope, specText } from "@/lib/speak";
 import { PUBLISHED } from "@/lib/site";
@@ -51,7 +51,6 @@ export default function HomePage() {
   const luba = modelFacts("mammotion-luba-3-awd", "LUBA 3 AWD 3000");
   const worx = modelFacts("worx-landroid-vision-cloud", "Landroid Vision Cloud WR340 (1 acre, 2WD)");
   const x430 = modelFacts("segway-navimow-x4", "Navimow X430");
-  const bank = degreesFromPercent(40);
 
   return (
     <article>
@@ -76,17 +75,10 @@ export default function HomePage() {
               By the RobotMowGuide editors · Updated {formatDate(PUBLISHED)} ·{" "}
               <Link href="/how-picks-are-chosen">How picks are chosen</Link>
             </p>
-            <MetaRow
-              updated={PUBLISHED}
-              whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
-            />
+            <MetaRow updated={PUBLISHED} />
             <p className="measure">
               Start with the lawn, not the brand. These rankings use the area each current model is rated for,
               then the steepest slope the maker publishes.
-              <span className="home-intro-more">
-                {" "}
-                Specs were checked on Oct 10, 2026. The reviews are research-based. We have not tested these mowers.
-              </span>
             </p>
           </div>
         </div>
@@ -134,13 +126,7 @@ export default function HomePage() {
           ]}
         />
         <div className="home-meta-mobile">
-          <MetaRow
-            updated={PUBLISHED}
-            whatChanged="October 13, 2026: linked the WR147 and Automower iQ reviews, the grass pages, and the cost, worth-it, and theft guides."
-          />
-          <p className="measure">
-            Specs were checked on Oct 10, 2026. The reviews are research-based. We have not tested these mowers.
-          </p>
+          <MetaRow updated={PUBLISHED} />
         </div>
         <FinderEmbed />
         <Ladder />
@@ -152,25 +138,24 @@ export default function HomePage() {
           <h3>A flat quarter acre</h3>
           <YardQuarter />
           <p className="measure">
-            A lot 90 ft by 121 ft is {formatAcres(0.25)}. The Navimow i210 AWD is rated{" "}
-            {formatAcres(i210.acres)} and {publishedSlope(i210.slope, i210.degrees)}.{" "}
+            A lot 90 ft by 121 ft is {formatAcres(0.25, false)}. The Navimow i210 AWD is rated{" "}
+            {formatAcres(i210.acres, false)} and {publishedSlope(i210.slope, i210.degrees)}.{" "}
             <Link href="/best#navimow-i210">See that pick</Link>.{" "}
             <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
           </p>
           <h3>A half acre with a side passage</h3>
           <YardHalf />
           <p className="measure">
-            A lot 132 ft by 165 ft is {formatAcres(0.5)}. A 3 ft side opening is 36 in. The Dreame A3 AWD Pro
-            2500 is rated {formatAcres(dreame.acres)} and {publishedSlope(dreame.slope, dreame.degrees)}. A
-            published body width was not on the sheet we checked, so a 36 in opening is not cleared for that
-            mower here.{" "}
+            A lot 132 ft by 165 ft is {formatAcres(0.5, false)}. The Dreame A3 AWD Pro 2500 is rated{" "}
+            {formatAcres(dreame.acres, false)} and {dreame.slope}%. Dreame doesn't publish a body width for
+            the A3 AWD Pro, so measure your side gate against the mower before you buy.{" "}
             <Link href="/reviews/dreame-a3-awd-pro">Read the Dreame A3 AWD Pro review</Link>.
           </p>
           <h3>An open acre</h3>
           <YardAcre />
           <p className="measure">
-            A lot 180 ft by 242 ft is {formatAcres(1)}. The Navimow X430 is rated {formatAcres(x430.acres)}{" "}
-            and {publishedSlope(x430.slope, x430.degrees)}.{" "}
+            A lot 180 ft by 242 ft is {formatAcres(1, false)}. The Navimow X430 is rated{" "}
+            {formatAcres(x430.acres, false)} and {x430.slope}%.{" "}
             <Link href="/reviews/segway-navimow-x4">Read the Navimow X4 review</Link>.{" "}
             <Link href="/best/robot-mower-1-acre">Which robot mower for about 1 acre?</Link>
           </p>
@@ -178,37 +163,36 @@ export default function HomePage() {
           <YardWooded />
           <p className="measure">
             When trees cover about a third of the lawn, canopy is where a satellite fix often weakens. The
-            LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and adds LiDAR to network
+            LUBA 3 AWD 3000 is rated {formatAcres(luba.acres, false)} and adds LiDAR to network
             RTK. <Link href="/reviews/mammotion-luba-3-awd">Read the LUBA 3 AWD review</Link>.{" "}
             <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link>.
           </p>
           <h3>A hillside bank</h3>
           <YardHillside />
           <p className="measure">
-            A bank that rises 4 ft over 10 ft is 40%, or {formatDegrees(bank)}, computed from the percent. It
-            is not a product rating. Published slopes for the picks: Worx Landroid Vision Cloud
-            WR340 {publishedSlope(worx.slope, worx.degrees)}, Dreame A3 AWD Pro 2500{" "}
-            {publishedSlope(dreame.slope, dreame.degrees)}, LUBA 3 AWD 3000{" "}
-            {publishedSlope(luba.slope, luba.degrees)}, Navimow X430 {publishedSlope(x430.slope, x430.degrees)}.{" "}
+            A bank that rises 4 ft over 10 ft is a 40% slope (about 22°). Compare that with each mower's
+            published maximum, and allow extra margin if the steep part is at the edge.{" "}
             <Link href="/best/robot-mower-for-hills">Convert a slope and compare current models</Link>.
           </p>
           <h3>A Florida yard</h3>
           <YardFlorida />
           <p className="measure">
-            A Florida yard often has a screened pool cage, palms, and a St. Augustine lawn. St. Augustine is often
-            kept tall, so cutting height matters. The Navimow X430 listing gives{" "}
+            St. Augustine is often kept tall, so cutting height matters. The Navimow X430 listing gives{" "}
             {specText(x430.specs.cuttingHeight)}. The LUBA 3 AWD 3000 listing gives{" "}
             {specText(luba.specs.cuttingHeight)}, and the high-cut variants are a separate row in the{" "}
-            <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
-            <Link href="/best/robot-mower-st-augustine">Which robot mower for St. Augustine grass?</Link>{" "}
-            <Link href="/best/robot-mower-bermuda">Bermuda grass</Link>.
+            <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
+          </p>
+          <p className="measure">
+            <Link href="/best/robot-mower-st-augustine">Which robot mower for St. Augustine grass?</Link>
+            {" · "}
+            <Link href="/best/robot-mower-bermuda">Which robot mower for Bermuda grass?</Link>
           </p>
           <AcreSquares />
           <p className="measure">
-            Sizes run from 0.125 acre to 1 acre. In the worked example, a quarter-acre lot
-            of 10,890 sq ft minus a 1,200 sq ft house, a 600 sq ft drive, and 400 sq ft of beds leaves about
-            8,690 sq ft of lawn.{" "}
-            <Link href="/guides/how-big-a-robot-mower-do-i-need">The size guide walks through that math.</Link>
+            Your lawn is smaller than your lot. On a quarter-acre lot, the house, drive and beds can take up
+            about 2,200 sq ft, which leaves roughly 8,700 sq ft to mow. The size guide shows how to work yours
+            out.{" "}
+            <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
           </p>
         </section>
         <section>
@@ -256,7 +240,7 @@ export default function HomePage() {
               <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review: LiDAR on a steep half acre</Link>
             </li>
             <li>
-              <Link href="/reviews/segway-navimow-i-series">Navimow i series review: a quarter acre, with the i1 models as the previous generation</Link>
+              <Link href="/reviews/segway-navimow-i-series">Navimow i series review: for a quarter acre</Link>
             </li>
             <li>
               <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD review: a small yard and a high cut</Link>

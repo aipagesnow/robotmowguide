@@ -103,12 +103,12 @@ export function matchMowers(candidates: Candidate[], input: FinderInput): Finder
     }
     const areaWords =
       factor === 1.25
-        ? `Rated area ${candidate.acres} acres covers ${needed.toFixed(2)} acres after our 1.25× rule.`
+        ? `Rated area ${candidate.acres} acres covers the ${needed.toFixed(2)} acres this yard needs with trees or two zones.`
         : `Rated area ${candidate.acres} acres covers this ${lawn} acre lawn at 1.0×, which is the open single-lawn case.`;
     const slopeWords =
       typeof candidate.boundarySlope === "number"
-        ? `Published interior slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered, because the note also prints a boundary figure.`
-        : `Published maximum slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered. The maker does not label that figure as interior or boundary.`;
+        ? `Published interior slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered, and the note also prints a boundary figure of ${candidate.boundarySlope}%.`
+        : `Published maximum slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered.`;
     return {
       candidate,
       why: `${areaWords} ${slopeWords} Navigation: ${candidate.navigationLabel}.`,

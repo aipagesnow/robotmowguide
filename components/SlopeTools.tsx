@@ -86,9 +86,7 @@ export function SlopeConverter({ candidates }: { candidates: Candidate[] }) {
                     {candidate.shortName}: published maximum {candidate.slope}%
                     {typeof candidate.degrees === "number" ? ` (${formatDegrees(candidate.degrees)} published)` : " (degrees not published)"}
                     , {risePer10Ft(candidate.slope)}.{" "}
-                    {separated
-                      ? "The note separates a boundary figure, so this maximum is the interior. "
-                      : "The maker does not say whether this limit is the interior of the lawn or only the boundary. "}
+                    {separated ? "The note separates a boundary figure, so this maximum is the interior. " : ""}
                     {interiorClear ? "The published maximum covers this slope." : "The published maximum is lower than this slope."}{" "}
                     {boundary === undefined
                       ? "No separate boundary figure is published."

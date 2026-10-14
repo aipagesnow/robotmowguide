@@ -4,6 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { CtaCluster, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { discontinuedMentions, modelFacts } from "@/lib/products";
 import { formatAcres } from "@/lib/format";
@@ -45,7 +46,7 @@ export default function ReviewsIndex() {
     >
       <p className="measure">
         Ten family reviews are up. Each one says who the mower suits, prints the checked specs, and links the
-        owner threads we read. We have not tested these mowers.
+        owner threads we read.
       </p>
       <CtaCluster>
         <ProductLink
@@ -65,39 +66,40 @@ export default function ReviewsIndex() {
         an open acre with steep banks, if the side passages are wide enough for a 24 in body and the lawn has
         Wi-Fi or cell service.
       </p>
+      <SlopeMarginNote />
       <h2>
         <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD</Link>
       </h2>
       <p className="measure">
-        The 3000 is rated {formatAcres(luba.acres)} and {publishedSlope(luba.slope, luba.degrees)}. It is the
+        The 3000 is rated {formatAcres(luba.acres, false)} and {luba.slope}%. It is the
         pick for a yard under trees, with LiDAR as well as network RTK. The standard cut tops out at {specText(luba.specs.cuttingHeight)}.
       </p>
       <h2>
         <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud</Link>
       </h2>
       <p className="measure">
-        The WR340 is rated {formatAcres(worx.acres)} and {publishedSlope(worx.slope, worx.degrees)}. It is
+        The WR340 is rated {formatAcres(worx.acres, false)} and {worx.slope}%. It is
         the open-acre pick when the banks stay inside that slope. The WR344 is the 4WD row on the same page.
       </p>
       <h2>
         <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro</Link>
       </h2>
       <p className="measure">
-        The 2500 is rated {formatAcres(dreame.acres)} and {publishedSlope(dreame.slope, dreame.degrees)}.
-        LiDAR and vision, no RTK. The 3500 and 5000 have no published slope on this site.
+        The 2500 is rated {formatAcres(dreame.acres, false)} and {dreame.slope}%.
+        LiDAR and vision, no RTK. Dreame doesn't publish a slope figure for the 3500 or the 5000.
       </p>
       <h2>
         <Link href="/reviews/segway-navimow-i-series">Navimow i series</Link>
       </h2>
       <p className="measure">
-        The i210 AWD is rated {formatAcres(i210.acres)} and {publishedSlope(i210.slope, i210.degrees)}. The
-        i105N and i110N stay on that page as the previous generation, each with its own status line.
+        The i210 AWD is rated {formatAcres(i210.acres, false)} and {i210.slope}%. The
+        i105N and i110N stay on that page as the previous generation.
       </p>
       <h2>
         <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD</Link>
       </h2>
       <p className="measure">
-        The 1500H is rated {formatAcres(mini.acres)} and {publishedSlope(mini.slope, mini.degrees)}. The cut
+        The 1500H is rated {formatAcres(mini.acres, false)} and {mini.slope}%. The cut
         on the listing is {specText(mini.specs.cuttingHeight)}. The standard 1500 has no confirmed listing on
         this page.
       </p>
@@ -105,15 +107,14 @@ export default function ReviewsIndex() {
         <Link href="/reviews/mova-lidax-ultra">MOVA LiDAX Ultra</Link>
       </h2>
       <p className="measure">
-        The Ultra 2000 is rated {formatAcres(mova.acres)} and {publishedSlope(mova.slope, mova.degrees)}. Few
-        owner reports exist yet. The 3000 AWD is the row rated {formatAcres(mova3000.acres)} and{" "}
-        {publishedSlope(mova3000.slope, mova3000.degrees)}.
+        The Ultra 2000 is rated {formatAcres(mova.acres, false)} and {mova.slope}%. Few owner reports exist
+        yet. The 3000 AWD is the row rated {formatAcres(mova3000.acres, false)} and {mova3000.slope}%.
       </p>
       <h2>
         <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H</Link>
       </h2>
       <p className="measure">
-        The Q110H is rated {formatAcres(q110.acres)} and {publishedSlope(q110.slope, q110.degrees)}. The
+        The Q110H is rated {formatAcres(q110.acres, false)} and {q110.slope}%. The
         English technical data gives a cut of {specText(q110.specs.cuttingHeight)}. Few Q110H owner reports
         exist yet.
       </p>
@@ -121,7 +122,7 @@ export default function ReviewsIndex() {
         <Link href="/reviews/worx-landroid-m-wr147">Worx Landroid M WR147</Link>
       </h2>
       <p className="measure">
-        The WR147 is rated {formatAcres(wr147.acres)} and {publishedSlope(wr147.slope, wr147.degrees)}. It is
+        The WR147 is rated {formatAcres(wr147.acres, false)} and {wr147.slope}%. It is
         the boundary-wire quarter acre. Obstacle detection is a bump sensor. The amazon.com listing showed
         unavailable on Oct 13, 2026, and the title still named the WR147.
       </p>
@@ -129,8 +130,8 @@ export default function ReviewsIndex() {
         <Link href="/reviews/husqvarna-automower-iq">Husqvarna Automower iQ</Link>
       </h2>
       <p className="measure">
-        The 420 iQ is rated {formatAcres(iq.acres)} for systematic mowing, with 0.5 acre named for an
-        irregular lawn, and {publishedSlope(iq.slope, iq.degrees)} with 15% at the boundary. The iQ rows have
+        The 420 iQ is rated {formatAcres(iq.acres, false)} for systematic mowing, with 0.5 acre named for an
+        irregular lawn, and {iq.slope}% with 15% at the boundary. The iQ rows have
         no Amazon button. The 435X AWD does.
       </p>
       {previous.length ? (

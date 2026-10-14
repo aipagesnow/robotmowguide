@@ -10,16 +10,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { NoConditionalApproval } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Worx Landroid M WR147 review: a quarter acre on boundary wire";
@@ -59,17 +59,8 @@ export default function Wr147Review() {
       whatChanged="October 13, 2026: first published. The amazon.com listing still named the WR147 and showed unavailable."
       factCheck={FACT}
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of {formatDate(family.statusDate)}. This is not a discontinued model.</p>
-        <p>
-          The amazon.com listing for this exact model showed unavailable on the Oct 13, 2026 check. The title
-          still named the WR147. Stock can change.
-        </p>
-        <p>
-          <NoConditionalApproval brand="Worx" />
-        </p>
-      </StatusLine>
       <p className="measure">
         Read the WR147 for a quarter-acre lawn when you will lay and maintain a boundary wire. It is rated{" "}
         {formatAcres(wr.acres)} and {publishedSlope(wr.slope, wr.degrees)}. The wire in the box is{" "}
@@ -95,12 +86,11 @@ export default function Wr147Review() {
           {
             label: "Rated area",
             value: formatAcres(wr.acres),
-            detail: realisticLine(wr.acres),
+            detail: <ComfortableFor rated={wr.acres} />,
           },
           {
             label: "Max slope",
             value: slopeWithRise(wr.slope, wr.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Passage",
@@ -145,7 +135,6 @@ export default function Wr147Review() {
             sources: ["worx-wr147-manual"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: interiorOrBoundary(),
           },
           {
             label: "Cutting width",
@@ -185,10 +174,11 @@ export default function Wr147Review() {
             value: specText(wr.specs.connectivity),
             sources: ["worx-wr147-manual"],
             checked: SPEC_CHECKED,
-            note: "A theft feature is Not published. This page does not add a PIN or GPS.",
+            note: "A theft feature is Not published.",
           },
         ]}
       />
+      <SlopeMarginNote />
       <h2>What the wire changes</h2>
       <p className="measure">
         The WR147 does not need a sky view to know the edge. It fails when the wire is cut, or when a bed
@@ -212,23 +202,22 @@ export default function Wr147Review() {
       <ul className="grid gap-2 pl-5">
         <li>Anyone who does not want to lay and maintain a boundary wire.</li>
         <li>A yard with toys and pets, because obstacle detection is a bump sensor.</li>
-        <li>Banks steeper than {publishedSlope(wr.slope, wr.degrees)}.</li>
-        <li>A lawn larger than {formatAcres(wr.acres)} once heavy trees or a second zone use the 1.25× rule.</li>
-        <li>A side passage whose width you need in writing. No body width was on the sheet we checked.</li>
+        <li>Banks steeper than {wr.slope}%.</li>
+        <li>A lawn with heavy trees or two zones, unless you size it from the size guide rather than the full rating.</li>
+        <li>A side passage whose width you need in writing. Body width not published.</li>
       </ul>
-      <h2>Support outlook</h2>
+      <SupportOutlook brand="Worx" />
       <p className="measure">
-        <NoConditionalApproval brand="Worx" />
+        The amazon.com listing showed unavailable on Oct 13, 2026. The title still named the WR147.
       </p>
       <h2>Two other yards</h2>
       <p className="measure">
-        The Navimow i210 AWD is the wire-free quarter acre, rated {formatAcres(i210.acres)} and{" "}
-        {publishedSlope(i210.slope, i210.degrees)}.{" "}
+        The Navimow i210 AWD is the wire-free quarter acre, rated {formatAcres(i210.acres)} and {i210.slope}%.{" "}
         <Link href="/reviews/segway-navimow-i-series">Navimow i series review</Link>.
       </p>
       <p className="measure">
-        The RockNeo Q110H is the other quarter-acre comparison, rated {formatAcres(q.acres)} and{" "}
-        {publishedSlope(q.slope, q.degrees)}. <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H review</Link>.
+        The RockNeo Q110H is the other quarter-acre comparison, rated {formatAcres(q.acres)} and {q.slope}%.{" "}
+        <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H review</Link>.
       </p>
       <Faq
         items={[
@@ -242,7 +231,7 @@ export default function Wr147Review() {
           },
           {
             q: "Will it see a pet before it bumps it?",
-            a: "The models page lists a bump sensor. This review does not add a camera or a radar claim.",
+            a: "The models page lists a bump sensor. Obstacle detection is that bump sensor, not a camera or radar.",
           },
         ]}
       />

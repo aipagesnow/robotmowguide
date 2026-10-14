@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { Slot } from "@/components/Slot";
 import { SlopeConverter } from "@/components/SlopeTools";
 import { currentCandidates } from "@/lib/candidates";
@@ -25,7 +26,6 @@ export default function HillsPage() {
   const luba = candidates.find((item) => item.model === "LUBA 3 AWD 3000");
   const x430 = candidates.find((item) => item.model === "Navimow X430");
   const wr344 = candidates.find((item) => item.model.startsWith("Landroid Vision Cloud 4WD WR344"));
-  const bank = degreesFromPercent(40);
 
   return (
     <ArticleFrame
@@ -42,9 +42,8 @@ export default function HillsPage() {
       disclosure
     >
       <p className="measure">
-        A back yard that drops 4 ft over 10 ft is 40%, or {formatDegrees(bank)} computed from that percent,
-        a rise of {risePer10Ft(40)}. Match that number to the published maximum first. If the maker also
-        prints a boundary figure, and the steep part is the edge, use the boundary figure.
+        A bank that rises 4 ft over 10 ft is a 40% slope (about 22°). Compare that with each mower's
+        published maximum, and allow extra margin if the steep part is at the edge.
       </p>
       <QuickPick
         pageType="best_for"
@@ -90,9 +89,7 @@ export default function HillsPage() {
       <h2>Converter</h2>
       <p className="measure">
         Percent, degrees, and rise per 10 ft are the same slope. Degrees are the arctangent of percent
-        divided by 100. Rise over 10 ft is 10 ft times percent divided by 100. A figure is labelled
-        interior only when the maker’s note also prints a boundary. Otherwise the page says the maker
-        does not label it.
+        divided by 100. Rise over 10 ft is 10 ft times percent divided by 100.
       </p>
       <SlopeConverter candidates={candidates} />
       <h2>Printed conversions</h2>
@@ -102,13 +99,14 @@ export default function HillsPage() {
         maximum is the interior, and the boundary may not cover the same percent.
       </p>
       <PrintedSlopes candidates={candidates} />
+      <SlopeMarginNote />
       <Slot id="dia-slope">
         <SlopeRuler />
       </Slot>
       <h2>Interior and boundary, model by model</h2>
       <ModelSlopes candidates={candidates} />
       <p className="measure">
-        The Worx WR340 is rated 30% (17°). It is the wrong pick when the bank is steeper than that. The
+        The Worx WR340 is rated 30%. It is the wrong pick when the bank is steeper than that. The
         WR344 is the 84% model in that family.{" "}
         <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.
       </p>
@@ -116,15 +114,15 @@ export default function HillsPage() {
         items={[
           {
             q: "What does 80% slope mean?",
-            a: "80% is a rise of 8 ft over 10 ft. The Dreame page also prints 38.7°. The LUBA 3 AWD 3000 page prints 38.6° for the same 80% class of figure. This page does not copy either degree onto a row that does not publish one.",
+            a: "80% is a rise of 8 ft over 10 ft. Dreame prints 38.7° and the LUBA 3 AWD 3000 prints 38.6°. A row with no published degree stays without one.",
           },
           {
             q: "Why do some mowers list two slopes?",
-            a: "Husqvarna’s iQ notes we checked put 15% at the boundary beside a higher interior figure. If your steep spot is the edge, the boundary number is the one that matters.",
+            a: "Husqvarna’s iQ pages put 15% at the boundary beside a higher interior figure. If your steep spot is the edge, the boundary number is the one that matters.",
           },
           {
             q: "Is 40% steep for a robot mower?",
-            a: "40% is 4 ft over 10 ft, about 21.8° computed. It is above the WR340’s 30% and under the 45% i210 figure and the 80% and 84% models.",
+            a: "40% is 4 ft over 10 ft. It is above the WR340’s 30% and under the 45% i210 figure and the 80% and 84% models.",
           },
         ]}
       />
@@ -132,7 +130,7 @@ export default function HillsPage() {
         scope="group"
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads are on the linked reviews, read for the October 10, 2026 check."
+        threads="Owner threads are on the linked reviews, read in October 2026."
         questions="No manufacturer questions have been answered yet."
         specsLine="Specs checked Oct 10, 2026. The WR344 listing was opened again on Oct 13, 2026."
       />
@@ -204,8 +202,8 @@ function ModelSlopes({ candidates }: { candidates: Candidate[] }) {
               <th scope="row">{item.href ? <Link href={item.href}>{item.shortName}</Link> : item.shortName}</th>
               <td className="dim">
                 {item.slope}% · {typeof item.degrees === "number" ? formatDegrees(item.degrees) : "degrees not published"} ·{" "}
-                {risePer10Ft(item.slope)} ·{" "}
-                {typeof item.boundarySlope === "number" ? "interior" : "maker does not label interior or boundary"}
+                {risePer10Ft(item.slope)}
+                {typeof item.boundarySlope === "number" ? " · interior" : ""}
               </td>
               <td className="dim">
                 {typeof item.boundarySlope === "number"

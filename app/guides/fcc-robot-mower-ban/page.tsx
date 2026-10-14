@@ -53,9 +53,8 @@ export default function FccPage() {
       factCheck={FACT}
     >
       <p className="measure">
-        Last checked {formatDate(RECHECKED)}. No. Mowers already on sale can still be sold and used. The
-        word in the title is the search term. The FCC documents below do not stop the import, sale, or use
-        of models the FCC had already authorized.
+        No. Robot mowers already on sale can still be sold and used. The July 2026 FCC rule only affects new
+        models that haven't been authorized yet.
       </p>
       <p className="measure">
         For a mower you can buy now, these current models have a confirmed amazon.com listing.
@@ -106,12 +105,12 @@ export default function FccPage() {
         The <a href={FAQ_URL}>FCC FAQ</a> defines an advanced robotic device as a device with ground
         locomotion, that operates at a distance from a human, weighs over 4.4 lb with its dock, contains a
         sensor, has a network connection of at least 200 kbps (including Bluetooth, Wi-Fi, or cellular), and
-        uses navigation software. The notice does not name lawn mowers.
+        uses navigation software.
       </p>
       <p className="measure">
-        Our reading, not an FCC quotation: those elements cover a connected wire-free robot mower. A mower
-        with no radio link at 200 kbps or more may fall outside that definition. This page does not quote
-        the FCC as saying the rule names robot mowers.
+        The notice doesn't mention lawn mowers by name, but a connected wire-free robot mower appears to meet
+        every part of that definition. A mower with no radio link at 200 kbps or more may fall outside that
+        definition.
       </p>
       <h2>What did not change</h2>
       <ul className="grid gap-2 pl-5">
@@ -147,8 +146,8 @@ export default function FccPage() {
       <p className="measure">
         A Conditional Approval is an exception for a named device or platform. The rows below are the robotic
         rows this check could read. The appendix inside{" "}
-        <a href={DA_1089}>DA 26-1089</a> is marked “Updated October 9, 2026.” This page does not claim that
-        appendix was read line by line past the rows named here. The live table is the{" "}
+        <a href={DA_1089}>DA 26-1089</a> is marked “Updated October 9, 2026.” Only the rows named here were
+        read from that appendix. The live table is the{" "}
         <a href={FCC_COVERED_LIST}>FCC Covered List</a>, table date {formatDate(FCC_TABLE_CHECKED)}.
       </p>
       <p className="measure">
@@ -158,7 +157,7 @@ export default function FccPage() {
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Robotic Conditional Approval rows read for the October 13, 2026 check.</caption>
+          <caption>Robotic Conditional Approval rows read in October 2026.</caption>
           <thead>
             <tr>
               <th scope="col">Device or platform</th>
@@ -199,8 +198,8 @@ export default function FccPage() {
       <p className="measure">
         None of the rows we could read is Navimow, Mammotion, Dreame, Worx, ECOVACS, MOVA, eufy, Sunseeker,
         or Greenworks. That is not a finding that those brands are absent from every FCC file. It is a
-        finding about the rows this check could read. This page does not state that any specific mower is
-        FCC-authorized.
+        finding about the rows this check could read. No specific mower is marked FCC-authorized from these
+        rows.
       </p>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
@@ -235,8 +234,8 @@ export default function FccPage() {
               <th scope="row">Navimow, Mammotion, Dreame, Worx, ECOVACS, MOVA, eufy, Sunseeker, Greenworks</th>
               <td>Not in the robotic rows we could read.</td>
               <td>
-                The fact sheet still says previously authorized models can still be sold. This page does not
-                state that a given model from these brands is authorized. Look up an FCC ID before you rely
+                The fact sheet still says previously authorized models can still be sold. These rows do not
+                show that a given model from these brands is authorized. Look up an FCC ID before you rely
                 on one.
               </td>
             </tr>
@@ -247,7 +246,7 @@ export default function FccPage() {
       <p className="measure">
         The ID is printed on the mower or in its papers. Search it in the{" "}
         <a href={FCC_SEARCH}>FCC equipment authorization search</a>. This site is not stating that any
-        model’s ID is on file. A search result is the check. A missing ID on this page is not a finding
+        model’s ID is on file. The search result is what tells you. A missing ID here is not a finding
         either way.
       </p>
       <h2>What to buy now</h2>
@@ -277,7 +276,7 @@ export default function FccPage() {
           },
           {
             q: "How do I check a model’s FCC authorization?",
-            a: "Use the FCC equipment authorization search and the ID on the mower or in its papers. This page does not print example IDs.",
+            a: "Use the FCC equipment authorization search and the ID on the mower or in its papers. Example IDs are not listed.",
           },
           {
             q: "Will new models come to the US?",
@@ -285,7 +284,7 @@ export default function FccPage() {
           },
           {
             q: "Can I import one myself?",
-            a: "The fact sheet says models the FCC had already authorized can still be imported and sold. This page does not give a path for a model that has no authorization.",
+            a: "The fact sheet says models the FCC had already authorized can still be imported and sold. These documents do not describe a path for a model that has no authorization.",
           },
         ]}
       />

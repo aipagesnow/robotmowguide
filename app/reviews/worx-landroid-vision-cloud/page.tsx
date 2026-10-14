@@ -11,16 +11,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { NoConditionalApproval } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Worx Landroid Vision Cloud review: an open acre on vision";
@@ -63,14 +63,8 @@ export default function WorxReview() {
       whatChanged="October 13, 2026: first published."
       factCheck={FACT}
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of Oct 10, 2026.</p>
-        <p>The WR310, WR340, and WR344 amazon.com listings were still the matching models on Oct 13, 2026.</p>
-        <p>
-          <NoConditionalApproval brand="Worx" />
-        </p>
-      </StatusLine>
       <p className="measure">
         Read the WR340 when the lawn is an open acre and the banks stay within{" "}
         {publishedSlope(worx.slope, worx.degrees)}. Cloud RTK needs no antenna. Stereo vision is part of the
@@ -97,12 +91,15 @@ export default function WorxReview() {
           {
             label: "Rated area",
             value: formatAcres(worx.acres),
-            detail: `${realisticLine(worx.acres)} Wirecutter’s complex-lawn note is a separate caution.`,
+            detail: (
+              <>
+                <ComfortableFor rated={worx.acres} /> Wirecutter’s complex-lawn note is a separate caution.
+              </>
+            ),
           },
           {
             label: "Max slope",
             value: slopeWithRise(worx.slope, worx.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Passage",
@@ -125,7 +122,7 @@ export default function WorxReview() {
         family={family}
         pageType="review"
         differences={{
-          "Landroid Vision Cloud WR310 (1/4 acre)": `Rated ${formatAcres(wr310.acres)} and ${publishedSlope(wr310.slope, wr310.degrees)}. The WR340 listing’s comparison chart marks Find My Landroid and Cut-to-Zero as not included on the WR310 row. Other WR310 specs were empty on the sheet we checked.`,
+          "Landroid Vision Cloud WR310 (1/4 acre)": `Rated ${formatAcres(wr310.acres)} and ${publishedSlope(wr310.slope, wr310.degrees)}. The WR340 listing’s comparison chart marks Find My Landroid and Cut-to-Zero as not included on the WR310 row. Other WR310 specs are not published.`,
           "Landroid Vision Cloud WR320 (1/2 acre)": `Rated ${wr320 ? formatAcres(Number(wr320.ladder?.ratedAreaAcres?.value)) : "Not published"}. Slope 30%, degrees not published. No confirmed amazon.com listing.`,
           "Landroid Vision Cloud WR340 (1 acre, 2WD)":
             "The model this review follows. Two-wheel drive. 30% (17°). Cloud RTK and vision.",
@@ -150,7 +147,7 @@ export default function WorxReview() {
             sources: ["worx-vision-cloud"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: `${interiorOrBoundary()} The WR344 slope is a different row.`,
+            note: "The WR344 slope is a different row.",
           },
           {
             label: "Navigation",
@@ -195,24 +192,24 @@ export default function WorxReview() {
       />
       <h2 id="slope">Two-wheel drive stops at 30%</h2>
       <p className="measure">
-        The WR340 slope is {slopeWithRise(worx.slope, worx.degrees)}. {interiorOrBoundary()} The WR344 is
-        rated {formatAcres(wr344.acres)} and {slopeWithRise(wr344.slope, wr344.degrees)}. The degree on the
-        WR344 listing is written as about 40°. Drive is four-wheel, with front-wheel steering, and the
-        listing describes a Cut-to-Zero offset blade.{" "}
+        The WR340 slope is {worx.slope}%, a rise of {risePer10Ft(worx.slope)}. The WR344 is rated{" "}
+        {formatAcres(wr344.acres)} and {wr344.slope}%. The degree on the WR344 listing is written as about 40°.
+        Drive is four-wheel, with front-wheel steering, and the listing describes a Cut-to-Zero offset blade.{" "}
         <SourceLine ids={["amz-wr344", "worx-vision-cloud"]} checked={RECHECKED} />
       </p>
+      <SlopeMarginNote />
       <p className="measure">
         Wirecutter says Cut-to-Zero is not recommended above 15°. That note is Wirecutter’s. The comparison
         chart on the WR340 listing marks Cut-to-Zero as included for the WR340 and not included for the
         WR310. The Worx series page used for the WR340 width does not describe Cut-to-Zero as this model’s
-        edge method, so this page does not print a distance-from-the-edge figure for the WR340.{" "}
+        edge method, and Worx does not publish a distance-from-the-edge figure for the WR340.{" "}
         <SourceLine ids={["wirecutter", "amz-wr340"]} checked={RECHECKED} />
       </p>
       <h2>The acre rating and a complex lawn</h2>
       <p className="measure">
-        The published area is {formatAcres(worx.acres)}. {realisticLine(worx.acres)} Wirecutter, updated Aug
+        The published area is {formatAcres(worx.acres)}. <ComfortableFor rated={worx.acres} /> Wirecutter, updated Aug
         3, 2026, suggests a complex lawn closer to a quarter acre than that rating. Use the Wirecutter note
-        as a caution about shape, and the 1.25× rule as ours.{" "}
+        as a caution about a broken-up lawn. Trees or two zones are sized on the size guide.{" "}
         <SourceLine ids={["wirecutter", "worx-vision-cloud"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Vision, and a 2023 leaf report</h2>
@@ -227,20 +224,20 @@ export default function WorxReview() {
         The WR344 amazon.com product information, checked Oct 13, 2026, lists a cutting width of{" "}
         {specText(wr344.specs.cuttingWidth)} and a cutting height of {specText(wr344.specs.cuttingHeight)},
         in 7 positions. Those are the figures this page uses. A European Worx page for the WR344E lists a
-        cutting height of 20 mm to 70 mm, about 0.8–2.8 in if you convert the millimeters. That sheet
-        disagrees with the US listing on height. This page does not use it. The support page for the WR344
-        was not the source of the width and height.{" "}
+        cutting height of 20 mm to 70 mm, about 0.8–2.8 in if you convert the millimeters. That European page
+        disagrees with the US listing on height. The height on this page is the US listing. The support page
+        for the WR344 was not the source of the width and height.{" "}
         <SourceLine ids={["amz-wr344"]} checked={RECHECKED} />
       </p>
       <h2>Find My Landroid is not settled</h2>
       <p className="measure">
         The amazon.com comparison chart for the WR340 listing marks Find My Landroid as included. Wirecutter’s
-        Aug 3, 2026 review treats a GPS module as an extra. This page does not settle that, and it does not
-        print a price or say the module works with the battery out. The same chart marks Find My Landroid as
+        Aug 3, 2026 review treats a GPS module as an extra. The two sources disagree. Neither states a price
+        or says the module works with the battery out. The same chart marks Find My Landroid as
         not included on the WR310 row. <SourceLine ids={["amz-wr340", "wirecutter"]} checked={RECHECKED} />
       </p>
       <OwnerReports
-        intro="In the owner threads we read for the October 10, 2026 check. The leaf report is about the 2023 Vision."
+        intro="In the 3 owner threads we read in October 2026:"
         items={[
           {
             text: "A 2023 Landroid Vision stopped at leaves, weeds, and bald patches. That report is not evidence that Vision Cloud does the same.",
@@ -267,23 +264,20 @@ export default function WorxReview() {
       />
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
-        <li>Banks steeper than 30% (17°) if you buy the two-wheel-drive WR340. The WR344 is the 84% model.</li>
+        <li>Banks steeper than 30% if you buy the two-wheel-drive WR340. The WR344 is the 84% model.</li>
         <li>Patchy or weedy lawns that vision may read as not grass.</li>
         <li>A very broken-up acre. The 1 acre rating is generous for that shape.</li>
-        <li>A side passage whose width you need in writing. No body width or minimum gap was on the sheet we checked.</li>
+        <li>A side passage whose width you need in writing. Body width and minimum gap are not published.</li>
       </ul>
-      <h2>Support outlook</h2>
+      <SupportOutlook brand="Worx" />
       <p className="measure">
         Worx says lifetime RTK Cloud service at no extra cost. That depends on Worx’s cloud.{" "}
         <SourceLine ids={["worx-vision-cloud"]} checked={SPEC_CHECKED} />
       </p>
-      <p className="measure">
-        <NoConditionalApproval brand="Worx" />
-      </p>
       <h2>Two other yards</h2>
       <p className="measure">
         The Navimow X430 is the open acre when the banks are steeper than 30%: {formatAcres(x430.acres)} and{" "}
-        {publishedSlope(x430.slope, x430.degrees)}. <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
+        {x430.slope}%. <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <p className="measure">
         The LUBA 3 AWD 3000 is the comparison when trees cover the lawn. It is rated {formatAcres(luba.acres)},
@@ -298,18 +292,18 @@ export default function WorxReview() {
           },
           {
             q: "Which Worx model climbs a steep bank?",
-            a: "The WR340 publishes 30% (17°). The WR344 publishes 84% (about 40° on the listing). Do not put the WR344 slope on the two-wheel-drive models.",
+            a: "The WR340 publishes 30%. The WR344 publishes 84%. Do not put the WR344 slope on the two-wheel-drive models.",
           },
           {
             q: "Is Find My Landroid in the WR340 box?",
-            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. This review does not settle that and does not print a price.",
+            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. The two sources disagree, and neither states a price.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
         manuals="The support-na.worx.com WR344 page was not the source of the cutting width or height on this page."
-        threads="Three owner threads and one independent review, read for the October 10, 2026 check."
+        threads="Three owner threads and one independent review, read in October 2026."
         questions="No manufacturer questions have been answered yet."
         specsLine="Specs checked Oct 10, 2026. WR310, WR340, and WR344 listings rechecked Oct 13, 2026."
       />

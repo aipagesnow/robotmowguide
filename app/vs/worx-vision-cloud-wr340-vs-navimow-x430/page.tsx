@@ -4,10 +4,11 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { EndLinks, Faq, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Worx Vision Cloud WR340 vs Navimow X430";
@@ -31,31 +32,31 @@ export default function VsWr340Page() {
       topic: "Rated area",
       w: formatAcres(worx.acres),
       x: formatAcres(x430.acres),
-      better: "An open acre: either rating covers it. A complex acre is a separate caution on the Worx review.",
+      better: "Either model. Both ratings cover an open acre, and a complex acre is a separate caution on the Worx review.",
     },
     {
       topic: "Slope",
-      w: `${slopeWithRise(worx.slope, worx.degrees)}. Two-wheel drive. ${interiorOrBoundary()}`,
-      x: `${slopeWithRise(x430.slope, x430.degrees)}. All-wheel drive. ${interiorOrBoundary()}`,
-      better: "Banks between 30% and 84%: X430. Banks inside 30% (17°): the WR340’s published maximum covers them.",
+      w: `${slopeWithRise(worx.slope, worx.degrees)}. Two-wheel drive.`,
+      x: `${slopeWithRise(x430.slope, x430.degrees)}. All-wheel drive.`,
+      better: "X430. It covers banks between 30% and 84%, and banks inside 30% (17°) sit within the WR340’s published maximum.",
     },
     {
       topic: "Navigation",
       w: navigationLabel(worx.family.navigation),
       x: navigationLabel(x430.family.navigation),
-      better: "No antenna and a cloud RTK service Worx prices at no extra cost: WR340. A steeper acre that also has vision and a time-of-flight sensor: X430.",
+      better: "WR340. Cloud RTK is priced at no extra cost and there is no antenna. The X430 is the steeper acre, with vision and a time-of-flight sensor.",
     },
     {
       topic: "Cut",
       w: specText(worx.specs.cuttingHeight),
       x: specText(x430.specs.cuttingHeight),
-      better: "A lawn kept near 4 in, such as standard St. Augustine: X430. A lawn inside 3.54 in: either.",
+      better: "X430. It reaches a lawn kept near 4 in, such as standard St. Augustine, and a lawn inside 3.54 in can use either.",
     },
     {
       topic: "Side passage",
       w: "Not published.",
       x: `Body width ${specText(x430.specs.bodyWidth)}.`,
-      better: "A gap you can measure against a published body: X430, at 24 in. Under that, or if you need a WR340 width: neither figure clears it.",
+      better: "X430. The published body is 24 in. Under that, or if you need a WR340 width, neither figure clears it.",
     },
   ];
 
@@ -75,9 +76,8 @@ export default function VsWr340Page() {
     >
       <p className="measure">
         Buy the WR340 for an open acre whose banks stay inside {publishedSlope(worx.slope, worx.degrees)}.
-        Buy the X430 when the banks are steeper, up to {publishedSlope(x430.slope, x430.degrees)}, and the
-        side passage clears a {specText(x430.specs.bodyWidth)} body. Both are rated {formatAcres(x430.acres, false)}.
-        We have not tested these mowers.
+        Buy the X430 when the banks are steeper, up to {x430.slope}%, and the side passage clears a{" "}
+        {specText(x430.specs.bodyWidth)} body. Both are rated {formatAcres(x430.acres, false)}.
       </p>
       <div data-cta-cluster="true" className="grid gap-2">
         <p className="paid m-0">
@@ -129,16 +129,17 @@ export default function VsWr340Page() {
           </tbody>
         </table>
       </div>
+      <SlopeMarginNote />
       <h2>Choose the WR340</h2>
       <p className="measure">
-        Choose it when the acre is open, the banks stay at or under {publishedSlope(worx.slope, worx.degrees)},
+        Choose it when the acre is open, the banks stay at or under {worx.slope}%,
         and you want cloud RTK without an antenna. Worx says lifetime RTK Cloud service at no extra cost.
         That depends on Worx’s cloud. The WR344, not this model, is the 4WD sibling at a much steeper slope.{" "}
         <SourceLine ids={["worx-vision-cloud"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Choose the X430</h2>
       <p className="measure">
-        Choose it when the bank is between 30% and {publishedSlope(x430.slope, x430.degrees)}, or when the
+        Choose it when the bank is between 30% and {x430.slope}%, or when the
         grass is kept tall enough to need a 4 inch cut. The body width is {specText(x430.specs.bodyWidth)}.
         Connect+ is free for 1 year on the X430, then a yearly fee. Network RTK is described as free for
         life, depending on Segway’s cloud. <SourceLine ids={["navimow-x4"]} checked={SPEC_CHECKED} />
@@ -159,11 +160,11 @@ export default function VsWr340Page() {
         items={[
           {
             q: "Which one for a flat open acre?",
-            a: "Either rating is 1 acre. Choose the WR340 if you want cloud RTK at no extra cost in Worx’s wording and the banks stay inside 30% (17°). Choose the X430 if you want the steeper published slope or a cut that reaches 4 in.",
+            a: "Either rating is 1 acre. Choose the WR340 if you want cloud RTK at no extra cost in Worx’s wording and the banks stay inside 30%. Choose the X430 if you want the steeper published slope or a cut that reaches 4 in.",
           },
           {
             q: "Which one climbs a 40% bank?",
-            a: "The X430. It publishes 84% (40°). The WR340 publishes 30% (17°). A 40% bank is above the WR340 and inside the X430 figure. Neither maker says whether the maximum is the interior or only the boundary.",
+            a: "The X430. It publishes 84%. The WR340 publishes 30%. A 40% bank is above the WR340 and inside the X430 figure.",
           },
           {
             q: "Do both need a boundary wire?",
@@ -175,7 +176,7 @@ export default function VsWr340Page() {
         scope="group"
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads are on the two reviews, read for the October 10, 2026 check."
+        threads="Owner threads are on the two reviews, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />
       <h2>See both models</h2>

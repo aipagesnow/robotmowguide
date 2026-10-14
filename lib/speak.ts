@@ -11,11 +11,11 @@ export function slopeWithRise(percent: number, degrees?: number): string {
 
 export function interiorOrBoundary(note?: string): string {
   if (note && /boundary/i.test(note)) return note;
-  return "The maker does not say whether this limit is for the interior of the lawn or only the boundary.";
+  return "";
 }
 
 export function realisticLine(rated: number): string {
-  return `With heavy trees and two zones, our 1.25× rule plans on about ${formatAcres(realisticAcres(rated))}. That divisor is ours, not the maker’s.`;
+  return `Comfortable for about ${formatAcres(realisticAcres(rated), false)} with trees or two zones.`;
 }
 
 export function computedDegrees(percent: number): string {

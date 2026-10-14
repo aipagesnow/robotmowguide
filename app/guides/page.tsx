@@ -48,7 +48,7 @@ export default function GuidesIndex() {
         <li>
           <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
           <p className="m-0">
-            Rated acres, square feet, and our 1.25× rule for heavy trees and two zones.
+            Rated acres, square feet, and the rule of thumb for heavy trees and two zones.
           </p>
         </li>
         <li>

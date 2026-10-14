@@ -4,6 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { CtaCluster, Faq, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { AntennaDiagram, NavFour } from "@/components/Diagrams";
 import { pageMeta } from "@/lib/metadata";
 import { HUSQ_ANTENNA } from "@/lib/site";
@@ -53,7 +54,7 @@ export default function RtkGuide() {
       <p className="measure">
         For heavy trees, the LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and uses{" "}
         {navigationLabel(luba.family.navigation)}. For an open steep acre, the Navimow X430 is rated{" "}
-        {formatAcres(x430.acres)} and {publishedSlope(x430.slope, x430.degrees)}, with{" "}
+        {formatAcres(x430.acres, false)} and {publishedSlope(x430.slope, x430.degrees)}, with{" "}
         {navigationLabel(x430.family.navigation)}.
       </p>
       <CtaCluster>
@@ -79,7 +80,7 @@ export default function RtkGuide() {
       <p className="measure">
         A wire is buried or pegged around the lawn, and the mower follows it. It does not need sky. It fails
         when the wire is cut, or when a bed moves and nobody moves the wire. On the ladder, the Worx Landroid
-        M <Link href="/reviews/worx-landroid-m-wr147">WR147</Link> is a boundary-wire model rated {formatAcres(0.25)}. The Husqvarna{" "}
+        M <Link href="/reviews/worx-landroid-m-wr147">WR147</Link> is a boundary-wire model rated {formatAcres(0.25, false)}. The Husqvarna{" "}
         <Link href="/reviews/husqvarna-automower-iq">Automower 420 iQ</Link> can run wire-free or with a boundary wire.
       </p>
       <h3>Antenna RTK</h3>
@@ -108,14 +109,15 @@ export default function RtkGuide() {
         The mower builds a map from what it sees. Nothing has to be installed in the yard. It weakens when
         the camera reads leaves, weeds, or bare soil as “not grass,” and when a LiDAR unit pauses in heat.
         The Dreame A3 AWD Pro 2500 is LiDAR plus vision, with no RTK and no wire, rated{" "}
-        {formatAcres(dreame.acres)}. The LUBA 3 AWD 1500 is LiDAR plus vision only. The 3000 adds network
-        RTK. The 1500 is rated {formatAcres(luba1500.acres)}.
+        {formatAcres(dreame.acres, false)}. The LUBA 3 AWD 1500 is LiDAR plus vision only. The 3000 adds
+        network RTK. The 1500 is rated {formatAcres(luba1500.acres, false)}.
       </p>
       <p className="measure">
         The Worx Landroid Vision Cloud WR340 uses cloud RTK, with no antenna, plus stereo vision, and Worx
-        says a V-SLAM fallback takes over in shade. It is rated {formatAcres(worx.acres)} and{" "}
-        {publishedSlope(worx.slope, worx.degrees)}.
+        says a V-SLAM fallback takes over in shade. It is rated {formatAcres(worx.acres, false)} and{" "}
+        {worx.slope}%.
       </p>
+      <SlopeMarginNote />
       <h2>What this means when you choose</h2>
       <ul className="grid gap-3 pl-5">
         <li>

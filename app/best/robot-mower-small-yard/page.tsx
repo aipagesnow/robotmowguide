@@ -3,10 +3,11 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, specText } from "@/lib/speak";
+import { publishedSlope, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Which robot mower for a small yard?";
@@ -45,7 +46,7 @@ export default function SmallYardPage() {
     >
       <p className="measure">
         A small yard here means about a quarter acre of grass, {formatAcres(0.25)}, up to the mini 2’s{" "}
-        {formatAcres(mini.acres)}. The i210 AWD is the open quarter acre with no antenna. The Q110H is the
+        {formatAcres(mini.acres, false)}. The i210 AWD is the open quarter acre with no antenna. The Q110H is the
         other quarter-acre RTK mower, with a shorter cut. The mini 2 1500H is the step up when the bank is
         steep or the grass is kept tall.
       </p>
@@ -148,16 +149,16 @@ export default function SmallYardPage() {
       </div>
       <h2>Leave the previous i1 off the short list</h2>
       <p className="measure">
-        The i105N is rated {formatAcres(i105.acres)} and is marked superseded. It still has its own listing.
+        The i105N is rated {formatAcres(i105.acres, false)} and is marked superseded. It still has its own listing.
         It is not a current pick on this page. The i110N is the other previous-generation row, and it has no
         confirmed listing. Both stay on the{" "}
-        <Link href="/reviews/segway-navimow-i-series">i series review</Link> with the superseded status line.{" "}
+        <Link href="/reviews/segway-navimow-i-series">i series review</Link>.{" "}
         <SourceLine ids={["amz-i105n", "amz-i210"]} checked="2026-10-13" />
       </p>
+      <SlopeMarginNote />
       <p className="measure">
-        {interiorOrBoundary()} applies to the i210 and the Q110H. The Q110H’s 24.2° was calculated from 45%
-        and is labeled that way on its review. The mini 2 publishes {publishedSlope(mini.slope, mini.degrees)}.
-        A bank past 45% is a reason to leave the i210 and the Q110H.{" "}
+        The Q110H’s 24.2° was calculated from 45% and is labeled that way on its review. The mini 2 publishes{" "}
+        {mini.slope}%. A bank past 45% is a reason to leave the i210 and the Q110H.{" "}
         <Link href="/best/robot-mower-for-hills">Hills page</Link>.{" "}
         <SourceLine ids={["navimow-ces26", "q110h-manual", "mammotion-mini2"]} checked={SPEC_CHECKED} />
       </p>
@@ -174,7 +175,7 @@ export default function SmallYardPage() {
           },
           {
             q: "Can I buy the i105N from this list?",
-            a: "No. It is the previous generation. The i series review keeps its own button and its superseded status line.",
+            a: "No. It is the previous generation. The i series review keeps its own button.",
           },
           {
             q: "Which small mower cuts tall grass?",

@@ -4,6 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { CtaCluster, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
@@ -36,8 +37,7 @@ export default function VsIndex() {
       disclosure
     >
       <p className="measure">
-        Three comparisons are up. Each one puts two current models on the same yard questions. We have not
-        tested these mowers.
+        Three comparisons are up. Each one puts two current models on the same yard questions.
       </p>
       <CtaCluster>
         <ProductLink
@@ -54,23 +54,24 @@ export default function VsIndex() {
       </h2>
       <p className="measure">
         The X430 is rated {formatAcres(x430.acres)} and {publishedSlope(x430.slope, x430.degrees)}. The LUBA
-        3 AWD 3000 is rated {formatAcres(luba.acres)} and {publishedSlope(luba.slope, luba.degrees)}. One is
-        the open acre. The other adds LiDAR for a smaller lawn under trees.
+        3 AWD 3000 is rated {formatAcres(luba.acres, false)} and {luba.slope}%. One is the open acre. The
+        other adds LiDAR for a smaller lawn under trees.
       </p>
+      <SlopeMarginNote />
       <h2>
         <Link href="/vs/dreame-a3-awd-pro-vs-luba-3-awd">Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000</Link>
       </h2>
       <p className="measure">
-        The Dreame 2500 is rated {formatAcres(dreame.acres)} and {publishedSlope(dreame.slope, dreame.degrees)}.
-        The LUBA 3000 is rated {formatAcres(luba.acres)} and {publishedSlope(luba.slope, luba.degrees)}. Both
-        use LiDAR. The LUBA also uses network RTK. The Dreame does not.
+        The Dreame 2500 is rated {formatAcres(dreame.acres, false)} and {dreame.slope}%. The LUBA 3000 is
+        rated {formatAcres(luba.acres, false)} and {luba.slope}%. Both use LiDAR. The LUBA also uses network
+        RTK. The Dreame does not.
       </p>
       <h2>
         <Link href="/vs/worx-vision-cloud-wr340-vs-navimow-x430">Worx Vision Cloud WR340 vs Navimow X430</Link>
       </h2>
       <p className="measure">
-        Both are rated {formatAcres(worx.acres, false)}. The WR340 publishes {publishedSlope(worx.slope, worx.degrees)}.
-        The X430 publishes {publishedSlope(x430.slope, x430.degrees)}.
+        Both are rated {formatAcres(worx.acres, false)}. The WR340 publishes {worx.slope}%. The X430 publishes{" "}
+        {x430.slope}%.
       </p>
       <Related
         links={[

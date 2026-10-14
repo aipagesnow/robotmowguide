@@ -2,6 +2,8 @@
 
 Clear reviewer voice (the shared Amazon lane), written fresh for this site. Read AUDIENCE.md before writing any page. US English throughout.
 
+Exception to the house UK English default: this is a US-only amazon.com site, so public copy uses US English and US units.
+
 ## Master instruction
 Write like a knowledgeable person explaining what the specifications mean for someone's yard. Do not write like a reviewer trying to sound like a reviewer. When in doubt, make the sentence clearer rather than more interesting.
 
@@ -23,13 +25,15 @@ Byline on every page: **By the RobotMowGuide editors**, with the fact-check line
 8. Calm verbs: is rated, states, shows, does not. Avoid refuse, insist, prove, guarantee, demonstrate, dominate, crush.
 9. Use "you" for the reader. Use the model name instead of "this beast", "our pick", "the one we point people toward".
 10. Do not force a closing line. Finish when the information is finished.
+11. Rated area assumes an open, simple lawn. If yours has heavy tree cover or is split into two zones, a sensible rule of thumb is to divide the rating by 1.25. On that basis a 1-acre mower is a comfortable fit for about 0.8 acres. This is our own rule of thumb rather than a manufacturer figure. Explain that once, on the size guide. Everywhere else, write "Comfortable for about X acres with trees or two zones" and link "how we size" to that guide. Do not restate the divisor on every pick.
 
 ## Units and spelling (locked)
 - US English: color, gray, meter where needed, "yard" not "garden", "lawn" is fine.
 - Area: acres first, with square feet in brackets the first time on a page (for example "0.25 acre (about 10,900 sq ft)"). Convert metric manufacturer figures and say so if the maker publishes metric.
 - Slope: give percent and degrees together the first time ("80% (about 38.7°)"), then percent. Explain once per guide that 100% slope is 45°.
 - Lengths: inches and feet. Cutting heights in inches with one decimal.
-- Slope extras: give rise per 10 ft where it helps ("80% is a rise of 8 ft over 10 ft"), and always say whether a figure is the interior or the boundary limit.
+- Tables may show both units in every row; running text may not.
+- Slope extras: give rise per 10 ft where it helps ("80% is a rise of 8 ft over 10 ft"). Keep an explicit boundary figure when the maker prints one (for example "15% at the boundary"). Say once per page, under the first slope table, that makers usually publish one maximum and don't say whether it applies inside the lawn or at the edge. Do not repeat that caveat in every cell.
 - Prices: no Amazon prices anywhere, and no dollar figures for products on reviews, /best or vs pages. The cost-to-own guide and calculator may use dated, sourced manufacturer list prices labelled MSRP ("as of Oct 2026, Mammotion listed the LUBA 3 AWD 3000 at $2,799 MSRP") and published subscription fees, linked to the source.
 
 ## Words this audience uses
@@ -45,15 +49,18 @@ Yard, front yard, back yard, side yard, acre, quarter acre, wire-free, no perime
 - Urgency: "before it sells out", "limited time", "deal".
 - Amazon review talk: "4.5 stars on Amazon", "highly rated on Amazon", "thousands of happy buyers", "customers say".
 - Scare words about the FCC rule: "banned brand", "illegal to buy", "Chinese ban".
-- Owner-report inflation: "many owners", "most owners", "X% fail", "notorious". Use counts from the threads read and link them.
+- Owner-report inflation: "many owners", "most owners", "X% fail", "notorious". Use counts from the threads read and link them. Say "owners", not "writers".
+- Process talk: "this page does not…", "this review does not…", "on the sheet we checked", "the sheets we checked", and "check" as a noun. Say what the reader needs to know, or delete the sentence when the missing row already says it.
+- Caveats repeated in every table cell, key-number box, converter result, or variant row. One note per page is enough.
+- Visible "What changed" changelogs. The meta row keeps "Updated {date}" only.
 
 ## Fixed microcopy
-- Disclosure line (under H1 meta, before the first affiliate link): **As an Amazon Associate I earn from qualifying purchases.** (the Agreement's exact wording) followed by: "Links to Amazon are paid links. How this site makes money" (link).
+- Disclosure line (under H1 meta, before the first affiliate link): **As an Amazon Associate I earn from qualifying purchases.** "I earn" is Amazon's exact required wording and stays even though the site uses "we". Follow it with: "Links to Amazon are paid links. How this site makes money" (link).
 - Disclosure repeat next to CTA clusters and in any sticky bar: **Paid links: see disclosure** (link).
 - Primary button: **See {model} on Amazon** (e.g. "See Navimow X430 on Amazon"). In table cells: **See on Amazon** with an `aria-label` naming the model. Allowed alternative: **Check price on Amazon**.
 - Byline: **By the RobotMowGuide editors**. Fact-check line: **Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on {date}.**
-- Status lines: **On sale in the US as of {date}.** / **Replaced by {successor} in {month year}. Still sold while stock lasts.** / **No longer sold. This page stays up for owners.** / **No longer importable under the 2026 FCC rule; existing stock only, as of {date}.**
-- Owner reports intro: **In the owner threads we read between {month} and {month year}:** followed by linked themes.
+- Status lines: **On sale in the US as of {date}.** / **Replaced by {successor} in {month year}. Still sold while stock lasts.** / **No longer sold. This page stays up for owners.** / **New models of this line need FCC Conditional Approval before US sale (as of {date}).**
+- Owner reports intro: **In the {n} owner threads we read in {month year}:** followed by linked themes.
 - Researched box title: **How this page was researched**.
 - Research-based label on reviews (in the researched box and on /how-picks-are-chosen): **This is a research-based review. We have not tested this mower.**
 - Product with no verified ASIN (no button, plain text instead): **"There's no Amazon link for this model yet because we couldn't confirm a current amazon.com listing for this exact version."** Keep it to that, or a close plain variant. Do not apologise further or promise a date.

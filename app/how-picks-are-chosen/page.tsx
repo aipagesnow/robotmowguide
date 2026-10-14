@@ -4,6 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { MethodDiagram } from "@/components/Diagrams";
 import { Faq, Related } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { CONTACT_EMAIL, RECHECKED } from "@/lib/site";
 
@@ -24,8 +25,7 @@ export default function MethodPage() {
     >
       <p className="measure">
         A pick starts from the yard. The ladder places each current model at the lawn area its maker rates,
-        then shows the maximum slope that maker publishes. We have not tested these mowers. The work is
-        research-based.
+        then shows the maximum slope that maker publishes. The work is research-based.
       </p>
       <YardPhoto id="photo-method" />
       <MethodDiagram />
@@ -39,11 +39,10 @@ export default function MethodPage() {
       <h2>The ladder and the 1.25× rule</h2>
       <p className="measure">
         Rated area is the maker’s number, shown in acres and, the first time, in square feet. One acre is
-        43,560 sq ft. Our own rule, labeled as ours: for heavy trees and two zones, plan on the rated area
-        divided by 1.25. That is not a second manufacturer rating. Where a maker prints its own fine print,
-        the page quotes that note instead of folding it into the 1.25× rule. Husqvarna’s 420 iQ page is one
-        example, and it is explained in the{" "}
-        <Link href="/guides/how-big-a-robot-mower-do-i-need">size guide</Link>.
+        43,560 sq ft. Heavy trees or two zones use the rule of thumb in{" "}
+        <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. Where a maker prints its own
+        fine print, the page quotes that note instead of folding it into that rule. Husqvarna’s 420 iQ page
+        is one example.
       </p>
       <h2>The mower finder</h2>
       <p className="measure">
@@ -53,22 +52,23 @@ export default function MethodPage() {
       </p>
       <p className="measure">
         Area: an open single lawn needs a rating at least as large as the lawn. Heavy trees, or more than
-        one zone, use the 1.25× rule above. Slope: the published maximum has to be at least the steepest
+        one zone, use the rule of thumb in <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
+        Slope: the published maximum has to be at least the steepest
         slope you enter. If you mark that slope as an edge, and the model prints a lower boundary figure,
         the row stays and the note says the boundary is lower. Heavy trees prefer LiDAR or vision. An
         RTK-only model can still appear, with a note about satellite fix under canopy. A passage uses a
         published body width or minimum gap. If that width is missing, the note says to check the manual.
-        If nothing clears the checks, the result says nothing fits, including a lawn past every rated area.
+        If nothing fits, the result says nothing fits, including a lawn past every rated area.
       </p>
       <h2>Slope</h2>
       <p className="measure">
         Slope is shown as a percent and, when the maker publishes it, as degrees. The first time on a page it
-        also appears as rise over 10 ft. If the maker does not say whether the figure is the interior of the
-        lawn or only the boundary, the page says that. It does not guess.
+        also appears as rise over 10 ft.
       </p>
+      <SlopeMarginNote />
       <h2>Owner reports</h2>
       <p className="measure">
-        Themes come from threads and independent reviews we opened for the check date on the page. Each theme
+        Themes come from threads and independent reviews opened for the date on the page. Each theme
         has a link. The count is the threads we read, not a percentage of all owners. We do not paraphrase
         Amazon review text, and we do not print a score or a row of stars.
       </p>
@@ -82,7 +82,7 @@ export default function MethodPage() {
         Specs are re-checked at least every 90 days, and again before a page is edited. The Updated date
         changes only when the page changes. Send a correction to{" "}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. If a figure was wrong, the page is updated
-        and the What changed line says what moved.
+        and the Updated date moves.
       </p>
       <h2>Drafts and images</h2>
       <p className="measure">

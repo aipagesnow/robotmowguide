@@ -31,8 +31,8 @@ export default function AffiliatePage() {
       <AffiliateDiagram />
       <p className="measure">
         You click a “See on Amazon” link, which opens amazon.com. A qualifying purchase may earn this site a
-        commission. The price you pay is the same price Amazon shows you. This site does not print Amazon
-        prices, because they change and a stale number would be wrong.
+        commission. The price you pay is the same price Amazon shows you. Amazon prices are not shown here,
+        because they change and a stale number would be wrong.
       </p>
       <p className="measure">
         Rankings are not paid placements. A model is on the ladder because of the area and slope its maker

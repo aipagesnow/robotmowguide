@@ -27,12 +27,12 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
 
 export function MetaRow({
   updated,
-  whatChanged,
   factCheck = FACT_CHECK,
+  status,
 }: {
   updated: string;
-  whatChanged: string;
   factCheck?: string;
+  status?: ReactNode;
 }) {
   return (
     <div className="meta-row measure">
@@ -41,8 +41,10 @@ export function MetaRow({
       </p>
       <p className="m-0">{factCheck}</p>
       <p className="dim m-0">Updated {formatDate(updated)}</p>
+      {status ? <p className="m-0">{status}</p> : null}
       <p className="m-0">
-        <span className="label">What changed</span> {whatChanged}
+        Research-based: we haven't tested these mowers.{" "}
+        <Link href="/how-picks-are-chosen">How picks are chosen</Link>
       </p>
     </div>
   );
@@ -120,7 +122,7 @@ export function QuickPick({ items, pageType }: { items: QuickPickItem[]; pageTyp
   );
 }
 
-export type KeyNumber = { label: string; value: string; detail?: string };
+export type KeyNumber = { label: string; value: string; detail?: ReactNode };
 
 export function KeyNumbers({ rows }: { rows: KeyNumber[] }) {
   return (

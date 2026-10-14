@@ -44,7 +44,7 @@ export default function TheftGuide() {
         Buy a published lock or alarm when the mower will sit on a street-visible lawn. In this set, the MOVA
         LiDAX Ultra 3000 AWD states location tracking, an off-map alarm, AirTag compatibility, and a PIN
         lock. Several other current models do not state a theft feature at all. A fence and a garage still
-        matter, because a radio feature is not a lock on the mower. We have not tested these mowers.
+        matter, because a radio feature is not a lock on the mower.
       </p>
       <CtaCluster>
         <ProductLink
@@ -103,8 +103,8 @@ export default function TheftGuide() {
                 <Link href="/reviews/worx-landroid-m-wr147">Worx Landroid M WR147</Link>
               </th>
               <td>
-                Not published. Connectivity on the manual is {specText(wr147.specs.connectivity)}. This page
-                does not add a PIN or a GPS claim.
+                Not published. Connectivity on the manual is {specText(wr147.specs.connectivity)}. No PIN or
+                GPS claim is published.
               </td>
               <td>
                 <SourceLine ids={["worx-wr147-manual"]} checked={SPEC_CHECKED} />
@@ -166,11 +166,11 @@ export default function TheftGuide() {
         items={[
           {
             q: "Does Find My Landroid come with the WR340?",
-            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. This page does not settle that and does not treat either sentence as a test.",
+            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. The two lines disagree.",
           },
           {
             q: "Does the Automower iQ have GPS tracking?",
-            a: "Not published on the Husqvarna US pages used for this site. This page does not invent a PIN, an alarm, or a power-off report.",
+            a: "Not published on the Husqvarna US pages used for this site. Husqvarna doesn't publish a PIN, an alarm, or a power-off report.",
           },
           {
             q: "Is an AirTag the same as the maker’s tracking?",

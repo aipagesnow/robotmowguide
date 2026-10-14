@@ -7,7 +7,8 @@ import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { SlopeMarginNote } from "@/components/VoiceBits";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Navimow X430 vs LUBA 3 AWD 3000";
@@ -31,31 +32,31 @@ export default function VsPage() {
       topic: "Rated area",
       x: formatAcres(x430.acres),
       l: formatAcres(luba.acres),
-      better: "An open acre: X430. About 0.75 acre: either, and the LUBA is the one rated for that size under trees.",
+      better: "X430. It covers an open acre, and the LUBA is the one rated for about 0.75 acre under trees.",
     },
     {
       topic: "Slope",
-      x: `${slopeWithRise(x430.slope, x430.degrees)}. ${interiorOrBoundary()}`,
-      l: `${slopeWithRise(luba.slope, luba.degrees)}. ${interiorOrBoundary()} The degree is the published 38.6°.`,
-      better: "A bank between 80% and 84%: X430. At 80% or under, both publish a maximum that covers it.",
+      x: slopeWithRise(x430.slope, x430.degrees),
+      l: `${slopeWithRise(luba.slope, luba.degrees)}. The degree is the published 38.6°.`,
+      better: "X430. Its 84% covers a bank between 80% and 84%, and at 80% or under both maxima cover the bank.",
     },
     {
       topic: "Trees",
       x: navigationLabel(x430.family.navigation),
       l: navigationLabel(luba.family.navigation),
-      better: "Canopy over the path: LUBA, because LiDAR is on this model. Open sky: X430.",
+      better: "LUBA 3. LiDAR is on this model for canopy over the path, and open sky can use the X430.",
     },
     {
       topic: "Side passage",
       x: `Body width ${specText(x430.specs.bodyWidth)}.`,
       l: `Narrowest gap ${specText(luba.specs.narrowestGap)}.`,
-      better: "A gap between 24 in and 27.6 in: X430. Under 24 in: neither published figure clears it.",
+      better: "X430. A gap between 24 in and 27.6 in clears its body, and under 24 in neither published figure clears it.",
     },
     {
       topic: "After the free period",
       x: "Connect+ is free for 1 year on the X430, then a yearly fee. Network RTK is described as free for life, depending on Segway’s cloud.",
       l: "Built-in 4G includes 3 years of data, then a subscription. The price is not stated. NetRTK is described as free for life, depending on Mammotion’s cloud.",
-      better: "A buyer who wants the longer included data window in these two write-ups: LUBA. A buyer who accepts a fee after one year: X430.",
+      better: "LUBA 3. Its 4G data is included for 3 years, against 1 year of Connect+ on the X430.",
     },
   ];
 
@@ -76,7 +77,7 @@ export default function VsPage() {
       <p className="measure">
         Buy the X430 for an open acre and banks up to {publishedSlope(x430.slope, x430.degrees)}. Buy the
         LUBA 3 AWD 3000 when trees cover a lawn rated around {formatAcres(luba.acres, false)} and you want
-        LiDAR with network RTK. We have not tested these mowers.
+        LiDAR with network RTK.
       </p>
       <div data-cta-cluster="true" className="grid gap-2">
         <p className="paid m-0">
@@ -125,18 +126,18 @@ export default function VsPage() {
           </tbody>
         </table>
       </div>
+      <SlopeMarginNote />
       <h2>An open acre against a wooded three-quarter acre</h2>
       <p className="measure">
-        The X430 rating is {formatAcres(x430.acres)}. The LUBA 3000 rating is {formatAcres(luba.acres)}. A
+        The X430 rating is {formatAcres(x430.acres)}. The LUBA 3000 rating is {formatAcres(luba.acres, false)}. A
         full acre is outside the LUBA 3000 rating. A wooded path is the reason the LUBA page adds LiDAR to
         network RTK, and the reason the X430 page still warns that canopy can drop a satellite fix.{" "}
         <SourceLine ids={["navimow-x4", "mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Slope, labelled only as far as the makers go</h2>
       <p className="measure">
-        X430: {slopeWithRise(x430.slope, x430.degrees)}. LUBA 3000: {slopeWithRise(luba.slope, luba.degrees)}.
-        {interiorOrBoundary()} The 38.6° figure belongs to the LUBA 3000. It is not the computed degree for
-        80%, and it is not copied onto the LUBA 1500 or 5000.{" "}
+        X430: {x430.slope}%. LUBA 3000: {luba.slope}%. The 38.6° figure belongs to the LUBA 3000. It is not
+        the computed degree for 80%, and Mammotion doesn't publish it for the 1500 or the 5000.{" "}
         <Link href="/best/robot-mower-for-hills">The hills page converts a measured bank.</Link>
       </p>
       <h2>What each review holds back</h2>
@@ -162,7 +163,7 @@ export default function VsPage() {
           },
           {
             q: "Do both climb 80%?",
-            a: "Both publish a maximum of at least 80%. The X430 publishes 84% (40°). The LUBA 3000 publishes 80% (38.6°). Neither maker says whether that maximum is the interior or only the boundary.",
+            a: "Both publish a maximum of at least 80%. The X430 publishes 84%. The LUBA 3000 publishes 80%.",
           },
         ]}
       />
@@ -170,7 +171,7 @@ export default function VsPage() {
         scope="group"
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads are on the two reviews, read for the October 10, 2026 check."
+        threads="Owner threads are on the two reviews, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />
       <h2>See both models</h2>

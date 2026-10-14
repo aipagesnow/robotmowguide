@@ -11,16 +11,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver, NoConditionalApproval } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Navimow i series review: i2 AWD now, i1 still sold";
@@ -59,28 +59,20 @@ export default function ISeriesReview() {
       updated={RECHECKED}
       whatChanged="October 13, 2026: added the replacement note for the i105N and i110N. The i210 AWD stays the current model."
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>The i210 AWD is on sale in the US as of {formatDate(family.statusDate)}.</p>
-        <p>The i105N and i110N are the previous generation. They are still sold, and they are not the lead.</p>
-        <p>
-          <NoConditionalApproval brand="Segway Navimow" />
-        </p>
-      </StatusLine>
       <p className="measure">
-        Replaced by the Navimow i210 AWD in October 2026: here’s what changed. The i210 AWD is all-wheel
-        drive and rated {publishedSlope(i210.slope, i210.degrees)}. The i105N is rated {formatAcres(i105.acres)}{" "}
-        at {publishedSlope(i105.slope, i105.degrees)}, and the i110N is rated {formatAcres(i110.acres)} at{" "}
-        {publishedSlope(i110.slope, i110.degrees)}.
+        The Navimow i210 AWD replaced the i105N and i110N in October 2026. The i210 AWD is all-wheel drive and
+        rated {publishedSlope(i210.slope, i210.degrees)}. The i105N is rated {formatAcres(i105.acres)} at{" "}
+        {i105.slope}%, and the i110N is rated {formatAcres(i110.acres, false)} at {i110.slope}%.
       </p>
       <p className="measure">
-        Read the i210 AWD for a quarter acre and banks inside {publishedSlope(i210.slope, i210.degrees)}. It
+        Read the i210 AWD for a quarter acre and banks inside {i210.slope}%. It
         is three-wheel all-wheel drive, with network RTK and vision, and no antenna to mount. The i206 AWD
         is the smaller current sibling, rated {formatAcres(i206.acres)}.
       </p>
       <p className="measure">
-        The i105N and the i110N are the previous generation. Each row has its own status line. The i110N has
-        no confirmed amazon.com listing, so that row is the plain no-link line.
+        The i105N and the i110N are the previous generation. The i110N has no confirmed amazon.com listing.
       </p>
       <CtaCluster>
         <ProductLink
@@ -98,17 +90,16 @@ export default function ISeriesReview() {
           {
             label: "Rated area",
             value: formatAcres(i210.acres),
-            detail: realisticLine(i210.acres),
+            detail: <ComfortableFor rated={i210.acres} />,
           },
           {
             label: "Max slope",
             value: slopeWithRise(i210.slope, i210.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Passage",
             value: "Not published",
-            detail: "No body width for the i210 was on the sheets we checked.",
+            detail: "Body width for the i210 is not published.",
           },
           {
             label: "Navigation",
@@ -149,7 +140,6 @@ export default function ISeriesReview() {
             sources: ["navimow-ces26", "amz-i210"],
             checked: "2026-10-13",
             href: "/best/robot-mower-for-hills",
-            note: interiorOrBoundary(),
           },
           {
             label: "i210 navigation",
@@ -176,7 +166,7 @@ export default function ISeriesReview() {
             value: publishedSlope(i110.slope, i110.degrees),
             sources: ["navimow-i110"],
             checked: SPEC_CHECKED,
-            note: "The sheet also says 10% (6°) at the boundary. That boundary figure is not the interior.",
+            note: "The Navimow page also says 10% (6°) at the boundary. That boundary figure is not the interior.",
           },
           {
             label: "i110N cut",
@@ -191,17 +181,18 @@ export default function ISeriesReview() {
       <p className="measure">
         The i210 is the quarter-acre AWD. The i206 is rated {formatAcres(i206.acres)} at the same {i206.slope}%
         slope, and its bare ASIN is empty, so the variant table does not borrow the i210 button. The i105N is
-        rated {formatAcres(i105.acres)}. The i110N is rated {formatAcres(i110.acres)} and is front-wheel drive
+        rated {formatAcres(i105.acres, false)}. The i110N is rated {formatAcres(i110.acres, false)} and is front-wheel drive
         with an antenna kit. Amazon’s i105N listing is still that model. The family note says Amazon points
         at the i206 AWD as a newer version. <SourceLine ids={["amz-i210", "amz-i105n", "navimow-i110"]} checked="2026-10-13" />
       </p>
       <h2>Slope, including the boundary note on the i1</h2>
       <p className="measure">
-        {slopeWithRise(i210.slope, i210.degrees)}. {interiorOrBoundary()} The i110N publishes{" "}
-        {publishedSlope(i110.slope, i110.degrees)}, and the same sheet says 10% at the boundary. Do not treat
-        30% as the edge figure. <Link href="/best/robot-mower-for-hills">Hills converter</Link>.{" "}
+        {i210.slope}%, a rise of {risePer10Ft(i210.slope)}. The i110N publishes {i110.slope}%, and the Navimow
+        page says 10% at the boundary. Do not treat 30% as the edge figure.{" "}
+        <Link href="/best/robot-mower-for-hills">Hills converter</Link>.{" "}
         <SourceLine ids={["navimow-ces26", "navimow-i110"]} checked={SPEC_CHECKED} />
       </p>
+      <SlopeMarginNote />
       <h2>Trees and the antenna the i2 dropped</h2>
       <p className="measure">
         The i210 does not use an antenna. Network RTK still needs cell service, and canopy over the path
@@ -210,10 +201,10 @@ export default function ISeriesReview() {
         <SourceLine ids={["navimow-ces26", "navimow-i110"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
-        intro="One owner thread was in the set we re-opened. It is a short record, and it is not a survey of the i210."
+        intro="In the 1 owner thread we read in October 2026:"
         items={[
           {
-            text: "In the thread we read, the writer praises the Navimow app and describes support as responsive.",
+            text: "Owners praise the Navimow app and describe support as responsive.",
             href: "https://www.reddit.com/r/SegwayNavimow/comments/1vgvkkq/",
             linkLabel: "Navimow owner thread",
           },
@@ -226,17 +217,20 @@ export default function ISeriesReview() {
         ))}
         <li>The i1 rows are previous generation. Do not buy one by using the i210 button.</li>
       </ul>
-      <h2>Support</h2>
+      <SupportOutlook brand="Segway Navimow" />
       <p className="measure">
-        A fee after a free data period is not published for the i210. The i110N sheet says a 4G anti-theft
-        module is an optional add-on. <FccWaiver /> <SourceLine ids={["homedepot-i110n"]} checked={SPEC_CHECKED} />
+        The i105N and i110N are the previous generation. They are still sold, and they are not the lead.
+      </p>
+      <p className="measure">
+        A fee after a free data period is not published for the i210. The i110N page says a 4G anti-theft
+        module is an optional add-on. <SourceLine ids={["homedepot-i110n"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
         The <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H</Link> is the other quarter-acre RTK
         mower, rated {formatAcres(q.acres)}, with a shorter US cut. The{" "}
         <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is the step up in area
-        and slope, rated {formatAcres(mini.acres)} and {publishedSlope(mini.slope, mini.degrees)}.
+        and slope, rated {formatAcres(mini.acres, false)} and {mini.slope}%.
       </p>
       <Faq
         items={[

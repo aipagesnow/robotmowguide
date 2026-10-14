@@ -11,17 +11,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
-import { FCC_COVERED_LIST, RECHECKED, SPEC_CHECKED } from "@/lib/site";
+import { interiorOrBoundary, publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { FCC_COVERED_LIST, FCC_DA_26_789, RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Husqvarna Automower iQ review: EPOS on an open acre";
 const description =
@@ -64,18 +63,8 @@ export default function IqReview() {
       whatChanged="October 13, 2026: first published. iQ models stay on the plain no-link line. The 435X AWD keeps its button."
       factCheck={FACT}
       disclosure
+      status="Current in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>The family is current as of {formatDate(family.statusDate)}.</p>
-        <p>
-          The 410 iQ, 420 iQ, 440 iQ, and 435 iQ AWD had no confirmed amazon.com listing at the Oct 10, 2026
-          check. The 435X AWD listing title was confirmed that day. It was not opened again on Oct 13, 2026.
-        </p>
-        <p>
-          Husqvarna is the only robot-mower brand with Conditional Approval (Sep 9, 2026, DA 26-957) on the{" "}
-          <a href={FCC_COVERED_LIST}>FCC Covered List and Conditional Approvals table</a>. <FccWaiver />
-        </p>
-      </StatusLine>
       <p className="measure">
         Read the 420 iQ for an open acre mowed in systematic passes. Husqvarna rates it{" "}
         {formatAcres(iq.acres)} for systematic mowing and 0.5 acre for an irregular lawn, at{" "}
@@ -110,7 +99,12 @@ export default function IqReview() {
           {
             label: "Rated area",
             value: formatAcres(iq.acres),
-            detail: `The same page says 0.5 acre irregular and 1 acre systematic. The 410 iQ area note is ±20%. ${realisticLine(iq.acres)}`,
+            detail: (
+              <>
+                The same page says 0.5 acre irregular and 1 acre systematic. The 410 iQ area note is ±20%.{" "}
+                <ComfortableFor rated={iq.acres} />
+              </>
+            ),
           },
           {
             label: "Max slope",
@@ -120,7 +114,7 @@ export default function IqReview() {
           {
             label: "Passage",
             value: "Not published",
-            detail: "No body width was on the 420 iQ sheet we checked.",
+            detail: "Body width not published.",
           },
           {
             label: "Navigation",
@@ -198,27 +192,27 @@ export default function IqReview() {
       />
       <h2>The acre is two numbers</h2>
       <p className="measure">
-        Systematic mowing is the {formatAcres(iq.acres)} figure. An irregular lawn is the 0.5 acre figure on
-        the same page. The 410 iQ is rated {formatAcres(small.acres)} and prints ±20% on that area. Our
-        1.25× rule for heavy trees or two zones is a third number, and it is ours.{" "}
+        Systematic mowing is the {formatAcres(iq.acres, false)} figure. An irregular lawn is the 0.5 acre
+        figure on the same page. The 410 iQ is rated {formatAcres(small.acres, false)} and prints ±20% on that
+        area. Heavy trees or two zones are a separate case on the size guide.{" "}
         <SourceLine ids={["husq-420iq", "husq-410iq"]} checked={SPEC_CHECKED} />
       </p>
       <h2>15% at the boundary</h2>
       <p className="measure">
-        The 410 iQ, 420 iQ, and 440 iQ publish {publishedSlope(iq.slope, iq.degrees)} and limit the boundary
-        to 15%. A bank that is steep only at the edge can miss the mower even when the middle of the lawn is
-        gentler. The 435 iQ AWD and the 435X AWD publish {publishedSlope(awd.slope, awd.degrees)} and 50% at
-        the boundary. Degrees are not published on these rows.{" "}
+        The 410 iQ, 420 iQ, and 440 iQ publish {iq.slope}% and limit the boundary to 15%. A bank that is steep
+        only at the edge can miss the mower even when the middle of the lawn is gentler. The 435 iQ AWD and
+        the 435X AWD publish {awd.slope}% and 50% at the boundary. Degrees are not published on these rows.{" "}
         <SourceLine ids={["husq-420iq", "husq-435iq", "husq-435x"]} checked={SPEC_CHECKED} />
       </p>
+      <SlopeMarginNote />
       <h2>Trees and the wire option</h2>
       <p className="measure">
         EPOS is RTK. Owners report pauses under trees. The boundary wire is the option Husqvarna leaves on
-        these models when the sky is not enough. This page does not treat radar or ultrasonic as a substitute
-        for a clear sky. <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
+        these models when the sky is not enough. Radar and ultrasonic are not a substitute for a clear sky.{" "}
+        <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
-        intro="In the owner threads we read for the October 10, 2026 check. These are reports, not a count of all owners."
+        intro="In the 4 owner threads we read in October 2026:"
         items={[
           {
             text: "EPOS pauses and searches under trees, then stops.",
@@ -260,17 +254,24 @@ export default function IqReview() {
       </ul>
       <h2>Support outlook</h2>
       <p className="measure">
-        Husqvarna is the only robot-mower brand with Conditional Approval in the FCC table checked Oct 9,
-        2026. Existing authorized models remain covered by the update waiver.{" "}
+        Husqvarna is the only robot-mower brand with{" "}
         <a href="https://www.husqvarnagroup.com/en/press/husqvarna-group-first-receive-fcc-conditional-approval-foreign-manufactured-advanced-robotic">
-          Husqvarna on the Conditional Approval
+          FCC Conditional Approval
         </a>
-        . <FccWaiver />
+        , granted Sep 9, 2026 (DA 26-957,{" "}
+        <a href={FCC_COVERED_LIST}>FCC Covered List and Conditional Approvals table</a>
+        ). Models already authorized can keep receiving updates until at least Jan 1, 2029 (
+        <a href={FCC_DA_26_789}>FCC DA 26-789</a>
+        ).
+      </p>
+      <p className="measure">
+        The 410 iQ, 420 iQ, 440 iQ, and 435 iQ AWD had no confirmed amazon.com listing on Oct 10, 2026. The
+        435X AWD listing title was confirmed that day. It was not opened again on Oct 13, 2026.
       </p>
       <h2>Another open acre</h2>
       <p className="measure">
-        The Navimow X430 is rated {formatAcres(x430.acres)} and {publishedSlope(x430.slope, x430.degrees)},
-        with a confirmed listing. It does not print the 15% boundary split.{" "}
+        The Navimow X430 is rated {formatAcres(x430.acres)} and {x430.slope}%, with a confirmed listing. It
+        doesn't publish a separate 15% boundary figure.{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.{" "}
         <Link href="/vs/worx-vision-cloud-wr340-vs-navimow-x430">WR340 vs X430</Link> is the vision comparison
         on the same acre.
@@ -294,7 +295,7 @@ export default function IqReview() {
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
         manuals="Specs on this page come from Husqvarna US model pages, not from a third-party manual site."
-        threads="Four owner threads, read for the October 10, 2026 check."
+        threads="Four owner threads, read in October 2026."
         questions="No manufacturer questions have been answered yet."
         specsLine="Specs checked Oct 10, 2026. The 435X AWD listing was not opened again on Oct 13, 2026."
       />

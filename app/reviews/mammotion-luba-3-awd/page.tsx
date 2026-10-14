@@ -11,18 +11,18 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { NavFour, SpecPlate } from "@/components/Diagrams";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
-import { FCC_COVERED_LIST, FCC_TABLE_CHECKED, SPEC_CHECKED } from "@/lib/site";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { SPEC_CHECKED } from "@/lib/site";
 
 const title = "LUBA 3 AWD review: three-quarters of an acre under trees";
 const description =
@@ -59,23 +59,8 @@ export default function LubaReview() {
       crumbs={crumbs}
       whatChanged="October 13, 2026: linked the Dreame 2500 comparison beside the X430 comparison."
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of {formatDate(family.statusDate)}.</p>
-        <p>Sold out on the Mammotion US store at that check. The amazon.com listing was live.</p>
-        <p>
-          Some features on the Mammotion page are marked as not available yet. This review does not describe
-          those features as available.
-        </p>
-        <p>
-          Mammotion has no Conditional Approval for new models on the{" "}
-          <a href={FCC_COVERED_LIST}>FCC Covered List and Conditional Approvals table</a>, checked{" "}
-          {formatDate(FCC_TABLE_CHECKED)}.
-        </p>
-        <p>
-          <FccWaiver />
-        </p>
-      </StatusLine>
       <p className="measure">
         The 3000 is the LUBA 3 to read first when trees cover the lawn: {formatAcres(m3000.acres)} and{" "}
         {publishedSlope(m3000.slope, m3000.degrees)}, with LiDAR, network RTK, and vision together.
@@ -100,12 +85,15 @@ export default function LubaReview() {
           {
             label: "Rated area",
             value: formatAcres(m3000.acres),
-            detail: `${realisticLine(m3000.acres)} The area note on the sheet is 3,000 m².`,
+            detail: (
+              <>
+                <ComfortableFor rated={m3000.acres} /> Mammotion's US product page notes 3,000 m².
+              </>
+            ),
           },
           {
             label: "Max slope",
             value: slopeWithRise(m3000.slope, m3000.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Narrowest gap",
@@ -130,7 +118,7 @@ export default function LubaReview() {
         differences={{
           "LUBA 3 AWD 1500": `Rated ${formatAcres(m1500.acres)}. LiDAR and vision only. No network RTK. Slope ${m1500.slope}%. Degrees are not published on this row.`,
           "LUBA 3 AWD 3000": "The model this review follows. Network RTK, LiDAR, and vision. Standard cut height is on the spec table.",
-          "LUBA 3 AWD 5000": `Rated ${formatAcres(m5000.acres)}. Slope ${m5000.slope}%. Degrees are not published on this row. Other specs were empty on the sheet we checked.`,
+          "LUBA 3 AWD 5000": `Rated ${formatAcres(m5000.acres)}. Slope ${m5000.slope}%. Degrees are not published on this row. Other specs are not published.`,
           "LUBA 3 AWD 3000H / 5000H (high-cut)": `Cutting height ${high ? specText(high.specs?.cuttingHeight) : "Not published"}. Rated area and slope were not on this row.`,
         }}
       />
@@ -145,7 +133,7 @@ export default function LubaReview() {
             sources: ["mammotion-luba3-sku", "amz-luba3-3000"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "3,000 m² on the sheet.",
+            note: "Mammotion's US product page notes 3,000 m².",
           },
           {
             label: "Max slope",
@@ -153,7 +141,7 @@ export default function LubaReview() {
             sources: ["mammotion-luba3", "amz-luba3-3000"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: `${interiorOrBoundary()} Degrees are the published 38.6°, not a computed stand-in.`,
+            note: "Degrees are the published 38.6°, not a computed stand-in.",
           },
           {
             label: "Navigation",
@@ -230,14 +218,14 @@ export default function LubaReview() {
       </p>
       <h2 id="slope">Slope</h2>
       <p className="measure">
-        {slopeWithRise(m3000.slope, m3000.degrees)}. {interiorOrBoundary()} The 1500 and the 5000 publish{" "}
-        {m1500.slope}%. Degrees are not on those rows. This page does not copy 38.6° onto them.{" "}
-        <SourceLine ids={["mammotion-luba3"]} checked={SPEC_CHECKED} />
+        {m3000.slope}%, a rise of {risePer10Ft(m3000.slope)}. The 1500 and the 5000 publish {m1500.slope}%.
+        Degrees are not published on those rows. <SourceLine ids={["mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
+      <SlopeMarginNote />
       <h2>Size and zones</h2>
       <p className="measure">
-        The 3000 is {formatAcres(m3000.acres)}. {realisticLine(m3000.acres)} The 1500 is{" "}
-        {formatAcres(m1500.acres)}. The 5000 is {formatAcres(m5000.acres)}. The amazon.com listing for the
+        The 3000 is {formatAcres(m3000.acres)}. <ComfortableFor rated={m3000.acres} /> The 1500 is{" "}
+        {formatAcres(m1500.acres, false)}. The 5000 is {formatAcres(m5000.acres, false)}. The amazon.com listing for the
         3000 says {specText(m3000.specs.zones)}. Mammotion pages also cite 50 zones and 100 zones for the
         series. Use the listing’s 30 if you are buying the 3000, and treat 50 and 100 as series claims that
         do not match it. <SourceLine ids={["amz-luba3-3000", "mammotion-luba3"]} checked={SPEC_CHECKED} />
@@ -251,7 +239,7 @@ export default function LubaReview() {
         <SourceLine ids={["mammotion-luba3", "mammotion-luba3-sku", "mammotion-luba3-global"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
-        intro="In the owner threads we read for the October 10, 2026 check. Both themes are problems. A generic LiDAR praise piece was not about this model, so it is not repeated here."
+        intro="In the 4 owner threads we read in October 2026:"
         items={[
           {
             text: "Owners linked firmware 2.3.30.26 to blade cut-outs and restarts. A later note in the thread said a fix was being tried.",
@@ -293,17 +281,21 @@ export default function LubaReview() {
       <p className="measure">
         The battery line disagrees with itself across pages: the amazon.com listing says up to 12 Ah and up
         to 175 minutes for the 3000, and the US product page says up to 15 Ah and up to 215 minutes for the
-        series. <FccWaiver />
+        series.
+      </p>
+      <SupportOutlook brand="Mammotion" />
+      <p className="measure">
+        Sold out on the Mammotion US store on Oct 10, 2026. The amazon.com listing was live. Some features on
+        the Mammotion page are marked as not available yet.
       </p>
       <h2>Two other yards</h2>
       <p className="measure">
         The Dreame A3 AWD Pro 2500 is LiDAR and vision without RTK, rated {formatAcres(dreame.acres)} and{" "}
-        {publishedSlope(dreame.slope, dreame.degrees)}.{" "}
+        {dreame.slope}%.{" "}
         <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link>.
       </p>
       <p className="measure">
-        The Navimow X430 is the open acre with a steeper published slope,{" "}
-        {publishedSlope(x430.slope, x430.degrees)}, and no LiDAR.{" "}
+        The Navimow X430 is the open acre with a steeper published slope, {x430.slope}%, and no LiDAR.{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <Faq
@@ -325,7 +317,7 @@ export default function LubaReview() {
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Four owner threads, read for the October 10, 2026 check."
+        threads="Four owner threads, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />
       <h2>See these models</h2>

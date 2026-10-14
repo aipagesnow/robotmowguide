@@ -22,9 +22,8 @@ export function AreaEstimate({ models }: { models: Row[] }) {
   return (
     <form className="sheet grid gap-4 p-4" onSubmit={(event) => event.preventDefault()}>
       <p className="measure m-0">
-        This uses our 1.25× rule only. It is not a manufacturer formula. Husqvarna prints its own ±20% on
-        rated area, and the 420 iQ page splits 0.5 acre irregular from 1 acre systematic. Those notes stay
-        separate from this box.
+        Turn on heavy trees or more than one zone to use the rule of thumb above. Husqvarna’s ±20% note and
+        the 420 iQ split of 0.5 acre irregular / 1 acre systematic stay separate from this box.
       </p>
       <div className="flex flex-wrap gap-3">
         <label className="grid gap-1">

@@ -20,7 +20,8 @@ import { ProductLink } from "@/components/ProductLink";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Best robot lawn mowers for US yards";
@@ -67,7 +68,7 @@ export default function BestPage() {
       href: "#navimow-i210",
       bestFor: "A flat quarter acre",
       area: formatAcres(i210.acres),
-      slope: `${publishedSlope(i210.slope, i210.degrees)}. ${interiorOrBoundary()}`,
+      slope: publishedSlope(i210.slope, i210.degrees),
       nav: navigationLabel(i210.family.navigation),
       height: specText(i210.specs.cuttingHeight),
       edge: "Not published",
@@ -80,7 +81,7 @@ export default function BestPage() {
       href: "#dreame-a3-2500",
       bestFor: "About 0.62 acre, trees, steep banks",
       area: formatAcres(dreame.acres),
-      slope: `${publishedSlope(dreame.slope, dreame.degrees)}. ${interiorOrBoundary()}`,
+      slope: publishedSlope(dreame.slope, dreame.degrees),
       nav: navigationLabel(dreame.family.navigation),
       height: specText(dreame.specs.cuttingHeight),
       edge: specText(dreame.specs.edgeCutting),
@@ -93,7 +94,7 @@ export default function BestPage() {
       href: "#luba-3-3000",
       bestFor: "About 0.75 acre under trees",
       area: formatAcres(luba.acres),
-      slope: `${publishedSlope(luba.slope, luba.degrees)}. ${interiorOrBoundary()}`,
+      slope: publishedSlope(luba.slope, luba.degrees),
       nav: navigationLabel(luba.family.navigation),
       height: specText(luba.specs.cuttingHeight),
       edge: "Not published",
@@ -106,7 +107,7 @@ export default function BestPage() {
       href: "#worx-wr340",
       bestFor: "An open acre, gentler slopes",
       area: formatAcres(worx.acres),
-      slope: `${publishedSlope(worx.slope, worx.degrees)}. ${interiorOrBoundary()}`,
+      slope: publishedSlope(worx.slope, worx.degrees),
       nav: navigationLabel(worx.family.navigation),
       height: specText(worx.specs.cuttingHeight),
       edge: "Not published",
@@ -119,7 +120,7 @@ export default function BestPage() {
       href: "#navimow-x430",
       bestFor: "An open acre with steep banks",
       area: formatAcres(x430.acres),
-      slope: `${publishedSlope(x430.slope, x430.degrees)}. ${interiorOrBoundary()}`,
+      slope: publishedSlope(x430.slope, x430.degrees),
       nav: navigationLabel(x430.family.navigation),
       height: specText(x430.specs.cuttingHeight),
       edge: "Not published",
@@ -144,8 +145,7 @@ export default function BestPage() {
       <p className="measure">
         For a US yard between a quarter acre and an acre, start with rated area, then slope. The five picks
         are the Navimow i210 AWD, the Dreame A3 AWD Pro 2500, the LUBA 3 AWD 3000, the Worx Landroid Vision
-        Cloud WR340, and the Navimow X430. Figures below were checked on Oct 10, 2026. We have not tested
-        these mowers.
+        Cloud WR340, and the Navimow X430. Figures below were checked on Oct 10, 2026.
       </p>
       <QuickPick
         pageType="best"
@@ -206,14 +206,14 @@ export default function BestPage() {
         </ul>
       </details>
       <div id="ladder">
-        <Ladder />
+        <Ladder picks="below" />
       </div>
       <p className="measure">
         Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres)} and{" "}
         {publishedSlope(iq420.slope, iq420.degrees)}, and 15% at the boundary. The same page says 0.5 acre
         for an irregular lawn and 1 acre for systematic mowing. The 410 iQ area note is ±20%. Neither iQ
-        model had a confirmed amazon.com listing at the check, so this page does not put an Amazon button on
-        them. The write-up is the <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
+        model has a confirmed amazon.com listing, so those rows have no Amazon button. The write-up is the{" "}
+        <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
         <SourceLine ids={["husq-420iq", "husq-410iq"]} checked={SPEC_CHECKED} />
       </p>
       <h2 id="compare">Comparison</h2>
@@ -290,22 +290,22 @@ export default function BestPage() {
           </table>
         </div>
       </CtaCluster>
+      <SlopeMarginNote />
       <section id="navimow-i210">
         <h2>1. Navimow i210 AWD</h2>
         <p className="measure">
-          The quarter-acre pick when the banks stay within {publishedSlope(i210.slope, i210.degrees)} and you
+          The quarter-acre pick when the banks stay within {i210.slope}% and you
           do not want an antenna in the yard. It is three-wheel all-wheel drive, with network RTK and vision.{" "}
           <SourceLine ids={["navimow-ces26"]} checked={SPEC_CHECKED} />
         </p>
         <KeyNumbers
           rows={[
-            { label: "Rated area", value: formatAcres(i210.acres), detail: realisticLine(i210.acres) },
+            { label: "Rated area", value: formatAcres(i210.acres), detail: <ComfortableFor rated={i210.acres} /> },
             {
               label: "Max slope",
               value: slopeWithRise(i210.slope, i210.degrees),
-              detail: interiorOrBoundary(),
             },
-            { label: "Passage", value: "Not published", detail: "No body width was on the sheets we checked." },
+            { label: "Passage", value: "Not published", detail: "Body width not published." },
             {
               label: "Navigation",
               value: "Network RTK and vision, no antenna",
@@ -320,21 +320,20 @@ export default function BestPage() {
         />
         <p className="measure">
           The i105N and i110N are the previous generation. The i105N listing points to the i206 AWD as a
-          newer version. This page does not add Amazon buttons for those older models. The family write-up
-          is the <Link href="/reviews/segway-navimow-i-series">Navimow i series review</Link>. The i210 is
-          the one rated {formatAcres(i210.acres)} at {publishedSlope(i210.slope, i210.degrees)}.
+          newer version. The family write-up is the{" "}
+          <Link href="/reviews/segway-navimow-i-series">Navimow i series review</Link>. The i210 is the one
+          rated {formatAcres(i210.acres, false)} at {i210.slope}%.
         </p>
         <h3>Who it is not for</h3>
-        <ul className="grid gap-2 pl-5">
-          <li>A yard over a quarter acre.</li>
-          <li>Heavy tree cover.</li>
-          <li>Banks steeper than 45% (24°).</li>
-        </ul>
+        <p className="measure">
+          It isn't the right choice for a lawn over a quarter acre, for heavy tree cover, or for banks
+          steeper than 45%.
+        </p>
         <OwnerReports
-          intro="Few owner reports were available for the October 10, 2026 check."
+          intro="In the 1 owner thread we read in October 2026:"
           items={[
             {
-              text: "In the thread we read, the writer praises the Navimow app and describes support as responsive.",
+              text: "In the thread we read, the owner praises the Navimow app and describes support as responsive.",
               href: "https://www.reddit.com/r/SegwayNavimow/comments/1vgvkkq/",
               linkLabel: "Navimow owner thread",
             },
@@ -356,7 +355,7 @@ export default function BestPage() {
       <section id="dreame-a3-2500">
         <h2>2. Dreame A3 AWD Pro 2500</h2>
         <p className="measure">
-          The pick when the lawn is about {formatAcres(dreame.acres)}, the banks are steep, and you would
+          The pick when the lawn is about {formatAcres(dreame.acres, false)}, the banks are steep, and you would
           rather have LiDAR than an RTK antenna. There is no RTK and no perimeter wire. Drive is all-wheel,
           with hub motors. The family write-up is the{" "}
           <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link>.{" "}
@@ -364,11 +363,18 @@ export default function BestPage() {
         </p>
         <KeyNumbers
           rows={[
-            { label: "Rated area", value: formatAcres(dreame.acres), detail: `${realisticLine(dreame.acres)} The sheet note is 2,500 m².` },
+            {
+              label: "Rated area",
+              value: formatAcres(dreame.acres),
+              detail: (
+                <>
+                  <ComfortableFor rated={dreame.acres} /> Dreame’s US product page notes 2,500 m².
+                </>
+              ),
+            },
             {
               label: "Max slope",
               value: slopeWithRise(dreame.slope, dreame.degrees),
-              detail: interiorOrBoundary(),
             },
             {
               label: "Passage",
@@ -383,28 +389,27 @@ export default function BestPage() {
             {
               label: "Cut",
               value: `${specText(dreame.specs.cuttingHeight)}. Edge: ${specText(dreame.specs.edgeCutting)}.`,
-              detail: `Obstacle clearance ${specText(dreame.specs.obstacleClearance)}. Noise ${specText(dreame.specs.noise)}. ${specText(dreame.specs.waterproofing)}. Weight ${specText(dreame.specs.weight)}.`,
+              detail:
+                "It cuts from 1.2 to 3.9 in and can climb over obstacles up to 2.2 in. It weighs about 53 lb, which matters on soft or sandy ground. It is rated IPX6 and up to 65 dB.",
             },
           ]}
         />
         <p className="measure">
           Two maps are supported, and each map needs its own charging station. Setup can use Bluetooth
           without Wi-Fi. The 3500 is rated{" "}
-          {d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"} with a{" "}
+          {d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value), false) : "Not published"} with a{" "}
           {d3500 ? specText(d3500.specs?.battery) : "Not published"} battery. The 5000 is rated{" "}
-          {d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value)) : "Not published"} with a{" "}
-          {d5000 ? specText(d5000.specs?.battery) : "Not published"} battery. Slope is not published on those
-          two rows, so this page does not copy the 2500’s {publishedSlope(dreame.slope, dreame.degrees)} onto
-          them.
+          {d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value), false) : "Not published"} with a{" "}
+          {d5000 ? specText(d5000.specs?.battery) : "Not published"} battery. Dreame doesn't publish a slope
+          figure for the 3500 or the 5000.
         </p>
         <h3>Who it is not for</h3>
-        <ul className="grid gap-2 pl-5">
-          <li>Hot, full-sun Southern yards where a midday run matters. Owner threads describe LiDAR heat pauses.</li>
-          <li>Tall-cut lawns if the edge mode stays on.</li>
-          <li>Sandy soil or turf that stays wet. Threads describe ruts.</li>
-        </ul>
+        <p className="measure">
+          It is a poor match for a hot, full-sun Southern yard if you need a midday run, for a tall cut with
+          the edge mode left on, or for sandy soil and turf that stays wet.
+        </p>
         <OwnerReports
-          intro="In the owner threads and the independent review we read for the October 10, 2026 check."
+          intro="In the 2 owner threads we read in October 2026, and one independent review:"
           items={[
             {
               text: "LiDAR overheats in direct sun and Florida heat, and the mower docks to cool.",
@@ -412,7 +417,7 @@ export default function BestPage() {
               linkLabel: "Thread on LiDAR heat",
             },
             {
-              text: "EdgeMaster cuts the border near 1.2 in and can scalp a tall lawn. Writers switch that mode off.",
+              text: "EdgeMaster cuts the border near 1.2 in and can scalp a tall lawn. Owners switch that mode off.",
               href: "https://www.reddit.com/r/Dreame_Tech/comments/1sivqul/",
               linkLabel: "Dreame thread on EdgeMaster",
               extra: [
@@ -464,18 +469,17 @@ export default function BestPage() {
       <section id="luba-3-3000">
         <h2>3. LUBA 3 AWD 3000</h2>
         <p className="measure">
-          The pick for about {formatAcres(luba.acres)} when trees cover the lawn. LiDAR, network RTK, and
+          The pick for about {formatAcres(luba.acres, false)} when trees cover the lawn. LiDAR, network RTK, and
           vision are all on the 3000. The standard cut is {specText(luba.specs.cuttingHeight)}. The full
           variant table, the zone conflict, and the battery conflict are in the{" "}
           <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
         </p>
         <KeyNumbers
           rows={[
-            { label: "Rated area", value: formatAcres(luba.acres), detail: realisticLine(luba.acres) },
+            { label: "Rated area", value: formatAcres(luba.acres), detail: <ComfortableFor rated={luba.acres} /> },
             {
               label: "Max slope",
               value: slopeWithRise(luba.slope, luba.degrees),
-              detail: interiorOrBoundary(),
             },
             {
               label: "Narrowest gap",
@@ -495,13 +499,13 @@ export default function BestPage() {
           ]}
         />
         <h3>Who it is not for</h3>
-        <ul className="grid gap-2 pl-5">
-          <li>Tall-cut lawns on the standard version, which stops at 2.7 in. The high-cut range is 2.2–4.0 in.</li>
-          <li>A side passage under 27.6 in.</li>
-          <li>Anyone counting on features the Mammotion page marks as not available yet.</li>
-        </ul>
+        <p className="measure">
+          Leave it if you need a cut taller than 2.7 in on the standard version (the high-cut range is 2.2–4.0
+          in), if the side passage is under 27.6 in, or if you are counting on features Mammotion marks as not
+          available yet.
+        </p>
         <OwnerReports
-          intro="In the owner threads we read for the October 10, 2026 check. Both are problems. Praise of LiDAR in general is left off this pick because the piece we found was not about the LUBA 3."
+          intro="In the 4 owner threads we read in October 2026. Both reports are problems. A general LiDAR write-up is left off this pick because it was not about the LUBA 3."
           items={[
             {
               text: "Owners linked firmware 2.3.30.26 to blade cut-outs and restarts. A later note said a fix was being tried.",
@@ -529,7 +533,7 @@ export default function BestPage() {
         />
         <StatusLine>
           <p>On sale in the US as of Oct 10, 2026.</p>
-          <p>Sold out on the Mammotion US store at that check. The amazon.com listing was live.</p>
+          <p>Sold out on the Mammotion US store on Oct 10, 2026. The amazon.com listing was live.</p>
           <p>
             <NoConditionalApproval brand="Mammotion" />
           </p>
@@ -547,7 +551,7 @@ export default function BestPage() {
       <section id="worx-wr340">
         <h2>4. Worx Landroid Vision Cloud WR340</h2>
         <p className="measure">
-          The open-acre pick when the banks stay within {publishedSlope(worx.slope, worx.degrees)}. Cloud RTK
+          The open-acre pick when the banks stay within {worx.slope}%. Cloud RTK
           needs no antenna. Stereo vision is part of the same setup, and Worx says V-SLAM takes over in
           shade. Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre than the 1
           acre rating. The family write-up is the{" "}
@@ -559,12 +563,18 @@ export default function BestPage() {
             {
               label: "Rated area",
               value: formatAcres(worx.acres),
-              detail: `${realisticLine(worx.acres)} Wirecutter’s complex-lawn note is a separate caution, not our 1.25× rule.`,
+              detail: (
+                <>
+                  <ComfortableFor rated={worx.acres} /> Wirecutter’s complex-lawn note is a separate caution
+                  for a broken-up lawn.
+                </>
+              ),
             },
             {
               label: "Max slope",
               value: slopeWithRise(worx.slope, worx.degrees),
-              detail: `${interiorOrBoundary()} Wirecutter says Cut-to-Zero is not recommended above 15°. That note is Wirecutter’s, and the WR340 page we checked does not list Cut-to-Zero as this model’s edge method.`,
+              detail:
+                "Wirecutter says Cut-to-Zero is not recommended above 15°. That note is Wirecutter’s. Worx’s US product page does not list Cut-to-Zero as this model’s edge method.",
             },
             {
               label: "Passage",
@@ -579,26 +589,26 @@ export default function BestPage() {
             {
               label: "Cut and battery",
               value: `${specText(worx.specs.cuttingHeight)}. ${specText(worx.specs.battery)}.`,
-              detail: "The amazon.com comparison chart marks Find My Landroid as included. Wirecutter treats a GPS module as an extra. This page does not settle that, and it does not print a price.",
+              detail: "The amazon.com comparison chart marks Find My Landroid as included. Wirecutter treats a GPS module as an extra. The two sources disagree, and neither states a price.",
             },
           ]}
         />
         <p className="measure">
-          The WR344 is the 4WD sibling, also rated {formatAcres(wr344.acres)}, at{" "}
-          {publishedSlope(wr344.slope, wr344.degrees)}. Its listing describes a Cut-to-Zero offset blade.
+          The WR344 is the 4WD sibling, also rated {formatAcres(wr344.acres, false)}, at {wr344.slope}%. Its
+          listing describes a Cut-to-Zero offset blade.
           Width {specText(wr344.specs.cuttingWidth)} and height {specText(wr344.specs.cuttingHeight)} are on
-          the amazon.com product information for that listing, checked Oct 13, 2026. A European WR344E sheet
-          lists 20 mm to 70 mm and is not used here.{" "}
+          the amazon.com product information for that listing, checked Oct 13, 2026. A European WR344E listing
+          gives 20 mm to 70 mm and is not used here.{" "}
           <SourceLine ids={["amz-wr344"]} checked={RECHECKED} />
         </p>
         <h3>Who it is not for</h3>
-        <ul className="grid gap-2 pl-5">
-          <li>Steep yards on the two-wheel-drive WR340. The 30% rating is the limit. The WR344 is the 84% model.</li>
-          <li>Patchy or weedy lawns that vision may read as not grass.</li>
-          <li>A very broken-up acre. The 1 acre rating is generous for that shape, which is the point of the Wirecutter note.</li>
-        </ul>
+        <p className="measure">
+          Choose something else for a steep yard on the two-wheel-drive WR340, which stops at 30% (the WR344
+          is the 84% model), for patchy or weedy lawns that vision may read as not grass, or for a very
+          broken-up acre where the 1 acre rating is generous.
+        </p>
         <OwnerReports
-          intro="In the threads we read for the October 10, 2026 check. The leaf report is about the 2023 Vision, and it is not proof about Vision Cloud."
+          intro="In the 3 owner threads we read in October 2026, and one independent review. The leaf report is about the 2023 Vision, and it is not proof about Vision Cloud."
           items={[
             {
               text: "A 2023 Landroid Vision stopped at leaves, weeds, and bald patches. That report is not evidence that Vision Cloud does the same.",
@@ -646,18 +656,17 @@ export default function BestPage() {
       <section id="navimow-x430">
         <h2>5. Navimow X430</h2>
         <p className="measure">
-          The open-acre pick when the banks are steep: {formatAcres(x430.acres)} and{" "}
-          {publishedSlope(x430.slope, x430.degrees)}. The body is {specText(x430.specs.bodyWidth)}. Network
+          The open-acre pick when the banks are steep: {formatAcres(x430.acres, false)} and {x430.slope}%. The
+          body is {specText(x430.specs.bodyWidth)}. Network
           RTK needs Wi-Fi or 4G. The antenna is included and described as optional. The longer write-up is
           the <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
         </p>
         <KeyNumbers
           rows={[
-            { label: "Rated area", value: formatAcres(x430.acres), detail: realisticLine(x430.acres) },
+            { label: "Rated area", value: formatAcres(x430.acres), detail: <ComfortableFor rated={x430.acres} /> },
             {
               label: "Max slope",
               value: slopeWithRise(x430.slope, x430.degrees),
-              detail: interiorOrBoundary(),
             },
             {
               label: "Passage",
@@ -677,21 +686,20 @@ export default function BestPage() {
           ]}
         />
         <p className="measure">
-          The X450 is rated {x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value)) : "Not published"},
-          with a map maximum of 1.8 acres for that model only, at the same slope. Other X450 specs were not
-          on the sheet we checked.
+          The X450 is rated{" "}
+          {x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value), false) : "Not published"}, with a
+          map maximum of 1.8 acres for that model only, at the same slope. Other X450 specs are not published.
         </p>
         <h3>Who it is not for</h3>
-        <ul className="grid gap-2 pl-5">
-          <li>Side passages narrower than about 2 ft.</li>
-          <li>A lawn with no reliable Wi-Fi or cell coverage.</li>
-          <li>A buyer who does not want a yearly fee after the free period.</li>
-        </ul>
+        <p className="measure">
+          Pass on it when the side passage is narrower than about 2 ft, when the lawn has no reliable Wi-Fi
+          or cell coverage, or when a yearly fee after the free period is a deal-breaker.
+        </p>
         <OwnerReports
-          intro="In the owner threads we read for the October 10, 2026 check."
+          intro="In the 4 owner threads we read in October 2026:"
           items={[
             {
-              text: "Writers say it maintains St. Augustine and Bermuda when it runs often.",
+              text: "Owners say it maintains St. Augustine and Bermuda when it runs often.",
               href: "https://www.reddit.com/r/SegwayNavimow/comments/1vi3zmr/",
               linkLabel: "Thread on warm-season grass",
               extra: [
@@ -702,7 +710,7 @@ export default function BestPage() {
               ],
             },
             {
-              text: "Writers still trim edges, and some describe missed strips.",
+              text: "Owners still trim edges, and some describe missed strips.",
               href: "https://www.reddit.com/r/roboticLawnmowers/comments/1uy0323/",
               linkLabel: "Thread on edges",
             },
@@ -715,8 +723,7 @@ export default function BestPage() {
         />
         <StatusLine>
           <p>On sale in the US as of Oct 10, 2026.</p>
-          <p>Sold out on navimow.com at that check. The amazon.com listing was live.</p>
-          <p>The review explains why this page does not call the X430 FCC-authorized.</p>
+          <p>Sold out on navimow.com on Oct 10, 2026. The amazon.com listing was live.</p>
           <p>
             <NoConditionalApproval brand="Segway Navimow" />
           </p>
@@ -746,8 +753,8 @@ export default function BestPage() {
             <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
           </li>
           <li>
-            Measure the steepest bank as rise over 10 ft, then compare it with the slope column above. The
-            maker may not say whether the number is the interior or only the boundary.{" "}
+            Measure the steepest bank as rise over 10 ft, then compare it with the slope column above. Leave
+            extra margin if the steep part is at the edge.{" "}
             <Link href="/best/robot-mower-for-hills">The hills page converts percent, degrees, and rise.</Link>
           </li>
           <li>
@@ -757,13 +764,13 @@ export default function BestPage() {
             mower.
           </li>
           <li>
-            Measure the narrowest passage. The X430 body is 24 in. The LUBA 3 gap is 27.6 in. The other three
-            picks have no passage width on the sheets we checked. The{" "}
+            Measure the narrowest passage. The X430 body is 24 in. The LUBA 3 gap is 27.6 in. Body width is
+            not published for the other three picks. The{" "}
             <Link href="/guides/robot-mower-front-and-back-yard">front-and-back guide</Link> compares a gap
             you measure with the figures that are published.
           </li>
           <li>
-            Read the owner threads on the two reviews, and the status line, before you use a button.
+            Read the owner threads on the reviews, and whether each model is on sale, before you use a button.
           </li>
         </ol>
       </section>
@@ -777,14 +784,14 @@ export default function BestPage() {
                 <>
                   Add the front and back grass first. A half acre is 21,780 sq ft. The{" "}
                   <Link href="/best/robot-mower-half-acre">half-acre page</Link> compares the ratings. If the
-                  yard is wooded and split into two zones, our 1.25× rule plans on less than the rated acre.
-                  The size guide shows the arithmetic.
+                  yard has trees or two zones, use the size guide rather than the full rated area. The size
+                  guide shows the arithmetic.
                 </>
               ),
             },
             {
               q: "What if the yard is steep?",
-              a: "Compare the bank with the published percent. The WR340 stops at 30% (17°). The i210 stops at 45% (24°). The Dreame 2500 and the LUBA 3000 publish 80%. The X430 publishes 84% (40°). Ask whether the figure is the interior or the boundary. Several of these makers do not say.",
+              a: "Compare the bank with the published percent. The WR340 stops at 30%. The i210 stops at 45%. The Dreame 2500 and the LUBA 3000 publish 80%. The X430 publishes 84%. Leave extra margin if the steep part is at the edge.",
             },
             {
               q: "Do I still need a boundary wire?",
@@ -802,7 +809,7 @@ export default function BestPage() {
         scope="group"
         sources={researched.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads linked in each pick, read for the October 10, 2026 check."
+        threads="Owner threads linked in each pick, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />
       <h2>Sources</h2>

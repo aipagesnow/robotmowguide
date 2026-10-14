@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { Faq, QuickPick, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { CanopyDiagram } from "@/components/Diagrams";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres } from "@/lib/format";
@@ -126,16 +127,17 @@ export default function TreesPage() {
           </tbody>
         </table>
       </div>
+      <SlopeMarginNote />
       <p className="measure">
         The i210 is rated {formatAcres(i210.acres)} and does not use an antenna. Canopy can still weaken
         network RTK, which is why heavy tree cover is on its skip list. Use it for the open quarter acre,
         and use a LiDAR row for the shaded part if that part is large enough to need its own mower. The
-        Q110H is the same kind of split: RTK plus VSLAM, rated {formatAcres(q.acres)}.{" "}
+        Q110H is the same kind of split: RTK plus VSLAM, rated {formatAcres(q.acres, false)}.{" "}
         <SourceLine ids={["navimow-ces26", "amz-q110h"]} checked="2026-10-13" />
       </p>
       <p className="measure">
-        The LUBA 3000 is the larger LiDAR-plus-RTK row, rated {formatAcres(luba.acres)}. The Dreame 2500 is
-        LiDAR without RTK, rated {formatAcres(dreame.acres)}. The mini 2 is the small steep LiDAR row. The
+        The LUBA 3000 is the larger LiDAR-plus-RTK row, rated {formatAcres(luba.acres, false)}. The Dreame
+        2500 is LiDAR without RTK, rated {formatAcres(dreame.acres, false)}. The mini 2 is the small steep LiDAR row. The
         Ultra 2000 is the half-acre LiDAR row, and few owner reports exist yet.{" "}
         <SourceLine ids={["mammotion-luba3", "dreame-a3", "amz-mova-2000"]} checked={SPEC_CHECKED} />
       </p>
@@ -151,7 +153,13 @@ export default function TreesPage() {
           },
           {
             q: "Which shaded yard is too big for these LiDAR rows?",
-            a: "Past the rated area, and past our 1.25× planning figure when the yard is also split into zones. The half-acre and 1-acre pages do that arithmetic.",
+            a: (
+              <>
+                Past the rated area. For heavy trees or two zones, use{" "}
+                <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The half-acre and
+                1-acre pages apply it.
+              </>
+            ),
           },
         ]}
       />

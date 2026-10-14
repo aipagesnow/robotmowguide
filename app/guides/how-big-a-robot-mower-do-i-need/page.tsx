@@ -7,10 +7,11 @@ import { CtaCluster, Faq, Related, SourceLine } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import { currentCandidates } from "@/lib/candidates";
 import { AcreSquares, YardAcre, YardHalf, YardQuarter, YardWooded } from "@/components/Diagrams";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres, realisticAcres } from "@/lib/format";
 import { getFamily, modelFacts } from "@/lib/products";
-import { publishedSlope, realisticLine } from "@/lib/speak";
+import { publishedSlope } from "@/lib/speak";
 import { RECHECKED } from "@/lib/site";
 
 const title = "How big a robot mower do I need?";
@@ -52,9 +53,9 @@ export default function SizeGuide() {
       disclosure
     >
       <p className="measure">
-        Buy for the grass you mow, not the lot on the deed. Use the maker’s rated acres as the ceiling, then
-        cut that number when the yard has heavy trees or a front lawn and a back lawn. Our rule for that
-        case is rated area divided by 1.25. A 1 acre rating then plans on about {formatAcres(realisticAcres(1))}.
+        Rated area assumes an open, simple lawn. If yours has heavy tree cover or is split into two zones, a
+        sensible rule of thumb is to divide the rating by 1.25. On that basis a 1-acre mower is a comfortable
+        fit for about 0.8 acres. This is our own rule of thumb rather than a manufacturer figure.
       </p>
       <CtaCluster>
         <ProductLink
@@ -76,7 +77,7 @@ export default function SizeGuide() {
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Rated area beside our 1.25× planning figure for heavy trees and two zones.</caption>
+          <caption>Rated area beside the 1.25 planning figure for heavy trees and two zones.</caption>
           <thead>
             <tr>
               <th scope="col">Rated area</th>
@@ -96,7 +97,7 @@ export default function SizeGuide() {
         </table>
       </div>
       <p className="measure">
-        The 1.25× column is ours. It is not printed on a manufacturer page. One acre is 43,560 sq ft.
+        One acre is 43,560 sq ft.
       </p>
       <h2>What an acre looks like on a lot</h2>
       <AcreSquares />
@@ -108,22 +109,21 @@ export default function SizeGuide() {
       <YardQuarter />
       <p className="measure">
         A lot 90 ft by 121 ft is a quarter acre, with a front lawn and a back lawn. The Navimow i210 AWD is
-        rated {formatAcres(i210.acres)}. {realisticLine(i210.acres)}{" "}
+        rated {formatAcres(i210.acres, false)}. <ComfortableFor rated={i210.acres} />{" "}
         <Link href="/best#navimow-i210">i210 pick</Link>.
       </p>
       <YardHalf />
       <p className="measure">
-        A lot 132 ft by 165 ft is a half acre, {formatAcres(0.5)}, with a 3 ft side passage between the
-        front and the back. Two zones matter even when the total grass is inside a rating. The Dreame A3 AWD
-        Pro 2500 is rated {formatAcres(dreame.acres)}. Its page also says each of two maps needs its own
-        charging station. <Link href="/best#dreame-a3-2500">Dreame pick</Link>.
+        A lot 132 ft by 165 ft is a half acre, with a 3 ft side passage between the front and the back. Two
+        zones matter even when the total grass is inside a rating. The Dreame A3 AWD Pro 2500 is rated{" "}
+        {formatAcres(dreame.acres, false)}. Its page also says each of two maps needs its own charging
+        station. <Link href="/best#dreame-a3-2500">Dreame pick</Link>.
       </p>
       <YardAcre />
       <p className="measure">
-        A lot 180 ft by 242 ft is one acre, {formatAcres(1)}. The Navimow X430 and the Worx Landroid
-        Vision Cloud WR340 are both rated {formatAcres(1)}. {realisticLine(1)} The slope and the trees decide
-        which of those two ratings is the honest one.{" "}
-        <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
+        A lot 180 ft by 242 ft is one acre. The Navimow X430 and the Worx Landroid Vision Cloud WR340 are
+        both rated {formatAcres(1, false)}. <ComfortableFor rated={1} /> The slope and the trees decide which
+        of those two ratings is the honest one. <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <h2>When the maker already discounts the rating</h2>
       <p className="measure">
@@ -131,33 +131,33 @@ export default function SizeGuide() {
         Say which number you are using.
       </p>
       <p className="measure">
-        Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres)} and{" "}
+        Husqvarna rates the Automower 420 iQ at {formatAcres(iq420.acres, false)} and{" "}
         {publishedSlope(iq420.slope, iq420.degrees)}, and 15% at the boundary. The same page describes 0.5
         acre for an irregular lawn and 1 acre for systematic mowing. Those notes are not folded into the
-        1.25× box below. <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
+        box below. <Link href="/reviews/husqvarna-automower-iq">Automower iQ review</Link>.{" "}
         <SourceLine ids={["husq-420iq"]} checked="2026-10-10" />
       </p>
       <p className="measure">
-        The Automower 410 iQ is rated {formatAcres(iq410.acres)}, with a ±20% note on that area, and{" "}
-        {publishedSlope(iq410.slope, iq410.degrees)}, and 15% at the boundary.{" "}
-        <SourceLine ids={["husq-410iq"]} checked="2026-10-10" />
+        The Automower 410 iQ is rated {formatAcres(iq410.acres, false)}, with a ±20% note on that area, and{" "}
+        {iq410.slope}%, and 15% at the boundary. <SourceLine ids={["husq-410iq"]} checked="2026-10-10" />
       </p>
+      <SlopeMarginNote />
       <p className="measure">
-        The Navimow X4 page rates the X450 at {x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value)) : "Not published"}{" "}
-        and lists a map maximum of 1.8 acres for that model. That 1.8 acre figure belongs to the X450. It is
-        not a general Navimow multiplier. <SourceLine ids={["navimow-x4"]} checked="2026-10-10" />
+        The Navimow X4 page rates the X450 at{" "}
+        {x450 ? formatAcres(Number(x450.ladder?.ratedAreaAcres?.value), false) : "Not published"} and lists a
+        map maximum of 1.8 acres for that model. That 1.8 acre figure belongs to the X450. It is not a
+        general Navimow multiplier. <SourceLine ids={["navimow-x4"]} checked="2026-10-10" />
       </p>
       <p className="measure">
         Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre for the WR340,
-        whose maker rates it at {formatAcres(worx.acres)}.{" "}
+        whose maker rates it at {formatAcres(worx.acres, false)}.{" "}
         <SourceLine ids={["wirecutter"]} checked="2026-10-10" />
       </p>
       <h2>Check a lawn against current ratings</h2>
       <p className="measure">
         Worked examples, with JavaScript off or on, use the same rule. An open 0.5 acre in one zone needs a
         rating of 0.5 acre. The same 0.5 acre with heavy trees, or with more than one zone, needs 0.625 acre.
-        A 0.4 acre lawn with two zones needs 0.5 acre. Husqvarna’s ±20% and the 420 iQ split of 0.5 acre
-        irregular / 1 acre systematic are not folded into these numbers.
+        A 0.4 acre lawn with two zones needs 0.5 acre.
       </p>
       <AreaEstimate
         models={currentCandidates().map((row) => ({
@@ -170,25 +170,24 @@ export default function SizeGuide() {
       <YardWooded />
       <p className="measure">
         Canopy over about a third of a lawn is enough to weaken a satellite fix along the mower’s path. The
-        LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)}. {realisticLine(luba.acres)}{" "}
+        LUBA 3 AWD 3000 is rated {formatAcres(luba.acres, false)}. <ComfortableFor rated={luba.acres} />{" "}
         <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">How navigation fails under trees</Link>.
       </p>
       <h2>Ratings that do not include a slope</h2>
       <p className="measure">
         The Dreame A3 AWD Pro 3500 is rated{" "}
-        {dreame3500 ? formatAcres(Number(dreame3500.ladder?.ratedAreaAcres?.value)) : "Not published"}, and
-        the 5000 is rated{" "}
-        {dreame5000 ? formatAcres(Number(dreame5000.ladder?.ratedAreaAcres?.value)) : "Not published"}. The
-        rows we checked have no maximum slope for those two models. This guide does not copy the
-        2500’s {publishedSlope(dreame.slope, dreame.degrees)} onto them.{" "}
+        {dreame3500 ? formatAcres(Number(dreame3500.ladder?.ratedAreaAcres?.value), false) : "Not published"},
+        and the 5000 is rated{" "}
+        {dreame5000 ? formatAcres(Number(dreame5000.ladder?.ratedAreaAcres?.value), false) : "Not published"}.
+        Dreame doesn't publish a slope figure for the 3500 or the 5000.{" "}
         <SourceLine ids={["dreame-a3"]} checked="2026-10-10" />
       </p>
       <h2>What this means when you choose</h2>
       <ul className="grid gap-3 pl-5">
         <li>
           About a quarter acre, open: <Link href="/best#navimow-i210">Navimow i210 AWD</Link>, rated{" "}
-          {formatAcres(i210.acres)}.
+          {formatAcres(i210.acres, false)}.
         </li>
         <li>
           About {formatAcres(dreame.acres, false)} with two zones:{" "}

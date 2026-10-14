@@ -10,16 +10,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver, NoConditionalApproval } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Roborock RockNeo Q110H review: a quarter acre on RTK";
@@ -55,22 +55,16 @@ export default function Q110Review() {
       updated={RECHECKED}
       whatChanged="October 13, 2026: first published. Cutting height follows the Q110H line in the English technical data, and the CE band is kept beside it."
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of {formatDate(family.statusDate)}.</p>
-        <p>The amazon.com title rechecked on Oct 13, 2026 still names the RockNeo Q110H, up to 1/4 acre, 45% slope.</p>
-        <p>
-          <NoConditionalApproval brand="Roborock" />
-        </p>
-      </StatusLine>
       <p className="measure">
         The Q110H fits an open quarter acre with banks inside {publishedSlope(q.slope, q.degrees)}. It uses
         full-band RTK plus VSLAM and vision, so heavy canopy is a reason to look at a LiDAR mower instead.
       </p>
       <p className="measure">
         The cut to use is {specText(q.specs.cuttingHeight)}. That is 40–80 mm on the English technical data
-        that names the Q110H. A CE manual for the Q105 and Q110 lists 20–60 mm, about 0.8–2.4 in. The two
-        bands are different models. This page does not average them.
+        that names the Q110H. A CE manual for the Q105 and Q110 lists 20–60 mm, about 0.8–2.4 in. Those are
+        different models, so use the band for the model you are buying.
       </p>
       <CtaCluster>
         <ProductLink
@@ -88,12 +82,12 @@ export default function Q110Review() {
           {
             label: "Rated area",
             value: formatAcres(q.acres),
-            detail: realisticLine(q.acres),
+            detail: <ComfortableFor rated={q.acres} />,
           },
           {
             label: "Max slope",
             value: slopeWithRise(q.slope, q.degrees),
-            detail: `${interiorOrBoundary()} The degree on the sheet was calculated from 45%.`,
+            detail: "The degree was calculated from 45%.",
           },
           {
             label: "Body width",
@@ -138,7 +132,7 @@ export default function Q110Review() {
             sources: ["amz-q110h"],
             checked: "2026-10-13",
             href: "/best/robot-mower-for-hills",
-            note: "24.2° on the sheet is calculated from 45%, not a second published degree.",
+            note: "24.2° was calculated from 45%, not a second published degree.",
           },
           {
             label: "Cutting height",
@@ -184,6 +178,7 @@ export default function Q110Review() {
           },
         ]}
       />
+      <SlopeMarginNote />
       <h2>The two cutting-height bands</h2>
       <p className="measure">
         The English technical data names the Q110H, model RRTR1BUT, rated 1/4 acre, and lists cutting height
@@ -194,16 +189,15 @@ export default function Q110Review() {
       </p>
       <h2>Quarter acre, open sky</h2>
       <p className="measure">
-        {formatAcres(q.acres)}. {realisticLine(q.acres)} {slopeWithRise(q.slope, q.degrees)}.{" "}
-        {interiorOrBoundary()} RTK plus VSLAM still wants sky along the path.{" "}
+        {formatAcres(q.acres)}. <ComfortableFor rated={q.acres} /> {q.slope}%, a rise of {risePer10Ft(q.slope)}.
+        RTK plus VSLAM still wants sky along the path.{" "}
         <Link href="/best/robot-mower-under-trees">Under trees</Link> is a different pick.{" "}
         <SourceLine ids={["amz-q110h", "q110h-manual"]} checked="2026-10-13" />
       </p>
       <h2>What owners report</h2>
       <p className="measure">
-        Few owner reports for the US Q110H exist yet. Threads that turned up on Oct 13, 2026 name the Q110
-        or the Q105, which are the European models in the CE manual. This page does not borrow those reports
-        for the Q110H.
+        Few owner reports for the US Q110H exist yet. Threads that turned up on Oct 13, 2026 name the Q110 or
+        the Q105, the European models in the CE manual, and they are not Q110H reports.
       </p>
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
@@ -212,17 +206,17 @@ export default function Q110Review() {
         ))}
         <li>A minimum passage is not published. The 16.54 in figure is body width.</li>
       </ul>
-      <h2>Tracking module and support</h2>
+      <SupportOutlook brand="Roborock" />
       <p className="measure">
         Wi-Fi and Bluetooth are on the mower. The Verge describes a 4G tracking module sold separately.{" "}
-        <FccWaiver /> <SourceLine ids={["verge"]} checked={SPEC_CHECKED} />
+        <SourceLine ids={["verge"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
         The <Link href="/reviews/segway-navimow-i-series">Navimow i210 AWD</Link> is the same quarter-acre
         class, rated {formatAcres(i210.acres)}, with network RTK and no antenna. The{" "}
         <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is rated{" "}
-        {formatAcres(mini.acres)} and climbs to {publishedSlope(mini.slope, mini.degrees)}, with a taller cut.
+        {formatAcres(mini.acres, false)} and climbs to {mini.slope}%, with a taller cut.
       </p>
       <Faq
         items={[

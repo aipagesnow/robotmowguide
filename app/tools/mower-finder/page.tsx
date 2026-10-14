@@ -4,6 +4,7 @@ import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
 import { DecisionTable } from "@/components/DecisionTable";
 import { CtaCluster, Faq, Related } from "@/components/Blocks";
+import { SlopeMarginNote } from "@/components/VoiceBits";
 import { MowerFinder } from "@/components/MowerFinder";
 import { ProductLink } from "@/components/ProductLink";
 import { currentCandidates } from "@/lib/candidates";
@@ -61,18 +62,18 @@ export default function FinderPage() {
       <DecisionTable />
       <h2>How a row is chosen</h2>
       <p className="measure">
-        Area: the rated acres must be at least your lawn for an open, single zone. Heavy trees, or more
-        than one zone, use our 1.25× rule, so the rating must cover lawn times 1.25. That divisor is ours.
-        It is described on <Link href="/how-picks-are-chosen">how picks are chosen</Link>.
+        Area: the rated acres must be at least your lawn for an open, single zone. Heavy trees or more than
+        one zone need a rating of lawn times 1.25.{" "}
+        <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
       </p>
       <p className="measure">
         Slope: the published maximum must be at least the steepest slope you enter. If you mark that slope
         as an edge, and the model prints a lower boundary figure, the row stays and the note says the
-        boundary is lower. The maximum is called interior only when that boundary note exists. Trees: heavy
-        cover prefers LiDAR or vision. An RTK-only model can still appear,
+        boundary is lower. Trees: heavy cover prefers LiDAR or vision. An RTK-only model can still appear,
         with a note about satellite fix under canopy. Passage: a published body width or minimum gap has to
         be no wider than the passage. If the width is missing, the note says to check the manual.
       </p>
+      <SlopeMarginNote />
       <Faq
         items={[
           {

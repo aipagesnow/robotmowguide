@@ -48,7 +48,7 @@ export default function StAugustinePage() {
         that reaches 4 inches. On this site that is the Navimow X430 at {specText(x430.specs.cuttingHeight)} and
         the Automower 420 iQ at {specText(iq.specs.cuttingHeight)}. The Dreame A3 AWD Pro 2500 reaches{" "}
         {specText(dreame.specs.cuttingHeight)}. The standard LUBA 3 AWD 3000 stops at{" "}
-        {specText(luba.specs.cuttingHeight)}. We have not tested these mowers.
+        {specText(luba.specs.cuttingHeight)}.
       </p>
       <QuickPick
         pageType="best_for"

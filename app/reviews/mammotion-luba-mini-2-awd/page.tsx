@@ -11,16 +11,16 @@ import {
   Related,
   ResearchedBox,
   SourceLine,
-  StatusLine,
 } from "@/components/Blocks";
-import { FccWaiver, NoConditionalApproval } from "@/components/FccNote";
+import { SupportOutlook } from "@/components/FccNote";
+import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, formatDate } from "@/lib/format";
+import { formatAcres, risePer10Ft } from "@/lib/format";
 import { getFamily, modelFacts, navigationLabel } from "@/lib/products";
-import { interiorOrBoundary, publishedSlope, realisticLine, slopeWithRise, specText } from "@/lib/speak";
+import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "LUBA mini 2 AWD review: a small yard with a steep bank";
@@ -57,17 +57,8 @@ export default function MiniReview() {
       updated={RECHECKED}
       whatChanged="October 13, 2026: first published, after the amazon.com title for the 1500H was rechecked."
       disclosure
+      status="On sale in the US as of Oct 10, 2026."
     >
-      <StatusLine>
-        <p>On sale in the US as of {formatDate(family.statusDate)}.</p>
-        <p>
-          The listing rechecked on Oct 13, 2026 still names the LUBA mini 2 1500H, 0.37 acre, cutting height
-          2.2–4.0 in.
-        </p>
-        <p>
-          <NoConditionalApproval brand="Mammotion" />
-        </p>
-      </StatusLine>
       <p className="measure">
         Buy the 1500H when the lawn is about a third of an acre, the bank is steep, and the grass is kept
         tall. It is rated {formatAcres(high.acres)} and {publishedSlope(high.slope, high.degrees)}, and the
@@ -75,7 +66,7 @@ export default function MiniReview() {
       </p>
       <p className="measure">
         Skip it for a lawn near half an acre, and skip the standard 1500 if you needed the tall cut. That
-        row has no confirmed amazon.com listing, and this page does not print a US height for it.
+        row has no confirmed amazon.com listing. Mammotion does not publish a US height for it.
       </p>
       <CtaCluster>
         <ProductLink
@@ -93,12 +84,15 @@ export default function MiniReview() {
           {
             label: "Rated area",
             value: formatAcres(high.acres),
-            detail: `${realisticLine(high.acres)} The sheet notes 1,500 m².`,
+            detail: (
+              <>
+                <ComfortableFor rated={high.acres} /> Mammotion's US product page notes 1,500 m².
+              </>
+            ),
           },
           {
             label: "Max slope",
             value: slopeWithRise(high.slope, high.degrees),
-            detail: interiorOrBoundary(),
           },
           {
             label: "Cut",
@@ -124,7 +118,7 @@ export default function MiniReview() {
           "LUBA mini 2 AWD 1500H (high-cut)":
             "The model this review follows. Confirmed listing. Cut 2.2–4.0 in. LiDAR and vision, no antenna.",
           "LUBA mini 2 AWD 1500 (standard)":
-            "No confirmed amazon.com listing. A European citation lists a shorter cut. This page does not use that band as the US height.",
+            "No confirmed amazon.com listing. A European citation lists a shorter cut. That band is not the US height.",
         }}
       />
       <h2>Specs we checked</h2>
@@ -137,7 +131,7 @@ export default function MiniReview() {
             sources: ["mammotion-mini2", "amz-mini2-1500h"],
             checked: "2026-10-13",
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "1,500 m² on the sheet.",
+            note: "Mammotion's US product page notes 1,500 m².",
           },
           {
             label: "Max slope",
@@ -145,7 +139,7 @@ export default function MiniReview() {
             sources: ["mammotion-mini2"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: `${interiorOrBoundary()} Degrees are the published 38.6°.`,
+            note: "Degrees are the published 38.6°.",
           },
           {
             label: "Navigation",
@@ -196,20 +190,21 @@ export default function MiniReview() {
       />
       <h2>A third of an acre, and the bank</h2>
       <p className="measure">
-        {formatAcres(high.acres)} is the rating. {realisticLine(high.acres)} A flat quarter acre is a
-        comfortable fit. A half acre is not. {slopeWithRise(high.slope, high.degrees)}.{" "}
-        {interiorOrBoundary()} <Link href="/best/robot-mower-small-yard">Small-yard picks</Link> and{" "}
+        {formatAcres(high.acres)} is the rating. <ComfortableFor rated={high.acres} /> A flat quarter acre is a
+        comfortable fit. A half acre is not. {high.slope}%, a rise of {risePer10Ft(high.slope)}.{" "}
+        <Link href="/best/robot-mower-small-yard">Small-yard picks</Link> and{" "}
         <Link href="/best/robot-mower-for-hills">the hills page</Link>.{" "}
         <SourceLine ids={["mammotion-mini2", "amz-mini2-1500h"]} checked="2026-10-13" />
       </p>
+      <SlopeMarginNote />
       <h2>Tall grass and the two versions</h2>
       <p className="measure">
         The 1500H cuts {specText(high.specs.cuttingHeight)}. That is the band to read for St. Augustine or
         summer fescue kept long. The standard 1500
         {standard?.specs?.cuttingHeight
           ? " has a shorter band in a European citation"
-          : " does not have a height on this sheet"}
-        . This page leaves that band off the US spec table until the US page is the source.{" "}
+          : " does not have a published US height"}
+        . The US spec table leaves that band off until a US page is the source.{" "}
         <SourceLine ids={["amz-mini2-1500h", "mammotion-mini2"]} checked="2026-10-13" />
       </p>
       <h2>Trees, without an antenna</h2>
@@ -221,7 +216,7 @@ export default function MiniReview() {
       </p>
       <h2>What owners report</h2>
       <OwnerReports
-        intro="Two threads were open for this check, read in 2026. That is a short record for a new model."
+        intro="In the 2 owner threads we read in October 2026:"
         items={[
           {
             text: "A new owner on sandy Bahia grass in Florida says the tank-style turns tore thin shaded edges, and they remapped to keep the mower off those strips.",
@@ -240,19 +235,19 @@ export default function MiniReview() {
         {getFamily("mammotion-luba-mini-2-awd").notFor?.map((item) => (
           <li key={item}>{item}</li>
         ))}
-        <li>A side-passage width is not published, so this page does not guess one.</li>
+        <li>Side-passage width is not published.</li>
       </ul>
-      <h2>Data and support</h2>
+      <SupportOutlook brand="Mammotion" />
       <p className="measure">
         {family.connectivityCost ? String(family.connectivityCost.value) : "A fee after the free period is not published."}{" "}
-        <FccWaiver /> <SourceLine ids={["mammotion-mini2"]} checked={SPEC_CHECKED} />
+        <SourceLine ids={["mammotion-mini2"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
         The <Link href="/reviews/segway-navimow-i-series">Navimow i210 AWD</Link> is rated{" "}
-        {formatAcres(i210.acres)} and {publishedSlope(i210.slope, i210.degrees)}. It is the smaller, gentler
-        yard. The <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link> is rated{" "}
-        {formatAcres(luba.acres)} when the lawn outgrows a third of an acre.
+        {formatAcres(i210.acres)} and {i210.slope}%. It is the smaller, gentler yard. The{" "}
+        <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link> is rated {formatAcres(luba.acres, false)}{" "}
+        when the lawn outgrows a third of an acre.
       </p>
       <Faq
         items={[
@@ -262,7 +257,7 @@ export default function MiniReview() {
           },
           {
             q: "Which version cuts tall grass?",
-            a: "The 1500H listing says 2.2–4.0 in. The standard 1500 does not have a confirmed listing, and this page does not assign it a US height.",
+            a: "The 1500H listing says 2.2–4.0 in. The standard 1500 does not have a confirmed listing or a published US height.",
           },
           {
             q: "Does it need an antenna?",
@@ -273,7 +268,7 @@ export default function MiniReview() {
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
         manuals="No owner's manual was in the source list. Height for the 1500H is the listing title."
-        threads="Two Mammotion owner threads, read for the October 13, 2026 check."
+        threads="Two Mammotion owner threads, read in October 2026."
         questions="No manufacturer questions have been answered yet."
         specsLine="Listing title rechecked Oct 13, 2026. Other specs checked Oct 10, 2026."
       />
