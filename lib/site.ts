@@ -14,6 +14,14 @@ export const SITE_URL = /vercel\.app|localhost|127\.0\.0\.1/i.test(configured)
   ? "https://robotmowguide.com"
   : configured;
 
+// On Vercel previews, Next.js points file-based OG/Twitter image URLs at the preview host
+// (VERCEL_BRANCH_URL / VERCEL_URL) instead of metadataBase. Clear them so previews keep the
+// canonical site URL, matching production output.
+if (process.env.VERCEL_ENV === "preview") {
+  delete process.env.VERCEL_BRANCH_URL;
+  delete process.env.VERCEL_URL;
+}
+
 export const INDEXNOW_KEY = "2b3fd7045f9cfd3978efbb9fb48e8fc1";
 
 export const DISCLOSURE_SENTENCE = "As an Amazon Associate I earn from qualifying purchases.";
