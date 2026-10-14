@@ -66,7 +66,7 @@ export default function WorxReview() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        If you've got an open acre and the banks stay within {publishedSlope(worx.slope, worx.degrees)}, the
+        If you've got an open acre and the banks go up to {publishedSlope(worx.slope, worx.degrees)}, the
         WR340 is a sensible pick. Cloud RTK needs no antenna. Stereo vision is part of the same setup, and
         Worx says V-SLAM takes over in shade.
       </p>
@@ -222,9 +222,9 @@ export default function WorxReview() {
       </p>
       <h2>Cutting height on the US listing</h2>
       <p className="measure">
-        For the US listing, we'd use the WR344 amazon.com product information, as of Oct 13, 2026. It lists
-        a cutting width of {specText(wr344.specs.cuttingWidth)} and a cutting height of{" "}
-        {specText(wr344.specs.cuttingHeight)}, in 7 positions. Those are the figures we'd use. A European Worx
+        The US listing gives a cutting height of {specText(wr344.specs.cuttingHeight)}, in 7 positions, and a
+        cutting width of {specText(wr344.specs.cuttingWidth)}. That's the WR344 amazon.com product information,
+        as of Oct 13, 2026. Those are the figures we'd use. A European Worx
         page for the WR344E lists a cutting height of 20 mm to 70 mm, about 0.8–2.8 in if you convert the
         millimeters. That European page disagrees with the US listing on height. The height we'd use is the
         US listing. Width and height don't come from the WR344 support page.{" "}

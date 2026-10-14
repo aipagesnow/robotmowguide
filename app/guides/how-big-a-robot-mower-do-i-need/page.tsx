@@ -102,7 +102,7 @@ export default function SizeGuide() {
       <h2>What an acre looks like on a lot</h2>
       <AcreSquares />
       <p className="measure">
-        Here's what those sizes look like on a lot. A quarter acre is 10,890 sq ft. In the
+        On a lot, a quarter acre is 10,890 sq ft. In the
         worked example, take out a 1,200 sq ft house, a 600 sq ft drive, and 400 sq ft of beds from that lot
         and about 8,690 sq ft of lawn is what's left. That's smaller than the 0.25 acre a maker might assume.
       </p>

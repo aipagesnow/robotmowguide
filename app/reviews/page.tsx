@@ -79,7 +79,7 @@ export default function ReviewsIndex() {
         <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud</Link>
       </h2>
       <p className="measure">
-        If you've got an open acre and the banks stay inside that slope, the WR340 is a sensible pick. It's
+        If you've got an open acre and the banks go up to that slope, the WR340 is a sensible pick. It's
         rated {formatAcres(worx.acres, false)} and {worx.slope}%. If your bank is steeper, the WR344 is the
         4WD model to look at.
       </p>

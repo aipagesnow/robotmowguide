@@ -61,7 +61,7 @@ export default function MovaReview() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        If you've got an open half acre and banks inside {publishedSlope(m2000.slope, m2000.degrees)}, start
+        If you've got an open half acre and banks up to {publishedSlope(m2000.slope, m2000.degrees)}, start
         with the 2000. It's LiDAR and vision, with no RTK antenna. Move to the 3000 AWD when the bank is why
         you're shopping: that model is {m3000.slope}% and {formatAcres(m3000.acres)}.
       </p>

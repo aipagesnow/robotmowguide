@@ -57,7 +57,7 @@ export default function WorthItPage() {
       <YardPhoto id="photo-worth-it" />
       <h2>A yard that can use one</h2>
       <p className="measure">
-        If you've got an open acre and the banks stay inside {publishedSlope(x430.slope, x430.degrees)}, we'd start with the Navimow X430. It's
+        If you've got an open acre and the banks go up to {publishedSlope(x430.slope, x430.degrees)}, we'd start with the Navimow X430. It's
         rated {formatAcres(x430.acres)} and the cut is {specText(x430.specs.cuttingHeight)}.{" "}
         <ComfortableFor rated={x430.acres} /> The longer write-up is the{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.

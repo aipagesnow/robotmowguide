@@ -55,7 +55,7 @@ export default function HalfAcrePage() {
         pageType="best_for"
         items={[
           {
-            yard: "Open half acre if your banks stay near 45%",
+            yard: "Open half acre if your banks go up to 45%",
             model: "LiDAX Ultra 2000",
             href: "/reviews/mova-lidax-ultra",
             asin: mova.variant.asin,

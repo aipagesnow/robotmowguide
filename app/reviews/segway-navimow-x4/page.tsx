@@ -283,7 +283,7 @@ export default function X4Review() {
         <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
       </p>
       <p className="measure">
-        If your banks stay within {worx.slope}%, the Worx Landroid Vision Cloud WR340 is the open-acre
+        If your banks go up to {worx.slope}%, the Worx Landroid Vision Cloud WR340 is the open-acre
         comparison. <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.
       </p>
       <Faq

@@ -66,7 +66,7 @@ export default function BestPage() {
     {
       name: "Navimow i210 AWD",
       href: "#navimow-i210",
-      bestFor: "Your flat quarter acre",
+      bestFor: "Flat quarter acre",
       area: formatAcres(i210.acres),
       slope: publishedSlope(i210.slope, i210.degrees),
       nav: navigationLabel(i210.family.navigation),
@@ -79,7 +79,7 @@ export default function BestPage() {
     {
       name: "Dreame A3 AWD Pro 2500",
       href: "#dreame-a3-2500",
-      bestFor: "About 0.62 acre, with trees and steep banks",
+      bestFor: "About 0.62 acre, trees, steep banks",
       area: formatAcres(dreame.acres),
       slope: publishedSlope(dreame.slope, dreame.degrees),
       nav: navigationLabel(dreame.family.navigation),
@@ -92,7 +92,7 @@ export default function BestPage() {
     {
       name: "LUBA 3 AWD 3000",
       href: "#luba-3-3000",
-      bestFor: "About 0.75 acre under your trees",
+      bestFor: "About 0.75 acre under trees",
       area: formatAcres(luba.acres),
       slope: publishedSlope(luba.slope, luba.degrees),
       nav: navigationLabel(luba.family.navigation),
@@ -105,7 +105,7 @@ export default function BestPage() {
     {
       name: "Worx WR340",
       href: "#worx-wr340",
-      bestFor: "An open acre with gentler slopes",
+      bestFor: "Open acre, gentler slopes",
       area: formatAcres(worx.acres),
       slope: publishedSlope(worx.slope, worx.degrees),
       nav: navigationLabel(worx.family.navigation),
@@ -118,7 +118,7 @@ export default function BestPage() {
     {
       name: "Navimow X430",
       href: "#navimow-x430",
-      bestFor: "An open acre if your banks are steep",
+      bestFor: "Open acre, steep banks",
       area: formatAcres(x430.acres),
       slope: publishedSlope(x430.slope, x430.degrees),
       nav: navigationLabel(x430.family.navigation),
@@ -145,13 +145,13 @@ export default function BestPage() {
       <p className="measure">
         If your yard's somewhere between a quarter acre and an acre, here's how we'd pick: start with how much grass you've got, then think about your steepest slope. With that in mind, our five picks
         are the Navimow i210 AWD, the Dreame A3 AWD Pro 2500, the LUBA 3 AWD 3000, the Worx Landroid Vision
-        Cloud WR340 and the Navimow X430, as of Oct 10, 2026.
+        Cloud WR340 and the Navimow X430.
       </p>
       <QuickPick
         pageType="best"
         items={[
           {
-            yard: `Up to ${formatAcres(i210.acres, false)} if your banks stay under ${publishedSlope(i210.slope, i210.degrees)}`,
+            yard: `Up to ${formatAcres(i210.acres, false)} if your banks go up to ${publishedSlope(i210.slope, i210.degrees)}`,
             model: "Navimow i210 AWD",
             href: "/best#navimow-i210",
             asin: i210.variant.asin,
@@ -172,7 +172,7 @@ export default function BestPage() {
             productSlug: luba.family.slug,
           },
           {
-            yard: `An open acre if your banks stay under ${publishedSlope(worx.slope, worx.degrees)}`,
+            yard: `An open acre if your banks go up to ${publishedSlope(worx.slope, worx.degrees)}`,
             model: "Worx Landroid Vision Cloud WR340",
             href: "/best#worx-wr340",
             asin: worx.variant.asin,
@@ -294,7 +294,7 @@ export default function BestPage() {
       <section id="navimow-i210">
         <h2>1. Navimow i210 AWD</h2>
         <p className="measure">
-          If your banks stay within {i210.slope}% and you don't
+          If your banks go up to {i210.slope}% and you don't
           want an antenna in the yard, we'd start here for a quarter acre. It's three-wheel all-wheel drive, with network RTK and vision.{" "}
           <SourceLine ids={["navimow-ces26"]} checked={SPEC_CHECKED} />
         </p>
@@ -550,7 +550,7 @@ export default function BestPage() {
       <section id="worx-wr340">
         <h2>4. Worx Landroid Vision Cloud WR340</h2>
         <p className="measure">
-          If your banks stay within {worx.slope}%, we'd look at this for an open acre. Cloud RTK
+          If your banks go up to {worx.slope}%, we'd look at this for an open acre. Cloud RTK
           needs no antenna in your yard. Stereo vision is part of the same setup, and Worx says V-SLAM takes over in
           shade. Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre than the 1
           acre rating. The family write-up is the{" "}
@@ -607,7 +607,7 @@ export default function BestPage() {
           broken-up acre, that 1 acre rating is generous too.
         </p>
         <OwnerReports
-          intro="In the 3 owner threads we read in October 2026, and one independent review. The leaf report is about the older 2023 Vision, so it may not be the same on Vision Cloud."
+          intro="Here's what owners reported in the 3 owner threads we read in October 2026, and one independent review. The leaf report is about the older 2023 Vision, so it may not be the same on Vision Cloud."
           items={[
             {
               text: "One owner of the older 2023 Landroid Vision said theirs stopped at leaves, weeds and bald patches. That's a different model, so it may not happen on the Vision Cloud, but it's worth knowing if your lawn isn't perfect.",

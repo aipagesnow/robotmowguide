@@ -68,7 +68,7 @@ export default function ISeriesReview() {
         {formatAcres(i110.acres, false)} at {i110.slope}%.
       </p>
       <p className="measure">
-        If you've got a quarter acre and banks inside {i210.slope}%, the i210 AWD is the one we'd read. It's
+        If you've got a quarter acre and banks up to {i210.slope}%, the i210 AWD is the one we'd read. It's
         three-wheel all-wheel drive, with network RTK and vision, and no antenna to mount. The i206 AWD is
         the smaller current sibling, rated {formatAcres(i206.acres)}.
       </p>

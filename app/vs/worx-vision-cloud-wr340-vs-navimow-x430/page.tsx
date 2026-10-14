@@ -38,7 +38,7 @@ export default function VsWr340Page() {
       topic: "Slope",
       w: `${slopeWithRise(worx.slope, worx.degrees)}. Two-wheel drive.`,
       x: `${slopeWithRise(x430.slope, x430.degrees)}. All-wheel drive.`,
-      better: "We'd pick the X430. It covers banks between 30% and 84%, and banks inside 30% (17°) sit within the WR340's published maximum.",
+      better: "We'd pick the X430. It covers banks between 30% and 84%, and banks up to 30% (17°) sit within the WR340's published maximum.",
     },
     {
       topic: "Navigation",
@@ -75,7 +75,7 @@ export default function VsWr340Page() {
       disclosure
     >
       <p className="measure">
-        We'd buy the WR340 for an open acre whose banks stay inside {publishedSlope(worx.slope, worx.degrees)}.
+        We'd buy the WR340 for an open acre whose banks go up to {publishedSlope(worx.slope, worx.degrees)}.
         We'd buy the X430 when the banks are steeper, up to {x430.slope}%, and the side passage clears a{" "}
         {specText(x430.specs.bodyWidth)} body. Both are rated {formatAcres(x430.acres, false)}.
       </p>
@@ -132,7 +132,7 @@ export default function VsWr340Page() {
       <SlopeMarginNote />
       <h2>Choose the WR340</h2>
       <p className="measure">
-        We'd choose it when your acre is open, the banks stay at or under {worx.slope}%,
+        We'd choose it when your acre is open, the banks go up to {worx.slope}%,
         and you want cloud RTK without an antenna. Worx says lifetime RTK Cloud service at no extra cost.
         To be fair, that depends on Worx's cloud. The WR344, not this model, is the 4WD sibling at a much steeper slope.{" "}
         <SourceLine ids={["worx-vision-cloud"]} checked={SPEC_CHECKED} />
@@ -160,7 +160,7 @@ export default function VsWr340Page() {
         items={[
           {
             q: "Which one for a flat open acre?",
-            a: "Either rating is 1 acre. We'd choose the WR340 if you want cloud RTK at no extra cost in Worx's wording and the banks stay inside 30%. We'd choose the X430 if you want the steeper published slope or a cut that reaches 4 in.",
+            a: "Either rating is 1 acre. We'd choose the WR340 if you want cloud RTK at no extra cost in Worx's wording and the banks go up to 30%. We'd choose the X430 if you want the steeper published slope or a cut that reaches 4 in.",
           },
           {
             q: "Which one climbs a 40% bank?",

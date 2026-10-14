@@ -58,7 +58,7 @@ export default function Q110Review() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        If you've got an open quarter acre and banks inside {publishedSlope(q.slope, q.degrees)}, the Q110H
+        If you've got an open quarter acre and banks up to {publishedSlope(q.slope, q.degrees)}, the Q110H
         is a possible fit. It uses full-band RTK plus VSLAM and vision, so heavy canopy is a reason to look
         at a LiDAR mower instead.
       </p>
