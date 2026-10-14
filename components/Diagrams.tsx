@@ -298,24 +298,35 @@ export function MethodDiagram() {
     "Manufacturer US spec page and manual",
     "Owner threads and independent reviews, cited",
     "amazon.com listing check for the exact model",
-    "Placed on the ladder by rated area and slope",
+    "Listed by the lawn size and slope its maker rates",
     "Dated, and re-checked at least every 90 days",
   ];
   return (
     <Slot id="dia-method">
-      <Frame
-        title="Flow of how picks are researched, checked, and dated"
-        desc="Five steps: manufacturer pages, owner threads and independent reviews, an amazon.com listing check, a place on the ladder, and a re-check at least every 90 days. The page states that the work is research-based and the mowers have not been tested."
-        viewBox="0 0 720 460"
+      <figure
+        aria-label="How picks are researched, checked, and dated"
+        className="my-6 rounded-xl border p-5 sm:p-7"
+        style={{ background: "#eef6e8", borderColor: "#b8d4a8", color: "#1d2b1f" }}
       >
-        {steps.map((step, index) => (
-          <g key={step}>
-            <rect x={80} y={30 + index * 70} width={560} height={52} fill="none" stroke="#ffffff" />
-            <text x={100} y={62 + index * 70} fill="#ffffff" fontSize="16">{index + 1}. {step}</text>
-          </g>
-        ))}
-        <text x="80" y="420" fill="#dbe7f3" fontSize="14">Research-based: we have not tested these mowers.</text>
-      </Frame>
+        <ol className="m-0 grid list-none gap-3 p-0">
+          {steps.map((step, index) => (
+            <li
+              key={step}
+              className="flex items-start gap-3 rounded-lg border bg-white px-4 py-3 leading-snug"
+              style={{ borderColor: "#cfe2c3", fontSize: "1.0625rem" }}
+            >
+              <span
+                aria-hidden="true"
+                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-semibold"
+                style={{ background: "#2f6b34", color: "#ffffff", fontSize: "1rem" }}
+              >
+                {index + 1}
+              </span>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </figure>
     </Slot>
   );
 }

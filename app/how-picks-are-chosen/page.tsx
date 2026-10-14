@@ -24,8 +24,8 @@ export default function MethodPage() {
       whatChanged="October 13, 2026: names the licensed yard photographs."
     >
       <p className="measure">
-        A pick starts from the yard. The ladder places each current model at the lawn area its maker rates,
-        then shows the maximum slope that maker publishes. The work is research-based.
+        A pick starts from the yard. We list each current model by the lawn size its maker rates, then
+        show the maximum slope that maker publishes. The work is research-based.
       </p>
       <YardPhoto id="photo-method" />
       <MethodDiagram />
