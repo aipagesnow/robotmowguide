@@ -44,8 +44,8 @@ export default function StAugustinePage() {
       disclosure
     >
       <p className="measure">
-        For standard St. Augustine, start with a mower whose published cut reaches 3.5 inches, and prefer one
-        that reaches 4 inches. On this site that is the Navimow X430 at {specText(x430.specs.cuttingHeight)} and
+        If you've got standard St. Augustine, we'd start with a mower whose published cut reaches 3.5 inches, and prefer one
+        that reaches 4 inches. That points to the Navimow X430 at {specText(x430.specs.cuttingHeight)} and
         the Automower 420 iQ at {specText(iq.specs.cuttingHeight)}. The Dreame A3 AWD Pro 2500 reaches{" "}
         {specText(dreame.specs.cuttingHeight)}. The standard LUBA 3 AWD 3000 stops at{" "}
         {specText(luba.specs.cuttingHeight)}.
@@ -91,12 +91,12 @@ export default function StAugustinePage() {
       <p className="measure">
         UF/IFAS says standard cultivars, including BitterBlue, Classic, and Floratam, should be mowed at 3.5–4
         inches with a rotary mower. The same publication says dwarf cultivars should be mowed at 2.5 inches,
-        and later says dwarf varieties should be mowed at 2–2.5 inches. Both sentences are on the page. It
+        and later says dwarf varieties should be mowed at 2–2.5 inches. Both sentences are in that guide. It
         also says University of Florida research kept Floratam at 2.4 inches year-round with a robotic mower
-        and saw no negative effects. That research note does not replace the 3.5–4 inch line for a standard
+        and saw no negative effects. That research note doesn't replace the 3.5–4 inch line for a standard
         lawn.{" "}
         <a href="https://edis.ifas.ufl.edu/publication/LH010">St. Augustinegrass for Florida Lawns, UF/IFAS LH010</a>
-        , checked Oct 13, 2026.
+        , as of Oct 13, 2026.
       </p>
       <p className="measure">
         NC State says to maintain St. Augustine between 2.5 and 4 inches, with the higher cut more tolerant
@@ -104,53 +104,53 @@ export default function StAugustinePage() {
         <a href="https://content.ces.ncsu.edu/st-augustinegrass-lawn-maintenance-calendar">
           St. Augustinegrass Lawn Maintenance Calendar
         </a>
-        . The same 2.5–4 inch band is in NC State’s mowing table.{" "}
+        . The same 2.5–4 inch band is in NC State's mowing table.{" "}
         <a href="https://content.ces.ncsu.edu/caring-for-your-lawn-and-the-environment">
           Caring for Your Lawn and the Environment
         </a>
-        . Texas A&M AgriLife’s warm-season table lists St. Augustinegrass lawns at 2.5 to 4 inches.{" "}
+        . Texas A&M AgriLife's warm-season table lists St. Augustinegrass lawns at 2.5 to 4 inches.{" "}
         <a href="https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Turf-Cutting-height.pdf">
           Mowing Recommendations for Warm-Season Turfgrasses, ESC-052
         </a>
-        . The three services are not averaged here.
+        . We wouldn't average the three services into one height.
       </p>
       <GrassChart focus="st-augustine" />
       <h2>Models that stop short</h2>
       <p className="measure">
-        The standard LUBA 3 AWD 3000 is published at {specText(luba.specs.cuttingHeight)}. That top is under
-        3.5 inches. The high-cut row is {specText(high.specs?.cuttingHeight)}, and that row has no confirmed
+        The standard LUBA 3 AWD 3000 stops short for a tall St. Augustine lawn. It's published at {specText(luba.specs.cuttingHeight)}, and that top is under
+        3.5 inches. The high-cut version is {specText(high.specs?.cuttingHeight)}, and it has no confirmed
         amazon.com listing on the LUBA page. The Automower 435 iQ AWD and the 435X AWD are published at
-        1.2–2.8 inches. The RockNeo Q110H English technical data tops out at 3.15 inches. eufy’s robot-mower
-        support page tells buyers to avoid dense zoysia and St. Augustine, and to keep grass under 3.5
+        1.2–2.8 inches. The RockNeo Q110H English technical data tops out at 3.15 inches. eufy's robot-mower
+        support page tells you to avoid dense zoysia and St. Augustine, and to keep grass under 3.5
         inches.{" "}
         <a href="https://service.eufy.com/article-description/What-should-customers-confirm-before-purchasing-to-ensure-optimal-performance">
           eufy support, before you buy
         </a>
-        , checked Oct 13, 2026. eufy is not a pick on this site.
+        , as of Oct 13, 2026. eufy isn't a pick we'd make.
       </p>
       <Faq
         items={[
           {
             q: "Can a robot cut thick St. Augustine at 3.5 to 4 inches?",
-            a: "Only if the model’s published maximum reaches that height. The X430 and the 410 iQ and 420 iQ publish a 4 inch top. Several other current models stop between 2.7 and 3.5 inches.",
+            a: "Only if your model's published maximum reaches that height. The X430 and the 410 iQ and 420 iQ publish a 4 inch top. Several other current models stop between 2.7 and 3.5 inches.",
           },
           {
             q: "Do dwarf St. Augustine lawns need the same height?",
-            a: "UF/IFAS prints 2.5 inches for dwarf cultivars in one sentence and 2–2.5 inches in another. A mower that cannot go below 2.2 inches is a poor match for the low end of that dwarf band.",
+            a: "UF/IFAS prints 2.5 inches for dwarf cultivars in one sentence and 2–2.5 inches in another. If your mower can't go below 2.2 inches, we'd call it a poor match for the low end of that dwarf band.",
           },
           {
             q: "Does the Florida robotic-mower note mean 2.4 inches is the new standard?",
-            a: "No. UF/IFAS still prints 3.5–4 inches for standard cultivars. The 2.4 inch line is a research result for Floratam under constant robotic mowing.",
+            a: "No. UF/IFAS still prints 3.5–4 inches for standard cultivars. The 2.4 inch line is a research result for Floratam under constant robotic mowing, not the height we'd plan on for a standard lawn.",
           },
         ]}
       />
       <ResearchedBox
         scope="group"
         sources={researched.map((id) => ({ id }))}
-        manuals="Cutting heights are the figures already on each review. No new manual was opened for this chart."
-        threads="No new owner threads were opened for this page."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Grass pages checked Oct 13, 2026. Mower cuts checked Oct 10, 2026."
+        manuals="Cutting heights are the figures already on each review. No extra manual for the chart."
+        threads="No new owner threads on the grass heights."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Grass pages as of Oct 13, 2026. Mower cuts as of Oct 10, 2026."
       />
       <h2>Sources</h2>
       <ul className="grid gap-2 pl-5">

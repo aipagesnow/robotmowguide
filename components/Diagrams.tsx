@@ -32,7 +32,7 @@ export function YardQuarter() {
     <Slot id="dia-yard-quarter">
       <Frame
         title="Plan of a flat quarter-acre suburban lot with front and back lawns"
-        desc="Example plan, not a survey. The lot is 90 feet by 121 feet, which is 10,890 square feet, or 0.25 acre. It shows a house, a driveway, a front lawn, and a back lawn."
+        desc="Example plan, not a survey. If your lot is 90 feet by 121 feet, that's 10,890 square feet, or 0.25 acre. It shows a house, a driveway, a front lawn, and a back lawn."
         viewBox="0 0 720 460"
       >
         <PlanRect x={70} y={50} w={580} h={340} label="Lot 90 ft × 121 ft" sub="10,890 sq ft · 0.25 acre" />
@@ -42,7 +42,7 @@ export function YardQuarter() {
         <text x="465" y="230" fill="#dbe7f3" fontSize="13" textAnchor="middle">Drive</text>
         <text x="340" y="110" fill="#dbe7f3" fontSize="14" textAnchor="middle">Front lawn</text>
         <text x="300" y="330" fill="#dbe7f3" fontSize="14" textAnchor="middle">Back lawn</text>
-        <text x="80" y="430" fill="#dbe7f3" fontSize="13">Example plan of a flat quarter-acre lot, with a front lawn and a back lawn.</text>
+        <text x="80" y="430" fill="#dbe7f3" fontSize="13">An example of a flat quarter-acre lot, with a front lawn and a back lawn.</text>
       </Frame>
     </Slot>
   );
@@ -53,7 +53,7 @@ export function YardHalf() {
     <Slot id="dia-yard-half-zones">
       <Frame
         title="Plan of a half-acre lot whose front and back lawns are joined by a narrow side passage"
-        desc="Example plan, not a survey. The lot is 132 feet by 165 feet, 21,780 square feet, or 0.5 acre. A 3 foot passage joins the front and back lawns."
+        desc="Example plan, not a survey. If your lot is 132 feet by 165 feet, that's 21,780 square feet, or 0.5 acre. A 3 foot passage joins the front and back lawns."
         viewBox="0 0 720 480"
       >
         <PlanRect x={60} y={40} w={600} h={380} label="Lot 132 ft × 165 ft" sub="21,780 sq ft · 0.5 acre" />
@@ -63,7 +63,7 @@ export function YardHalf() {
         <text x="500" y="200" fill="#ffffff" fontSize="13">Passage 3 ft</text>
         <text x="200" y="100" fill="#dbe7f3" fontSize="14">Front lawn</text>
         <text x="200" y="360" fill="#dbe7f3" fontSize="14">Back lawn</text>
-        <text x="70" y="450" fill="#dbe7f3" fontSize="13">The pink line is a 3 ft side passage. A mower wider than the gap cannot pass.</text>
+        <text x="70" y="450" fill="#dbe7f3" fontSize="13">The pink line is a 3 ft side passage. If your mower is wider than that gap, it can't get through.</text>
       </Frame>
     </Slot>
   );
@@ -74,7 +74,7 @@ export function YardAcre() {
     <Slot id="dia-yard-acre">
       <Frame
         title="Plan of an open one-acre lot with a long driveway"
-        desc="Example plan, not a survey. The lot is 180 feet by 242 feet, 43,560 square feet, or 1 acre, with a long drive and a few beds."
+        desc="Example plan, not a survey. If your lot is 180 feet by 242 feet, that's 43,560 square feet, or 1 acre, with a long drive and a few beds."
         viewBox="0 0 720 480"
       >
         <PlanRect x={50} y={36} w={640} h={390} label="Lot 180 ft × 242 ft" sub="43,560 sq ft · 1 acre" />
@@ -96,7 +96,7 @@ export function YardWooded() {
     <Slot id="dia-yard-wooded">
       <Frame
         title="Plan of a wooded lot with tree canopy over a third of the lawn"
-        desc="Example plan. Three canopy circles are sized to cover about one third of the lawn area. Canopy is where a satellite fix often weakens."
+        desc="Example plan. Three canopy circles cover about one third of the lawn. If your trees shade that much, that's where a satellite fix often weakens."
         viewBox="0 0 720 480"
       >
         <PlanRect x={60} y={40} w={600} h={380} label="Example lawn under trees" sub="Canopy about 1/3 of the lawn" />
@@ -104,7 +104,7 @@ export function YardWooded() {
         <circle cx="360" cy="180" r="70" fill="#1d4f80" stroke="#dbe7f3" />
         <circle cx="470" cy="300" r="70" fill="#1d4f80" stroke="#dbe7f3" />
         <text x="300" y="250" fill="#ffffff" fontSize="14" textAnchor="middle">Canopy</text>
-        <text x="80" y="450" fill="#dbe7f3" fontSize="13">Shaded circles: tree canopy over about one third of the lawn.</text>
+        <text x="80" y="450" fill="#dbe7f3" fontSize="13">Shaded circles show tree canopy over about one third of the lawn.</text>
       </Frame>
     </Slot>
   );
@@ -116,7 +116,7 @@ export function YardHillside() {
     <Slot id="dia-yard-hillside">
       <Frame
         title="Plan of a hillside lot with contour lines and the steepest bank marked"
-        desc={`Example bank, not a survey and not a mower rating. The steepest bank rises 4 feet over 10 feet, which is 40 percent, ${deg}.`}
+        desc={`Example bank, not a survey and not a mower rating. If your steepest bank rises 4 feet over 10 feet, that's 40 percent, ${deg}.`}
         viewBox="0 0 720 460"
       >
         {[0, 1, 2, 3, 4].map((line) => (
@@ -131,7 +131,7 @@ export function YardHillside() {
         <polygon points="460,250 560,250 560,290" fill="none" stroke="#f2c230" strokeWidth="2" />
         <text x="470" y="245" fill="#f2c230" fontSize="14">Example bank 40% ({deg})</text>
         <text x="575" y="275" fill="#f2c230" fontSize="12">4 ft rise / 10 ft</text>
-        <text x="80" y="420" fill="#dbe7f3" fontSize="13">Contour lines. The yellow triangle is an example 40% bank, not a product rating.</text>
+        <text x="80" y="420" fill="#dbe7f3" fontSize="13">Contour lines on a slope. The yellow triangle is an example 40% bank, not a mower's rating.</text>
       </Frame>
     </Slot>
   );
@@ -142,7 +142,7 @@ export function YardFlorida() {
     <Slot id="dia-yard-florida">
       <Frame
         title="Plan of a Florida yard with a pool cage, palms, and St. Augustine lawn"
-        desc="Example Florida lot with a screened pool cage, two palms, and a St. Augustine lawn. Not a survey."
+        desc="An example Florida lot with a screened pool cage, two palms, and a St. Augustine lawn. Not a survey."
         viewBox="0 0 720 460"
       >
         <PlanRect x={60} y={40} w={600} h={360} label="St. Augustine lawn" sub="Example Florida yard" />
@@ -153,7 +153,7 @@ export function YardFlorida() {
         <line x1="230" y1="150" x2="230" y2="90" stroke="#dbe7f3" strokeWidth="2" />
         <circle cx="230" cy="74" r="22" fill="none" stroke="#dbe7f3" />
         <text x="140" y="330" fill="#dbe7f3" fontSize="13">Two palms</text>
-        <text x="70" y="430" fill="#dbe7f3" fontSize="13">Example only. Cut height matters more than the plan: St. Augustine is often kept tall.</text>
+        <text x="70" y="430" fill="#dbe7f3" fontSize="13">Example only. If your lawn is St. Augustine, cut height matters more than the plan, because it's often kept tall.</text>
       </Frame>
     </Slot>
   );
@@ -175,7 +175,7 @@ export function AcreSquares() {
     <Slot id="dia-acres">
       <Frame
         title="Squares comparing lawn sizes from an eighth of an acre to one acre"
-        desc="Five squares whose sides scale with the square root of the area, labeled in acres and square feet. A worked example subtracts a house, a drive, and beds from a quarter-acre lot."
+        desc="Five squares whose sides scale with the square root of the area, labeled in acres and square feet. The example takes a house, a drive, and beds out of a quarter-acre lot so you can see what's left to mow."
         viewBox="0 0 760 420"
       >
         {sizes.map((acres, index) => {
@@ -194,7 +194,7 @@ export function AcreSquares() {
             </g>
           );
         })}
-        <text x="30" y="300" fill="#ffffff" fontSize="15">Example: lot minus house, drive, and beds</text>
+        <text x="30" y="300" fill="#ffffff" fontSize="15">Example: your lot minus the house, the drive, and the beds</text>
         <text x="30" y="328" fill="#dbe7f3" fontSize="14">0.25 acre lot, 10,890 sq ft</text>
         <text x="30" y="350" fill="#dbe7f3" fontSize="14">− house 1,200 sq ft − drive 600 sq ft − beds 400 sq ft</text>
         <text x="30" y="376" fill="#ffffff" fontSize="14">= about 8,690 sq ft of lawn in this example</text>
@@ -235,7 +235,7 @@ export function NavFour({ highlight = [] }: { highlight?: string[] }) {
     <Slot id="dia-nav-four">
       <Frame
         title="Four plan views of one yard showing boundary wire, antenna RTK, network RTK, and LiDAR or camera navigation"
-        desc="The same yard four ways. Under each plan: what that navigation needs, and what weakens it. Highlighted panels are the ones used by the mower on this page, when a highlight is set."
+        desc="The same yard four ways. Under each plan is what that navigation needs, and what weakens it. A highlighted panel shows the navigation that mower uses, when a highlight is set."
         viewBox="0 0 760 460"
       >
         {NAV_PANELS.map((panel, index) => {
@@ -265,7 +265,7 @@ export function AntennaDiagram() {
     <Slot id="dia-antenna">
       <Frame
         title="Diagram of good and bad places to mount an RTK antenna"
-        desc="Roofline and an open pole keep sky view. Under the eaves and against a wall block it. Husqvarna's EPOS guidance asks for at least 6.5 feet of height and 135 degrees of open sky for its reference station."
+        desc="A roofline and an open pole keep the sky view. Under the eaves and against a wall block it. Husqvarna's EPOS guidance asks for at least 6.5 feet of height and 135 degrees of open sky for its reference station."
         viewBox="0 0 760 420"
       >
         <AntennaCase x={20} label="Roofline" note="Open sky" ok />
@@ -273,9 +273,9 @@ export function AntennaDiagram() {
         <AntennaCase x={380} label="Under eaves" note="Poor sky view" ok={false} />
         <AntennaCase x={560} label="Against a wall" note="Poor sky view" ok={false} />
         <text x="20" y="300" fill="#ffffff" fontSize="14">Sky-view cone: 135° of open sky above the antenna</text>
-        <text x="20" y="330" fill="#dbe7f3" fontSize="13">Husqvarna EPOS guidance: mount the reference station at least 6.5 ft (2 m) up,</text>
-        <text x="20" y="350" fill="#dbe7f3" fontSize="13">with at least 135° of sky. That is Husqvarna’s rule for its own station, not a universal spec.</text>
-        <text x="20" y="380" fill="#dbe7f3" fontSize="13">The mower also needs sky along its path. Raising only the antenna does not fix canopy over the lawn.</text>
+        <text x="20" y="330" fill="#dbe7f3" fontSize="13">Husqvarna EPOS says: mount the reference station at least 6.5 ft (2 m) up,</text>
+        <text x="20" y="350" fill="#dbe7f3" fontSize="13">with at least 135° of sky. That's Husqvarna's rule for its own station, not every brand's.</text>
+        <text x="20" y="380" fill="#dbe7f3" fontSize="13">The mower also needs sky along its path. Raising only the antenna doesn't fix canopy over your lawn.</text>
       </Frame>
     </Slot>
   );
@@ -295,16 +295,16 @@ function AntennaCase({ x, label, note, ok }: { x: number; label: string; note: s
 
 export function MethodDiagram() {
   const steps = [
-    "Manufacturer US spec page and manual",
-    "Owner threads and independent reviews, cited",
-    "amazon.com listing check for the exact model",
-    "Listed by the lawn size and slope its maker rates",
-    "Dated, and re-checked at least every 90 days",
+    "The maker's US spec page and the manual",
+    "Owner threads and independent reviews, with a link",
+    "The amazon.com page for that exact model",
+    "Lined up by the lawn size and slope the maker rates",
+    "Dated, and read again at least every 90 days",
   ];
   return (
     <Slot id="dia-method">
       <figure
-        aria-label="How picks are researched, checked, and dated"
+        aria-label="How a pick is researched and dated"
         className="my-6 rounded-xl border p-5 sm:p-7"
         style={{ background: "#eef6e8", borderColor: "#b8d4a8", color: "#1d2b1f" }}
       >
@@ -336,8 +336,8 @@ export function AffiliateDiagram() {
   return (
     <Slot id="dia-affiliate">
       <Frame
-        title="How an Amazon paid link works for the reader"
-        desc="You click a See on Amazon link, which opens amazon.com. A qualifying purchase may pay this site a commission. The price you pay is the same."
+        title="How an Amazon paid link works for you"
+        desc="You click a See on Amazon link, and it opens amazon.com. A qualifying purchase may pay this site a commission. The price you pay stays the same."
         viewBox="0 0 720 360"
       >
         {steps.map((step, index) => (
@@ -356,7 +356,7 @@ export function CanopyDiagram() {
     <Slot id="dia-canopy">
       <Frame
         title="Plan showing where tree canopy weakens satellite positioning and how other navigation takes over"
-        desc="Example plan, not a survey. A canopy circle is marked as a weak satellite fix. A mower glyph in the open is labeled satellite or network RTK. A mower glyph under the canopy is labeled LiDAR or camera. The mower needs sky along its path, not only at an antenna."
+        desc="Example plan, not a survey. The canopy circle is where a satellite fix gets weak. A mower in the open is labeled satellite or network RTK. A mower under the canopy is labeled LiDAR or camera. Your mower needs sky along its path, not only at an antenna."
         viewBox="0 0 720 460"
       >
         <rect x="60" y="40" width="600" height="340" fill="none" stroke="#ffffff" />
@@ -368,7 +368,7 @@ export function CanopyDiagram() {
         <text x="168" y="176" fill="#f2c230" fontSize="13">Open sky: RTK</text>
         <rect x="400" y="250" width="36" height="22" fill="none" stroke="#ffffff" />
         <text x="360" y="300" fill="#ffffff" fontSize="13" textAnchor="middle">Under canopy: LiDAR or camera</text>
-        <text x="70" y="420" fill="#dbe7f3" fontSize="13">The mower needs sky along its path, not only at an antenna.</text>
+        <text x="70" y="420" fill="#dbe7f3" fontSize="13">Your mower needs sky along its whole path, not only up at the antenna.</text>
       </Frame>
     </Slot>
   );
@@ -379,7 +379,7 @@ export function ZonesMap() {
     <Slot id="dia-zones">
       <Frame
         title="Map of a yard with front and back zones, a transit path and a no-go bed"
-        desc="Example map, not a brand app and not a survey. A front zone and a back zone are joined by a side passage. A flower bed is marked no-go. A bed beyond a fence is marked as a zone you would carry the mower to."
+        desc="Example map, not a brand app and not a survey. A front zone and a back zone are joined by a side passage. A flower bed is marked no-go. A bed past a fence is a zone you'd carry the mower to."
         viewBox="0 0 720 460"
       >
         <rect x="70" y="40" width="250" height="160" fill="none" stroke="#ffffff" />
@@ -393,7 +393,7 @@ export function ZonesMap() {
         <rect x="560" y="50" width="90" height="60" fill="none" stroke="#f2c230" />
         <text x="605" y="76" fill="#f2c230" fontSize="12" textAnchor="middle">Carry zone</text>
         <text x="605" y="92" fill="#f2c230" fontSize="11" textAnchor="middle">past a fence</text>
-        <text x="70" y="430" fill="#dbe7f3" fontSize="13">Example only. A passage the mower cannot use splits the yard into two maps, or into a carry.</text>
+        <text x="70" y="430" fill="#dbe7f3" fontSize="13">Example only. If your mower can't use the passage, your yard splits into two maps, or you carry it.</text>
       </Frame>
     </Slot>
   );
@@ -404,7 +404,7 @@ export function PassageDiagram() {
     <Slot id="dia-passage-width">
       <Frame
         title="Gauge comparing mower widths with gate and side-passage widths"
-        desc="Dimension lines only. The Navimow X430 body width is 24 inches. The LUBA 3 AWD 3000 narrowest gap is 27.6 inches. The LiDAX Ultra 2000 listing says 23.6 inch paths. Example gates at 36 and 32 inches are not product specs."
+        desc="Dimension lines only. The Navimow X430 body width is 24 inches. The LUBA 3 AWD 3000 narrowest gap is 27.6 inches. The LiDAX Ultra 2000 page says 23.6 inch paths. Example gates at 36 and 32 inches aren't product specs."
         viewBox="0 0 720 420"
       >
         <text x="40" y="40" fill="#ffffff" fontSize="16">Published limits, then two example gates</text>
@@ -420,7 +420,7 @@ export function PassageDiagram() {
             <line x1="40" y1={96 + index * 60} x2={40 + Number(width)} y2={96 + index * 60} stroke="#ffffff" strokeWidth="8" />
           </g>
         ))}
-        <text x="40" y="390" fill="#dbe7f3" fontSize="13">Measure your passage. The bars are the published figures, not a promise the mower fits.</text>
+        <text x="40" y="390" fill="#dbe7f3" fontSize="13">Measure your own passage. The bars are the published figures, not a promise it'll fit your gate.</text>
       </Frame>
     </Slot>
   );
@@ -428,16 +428,16 @@ export function PassageDiagram() {
 
 export function SeasonsDiagram() {
   const steps = [
-    "Spring: put the dock back and check the map",
-    "Summer: daily mowing on the schedule",
-    "Fall: leaves can hide edges and stop a camera",
+    "Spring: put the dock back and look over the map",
+    "Summer: it mows on the schedule you set",
+    "Fall: leaves can hide the edges and stop a camera",
     "Winter: use the storage temperature in that model's manual",
   ];
   return (
     <Slot id="dia-seasons">
       <Frame
-        title="Timeline of a robot mower's year from spring setup to winter storage"
-        desc="Four seasons. Winter points at the storage temperature in the model's manual. This diagram does not invent a charge level."
+        title="A year with a robot mower, from spring setup to winter storage"
+        desc="Four seasons of the year. Winter points you to the storage temperature in that model's manual. No charge level is shown."
         viewBox="0 0 720 400"
       >
         {steps.map((step, index) => (
@@ -465,7 +465,7 @@ export function SpecPlate({ familyId, slotId, modelName }: { familyId: string; s
     <Slot id={slotId}>
       <Frame
         title={slotId === "plate-x4" ? "Spec diagram for the Segway Navimow X4 series" : "Spec diagram for the Mammotion LUBA 3 AWD series"}
-        desc={`${modelName}. Rated area ${formatAcres(acres)}. Slope ${slope}% (${deg}). Navigation: ${navigationLabel(family.navigation)}. Cutting width ${width ?? "not published"} inches. Cutting height ${height ?? "not published"} inches.`}
+        desc={`${modelName} is rated for ${formatAcres(acres)}. The slope is ${slope}% (${deg}). Navigation: ${navigationLabel(family.navigation)}. Cutting width is ${width ?? "not published"} inches. Cutting height is ${height ?? "not published"} inches.`}
         viewBox="0 0 720 420"
       >
         <text x="24" y="36" fill="#ffffff" fontSize="18">{family.family}</text>
@@ -482,7 +482,7 @@ export function SpecPlate({ familyId, slotId, modelName }: { familyId: string; s
         <text x="24" y="320" fill="#ffffff" fontSize="14">Navigation: {navigationLabel(family.navigation)}</text>
         <text x="24" y="348" fill="#dbe7f3" fontSize="14">Cut width: {width ? `${width} in` : "Not published"}</text>
         <text x="280" y="348" fill="#dbe7f3" fontSize="14">Cut height: {height ? `${height} in` : "Not published"}</text>
-        <text x="24" y="390" fill="#dbe7f3" fontSize="12">No product drawing. Figures are the published specs for {modelName}.</text>
+        <text x="24" y="390" fill="#dbe7f3" fontSize="12">No product drawing. These are the published specs for {modelName}.</text>
       </Frame>
     </Slot>
   );

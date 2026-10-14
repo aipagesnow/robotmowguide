@@ -29,12 +29,12 @@ export function PassageGauge({ limits }: { limits: PassageLimit[] }) {
         />
       </label>
       <p className="m-0 text-[0.95rem] text-graphite">
-        Measure the opening the mower must pass, gate hardware included. A result only compares that number
+        Measure the opening your mower has to get through, hardware and all. The result only compares that number
         with the published figure.
       </p>
       <div className="table-scroll">
         <table className="data">
-          <caption>Your measurement against published passage figures.</caption>
+          <caption>Your gap next to the published passage figures.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -48,8 +48,8 @@ export function PassageGauge({ limits }: { limits: PassageLimit[] }) {
                 gap === null
                   ? "Enter a width."
                   : gap + 1e-9 >= limit.inches
-                    ? "At least as wide as the published figure."
-                    : "Narrower than the published figure.";
+                    ? "Your gap is at least as wide as the published figure."
+                    : "Your gap is narrower than the published figure.";
               return (
                 <tr key={limit.model}>
                   <th scope="row">

@@ -35,8 +35,8 @@ export function Ladder({ picks = "elsewhere" }: { picks?: "below" | "elsewhere" 
     <section aria-labelledby="ladder-heading">
       <h2 id="ladder-heading">The ladder: rated area, then slope</h2>
       <p className="measure">
-        Each current model sits at the lawn area its maker rates it for. The percent beside it is that
-        model’s published maximum slope. A solid mark is wire-free. A dashed mark uses a boundary wire.{" "}
+        Each current model sits at the lawn size its maker rates it for. The percent next to it is that
+        model's steepest published slope. A solid mark is wire-free. A dashed mark means a boundary wire.{" "}
         {picks === "below"
           ? "A numbered tag marks one of the five picks below."
           : "A numbered tag marks one of the five picks on the best-mowers page."}
@@ -45,9 +45,9 @@ export function Ladder({ picks = "elsewhere" }: { picks?: "below" | "elsewhere" 
         <LadderDrawing rows={rows} />
       </Slot>
       <div className="table-scroll mt-4">
-        <p className="scroll-cue">Swipe sideways to read every column.</p>
+        <p className="scroll-cue">Swipe sideways to see every column.</p>
         <table className="data">
-          <caption>Robot mowers by rated lawn area and maximum slope. Figures checked Oct 10, 2026.</caption>
+          <caption>Robot mowers by the lawn area they're rated for, then maximum slope. Figures checked Oct 10, 2026.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -99,10 +99,10 @@ function LadderDrawing({ rows }: { rows: LadderRow[] }) {
         aria-labelledby="ladder-title ladder-desc"
         className="block h-auto w-full"
       >
-        <title id="ladder-title">Diagram ranking robot mowers by rated lawn area, with each model’s maximum slope</title>
+        <title id="ladder-title">Mowers lined up by rated lawn area, with each model's maximum slope</title>
         <desc id="ladder-desc">
-          A scale from 0 to 2 acres. Each current model is a row, marked at its rated area, with its maximum slope.
-          Numbered rows are the five picks. Solid lines are wire-free. Dashed lines use a boundary wire. A dotted line can run wire-free or with a boundary wire.
+          A scale from 0 to 2 acres. Each current model is a row at the lawn size it's rated for, with its steepest slope.
+          Numbered rows are the five picks. Solid lines are wire-free. Dashed lines use a boundary wire. A dotted line can run wire-free or on a boundary wire.
         </desc>
         <rect width="760" height={height} fill="#123a63" />
         {[0, 0.5, 1, 1.5, 2].map((tick) => (

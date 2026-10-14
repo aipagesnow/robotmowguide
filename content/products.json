@@ -627,9 +627,9 @@
         }
       ],
       "notFor": [
-        "Side passages narrower than about 2 ft (24 in body)",
-        "Yards with no reliable Wi-Fi or cell coverage at the lawn (network RTK)",
-        "Buyers who don't want a yearly connectivity fee after the free period"
+        "If your side passage is narrower than about 2 ft, the 24 in body won't get through.",
+        "If your lawn doesn't have reliable Wi-Fi or cell coverage, network RTK won't have the signal it needs.",
+        "If you don't want a yearly connectivity fee after the free period, we'd look at something else."
       ],
       "supportOutlook": "FCC waiver allows security and compatibility updates for already-authorized models until at least Jan 1, 2029 (DA 26-789).",
       "plannedPages": [
@@ -905,9 +905,9 @@
         }
       ],
       "notFor": [
-        "Tall-cut lawns (St. Augustine, summer fescue) on the standard version, which tops out at 2.7 in",
-        "Buyers who want a mature, stable app (owner reports and app-store reviews are mixed; re-check)",
-        "Anyone counting on features Mammotion lists as launching later"
+        "If you keep St. Augustine or summer fescue tall, the standard version tops out at 2.7 in.",
+        "If you want a mature, stable app, the owner reports and app-store reviews are mixed.",
+        "If you're counting on features Mammotion lists as launching later, we wouldn't treat those as ready."
       ],
       "supportOutlook": "Covered by the FCC update waiver until at least Jan 1, 2029. Mammotion has no Conditional Approval for new models (FCC table, Oct 9, 2026).",
       "plannedPages": [
@@ -1228,9 +1228,9 @@
         }
       ],
       "notFor": [
-        "Steep yards on the 2WD models (30%); only the WR344 4WD is rated for 84%",
-        "Lawns with patchy or weedy areas that vision may read as 'not grass'",
-        "Very complex 1-acre yards: the rating is generous for multi-zone lots"
+        "If your yard is steep, we'd skip the 2WD models at 30%, because only the WR344 4WD is rated for 84%.",
+        "If your lawn has patchy or weedy areas, vision may read those spots as 'not grass'.",
+        "On a very complex 1-acre yard, the rating is generous for a multi-zone lot."
       ],
       "supportOutlook": "Worx has no Conditional Approval for new models; existing authorized models covered by the update waiver to at least Jan 1, 2029.",
       "variantRule": "WR344 is a 4WD sibling with a very different slope rating; it stays on this family page as its own variant row and its own CTA.",
@@ -1480,9 +1480,9 @@
         }
       ],
       "notFor": [
-        "Hot, full-sun Southern yards where midday mowing matters (owner reports of LiDAR heat pauses)",
-        "Tall-cut lawns if you want the edge mode on",
-        "Sandy soil or often-wet turf (rutting reports)"
+        "If your Southern yard is hot and in full sun, and midday mowing matters, owner reports describe LiDAR heat pauses.",
+        "If you keep the grass tall and you want the edge mode on, we'd skip it.",
+        "If your soil is sandy or the turf is often wet, owners report rutting."
       ],
       "supportOutlook": "Covered by the update waiver to at least Jan 1, 2029; no Conditional Approval for new Dreame models.",
       "plannedPages": [
@@ -1668,8 +1668,8 @@
         }
       ],
       "notFor": [
-        "Lawns over about a third of an acre, or complex ones near that size",
-        "Buyers who want the standard version for Bermuda but buy the H by mistake (check the height range)"
+        "If your lawn is over about a third of an acre, or it's a complex one near that size, we'd look at a larger mower.",
+        "If you want the standard version for Bermuda, don't buy the H by mistake, because the height range is what separates them."
       ],
       "supportOutlook": "Covered by the update waiver to at least Jan 1, 2029.",
       "plannedPages": [
@@ -1985,8 +1985,8 @@
       ],
       "ownerReportsNote": "Few independent owner reports exist yet. Several other posts on r/MOVASmartGardenHub say MOVA provided the unit. Do not treat those as ordinary owner reports. Say plainly that few owner reports exist yet.",
       "notFor": [
-        "Steep yards on the 1000/2000 (45%); only the 3000 AWD is rated 80%",
-        "Hot full-sun yards: same LiDAR heat question as other LiDAR mowers (no MOVA-specific reports yet)"
+        "If your yard is steep, the 1000 and the 2000 stop at 45%, and only the 3000 AWD is rated 80%.",
+        "If your yard is hot and in full sun, there's the same LiDAR heat question as other LiDAR mowers, and there are no MOVA-specific reports yet."
       ],
       "relationNote": "MOVA is reported as Dreame-affiliated (unconfirmed). The Ultra 3000 AWD's published dimensions match the Dreame A3 AWD Pro (740 × 532 mm). Mention only if confirmed.",
       "plannedPages": [
@@ -2137,8 +2137,8 @@
       "ownerReports": [],
       "ownerReportsNote": "Checked r/Roborock and r/roboticLawnmowers on Oct 13, 2026. Threads that turned up name the Q110 or Q105, not the US Q110H. Do not use those as Q110H owner reports. Say that few Q110H owner reports exist yet.",
       "notFor": [
-        "Lawns kept taller than 3.15 in",
-        "Heavy tree cover (RTK-led navigation)"
+        "If you keep the lawn taller than 3.15 in, this cut won't reach it.",
+        "If you've got heavy tree cover, RTK-led navigation is a weak fit."
       ],
       "plannedPages": [
         "/reviews/roborock-rockneo-q110h",
@@ -2461,9 +2461,9 @@
         }
       ],
       "notFor": [
-        "Yards over a quarter acre",
-        "Heavy tree cover",
-        "Steep banks over 45%"
+        "If your yard is over a quarter acre, we'd look at a larger mower.",
+        "If you've got heavy tree cover, this family isn't the one we'd pick.",
+        "If your banks are steeper than 45%, we'd look at a mower rated for more."
       ],
       "plannedPages": [
         "/reviews/segway-navimow-i-series",
@@ -2511,8 +2511,8 @@
         }
       ],
       "notFor": [
-        "Owners who plan to keep a mower past warranty (parts reports)",
-        "Heavy tree cover (RTK antenna)"
+        "If you plan to keep a mower past the warranty, the parts reports are a reason we'd hesitate.",
+        "If you've got heavy tree cover, the RTK antenna is a weak fit."
       ],
       "primaryVariant": "GOAT O1000 RTK",
       "variants": [
@@ -2646,8 +2646,8 @@
       "status": "current",
       "statusDate": "2026-10-10",
       "notFor": [
-        "Anyone who doesn't want to lay and maintain a boundary wire",
-        "Busy yards with toys and pets (bump-sensor obstacle detection only)"
+        "If you don't want to lay and maintain a boundary wire, we'd skip this one.",
+        "If your yard is busy with toys and pets, obstacle detection is only a bump sensor, so we'd look elsewhere."
       ],
       "ownerReports": [],
       "fccNote": "Has Wi-Fi/Bluetooth app control, so it very likely meets the FCC device definition; existing authorization stands.",
@@ -3010,9 +3010,9 @@
         }
       ],
       "notFor": [
-        "Budgets under about $2,600 for wire-free",
-        "Steep slopes near the edges on the iQ (15% boundary limit)",
-        "Heavily wooded lots without adding wire assist"
+        "If your budget for a wire-free mower is under about $2,600, we'd look at something else.",
+        "If your steep slopes sit near the edges, the iQ boundary limit is 15%.",
+        "If your lot is heavily wooded and you don't want to add wire assist, we'd skip it."
       ],
       "supportOutlook": "Strongest long-term outlook in this set: existing models covered by the waiver and the brand holds Conditional Approval for new platforms.",
       "affiliateNote": "No verified ASIN for the iQ models: the page shows the plain no-link line for them and a CTA only for the 435X AWD.",

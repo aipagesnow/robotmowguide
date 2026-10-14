@@ -13,7 +13,7 @@ export default function NotFound() {
       <p className="label">404</p>
       <h1>That page is not here</h1>
       <p className="measure">
-        The address does not match a page on this site. The rankings, the finder, and the guides are linked
+        That address doesn't match a page here. The rankings, the finder, and the guides are linked
         below.
       </p>
       <ul className="grid gap-2 pl-5">

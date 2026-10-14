@@ -25,23 +25,23 @@ export default function AffiliatePage() {
       <YardPhoto id="photo-affiliate" />
       <p className="measure">
         Some pages link to a model on amazon.com. The link goes straight to that product page. The associate
-        tag is added when the site is built, from the site configuration. There is no in-between redirect on
-        this site. If a tag is not configured, the page shows no Amazon button.
+        tag is added when the site is built, from the site configuration. There's no in-between redirect on
+        this site. If a tag isn't configured, there's no Amazon button.
       </p>
       <AffiliateDiagram />
       <p className="measure">
         You click a “See on Amazon” link, which opens amazon.com. A qualifying purchase may earn this site a
-        commission. The price you pay is the same price Amazon shows you. Amazon prices are not shown here,
+        commission. The price you pay is the same price Amazon shows you. Amazon prices aren't shown here,
         because they change and a stale number would be wrong.
       </p>
       <p className="measure">
-        Rankings are not paid placements. A model is on the ladder because of the area and slope its maker
-        publishes. A missing Amazon listing means no button, not a lower rank. RobotMowGuide does not use
+        Rankings aren't paid placements. A model is on the ladder because of the area and slope its maker
+        publishes. A missing Amazon listing means no button, not a lower rank. RobotMowGuide doesn't use
         other shopping affiliate programs.
       </p>
       <p className="measure">
         The disclosure sentence appears before the first Amazon link on a page. Beside each group of buttons,
-        the page repeats <Link href="/affiliate-disclosure">Paid links: see disclosure</Link>.
+        you'll also see <Link href="/affiliate-disclosure">Paid links: see disclosure</Link>.
       </p>
       <Related
         links={[

@@ -16,7 +16,7 @@ export function FinderEmbed() {
     <section className="sheet p-4" aria-label="Start the mower finder">
       <h2 className="mt-0">Two questions, then the full list</h2>
       <p className="measure">
-        How much grass do you mow, and how steep is the worst bank? The full finder adds trees, zones, and
+        How much grass do you mow, and how steep is the worst bank in your yard? The full finder also asks about trees, zones, and
         wire.
       </p>
       <form
@@ -52,7 +52,7 @@ export function FinderEmbed() {
         </label>
       </form>
       <p className="mb-0" aria-live="polite">
-        Area {area || "0"} acres, slope {slope || "0"}%.{" "}
+        You're looking at {area || "0"} acres and a slope of {slope || "0"}%.{" "}
         <Link href="/tools/mower-finder#results">See full results</Link>
       </p>
     </section>

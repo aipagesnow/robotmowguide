@@ -46,37 +46,36 @@ export default function TreesPage() {
       disclosure
     >
       <p className="measure">
-        Canopy over the path is the problem, not a tree at the edge of an open lawn. A satellite fix weakens
-        under that cover. LiDAR models are the ones to read for that part of the yard. An RTK mower can still
-        be the right machine for the open part. Read a LiDAR model for the shaded part and an RTK model for
-        the open part.
+        If the canopy is over your mower's path, that's the problem, not a tree sitting at the edge of an open lawn. A satellite fix weakens
+        under that cover. We'd read a LiDAR model for the shaded part of your yard. An RTK mower can still
+        be the right machine for the open part.
       </p>
       <QuickPick
         pageType="best_for"
         items={[
           {
-            yard: "About 0.75 acre under trees",
+            yard: "About 0.75 acre under your trees",
             model: "LUBA 3 AWD 3000",
             href: "/reviews/mammotion-luba-3-awd",
             asin: luba.variant.asin,
             productSlug: luba.family.slug,
           },
           {
-            yard: "About 0.62 acre, LiDAR, no RTK",
+            yard: "About 0.62 acre, with LiDAR and no RTK",
             model: "Dreame A3 AWD Pro 2500",
             href: "/reviews/dreame-a3-awd-pro",
             asin: dreame.variant.asin,
             productSlug: dreame.family.slug,
           },
           {
-            yard: "Small steep yard under trees",
+            yard: "A small steep yard under your trees",
             model: "LUBA mini 2 AWD 1500H",
             href: "/reviews/mammotion-luba-mini-2-awd",
             asin: mini.variant.asin,
             productSlug: mini.family.slug,
           },
           {
-            yard: "Open half acre, LiDAR",
+            yard: "An open half acre, with LiDAR",
             model: "LiDAX Ultra 2000",
             href: "/reviews/mova-lidax-ultra",
             asin: mova.variant.asin,
@@ -88,14 +87,14 @@ export default function TreesPage() {
       <h2>Where the fix weakens</h2>
       <CanopyDiagram />
       <p className="measure">
-        The mower needs sky along its path, not only at an antenna in the open.{" "}
+        Your mower needs sky along its path, not only at an antenna out in the open.{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">How RTK, LiDAR, and vision fail</Link>.
       </p>
       <h2>LiDAR rows, then the RTK rows</h2>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Navigation as published. A LiDAR row is the canopy comparison. An RTK row is the open-sky comparison.</caption>
+          <caption>Navigation as published. A LiDAR model is the canopy comparison. An RTK model is the open-sky comparison.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -107,12 +106,12 @@ export default function TreesPage() {
           </thead>
           <tbody>
             {[
-              { name: "LUBA 3 AWD 3000", href: "/reviews/mammotion-luba-3-awd", model: luba, canopy: "Yes. LiDAR plus network RTK." },
-              { name: "Dreame A3 AWD Pro 2500", href: "/reviews/dreame-a3-awd-pro", model: dreame, canopy: "Yes. LiDAR and vision. No RTK." },
-              { name: "LUBA mini 2 AWD 1500H", href: "/reviews/mammotion-luba-mini-2-awd", model: mini, canopy: "Yes, on a smaller lawn. LiDAR and vision." },
-              { name: "LiDAX Ultra 2000", href: "/reviews/mova-lidax-ultra", model: mova, canopy: "Yes. LiDAR and vision. Few owner reports yet." },
-              { name: "Navimow i210 AWD", href: "/reviews/segway-navimow-i-series", model: i210, canopy: "Open part only. Network RTK and vision." },
-              { name: "RockNeo Q110H", href: "/reviews/roborock-rockneo-q110h", model: q, canopy: "Open part only. RTK-led." },
+              { name: "LUBA 3 AWD 3000", href: "/reviews/mammotion-luba-3-awd", model: luba, canopy: "Yes, for the shaded part. LiDAR plus network RTK." },
+              { name: "Dreame A3 AWD Pro 2500", href: "/reviews/dreame-a3-awd-pro", model: dreame, canopy: "Yes, for the shaded part. LiDAR and vision, and there's no RTK." },
+              { name: "LUBA mini 2 AWD 1500H", href: "/reviews/mammotion-luba-mini-2-awd", model: mini, canopy: "Yes, on a smaller lawn. It's LiDAR and vision." },
+              { name: "LiDAX Ultra 2000", href: "/reviews/mova-lidax-ultra", model: mova, canopy: "Yes. LiDAR and vision. Few owner reports yet, so read the review before you order." },
+              { name: "Navimow i210 AWD", href: "/reviews/segway-navimow-i-series", model: i210, canopy: "The open part of your yard only. Network RTK and vision." },
+              { name: "RockNeo Q110H", href: "/reviews/roborock-rockneo-q110h", model: q, canopy: "The open part of your yard only. It's RTK-led." },
             ].map((row) => (
               <tr key={row.name}>
                 <th scope="row">
@@ -129,35 +128,35 @@ export default function TreesPage() {
       </div>
       <SlopeMarginNote />
       <p className="measure">
-        The i210 is rated {formatAcres(i210.acres)} and does not use an antenna. Canopy can still weaken
-        network RTK, which is why heavy tree cover is on its skip list. Use it for the open quarter acre,
-        and use a LiDAR row for the shaded part if that part is large enough to need its own mower. The
+        The i210 is rated {formatAcres(i210.acres)} and doesn't use an antenna. Canopy can still weaken
+        network RTK, which is why heavy tree cover is on its skip list. We'd use it for the open quarter acre,
+        and a LiDAR model for the shaded part if that part is large enough to need its own mower. The
         Q110H is the same kind of split: RTK plus VSLAM, rated {formatAcres(q.acres, false)}.{" "}
         <SourceLine ids={["navimow-ces26", "amz-q110h"]} checked="2026-10-13" />
       </p>
       <p className="measure">
-        The LUBA 3000 is the larger LiDAR-plus-RTK row, rated {formatAcres(luba.acres, false)}. The Dreame
-        2500 is LiDAR without RTK, rated {formatAcres(dreame.acres, false)}. The mini 2 is the small steep LiDAR row. The
-        Ultra 2000 is the half-acre LiDAR row, and few owner reports exist yet.{" "}
+        The LUBA 3000 is the larger LiDAR-plus-RTK model, rated {formatAcres(luba.acres, false)}. The Dreame
+        2500 is LiDAR without RTK, rated {formatAcres(dreame.acres, false)}. The mini 2 is the small steep LiDAR model. The
+        Ultra 2000 is the half-acre LiDAR model, and few owner reports exist yet.{" "}
         <SourceLine ids={["mammotion-luba3", "dreame-a3", "amz-mova-2000"]} checked={SPEC_CHECKED} />
       </p>
       <Faq
         items={[
           {
             q: "Does one tree mean I need LiDAR?",
-            a: "Not by itself. The question is whether the mower’s path runs under canopy. An open lawn with a tree at the fence can still suit an RTK mower.",
+            a: "Not by itself. The question is whether your mower's path runs under the canopy. An open lawn with a tree at the fence can still suit an RTK mower.",
           },
           {
             q: "Will an antenna in the open fix a shaded lawn?",
-            a: "No. The antenna’s sky does not give the mower a fix under the canopy.",
+            a: "No. The antenna's open sky doesn't give your mower a fix under the canopy.",
           },
           {
             q: "Which shaded yard is too big for these LiDAR rows?",
             a: (
               <>
-                Past the rated area. For heavy trees or two zones, use{" "}
+                Once you're past the rated area. For heavy trees or two zones, use{" "}
                 <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The half-acre and
-                1-acre pages apply it.
+                1-acre guides are where that shows up for your yard.
               </>
             ),
           },
@@ -166,10 +165,10 @@ export default function TreesPage() {
       <ResearchedBox
         scope="group"
         sources={sources.map((id) => ({ id }))}
-        manuals="No canopy manual was required. Navigation lines are the brand and listing lines already on the reviews."
+        manuals="No canopy manual was needed. Navigation is what the brand pages and listings already say on the reviews."
         threads="Owner threads are on the linked reviews."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Specs checked Oct 10, 2026, with listing titles rechecked Oct 13, 2026."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Specs as of Oct 10, 2026, with listing titles also read on Oct 13, 2026."
       />
       <Related
         links={[

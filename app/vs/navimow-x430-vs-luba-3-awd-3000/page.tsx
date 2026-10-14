@@ -32,31 +32,31 @@ export default function VsPage() {
       topic: "Rated area",
       x: formatAcres(x430.acres),
       l: formatAcres(luba.acres),
-      better: "X430. It covers an open acre, and the LUBA is the one rated for about 0.75 acre under trees.",
+      better: "We'd pick the X430. It covers an open acre, and the LUBA is the one rated for about 0.75 acre under trees.",
     },
     {
       topic: "Slope",
       x: slopeWithRise(x430.slope, x430.degrees),
       l: `${slopeWithRise(luba.slope, luba.degrees)}. The degree is the published 38.6°.`,
-      better: "X430. Its 84% covers a bank between 80% and 84%, and at 80% or under both maxima cover the bank.",
+      better: "We'd pick the X430. Its 84% covers a bank between 80% and 84%, and at 80% or under both maxima cover the bank.",
     },
     {
       topic: "Trees",
       x: navigationLabel(x430.family.navigation),
       l: navigationLabel(luba.family.navigation),
-      better: "LUBA 3. LiDAR is on this model for canopy over the path, and open sky can use the X430.",
+      better: "We'd pick the LUBA 3. LiDAR is on this model for canopy over the path, and open sky can use the X430.",
     },
     {
       topic: "Side passage",
       x: `Body width ${specText(x430.specs.bodyWidth)}.`,
       l: `Narrowest gap ${specText(luba.specs.narrowestGap)}.`,
-      better: "X430. A gap between 24 in and 27.6 in clears its body, and under 24 in neither published figure clears it.",
+      better: "We'd pick the X430. A gap between 24 in and 27.6 in clears its body, and under 24 in neither published figure clears it.",
     },
     {
       topic: "After the free period",
-      x: "Connect+ is free for 1 year on the X430, then a yearly fee. Network RTK is described as free for life, depending on Segway’s cloud.",
-      l: "Built-in 4G includes 3 years of data, then a subscription. The price is not stated. NetRTK is described as free for life, depending on Mammotion’s cloud.",
-      better: "LUBA 3. Its 4G data is included for 3 years, against 1 year of Connect+ on the X430.",
+      x: "Connect+ is free for 1 year on the X430, then a yearly fee. Network RTK is described as free for life, depending on Segway's cloud.",
+      l: "Built-in 4G includes 3 years of data, then a subscription. The price isn't stated. NetRTK is described as free for life, depending on Mammotion's cloud.",
+      better: "We'd pick the LUBA 3 on the free period. Its 4G data is included for 3 years, against 1 year of Connect+ on the X430.",
     },
   ];
 
@@ -75,7 +75,7 @@ export default function VsPage() {
       disclosure
     >
       <p className="measure">
-        Buy the X430 for an open acre and banks up to {publishedSlope(x430.slope, x430.degrees)}. Buy the
+        We'd buy the X430 for an open acre and banks up to {publishedSlope(x430.slope, x430.degrees)}. We'd buy the
         LUBA 3 AWD 3000 when trees cover a lawn rated around {formatAcres(luba.acres, false)} and you want
         LiDAR with network RTK.
       </p>
@@ -105,7 +105,7 @@ export default function VsPage() {
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Five differences between the Navimow X430 and the LUBA 3 AWD 3000. Specs checked Oct 10, 2026.</caption>
+          <caption>How the Navimow X430 and the LUBA 3 AWD 3000 differ for your yard. Specs checked Oct 10, 2026.</caption>
           <thead>
             <tr>
               <th scope="col">Difference</th>
@@ -129,48 +129,48 @@ export default function VsPage() {
       <SlopeMarginNote />
       <h2>An open acre against a wooded three-quarter acre</h2>
       <p className="measure">
-        The X430 rating is {formatAcres(x430.acres)}. The LUBA 3000 rating is {formatAcres(luba.acres, false)}. A
-        full acre is outside the LUBA 3000 rating. A wooded path is the reason the LUBA page adds LiDAR to
-        network RTK, and the reason the X430 page still warns that canopy can drop a satellite fix.{" "}
+        We'd pick by your yard. The X430 rating is {formatAcres(x430.acres)}. The LUBA 3000 rating is {formatAcres(luba.acres, false)}. A
+        full acre is outside the LUBA 3000 rating. If your path is wooded, that's why the LUBA page adds LiDAR to
+        network RTK, and why the X430 page still warns that canopy can drop a satellite fix.{" "}
         <SourceLine ids={["navimow-x4", "mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Slope, labelled only as far as the makers go</h2>
       <p className="measure">
-        X430: {x430.slope}%. LUBA 3000: {luba.slope}%. The 38.6° figure belongs to the LUBA 3000. It is not
+        We'd stop where the makers stop. X430: {x430.slope}%. LUBA 3000: {luba.slope}%. The 38.6° figure belongs to the LUBA 3000. It's not
         the computed degree for 80%, and Mammotion doesn't publish it for the 1500 or the 5000.{" "}
         <Link href="/best/robot-mower-for-hills">The hills page converts a measured bank.</Link>
       </p>
       <h2>What each review holds back</h2>
       <p className="measure">
         The X430 body is {specText(x430.specs.bodyWidth)} and the cut is {specText(x430.specs.cuttingHeight)}.
-        Connect+ is a yearly fee after the free year. The longer write-up is the{" "}
+        Connect+ is a yearly fee after the free year, which we'd want you to know. The longer write-up is the{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <p className="measure">
         The LUBA standard cut is {specText(luba.specs.cuttingHeight)}. The high-cut row is separate and has
-        no confirmed listing. Zone counts and the battery line disagree across Mammotion pages. Those
-        conflicts stay in the <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.
+        no confirmed listing. Zone counts and the battery line disagree across Mammotion pages. We'd read both
+        notes in the <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link> before you count on one figure.
       </p>
       <Faq
         items={[
           {
             q: "Which one for a flat open acre?",
-            a: "The X430. It is rated 1 acre. The LUBA 3000 is rated 0.75 acre.",
+            a: "We'd pick the X430. It's rated 1 acre. The LUBA 3000 is rated 0.75 acre.",
           },
           {
             q: "Which one under trees?",
-            a: "The LUBA 3000, if the grass is inside 0.75 acre. It adds LiDAR. The X430 is network RTK, vision, and a time-of-flight sensor, and canopy can still drop the fix.",
+            a: "We'd pick the LUBA 3000, if your grass is inside 0.75 acre. It adds LiDAR. The X430 is network RTK, vision, and a time-of-flight sensor, and canopy can still drop the fix.",
           },
           {
             q: "Do both climb 80%?",
-            a: "Both publish a maximum of at least 80%. The X430 publishes 84%. The LUBA 3000 publishes 80%.",
+            a: "Yes for the published maximum. Both publish a maximum of at least 80%. The X430 publishes 84%. The LUBA 3000 publishes 80%.",
           },
         ]}
       />
       <ResearchedBox
         scope="group"
         sources={sources.map((id) => ({ id }))}
-        manuals="No owner's manual was in the source list for this page."
+        manuals="No owner's manual was in the source list."
         threads="Owner threads are on the two reviews, read in October 2026."
         questions="No manufacturer questions have been answered yet."
       />

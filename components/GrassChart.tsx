@@ -5,10 +5,10 @@ export function GrassChart({ focus }: { focus: "st-augustine" | "bermuda" }) {
   const fit = (row: HeightRow) => (focus === "st-augustine" ? stAugustineFit(row) : bermudaFit(row));
   return (
     <div className="table-scroll">
-      <p className="scroll-cue">Swipe sideways to read every column.</p>
+      <p className="scroll-cue">Swipe sideways to see every column.</p>
       <table className="data">
         <caption>
-          Published cutting-height ranges on this site, set next to the{" "}
+          Published cutting heights, set next to the{" "}
           {focus === "st-augustine" ? "St. Augustine" : "Bermuda"} bands above.
         </caption>
         <thead>

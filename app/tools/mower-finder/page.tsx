@@ -36,10 +36,10 @@ export default function FinderPage() {
       disclosure
     >
       <p className="measure">
-        The short list uses current models only. A superseded model never appears. If nothing clears the
-        area and the slope, the result says so, including yards over about 2 acres. The form includes
-        boundary-wire models, including the Worx Landroid M WR147, when you allow a boundary wire. The
-        printed table below is wire-free and one zone only.
+        The short list is current models only. If a model has been replaced, it won't appear. If nothing clears the
+        area and the slope, the result says so, including yards over about 2 acres. The form can include
+        boundary-wire models, including the Worx Landroid M WR147, if you're willing to lay a boundary wire. The
+        table below is wire-free, and it's one zone only.
       </p>
       <CtaCluster>
         <ProductLink
@@ -56,37 +56,37 @@ export default function FinderPage() {
       </div>
       <h2>The decision table</h2>
       <p className="measure">
-        This table is the same filter, printed for one zone and a wire-free mower. It does not create a
-        separate address for each yard. The form above keeps its choices on the page.
+        It's the same filter as the form, for one zone and a wire-free mower. It doesn't make a
+        separate address for each yard. What you choose in the form stays put.
       </p>
       <DecisionTable />
       <h2>How a row is chosen</h2>
       <p className="measure">
-        Area: the rated acres must be at least your lawn for an open, single zone. Heavy trees or more than
-        one zone need a rating of lawn times 1.25.{" "}
+        For area, the rated acres have to cover your lawn if it's open and one zone. Heavy trees or more than
+        one zone need a rating of your lawn times 1.25.{" "}
         <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
       </p>
       <p className="measure">
-        Slope: the published maximum must be at least the steepest slope you enter. If you mark that slope
-        as an edge, and the model prints a lower boundary figure, the row stays and the note says the
-        boundary is lower. Trees: heavy cover prefers LiDAR or vision. An RTK-only model can still appear,
-        with a note about satellite fix under canopy. Passage: a published body width or minimum gap has to
-        be no wider than the passage. If the width is missing, the note says to check the manual.
+        For slope, the published maximum has to be at least the steepest slope you enter. If you mark that slope
+        as an edge, and the model prints a lower boundary figure, it still shows, and the note says the
+        boundary is lower. For trees, heavy cover favors LiDAR or vision. An RTK-only model can still appear,
+        with a note that the satellite fix can slip under the canopy. For a passage, a published body width or minimum gap has to
+        be no wider than your opening. If that width isn't published, the note says to look in the manual.
       </p>
       <SlopeMarginNote />
       <Faq
         items={[
           {
             q: "Why is a model missing?",
-            a: "Superseded and discontinued models are left out. A current model with no published slope is left out too, because the filter will not guess a slope.",
+            a: "Models that have been replaced or discontinued aren't included. A current model with no published slope isn't included either, because we won't guess a slope.",
           },
           {
             q: "Does this page change when I pick a yard?",
-            a: "No. The address stays /tools/mower-finder. The table lists the size, slope, and tree bands. It is the same filter as the form.",
+            a: "No. The address stays /tools/mower-finder. The table lists the size, slope, and tree bands. It's the same filter as the form.",
           },
           {
             q: "What if nothing fits?",
-            a: "The result says nothing fits and why. A lawn past every rated area points to two mowers or a commercial unit.",
+            a: "The result says nothing fits, and why. If your lawn is past every rated area, we'd look at two mowers or a commercial unit.",
           },
         ]}
       />

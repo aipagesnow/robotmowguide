@@ -62,12 +62,12 @@ export default function LubaReview() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        The 3000 is the LUBA 3 to read first when trees cover the lawn: {formatAcres(m3000.acres)} and{" "}
-        {publishedSlope(m3000.slope, m3000.degrees)}, with LiDAR, network RTK, and vision together.
+        If trees cover your lawn, the 3000 is the LUBA 3 we'd read first. It's rated {formatAcres(m3000.acres)}{" "}
+        and {publishedSlope(m3000.slope, m3000.degrees)}, with LiDAR, network RTK, and vision together.
       </p>
       <p className="measure">
-        Skip the standard version if you need a cut above {specText(m3000.specs.cuttingHeight)}. The high-cut
-        row is the one that reaches 4 in, and it does not have a confirmed amazon.com listing.
+        If you need a cut above {specText(m3000.specs.cuttingHeight)}, we'd skip the standard version. The
+        high-cut model is the one that reaches 4 in, and it doesn't have a confirmed amazon.com listing.
       </p>
       <CtaCluster>
         <ProductLink
@@ -98,17 +98,17 @@ export default function LubaReview() {
           {
             label: "Narrowest gap",
             value: specText(m3000.specs.narrowestGap),
-            detail: "A side passage tighter than that gap is a stop. The note on the page is 70 cm.",
+            detail: "Here's the thing about side gates: they're often narrower than you remember. Mammotion's note is 70 cm, so grab a tape measure before you order. Anything tighter and it can't get through.",
           },
           {
             label: "Navigation",
             value: navigationLabel(family.navigation),
-            detail: "The 3000 has all three. The 1500 is LiDAR and vision only, with no network RTK.",
+            detail: "The 3000 has all three. The 1500 is LiDAR and vision only, so there's no network RTK on that one.",
           },
           {
             label: "After the free data",
             value: "A subscription, price not stated",
-            detail: "Built-in 4G includes 3 years of data. NetRTK is described as free for life, and that depends on Mammotion’s cloud.",
+            detail: "Built-in 4G includes 3 years of data. NetRTK is free for life, as long as Mammotion keeps its cloud running.",
           },
         ]}
       />
@@ -116,16 +116,16 @@ export default function LubaReview() {
         family={family}
         pageType="review"
         differences={{
-          "LUBA 3 AWD 1500": `Rated ${formatAcres(m1500.acres)}. LiDAR and vision only. No network RTK. Slope ${m1500.slope}%. Degrees are not published on this row.`,
-          "LUBA 3 AWD 3000": "The model this review follows. Network RTK, LiDAR, and vision. Standard cut height is on the spec table.",
-          "LUBA 3 AWD 5000": `Rated ${formatAcres(m5000.acres)}. Slope ${m5000.slope}%. Degrees are not published on this row. Other specs are not published.`,
-          "LUBA 3 AWD 3000H / 5000H (high-cut)": `Cutting height ${high ? specText(high.specs?.cuttingHeight) : "Not published"}. Rated area and slope were not on this row.`,
+          "LUBA 3 AWD 1500": `Rated ${formatAcres(m1500.acres)}. LiDAR and vision only, no network RTK. Slope ${m1500.slope}%. Degrees aren't published for this model.`,
+          "LUBA 3 AWD 3000": "The one we'd start with. Network RTK, LiDAR, and vision. Standard cut height is in the specs below.",
+          "LUBA 3 AWD 5000": `Rated ${formatAcres(m5000.acres)}. Slope ${m5000.slope}%. Degrees aren't published for this model. Other specs aren't published.`,
+          "LUBA 3 AWD 3000H / 5000H (high-cut)": `Cutting height ${high ? specText(high.specs?.cuttingHeight) : "Not published"}. Rated area and slope aren't published for this model.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecPlate familyId="mammotion-luba-3-awd" slotId="plate-luba3" modelName="LUBA 3 AWD 3000" />
       <SpecTable
-        caption="LUBA 3 AWD 3000 figures checked Oct 10, 2026. Where two Mammotion pages disagree, both figures are shown."
+        caption="LUBA 3 AWD 3000 figures, checked Oct 10, 2026. Where two Mammotion pages disagree, you'll see both."
         rows={[
           {
             label: "Rated area",
@@ -133,7 +133,7 @@ export default function LubaReview() {
             sources: ["mammotion-luba3-sku", "amz-luba3-3000"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "Mammotion's US product page notes 3,000 m².",
+            note: "Mammotion's US product page notes 3,000 m², which is the area behind that rating.",
           },
           {
             label: "Max slope",
@@ -141,7 +141,7 @@ export default function LubaReview() {
             sources: ["mammotion-luba3", "amz-luba3-3000"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: "Degrees are the published 38.6°, not a computed stand-in.",
+            note: "Degrees are the published 38.6°, not a figure we worked out ourselves.",
           },
           {
             label: "Navigation",
@@ -155,42 +155,42 @@ export default function LubaReview() {
             value: specText(m3000.specs.cuttingWidth),
             sources: ["mammotion-luba3-global"],
             checked: SPEC_CHECKED,
-            note: "400 mm dual-disc system, on the global series page.",
+            note: "It's a 400 mm dual-disc system, from the global series page.",
           },
           {
             label: "Cutting height",
             value: specText(m3000.specs.cuttingHeight),
             sources: ["amz-luba3-3000"],
             checked: SPEC_CHECKED,
-            note: "Standard version. High-cut 3000H and 5000H: 2.2–4.0 in on the Mammotion US page.",
+            note: "That's the standard version. The high-cut 3000H and 5000H go to 2.2–4.0 in on the Mammotion US page.",
           },
           {
             label: "Narrowest gap",
             value: specText(m3000.specs.narrowestGap),
             sources: ["mammotion-luba3"],
             checked: SPEC_CHECKED,
-            note: "70 cm.",
+            note: "That's 70 cm, so measure your gate before you order.",
           },
           {
             label: "Obstacle clearance",
             value: specText(m3000.specs.obstacleClearance),
             sources: ["mammotion-luba3-sku"],
             checked: SPEC_CHECKED,
-            note: "Standard model. The same note lists 3.2 in for the H version.",
+            note: "That's the standard model. The same note lists 3.2 in for the H version.",
           },
           {
             label: "Battery",
             value: specText(m3000.specs.battery),
             sources: ["amz-luba3-3000"],
             checked: SPEC_CHECKED,
-            note: "The Mammotion US page says up to 15 Ah and up to 215 minutes for the series. The listing figure above is the 3000.",
+            note: "The Mammotion US page says up to 15 Ah and up to 215 minutes for the series. We'd use the listing figure for the 3000.",
           },
           {
             label: "Zones",
             value: specText(m3000.specs.zones),
             sources: ["amz-luba3-3000"],
             checked: SPEC_CHECKED,
-            note: "Mammotion pages also cite 50 and 100 zones for the series. The figures do not agree.",
+            note: "Mammotion pages also cite 50 and 100 zones for the series. Those figures don't agree, so we'd use the listing.",
           },
           {
             label: "Drive",
@@ -203,46 +203,50 @@ export default function LubaReview() {
       <h2>Trees and LiDAR</h2>
       <NavFour highlight={["network", "lidar"]} />
       <p className="measure">
-        The 3000 uses network RTK, and LiDAR or a camera. Vision is the camera half of that second setup, not
-        a separate product. The 1500 drops network RTK and keeps LiDAR and vision. That
-        split matters under canopy, where a satellite fix weakens and a scanned map can still see the yard.{" "}
+        If trees cover your lawn, the 3000's LiDAR is why we'd look at it. It uses network RTK, and LiDAR or
+        a camera. Vision is the camera half of that second setup, not a separate product. The 1500 drops
+        network RTK and keeps LiDAR and vision. That split matters under your canopy, where a satellite fix
+        weakens and a scanned map can still see the yard.{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">How those setups fail</Link>.{" "}
         <SourceLine ids={["mammotion-luba3-sku"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Cut height: standard and high-cut</h2>
       <p className="measure">
-        The standard 3000 cuts {specText(m3000.specs.cuttingHeight)}. That tops out too low for a St.
-        Augustine lawn kept tall, and for summer fescue in the same situation. The high-cut 3000H and 5000H
-        are listed at 2.2–4.0 in. They have no confirmed amazon.com listing, so the variant table shows the
-        plain no-link line. <SourceLine ids={["amz-luba3-3000", "mammotion-luba3"]} checked={SPEC_CHECKED} />
+        The standard 3000 cuts {specText(m3000.specs.cuttingHeight)}, which is the one to read if you don't
+        need a tall cut. That tops out too low for a St. Augustine lawn you keep tall, and for summer fescue
+        in the same situation. The high-cut 3000H and 5000H are listed at 2.2–4.0 in. They don't have a
+        confirmed amazon.com listing, so you'll see the plain no-link line instead of a button.{" "}
+        <SourceLine ids={["amz-luba3-3000", "mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <h2 id="slope">Slope</h2>
       <p className="measure">
-        {m3000.slope}%, a rise of {risePer10Ft(m3000.slope)}. The 1500 and the 5000 publish {m1500.slope}%.
-        Degrees are not published on those rows. <SourceLine ids={["mammotion-luba3"]} checked={SPEC_CHECKED} />
+        {m3000.slope}% is the slope we'd plan on, a rise of {risePer10Ft(m3000.slope)}. The 1500 and the 5000
+        publish {m1500.slope}%. Degrees aren't published for those models.{" "}
+        <SourceLine ids={["mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <SlopeMarginNote />
       <h2>Size and zones</h2>
       <p className="measure">
-        The 3000 is {formatAcres(m3000.acres)}. <ComfortableFor rated={m3000.acres} /> The 1500 is{" "}
-        {formatAcres(m1500.acres, false)}. The 5000 is {formatAcres(m5000.acres, false)}. The amazon.com listing for the
-        3000 says {specText(m3000.specs.zones)}. Mammotion pages also cite 50 zones and 100 zones for the
-        series. Use the listing’s 30 if you are buying the 3000, and treat 50 and 100 as series claims that
-        do not match it. <SourceLine ids={["amz-luba3-3000", "mammotion-luba3"]} checked={SPEC_CHECKED} />
+        The 3000 is {formatAcres(m3000.acres)}, which is the size we'd match to your lawn.{" "}
+        <ComfortableFor rated={m3000.acres} /> The 1500 is {formatAcres(m1500.acres, false)}. The 5000 is{" "}
+        {formatAcres(m5000.acres, false)}. We'd plan on 30 zones for the 3000, because that's what its
+        amazon.com listing says ({specText(m3000.specs.zones)}). You'll also see 50 and 100 on Mammotion's
+        series pages, but those don't match this 3000, so we wouldn't count on the 50 or the 100.{" "}
+        <SourceLine ids={["amz-luba3-3000", "mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Edges and the gap</h2>
       <p className="measure">
-        A distance-to-the-fence figure is not published. The narrowest gap on the US page is{" "}
-        {specText(m3000.specs.narrowestGap)}. Obstacle clearance is {specText(m3000.specs.obstacleClearance)}{" "}
-        on the standard model, and the SKU note lists 3.2 in for the H version. Cutting width is{" "}
-        {specText(m3000.specs.cuttingWidth)}.{" "}
+        Mammotion doesn't publish how close it gets to your fence, so you may still want a string trimmer
+        along the beds. The narrowest gap on the US page is {specText(m3000.specs.narrowestGap)}. Obstacle
+        clearance is {specText(m3000.specs.obstacleClearance)} on the standard model, and the SKU note lists
+        3.2 in for the H version. Cutting width is {specText(m3000.specs.cuttingWidth)}.{" "}
         <SourceLine ids={["mammotion-luba3", "mammotion-luba3-sku", "mammotion-luba3-global"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
         intro="In the 4 owner threads we read in October 2026:"
         items={[
           {
-            text: "Owners linked firmware 2.3.30.26 to blade cut-outs and restarts. A later note in the thread said a fix was being tried.",
+            text: "Owners linked firmware 2.3.30.26 to the blades cutting out and the mower restarting. A later note in the thread said a fix was being tried.",
             href: "https://www.reddit.com/r/MammotionTechnology/comments/1vtyyfi/",
             linkLabel: "Thread on firmware 2.3.30.26",
             extra: [
@@ -253,7 +257,7 @@ export default function LubaReview() {
             ],
           },
           {
-            text: "The threads linked here describe slow warranty handling.",
+            text: "Owners in the threads linked here describe slow warranty handling.",
             href: "https://www.reddit.com/r/mammotion/comments/1vhuxpl/",
             linkLabel: "Warranty thread",
             extra: [
@@ -267,61 +271,60 @@ export default function LubaReview() {
       />
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
-        <li>Tall-cut lawns on the standard version, which stops at 2.7 in.</li>
-        <li>Buyers who want a long, settled record for the app. The threads above are uneven, and they are a small set.</li>
-        <li>Anyone counting on features the Mammotion page marks as not available yet.</li>
-        <li>A side passage under 27.6 in.</li>
+        <li>If you keep the grass tall, the standard version stops at 2.7 in.</li>
+        <li>If you want a long, settled record for the app, the threads above are uneven, and they're a small set.</li>
+        <li>If you're counting on features the Mammotion page marks as not available yet, we wouldn't.</li>
+        <li>If your side passage is under 27.6 in, it won't get through.</li>
       </ul>
       <h2>Connectivity and support</h2>
       <p className="measure">
-        Built-in 4G includes 3 years of data, then a subscription is required. The price is not stated.
-        NetRTK is described as free for life, and that depends on Mammotion’s cloud.{" "}
+        You get built-in 4G with 3 years of data, then a subscription, and Mammotion doesn't say the price.
+        NetRTK is free for life, as long as Mammotion keeps its cloud running.{" "}
         <SourceLine ids={["mammotion-luba3"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
-        The battery line disagrees with itself across pages: the amazon.com listing says up to 12 Ah and up
-        to 175 minutes for the 3000, and the US product page says up to 15 Ah and up to 215 minutes for the
-        series.
+        We'd plan on the amazon.com listing for the 3000: up to 12 Ah and up to 175 minutes. The US product
+        page says up to 15 Ah and up to 215 minutes for the series, which is a different claim.
       </p>
       <SupportOutlook brand="Mammotion" />
       <p className="measure">
-        Sold out on the Mammotion US store on Oct 10, 2026. The amazon.com listing was live. Some features on
-        the Mammotion page are marked as not available yet.
+        The Mammotion US store was sold out on Oct 10, 2026. The amazon.com listing was live. Some features
+        on the Mammotion page are marked as not available yet, so we wouldn't count on those.
       </p>
       <h2>Two other yards</h2>
       <p className="measure">
-        The Dreame A3 AWD Pro 2500 is LiDAR and vision without RTK, rated {formatAcres(dreame.acres)} and{" "}
-        {dreame.slope}%.{" "}
+        If you want LiDAR without RTK, the Dreame A3 AWD Pro 2500 is the other yard we'd compare. It's rated{" "}
+        {formatAcres(dreame.acres)} and {dreame.slope}%.{" "}
         <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link>.
       </p>
       <p className="measure">
-        The Navimow X430 is the open acre with a steeper published slope, {x430.slope}%, and no LiDAR.{" "}
-        <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
+        If your lawn is an open acre, the Navimow X430 is the comparison, with a steeper published slope of{" "}
+        {x430.slope}% and no LiDAR. <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <Faq
         items={[
           {
             q: "Can the standard 3000 cut St. Augustine tall?",
-            a: "The listing tops out at 2.7 in. If you keep St. Augustine higher than that, look at the high-cut 3000H, whose published range is 2.2–4.0 in. That row has no confirmed Amazon listing.",
+            a: "The listing tops out at 2.7 in. If you keep St. Augustine higher than that, we'd look at the high-cut 3000H, whose published range is 2.2–4.0 in. That model has no confirmed Amazon listing.",
           },
           {
             q: "How many zones does the 3000 have?",
-            a: "The amazon.com listing says 30. Mammotion pages also cite 50 and 100 for the series. Those numbers were still in conflict on Oct 10, 2026.",
+            a: "We'd plan on 30 zones, because that's what its amazon.com listing says. You'll also see 50 and 100 on Mammotion's series pages, but those don't match this model, so we wouldn't count on them as of Oct 10, 2026.",
           },
           {
             q: "Will it fit a narrow side yard?",
-            a: "The US page lists a narrowest gap of 27.6 in (70 cm). A passage under that width is outside the published figure.",
+            a: "Mammotion says you need at least 27.6 in (70 cm) through the side gate. If yours is tighter than that, it can't get through, so grab a tape measure before you order.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="No owner's manual was in the source list for this page."
-        threads="Four owner threads, read in October 2026."
-        questions="No manufacturer questions have been answered yet."
+        manuals="No owner's manual was in the sources we used."
+        threads="We read four owner threads in October 2026."
+        questions="No manufacturer has answered questions yet."
       />
       <h2>See these models</h2>
-      <p className="measure">The 3000 button is at the top of this page. The two comparisons:</p>
+      <p className="measure">The 3000 button is up top. The two comparisons:</p>
       <EndLinks
         pageType="review"
         links={[

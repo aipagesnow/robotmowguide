@@ -37,7 +37,7 @@ export default function VsIndex() {
       disclosure
     >
       <p className="measure">
-        Three comparisons are up. Each one puts two current models on the same yard questions.
+        We've got three comparisons up. Each one puts two current models on the same questions about your yard.
       </p>
       <CtaCluster>
         <ProductLink
@@ -53,25 +53,25 @@ export default function VsIndex() {
         <Link href="/vs/navimow-x430-vs-luba-3-awd-3000">Navimow X430 vs LUBA 3 AWD 3000</Link>
       </h2>
       <p className="measure">
-        The X430 is rated {formatAcres(x430.acres)} and {publishedSlope(x430.slope, x430.degrees)}. The LUBA
-        3 AWD 3000 is rated {formatAcres(luba.acres, false)} and {luba.slope}%. One is the open acre. The
-        other adds LiDAR for a smaller lawn under trees.
+        For an open acre we'd look at the X430, rated {formatAcres(x430.acres)} and {publishedSlope(x430.slope, x430.degrees)}. The LUBA
+        3 AWD 3000 is rated {formatAcres(luba.acres, false)} and {luba.slope}%. We'd pick that one
+        for a smaller lawn under trees.
       </p>
       <SlopeMarginNote />
       <h2>
         <Link href="/vs/dreame-a3-awd-pro-vs-luba-3-awd">Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000</Link>
       </h2>
       <p className="measure">
-        The Dreame 2500 is rated {formatAcres(dreame.acres, false)} and {dreame.slope}%. The LUBA 3000 is
+        We'd pick the Dreame 2500, rated {formatAcres(dreame.acres, false)} and {dreame.slope}%, if you want LiDAR and no RTK. The LUBA 3000 is
         rated {formatAcres(luba.acres, false)} and {luba.slope}%. Both use LiDAR. The LUBA also uses network
-        RTK. The Dreame does not.
+        RTK. The Dreame doesn't.
       </p>
       <h2>
         <Link href="/vs/worx-vision-cloud-wr340-vs-navimow-x430">Worx Vision Cloud WR340 vs Navimow X430</Link>
       </h2>
       <p className="measure">
-        Both are rated {formatAcres(worx.acres, false)}. The WR340 publishes {worx.slope}%. The X430 publishes{" "}
-        {x430.slope}%.
+        Both are rated {formatAcres(worx.acres, false)}. For a gentler acre we'd pick the WR340, which publishes {worx.slope}%. The X430 publishes{" "}
+        {x430.slope}%, and that's the one we'd pick if your banks are steeper.
       </p>
       <Related
         links={[

@@ -46,14 +46,14 @@ export default function RtkGuide() {
       disclosure
     >
       <p className="measure">
-        Choose the navigation the yard can feed. Heavy tree cover points to a mower that can map with LiDAR,
-        not to RTK alone. An open acre with steep banks can use network RTK if the lawn has Wi-Fi or cell
-        service. Vision on these models is an extra pair of cameras, not a fourth setup you buy by itself.
+        We'd pick the navigation your yard can actually feed. Heavy tree cover points to a mower that can map with LiDAR,
+        not to RTK alone. An open acre with steep banks can use network RTK if your lawn has Wi-Fi or cell
+        service. Here's the thing: vision on these models is an extra pair of cameras, not a fourth setup you'd buy by itself.
       </p>
       <h2>Two checked examples</h2>
       <p className="measure">
-        For heavy trees, the LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)} and uses{" "}
-        {navigationLabel(luba.family.navigation)}. For an open steep acre, the Navimow X430 is rated{" "}
+        For heavy trees, we'd look at the LUBA 3 AWD 3000, rated {formatAcres(luba.acres)} and using{" "}
+        {navigationLabel(luba.family.navigation)}. For an open steep acre, the Navimow X430 is the one we'd look at, rated{" "}
         {formatAcres(x430.acres, false)} and {publishedSlope(x430.slope, x430.degrees)}, with{" "}
         {navigationLabel(x430.family.navigation)}.
       </p>
@@ -78,76 +78,76 @@ export default function RtkGuide() {
       <NavFour />
       <h3>Boundary wire</h3>
       <p className="measure">
-        A wire is buried or pegged around the lawn, and the mower follows it. It does not need sky. It fails
+        A wire is buried or pegged around your lawn, and the mower follows it. It doesn't need sky. It fails
         when the wire is cut, or when a bed moves and nobody moves the wire. On the ladder, the Worx Landroid
         M <Link href="/reviews/worx-landroid-m-wr147">WR147</Link> is a boundary-wire model rated {formatAcres(0.25, false)}. The Husqvarna{" "}
         <Link href="/reviews/husqvarna-automower-iq">Automower 420 iQ</Link> can run wire-free or with a boundary wire.
       </p>
       <h3>Antenna RTK</h3>
       <p className="measure">
-        A reference antenna on the property sends corrections. It needs open sky above the antenna, and the
+        A reference antenna on your property sends corrections. It needs open sky above the antenna, and the
         mower still needs sky along its path. Trees, walls, and the roof edge weaken it. Raising only the
-        antenna does not fix canopy over the grass.
+        antenna doesn't fix canopy over your grass.
       </p>
       <AntennaDiagram />
       <p className="measure">
-        Husqvarna’s own EPOS guidance asks for a reference station at least 6.5 ft (2 m) high, with at least
-        135° of open sky. That is Husqvarna’s rule for its station, published Jan 28, 2026. It is not a
+        Husqvarna's own EPOS guidance asks for a reference station at least 6.5 ft (2 m) high, with at least
+        135° of open sky. That's Husqvarna's rule for its station, published Jan 28, 2026. It isn't a
         universal spec for every brand.{" "}
         <a href={HUSQ_ANTENNA}>Husqvarna reference-station guidance</a>.
       </p>
       <h3>Network RTK</h3>
       <p className="measure">
-        Corrections arrive over Wi-Fi or cell service. There may be no antenna to mount. The Navimow X430
-        includes an antenna and says it is optional. The Navimow i210 AWD is network RTK plus vision and does
-        not use an antenna. The fix weakens when cell service is poor at the lawn, or when canopy covers the
+        Corrections arrive over Wi-Fi or cell service, so there may be no antenna to mount. The Navimow X430
+        includes an antenna and says it's optional. The Navimow i210 AWD is network RTK plus vision and doesn't
+        use an antenna. The fix weakens when cell service is poor at your lawn, or when canopy covers the
         path. A yearly fee after a free period is a separate question, answered on each review from that
-        maker’s page.
+        maker's page.
       </p>
       <h3>LiDAR or a camera</h3>
       <p className="measure">
-        The mower builds a map from what it sees. Nothing has to be installed in the yard. It weakens when
-        the camera reads leaves, weeds, or bare soil as “not grass,” and when a LiDAR unit pauses in heat.
+        The mower builds a map from what it sees, so nothing has to be installed in your yard. It weakens when
+        the camera reads leaves, weeds, or bare soil as "not grass," and when a LiDAR unit pauses in heat.
         The Dreame A3 AWD Pro 2500 is LiDAR plus vision, with no RTK and no wire, rated{" "}
         {formatAcres(dreame.acres, false)}. The LUBA 3 AWD 1500 is LiDAR plus vision only. The 3000 adds
         network RTK. The 1500 is rated {formatAcres(luba1500.acres, false)}.
       </p>
       <p className="measure">
         The Worx Landroid Vision Cloud WR340 uses cloud RTK, with no antenna, plus stereo vision, and Worx
-        says a V-SLAM fallback takes over in shade. It is rated {formatAcres(worx.acres, false)} and{" "}
+        says a V-SLAM fallback takes over in shade. It's rated {formatAcres(worx.acres, false)} and{" "}
         {worx.slope}%.
       </p>
       <SlopeMarginNote />
       <h2>What this means when you choose</h2>
       <ul className="grid gap-3 pl-5">
         <li>
-          Open quarter acre, no antenna to mount: <Link href="/best#navimow-i210">Navimow i210 AWD</Link>.
+          Open quarter acre and you don't want an antenna: we'd pick the <Link href="/best#navimow-i210">Navimow i210 AWD</Link>.
         </li>
         <li>
-          Trees, and you do not want a base station: <Link href="/best#dreame-a3-2500">Dreame A3 AWD Pro 2500</Link>{" "}
-          or <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link>.
+          Trees, and you don't want a base station: we'd pick the <Link href="/best#dreame-a3-2500">Dreame A3 AWD Pro 2500</Link>{" "}
+          or the <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link>.
         </li>
         <li>
-          Open acre, steep banks, Wi-Fi or cell at the lawn:{" "}
+          Open acre, steep banks, Wi-Fi or cell at the lawn: we'd pick the{" "}
           <Link href="/reviews/segway-navimow-x4">Navimow X430</Link>.
         </li>
         <li>
-          Open acre, gentler slopes, cloud RTK: <Link href="/best#worx-wr340">Worx WR340</Link>.
+          Open acre, gentler slopes, cloud RTK: we'd pick the <Link href="/best#worx-wr340">Worx WR340</Link>.
         </li>
       </ul>
       <Faq
         items={[
           {
             q: "Do I need an antenna in the yard?",
-            a: "Only for antenna RTK. Network RTK uses Wi-Fi or cell. The X430 includes an antenna and describes it as optional. The i210 page says no antenna. LiDAR models such as the Dreame 2500 do not use RTK at all.",
+            a: "Only if you're on antenna RTK. Network RTK uses Wi-Fi or cell. The X430 includes an antenna and describes it as optional. The i210 page says no antenna. LiDAR models such as the Dreame 2500 don't use RTK at all.",
           },
           {
             q: "Will trees block RTK?",
-            a: "They can. The mower needs a fix along its path, not only at the antenna or the dock. Canopy over the grass is the failure, which is why a LiDAR model is the comparison when the lawn is wooded.",
+            a: "They can. The mower needs a fix along its path, not only at the antenna or the dock. If canopy covers your grass, that's the failure, which is why we'd compare a LiDAR model when the lawn is wooded.",
           },
           {
             q: "Is a boundary wire still reasonable?",
-            a: "Yes, when you want a mower that does not depend on sky. The trade is the install, and a wire that can be cut. The ladder marks boundary-wire models with a dashed line.",
+            a: "Yes, if you want a mower that doesn't depend on sky. The trade is the install, and a wire that can be cut. The ladder marks boundary-wire models with a dashed line.",
           },
         ]}
       />

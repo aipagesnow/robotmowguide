@@ -42,35 +42,35 @@ export default function HillsPage() {
       disclosure
     >
       <p className="measure">
-        A bank that rises 4 ft over 10 ft is a 40% slope (about 22°). Compare that with each mower's
-        published maximum, and allow extra margin if the steep part is at the edge.
+        If your bank rises 4 ft over 10 ft, that's a 40% slope (about 22°). We'd compare that with each mower's
+        published maximum, and leave extra margin if the steep part is at the edge of your lawn.
       </p>
       <QuickPick
         pageType="best_for"
         items={[
           dreame && {
-            yard: "About 0.62 acre, 80% published",
+            yard: "About 0.62 acre, with an 80% rating",
             model: "Dreame A3 AWD Pro 2500",
             href: "/reviews/dreame-a3-awd-pro",
             asin: dreame.asin,
             productSlug: dreame.slug,
           },
           luba && {
-            yard: "About 0.75 acre under trees, 80% (38.6° published)",
+            yard: "About 0.75 acre under trees, 80% (38.6° on the bank)",
             model: "LUBA 3 AWD 3000",
             href: "/reviews/mammotion-luba-3-awd",
             asin: luba.asin,
             productSlug: luba.slug,
           },
           x430 && {
-            yard: "An open acre, 84% (40° published)",
+            yard: "An open acre, 84% (40° on the bank)",
             model: "Navimow X430",
             href: "/reviews/segway-navimow-x4",
             asin: x430.asin,
             productSlug: x430.slug,
           },
           wr344 && {
-            yard: "An acre on 4WD, 84% (about 40° on the listing)",
+            yard: "An acre on 4WD, 84% (about 40° from the listing)",
             model: "Worx WR344",
             href: "/reviews/worx-landroid-vision-cloud",
             asin: wr344.asin,
@@ -81,22 +81,22 @@ export default function HillsPage() {
       <YardPhoto id="photo-slope" />
       <h2>How to measure with a phone</h2>
       <p className="measure">
-        Lay a straight board on the bank. Open the phone’s level app and set it on the board. Read the
+        If you've got a phone, lay a straight board on your bank. Open the phone's level app and set it on the board. Read the
         angle in degrees, or the percent if the app shows percent. The other way: run a 10 ft string line
         from the high point to the low point, pull it level, and measure the vertical gap with a tape. That
         gap in feet, divided by 10, times 100, is the percent. A 4 ft gap is 40%.
       </p>
       <h2>Converter</h2>
       <p className="measure">
-        Percent, degrees, and rise per 10 ft are the same slope. Degrees are the arctangent of percent
+        Percent, degrees, and rise per 10 ft are the same slope on your bank. Degrees are the arctangent of percent
         divided by 100. Rise over 10 ft is 10 ft times percent divided by 100.
       </p>
       <SlopeConverter candidates={candidates} />
       <h2>Printed conversions</h2>
       <p className="measure">
-        These degrees are computed from the percent. They are not a second published rating. A model is
+        These degrees are worked out from the percent. They're not a second published rating. A model is
         listed when its published maximum is at least that percent. Where a boundary figure is lower, that
-        maximum is the interior, and the boundary may not cover the same percent.
+        maximum is the interior, and the boundary may not cover the same percent on your lawn.
       </p>
       <PrintedSlopes candidates={candidates} />
       <SlopeMarginNote />
@@ -106,7 +106,7 @@ export default function HillsPage() {
       <h2>Interior and boundary, model by model</h2>
       <ModelSlopes candidates={candidates} />
       <p className="measure">
-        The Worx WR340 is rated 30%. It is the wrong pick when the bank is steeper than that. The
+        The Worx WR340 is rated 30%. We'd skip it when your bank is steeper than that. The
         WR344 is the 84% model in that family.{" "}
         <Link href="/reviews/worx-landroid-vision-cloud">Worx Landroid Vision Cloud review</Link>.
       </p>
@@ -114,25 +114,25 @@ export default function HillsPage() {
         items={[
           {
             q: "What does 80% slope mean?",
-            a: "80% is a rise of 8 ft over 10 ft. Dreame prints 38.7° and the LUBA 3 AWD 3000 prints 38.6°. A row with no published degree stays without one.",
+            a: "80% is a rise of 8 ft over 10 ft. Dreame prints 38.7° and the LUBA 3 AWD 3000 prints 38.6°. If a model doesn't publish degrees, we don't invent one.",
           },
           {
             q: "Why do some mowers list two slopes?",
-            a: "Husqvarna’s iQ pages put 15% at the boundary beside a higher interior figure. If your steep spot is the edge, the boundary number is the one that matters.",
+            a: "Husqvarna's iQ pages put 15% at the boundary beside a higher interior figure. If your steep spot is the edge, the boundary number is the one that matters.",
           },
           {
             q: "Is 40% steep for a robot mower?",
-            a: "40% is 4 ft over 10 ft. It is above the WR340’s 30% and under the 45% i210 figure and the 80% and 84% models.",
+            a: "40% is 4 ft over 10 ft. That's above the WR340's 30% and under the 45% i210 figure and the 80% and 84% models.",
           },
         ]}
       />
       <ResearchedBox
         scope="group"
         sources={sources.map((id) => ({ id }))}
-        manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads are on the linked reviews, read in October 2026."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Specs checked Oct 10, 2026. The WR344 listing was opened again on Oct 13, 2026."
+        manuals="No owner's manual was in the source list."
+        threads="Owner threads are on the linked reviews, from October 2026."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Specs as of Oct 10, 2026. The WR344 listing was also read on Oct 13, 2026."
       />
       <Related
         links={[
@@ -152,11 +152,11 @@ function PrintedSlopes({ candidates }: { candidates: Candidate[] }) {
     <div className="table-scroll">
       <p className="scroll-cue">Swipe sideways to read every column.</p>
       <table className="data">
-        <caption>Percent, computed degrees, and rise per 10 ft. A model is listed when its published maximum covers that percent.</caption>
+        <caption>Percent, degrees worked out from that percent, and rise per 10 ft. A model shows up when its published maximum covers that percent.</caption>
         <thead>
           <tr>
             <th scope="col">Percent</th>
-            <th scope="col">Degrees, computed</th>
+            <th scope="col">Degrees</th>
             <th scope="col">Rise per 10 ft</th>
             <th scope="col">Published maximum covers it</th>
           </tr>
@@ -188,7 +188,7 @@ function ModelSlopes({ candidates }: { candidates: Candidate[] }) {
     <div className="table-scroll">
       <p className="scroll-cue">Swipe sideways to read every column.</p>
       <table className="data">
-        <caption>Published slope for every current model that has both area and slope. Interior is used only when the note also prints a boundary.</caption>
+        <caption>Published slope for every current model that has both area and slope. We call it interior only when the note also prints a boundary.</caption>
         <thead>
           <tr>
             <th scope="col">Model</th>
@@ -223,9 +223,9 @@ function SlopeRuler() {
   return (
     <figure className="blueprint mt-4">
       <svg role="img" viewBox="0 0 760 220" className="block h-auto w-full" aria-labelledby="slope-title slope-desc">
-        <title id="slope-title">Slope ruler from 15 percent to 100 percent</title>
+        <title id="slope-title">Slope ruler from 15 percent to 100 percent for your bank</title>
         <desc id="slope-desc">
-          A ruler of slope percents with computed degrees and rise per 10 feet. 100 percent is 45 degrees.
+          A ruler of slope percents with degrees and rise per 10 feet. 100 percent is 45 degrees.
         </desc>
         <rect width="760" height="220" fill="#123a63" />
         <line x1="40" y1="70" x2="720" y2="70" stroke="#dbe7f3" />
@@ -247,7 +247,7 @@ function SlopeRuler() {
           );
         })}
         <text x="40" y="196" fill="#ffffff" fontSize="14">
-          Interior and boundary are labelled in the table. Colour is not the only cue.
+          Interior and boundary are labeled in the table. Color isn't the only cue.
         </text>
       </svg>
     </figure>

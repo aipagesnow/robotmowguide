@@ -38,18 +38,18 @@ export default function AcrePage() {
   const iq440 = modelFacts("husqvarna-automower-iq", "Automower 440 iQ");
 
   const rows = [
-    { name: "Navimow i210 AWD", acres: i210.acres, slope: publishedSlope(i210.slope, i210.degrees), note: "Under an acre.", href: "/best#navimow-i210" },
-    { name: "Dreame A3 AWD Pro 2500", acres: dreame.acres, slope: publishedSlope(dreame.slope, dreame.degrees), note: "Under an acre.", href: "/reviews/dreame-a3-awd-pro" },
-    { name: "LUBA 3 AWD 3000", acres: luba.acres, slope: publishedSlope(luba.slope, luba.degrees), note: "Under an acre. LiDAR is the reason to read it for trees.", href: "/reviews/mammotion-luba-3-awd" },
-    { name: "Worx WR340", acres: worx.acres, slope: publishedSlope(worx.slope, worx.degrees), note: "Covers an open acre. Not enough for trees or two zones. Wirecutter’s complex-lawn note is separate.", href: "/reviews/worx-landroid-vision-cloud" },
-    { name: "Worx WR344", acres: wr344.acres, slope: publishedSlope(wr344.slope, wr344.degrees), note: "Same 1 acre rating, 4WD slope. Not enough for trees or two zones.", href: "/reviews/worx-landroid-vision-cloud" },
-    { name: "Navimow X430", acres: x430.acres, slope: publishedSlope(x430.slope, x430.degrees), note: "Covers an open acre. Not enough for trees or two zones.", href: "/reviews/segway-navimow-x4" },
-    { name: "Automower 420 iQ", acres: iq420.acres, slope: `${publishedSlope(iq420.slope, iq420.degrees)}. ${interiorOrBoundary(iq420.variant.ladder?.maxSlopePercent?.note)}`, note: iq420.variant.ladder?.ratedAreaAcres?.note || "Maker note on the area.", href: "/reviews/husqvarna-automower-iq" },
-    { name: "A3 AWD Pro 5000", acres: Number(dreame5000?.ladder?.ratedAreaAcres?.value), slope: "Not published", note: "Dreame doesn't publish a slope figure for the 5000.", href: "/reviews/dreame-a3-awd-pro" },
-    { name: "LUBA 3 AWD 5000", acres: luba5000.acres, slope: publishedSlope(luba5000.slope, luba5000.degrees), note: "Rated area meets 1.25 acres. Degrees are not published on this row.", href: "/reviews/mammotion-luba-3-awd" },
-    { name: "Automower 435 iQ AWD", acres: iq435.acres, slope: `${publishedSlope(iq435.slope, iq435.degrees)}. ${interiorOrBoundary(iq435.variant.ladder?.maxSlopePercent?.note)}`, note: "Rated above 1.25 acres. No confirmed amazon.com listing.", href: "/reviews/husqvarna-automower-iq" },
-    { name: "Navimow X450", acres: Number(x450?.ladder?.ratedAreaAcres?.value), slope: publishedSlope(Number(x450?.ladder?.maxSlopePercent?.value), typeof x450?.ladder?.maxSlopeDegrees?.value === "number" ? Number(x450.ladder.maxSlopeDegrees.value) : undefined), note: "Map maximum of 1.8 acres is stated for the X450 only. No confirmed amazon.com listing.", href: "/reviews/segway-navimow-x4" },
-    { name: "Automower 440 iQ", acres: iq440.acres, slope: `${publishedSlope(iq440.slope, iq440.degrees)}. ${interiorOrBoundary(iq440.variant.ladder?.maxSlopePercent?.note)}`, note: "The largest rating in this table. No confirmed amazon.com listing.", href: "/reviews/husqvarna-automower-iq" },
+    { name: "Navimow i210 AWD", acres: i210.acres, slope: publishedSlope(i210.slope, i210.degrees), note: "It sits under an acre, so we'd look past it for a full acre of grass.", href: "/best#navimow-i210" },
+    { name: "Dreame A3 AWD Pro 2500", acres: dreame.acres, slope: publishedSlope(dreame.slope, dreame.degrees), note: "It sits under an acre, so we'd look past it for a full acre of grass.", href: "/reviews/dreame-a3-awd-pro" },
+    { name: "LUBA 3 AWD 3000", acres: luba.acres, slope: publishedSlope(luba.slope, luba.degrees), note: "Under an acre. LiDAR is why we'd still read it if your smaller lawn is under trees.", href: "/reviews/mammotion-luba-3-awd" },
+    { name: "Worx WR340", acres: worx.acres, slope: publishedSlope(worx.slope, worx.degrees), note: "It covers an open acre. It's not enough if you've got trees or two zones. Wirecutter's complex-lawn note is a separate caution.", href: "/reviews/worx-landroid-vision-cloud" },
+    { name: "Worx WR344", acres: wr344.acres, slope: publishedSlope(wr344.slope, wr344.degrees), note: "Same 1 acre rating, with the 4WD slope. It's not enough if you've got trees or two zones.", href: "/reviews/worx-landroid-vision-cloud" },
+    { name: "Navimow X430", acres: x430.acres, slope: publishedSlope(x430.slope, x430.degrees), note: "It covers an open acre. It's not enough if you've got trees or two zones.", href: "/reviews/segway-navimow-x4" },
+    { name: "Automower 420 iQ", acres: iq420.acres, slope: `${publishedSlope(iq420.slope, iq420.degrees)}. ${interiorOrBoundary(iq420.variant.ladder?.maxSlopePercent?.note)}`, note: iq420.variant.ladder?.ratedAreaAcres?.note || "The maker's note on the area.", href: "/reviews/husqvarna-automower-iq" },
+    { name: "A3 AWD Pro 5000", acres: Number(dreame5000?.ladder?.ratedAreaAcres?.value), slope: "Not published", note: "Dreame doesn't publish a slope figure for the 5000, so we wouldn't guess one.", href: "/reviews/dreame-a3-awd-pro" },
+    { name: "LUBA 3 AWD 5000", acres: luba5000.acres, slope: publishedSlope(luba5000.slope, luba5000.degrees), note: "Rated area meets 1.25 acres. Degrees aren't published for it.", href: "/reviews/mammotion-luba-3-awd" },
+    { name: "Automower 435 iQ AWD", acres: iq435.acres, slope: `${publishedSlope(iq435.slope, iq435.degrees)}. ${interiorOrBoundary(iq435.variant.ladder?.maxSlopePercent?.note)}`, note: "Rated above 1.25 acres. There's no confirmed amazon.com listing.", href: "/reviews/husqvarna-automower-iq" },
+    { name: "Navimow X450", acres: Number(x450?.ladder?.ratedAreaAcres?.value), slope: publishedSlope(Number(x450?.ladder?.maxSlopePercent?.value), typeof x450?.ladder?.maxSlopeDegrees?.value === "number" ? Number(x450.ladder.maxSlopeDegrees.value) : undefined), note: "A map maximum of 1.8 acres is stated for the X450 only. There's no confirmed amazon.com listing.", href: "/reviews/segway-navimow-x4" },
+    { name: "Automower 440 iQ", acres: iq440.acres, slope: `${publishedSlope(iq440.slope, iq440.degrees)}. ${interiorOrBoundary(iq440.variant.ladder?.maxSlopePercent?.note)}`, note: "It's the largest rating in the list. There's no confirmed amazon.com listing.", href: "/reviews/husqvarna-automower-iq" },
   ];
 
   return (
@@ -67,37 +67,37 @@ export default function AcrePage() {
       disclosure
     >
       <p className="measure">
-        An open acre with one zone needs a model rated at least 1 acre. Heavy trees, or more than one zone,
-        need a rating of at least 1.25 acres.{" "}
+        If your acre is one open zone, you'd want a model rated at least 1 acre. If you've got heavy trees, or more than one zone,
+        you'd want a rating of at least 1.25 acres.{" "}
         <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The X430, the WR340, and the
-        WR344 are rated 1.0 acre, so they cover the open case and miss the complex case.
+        WR344 are rated 1.0 acre, so they cover an open lawn and miss a tree or two-zone lawn.
       </p>
       <QuickPick
         pageType="best_for"
         items={[
           {
-            yard: "Open acre, steep banks",
+            yard: "Open acre if your banks are steep",
             model: "Navimow X430",
             href: "/reviews/segway-navimow-x4",
             asin: x430.variant.asin,
             productSlug: x430.family.slug,
           },
           {
-            yard: "Open acre, gentler banks",
+            yard: "Open acre if your banks are gentler",
             model: "Worx Landroid Vision Cloud WR340",
             href: "/reviews/worx-landroid-vision-cloud",
             asin: worx.variant.asin,
             productSlug: worx.family.slug,
           },
           {
-            yard: "Open acre, 4WD slope",
+            yard: "Open acre on the 4WD slope",
             model: "Worx WR344",
             href: "/reviews/worx-landroid-vision-cloud",
             asin: wr344.variant.asin,
             productSlug: wr344.family.slug,
           },
           {
-            yard: "1.5 acres, no confirmed listing",
+            yard: "1.5 acres, with no confirmed listing",
             model: "Navimow X450",
             href: "/reviews/segway-navimow-x4",
             asin: x450?.asin ?? null,
@@ -108,7 +108,7 @@ export default function AcrePage() {
       <YardPhoto id="photo-acre" />
       <h2>Rated area with trees or two zones</h2>
       <p className="measure">
-        The Rated ÷ 1.25 column is the planning figure for heavy trees or two zones.{" "}
+        If your lawn has heavy trees or two zones, the Rated ÷ 1.25 column is the figure we'd plan on.{" "}
         <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
       </p>
       <Slot id="dia-rated-vs-real">
@@ -125,8 +125,8 @@ export default function AcrePage() {
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
           <caption>
-            Rated acres against the 1.25 planning figure. One acre of grass is 43,560 sq ft. Specs checked
-            Oct 10, 2026, except the WR344 listing recheck on Oct 13, 2026.
+            Rated acres against the 1.25 planning figure. One acre of grass is 43,560 sq ft. Specs as of
+            Oct 10, 2026, and the WR344 listing also read on Oct 13, 2026.
           </caption>
           <thead>
             <tr>
@@ -158,25 +158,25 @@ export default function AcrePage() {
       <SlopeMarginNote />
       <h2>What the 1.0 acre ratings leave out</h2>
       <p className="measure">
-        Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre than the WR340’s 1
-        acre rating. That note is Wirecutter’s. The WR340 is not an award winner.{" "}
+        Wirecutter, updated Aug 3, 2026, suggests a complex lawn closer to a quarter acre than the WR340's 1
+        acre rating. That's Wirecutter's note. We wouldn't call the WR340 an award winner.{" "}
         <SourceLine ids={["wirecutter", "worx-vision-cloud"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
-        The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)}. It does not cover a full acre. It is still
-        the comparison when trees cover a smaller lawn, because it adds LiDAR. The Dreame 2500 is rated{" "}
+        The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres)}. It doesn't cover a full acre. It's still
+        the one we'd compare when trees cover a smaller lawn, because it adds LiDAR. The Dreame 2500 is rated{" "}
         {formatAcres(dreame.acres, false)}. The i210 is rated {formatAcres(i210.acres, false)}.
       </p>
       <p className="measure">
-        The 420 iQ area note says 0.5 acre for an irregular lawn and 1 acre for systematic mowing. Use
-        Husqvarna’s figure for this model rather than <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. The same page puts 15% at the boundary
+        The 420 iQ area note says 0.5 acre for an irregular lawn and 1 acre for systematic mowing. We'd use
+        Husqvarna's figure for this model rather than <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. Husqvarna puts 15% at the boundary
         beside the higher slope figure, so that higher figure is the interior and 15% is the boundary.{" "}
         <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
-        The X450, the LUBA 5000, the Dreame 5000, and the Husqvarna iQ rows above do not have a confirmed
-        amazon.com listing in the data checked for this page, except where a button appears in the quick
-        pick. The X450 row in that box has no button for that reason.
+        The X450, the LUBA 5000, the Dreame 5000, and the Husqvarna iQ models above don't have a confirmed
+        amazon.com listing, except where a button appears in the quick
+        pick. The X450 in that box has no button for that reason.
       </p>
       <Faq
         items={[
@@ -184,7 +184,7 @@ export default function AcrePage() {
             q: "Is a 1 acre rating enough for 1 acre of grass?",
             a: (
               <>
-                For one open zone, yes: the rating has to be at least 1 acre. For heavy trees or two zones,
+                If it's one open zone, yes: the rating has to be at least 1 acre. If you've got heavy trees or two zones,
                 the rating needs to be at least 1.25 acres.{" "}
                 <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>. The X430, WR340, and
                 WR344 are 1.0 acre models.
@@ -193,21 +193,21 @@ export default function AcrePage() {
           },
           {
             q: "Which 1 acre mower is for a steep bank?",
-            a: "The X430 publishes 84% (40°). The WR344 publishes 84%. The WR340 publishes 30%. The hills page converts a measured bank.",
+            a: "If your bank is steep, start with the X430, which publishes 84% (40°). The WR344 publishes 84%. The WR340 publishes 30%. The hills page converts a bank you measure.",
           },
           {
             q: "What if the lawn is over about 2 acres?",
-            a: "The finder says nothing fits once the lawn is past every current rating, and it points at two mowers or a commercial unit. The 440 iQ is rated 2 acres and has no confirmed listing here.",
+            a: "Once your lawn is past every current rating, the finder says nothing fits, and it points at two mowers or a commercial unit. The 440 iQ is rated 2 acres and there's no confirmed listing here.",
           },
         ]}
       />
       <ResearchedBox
         scope="group"
         sources={sources.map((id) => ({ id }))}
-        manuals="No owner's manual was in the source list for this page."
-        threads="Owner threads are on the linked reviews, read in October 2026."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Specs checked Oct 10, 2026. The WR344 listing was opened again on Oct 13, 2026."
+        manuals="No owner's manual was in the source list."
+        threads="Owner threads are on the linked reviews, from October 2026."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Specs as of Oct 10, 2026. The WR344 listing was also read on Oct 13, 2026."
       />
       <Related
         links={[
@@ -229,9 +229,9 @@ function RatedBars({ rows }: { rows: { name: string; rated: number }[] }) {
   return (
     <figure className="blueprint mt-4">
       <svg role="img" viewBox="0 0 760 280" className="block h-auto w-full" aria-labelledby="acre-title acre-desc">
-        <title id="acre-title">Rated area beside the 1.25 planning figure</title>
+        <title id="acre-title">Rated area beside the 1.25 planning figure for your yard</title>
         <desc id="acre-desc">
-          Four bars. The longer bar is the rated acres. The shorter bar is that rating divided by 1.25.
+          Four bars for the comparison. The longer bar is the rated acres. The shorter bar is that rating divided by 1.25.
         </desc>
         <rect width="760" height="280" fill="#123a63" />
         {rows.map((row, index) => {
@@ -252,7 +252,7 @@ function RatedBars({ rows }: { rows: { name: string; rated: number }[] }) {
           );
         })}
         <text x="24" y="262" fill="#ffffff" fontSize="14">
-          White is rated acres. The pale bar is rated divided by 1.25. The table has the same numbers.
+          White is rated acres. The pale bar is rated divided by 1.25. The table has the same numbers for your yard.
         </text>
       </svg>
     </figure>

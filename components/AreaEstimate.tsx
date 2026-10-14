@@ -22,8 +22,8 @@ export function AreaEstimate({ models }: { models: Row[] }) {
   return (
     <form className="sheet grid gap-4 p-4" onSubmit={(event) => event.preventDefault()}>
       <p className="measure m-0">
-        Turn on heavy trees or more than one zone to use the rule of thumb above. Husqvarna’s ±20% note and
-        the 420 iQ split of 0.5 acre irregular / 1 acre systematic stay separate from this box.
+        If your yard has heavy trees or more than one zone, turn that on to use the rule of thumb above. Husqvarna's ±20% note and
+        the 420 iQ split of 0.5 acre irregular / 1 acre systematic stay separate from this estimate.
       </p>
       <div className="flex flex-wrap gap-3">
         <label className="grid gap-1">
@@ -42,19 +42,19 @@ export function AreaEstimate({ models }: { models: Row[] }) {
       <div aria-live="polite">
         {result ? (
           <p className="measure m-0">
-            At {result.factor}×, this {result.acres} acre lawn needs a rating of at least {result.needed.toFixed(2)}{" "}
+            At {result.factor}×, your {result.acres} acre lawn needs a rating of at least {result.needed.toFixed(2)}{" "}
             acres.{" "}
             {result.fits.length
               ? result.fits.map((model, index) => (
                   <span key={model.name}>
-                    {index > 0 ? ", " : "Current ratings that clear it: "}
+                    {index > 0 ? ", " : "Ratings that cover it: "}
                     {model.href ? <Link href={model.href}>{model.name}</Link> : model.name} ({model.acres} acres)
                   </span>
                 ))
-              : "No current rating on this list clears that number."}
+              : "No current rating on this list covers that number."}
           </p>
         ) : (
-          <p className="measure m-0">Enter a lawn area above zero.</p>
+          <p className="measure m-0">Enter a lawn area above zero so we can match it.</p>
         )}
       </div>
     </form>

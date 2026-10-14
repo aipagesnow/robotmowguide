@@ -54,7 +54,7 @@ export function matchMowers(candidates: Candidate[], input: FinderInput): Finder
   if (!Number.isFinite(lawn) || lawn <= 0 || !Number.isFinite(input.slopePercent) || input.slopePercent < 0) {
     return {
       matches: [],
-      nothing: "Enter a lawn area above zero and a slope of zero or more.",
+      nothing: "Enter a lawn area above zero and a slope of zero or higher.",
     };
   }
   const multiple = input.zones !== "none";
@@ -84,7 +84,7 @@ export function matchMowers(candidates: Candidate[], input: FinderInput): Finder
   const matches: Match[] = ranked.slice(0, 3).map((candidate) => {
     const watch: string[] = [];
     if (input.trees === "heavy" && rtkOnly(candidate)) {
-      watch.push("What to watch: satellite fix under canopy. This model is not LiDAR or vision-led.");
+      watch.push("What to watch: the satellite fix under the canopy on your lawn. This model isn't LiDAR or vision-led.");
     }
     if (
       input.slopeAtEdge &&
@@ -92,26 +92,26 @@ export function matchMowers(candidates: Candidate[], input: FinderInput): Finder
       candidate.boundarySlope + 1e-9 < input.slopePercent
     ) {
       watch.push(
-        `What to watch: the published boundary figure is ${candidate.boundarySlope}%, which is lower than this bank. The interior figure is ${candidate.slope}%.`,
+        `What to watch: the published edge figure is ${candidate.boundarySlope}%, lower than your bank. The interior figure is ${candidate.slope}%.`,
       );
     }
     if (input.zones === "passage" && candidate.passageInches === null) {
-      watch.push("What to watch: no body width or minimum gap is published. Check the manual before you trust a side passage.");
+      watch.push("What to watch: no body width or minimum gap is published. We'd read the manual before trusting a side passage.");
     }
     if (input.zones === "separate") {
-      watch.push("What to watch: the zones are not connected. Check whether this model keeps two maps, and whether each map needs its own dock.");
+      watch.push("What to watch: your zones aren't connected. See whether this model keeps two maps, and whether each map needs its own dock.");
     }
     const areaWords =
       factor === 1.25
-        ? `Rated area ${candidate.acres} acres covers the ${needed.toFixed(2)} acres this yard needs with trees or two zones.`
-        : `Rated area ${candidate.acres} acres covers this ${lawn} acre lawn at 1.0×, which is the open single-lawn case.`;
+        ? `It's rated for ${candidate.acres} acres, which covers the ${needed.toFixed(2)} acres your yard needs with trees or two zones.`
+        : `It's rated for ${candidate.acres} acres, which covers your ${lawn} acre lawn at 1.0×, the open single-lawn case.`;
     const slopeWords =
       typeof candidate.boundarySlope === "number"
-        ? `Published interior slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered, and the note also prints a boundary figure of ${candidate.boundarySlope}%.`
-        : `Published maximum slope ${candidate.slope}% is at least the ${input.slopePercent}% you entered.`;
+        ? `The interior slope of ${candidate.slope}% is at least the ${input.slopePercent}% you entered, and there's also an edge figure of ${candidate.boundarySlope}%.`
+        : `The steepest slope it's rated for, ${candidate.slope}%, is at least the ${input.slopePercent}% you entered.`;
     return {
       candidate,
-      why: `${areaWords} ${slopeWords} Navigation: ${candidate.navigationLabel}.`,
+      why: `${areaWords} ${slopeWords} It navigates with ${candidate.navigationLabel}.`,
       watch,
     };
   });
@@ -123,31 +123,31 @@ export function matchMowers(candidates: Candidate[], input: FinderInput): Finder
   if (needed > largest + 1e-9) {
     return {
       matches: [],
-      nothing: `Nothing fits. The list tops out at ${largest} rated acres, and this yard needs ${needed.toFixed(2)} under the rule in use. Over about 2 acres, consider two mowers or a commercial unit.`,
+      nothing: `Nothing fits. The list tops out at ${largest} rated acres, and your yard needs ${needed.toFixed(2)} on our sizing. Over about 2 acres, we'd look at two mowers or a commercial unit.`,
     };
   }
   if (!areaOk.length) {
     return {
       matches: [],
-      nothing: "Nothing fits. No current model is rated for this lawn under the area rule.",
+      nothing: "Nothing fits. No current model is rated for a lawn this size.",
     };
   }
   if (!slopeOk.length) {
     return {
       matches: [],
-      nothing: `Nothing fits. No current model publishes a maximum slope of at least ${input.slopePercent}%. The highest published maximum on the list is ${steepest}%.`,
+      nothing: `Nothing fits. No current model publishes a maximum slope of at least ${input.slopePercent}%. The highest one on the list is ${steepest}%.`,
     };
   }
   if (!wireOk.length) {
     return {
       matches: [],
-      nothing: "Nothing fits. The models that clear the area and the slope need a boundary wire, and this check is wire-free only.",
+      nothing: "Nothing fits. The models that clear your area and your slope need a boundary wire, and you asked for wire-free only.",
     };
   }
   return {
     matches: [],
     nothing:
-      "Nothing fits. Every current model that cleared the area, the slope, and the wire check publishes a body width or gap wider than this passage.",
+      "Nothing fits. Every current model that cleared your area, your slope, and the wire choice publishes a body width or gap wider than your passage.",
   };
 }
 

@@ -58,13 +58,14 @@ export default function Q110Review() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        The Q110H fits an open quarter acre with banks inside {publishedSlope(q.slope, q.degrees)}. It uses
-        full-band RTK plus VSLAM and vision, so heavy canopy is a reason to look at a LiDAR mower instead.
+        If you've got an open quarter acre and banks inside {publishedSlope(q.slope, q.degrees)}, the Q110H
+        is a possible fit. It uses full-band RTK plus VSLAM and vision, so heavy canopy is a reason to look
+        at a LiDAR mower instead.
       </p>
       <p className="measure">
-        The cut to use is {specText(q.specs.cuttingHeight)}. That is 40–80 mm on the English technical data
+        The cut we'd use is {specText(q.specs.cuttingHeight)}. That's 40–80 mm on the English technical data
         that names the Q110H. A CE manual for the Q105 and Q110 lists 20–60 mm, about 0.8–2.4 in. Those are
-        different models, so use the band for the model you are buying.
+        different models, so use the band for the model you're buying.
       </p>
       <CtaCluster>
         <ProductLink
@@ -87,12 +88,12 @@ export default function Q110Review() {
           {
             label: "Max slope",
             value: slopeWithRise(q.slope, q.degrees),
-            detail: "The degree was calculated from 45%.",
+            detail: "The degree was worked out from 45%, not printed as its own figure.",
           },
           {
             label: "Body width",
             value: specText(q.specs.bodyWidth),
-            detail: "From the manual’s L×W×H. It is the body, not a minimum gap.",
+            detail: "From the manual's L×W×H. It's the body, not a minimum gap, so don't treat it as your gate width.",
           },
           {
             label: "Navigation",
@@ -102,7 +103,7 @@ export default function Q110Review() {
           {
             label: "Cut",
             value: specText(q.specs.cuttingHeight),
-            detail: "Q110H line. The CE Q110 band is 20–60 mm and is not the US figure.",
+            detail: "Q110H line. The CE Q110 band is 20–60 mm and isn't the US figure.",
           },
         ]}
       />
@@ -111,12 +112,12 @@ export default function Q110Review() {
         pageType="review"
         differences={{
           "RockNeo Q110H":
-            "The only row. Rear-wheel drive. Cut 1.57–3.15 in on the Q110H manual line. 4G tracking is a separate module.",
+            "The only model here. Rear-wheel drive. Cut 1.57–3.15 in on the Q110H manual line. 4G tracking is a separate module.",
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="RockNeo Q110H. Height, width, and storage temperature are from the English technical data checked Oct 13, 2026."
+        caption="RockNeo Q110H. Height, width, and storage temperature come from the English technical data, checked Oct 13, 2026."
         rows={[
           {
             label: "Rated area",
@@ -124,7 +125,7 @@ export default function Q110Review() {
             sources: ["amz-q110h", "q110h-manual"],
             checked: "2026-10-13",
             href: "/best/robot-mower-small-yard",
-            note: "The manual’s Q110H line says 1/4 acre.",
+            note: "The manual's Q110H line says 1/4 acre.",
           },
           {
             label: "Max slope",
@@ -132,14 +133,14 @@ export default function Q110Review() {
             sources: ["amz-q110h"],
             checked: "2026-10-13",
             href: "/best/robot-mower-for-hills",
-            note: "24.2° was calculated from 45%, not a second published degree.",
+            note: "24.2° was worked out from 45%, not a second published degree.",
           },
           {
             label: "Cutting height",
             value: specText(q.specs.cuttingHeight),
             sources: ["q110h-manual"],
             checked: "2026-10-13",
-            note: "40–80 mm. The CE Q105/Q110 manual lists 20–60 mm. The Verge’s 0.8–2.4 in matches that CE band.",
+            note: "40–80 mm. The CE Q105/Q110 manual lists 20–60 mm. The Verge's 0.8–2.4 in matches that CE band.",
           },
           {
             label: "Cutting width",
@@ -154,7 +155,7 @@ export default function Q110Review() {
             sources: ["q110h-manual"],
             checked: "2026-10-13",
             href: "/guides/robot-mower-front-and-back-yard",
-            note: "420 mm in the L×W×H line. Not a minimum passage.",
+            note: "420 mm in the L×W×H line. That's the body, not a minimum passage.",
           },
           {
             label: "Navigation",
@@ -181,65 +182,67 @@ export default function Q110Review() {
       <SlopeMarginNote />
       <h2>The two cutting-height bands</h2>
       <p className="measure">
-        The English technical data names the Q110H, model RRTR1BUT, rated 1/4 acre, and lists cutting height
-        as 40–80 mm (1.57–3.15 in). The CE manual’s technical data names the Q105 and the Q110 and lists
-        20–60 mm. The Verge published 0.8–2.4 in, which matches the CE band. Grass kept taller than 3.15 in
-        is outside the Q110H line. A lawn someone hoped to cut at 0.8 in is inside the CE band and outside
-        the Q110H line. <SourceLine ids={["q110h-manual", "q110h-manual-ce", "verge"]} checked="2026-10-13" />
+        There are two cutting-height bands, and we'd use the one that names your model. The English technical
+        data names the Q110H, model RRTR1BUT, rated 1/4 acre, and lists cutting height as 40–80 mm (1.57–3.15
+        in). The CE manual's technical data names the Q105 and the Q110 and lists 20–60 mm. The Verge
+        published 0.8–2.4 in, which matches the CE band. Grass kept taller than 3.15 in is outside the Q110H
+        line. A lawn you hoped to cut at 0.8 in is inside the CE band and outside the Q110H line.{" "}
+        <SourceLine ids={["q110h-manual", "q110h-manual-ce", "verge"]} checked="2026-10-13" />
       </p>
       <h2>Quarter acre, open sky</h2>
       <p className="measure">
-        {formatAcres(q.acres)}. <ComfortableFor rated={q.acres} /> {q.slope}%, a rise of {risePer10Ft(q.slope)}.
-        RTK plus VSLAM still wants sky along the path.{" "}
+        It's a quarter acre on open sky, rated {formatAcres(q.acres)}. <ComfortableFor rated={q.acres} />{" "}
+        {q.slope}% is the bank, a rise of {risePer10Ft(q.slope)}. RTK plus VSLAM still wants sky along the
+        path, so heavy canopy is a reason to look elsewhere.{" "}
         <Link href="/best/robot-mower-under-trees">Under trees</Link> is a different pick.{" "}
         <SourceLine ids={["amz-q110h", "q110h-manual"]} checked="2026-10-13" />
       </p>
       <h2>What owners report</h2>
       <p className="measure">
         Few owner reports for the US Q110H exist yet. Threads that turned up on Oct 13, 2026 name the Q110 or
-        the Q105, the European models in the CE manual, and they are not Q110H reports.
+        the Q105, the European models in the CE manual, and they aren't Q110H reports.
       </p>
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
         {family.notFor?.map((item) => (
           <li key={item}>{item}</li>
         ))}
-        <li>A minimum passage is not published. The 16.54 in figure is body width.</li>
+        <li>If you need a minimum passage in writing, it isn't published. The 16.54 in figure is body width.</li>
       </ul>
       <SupportOutlook brand="Roborock" />
       <p className="measure">
-        Wi-Fi and Bluetooth are on the mower. The Verge describes a 4G tracking module sold separately.{" "}
-        <SourceLine ids={["verge"]} checked={SPEC_CHECKED} />
+        Wi-Fi and Bluetooth are on the mower. The Verge describes a 4G tracking module sold separately, so it
+        isn't in the box. <SourceLine ids={["verge"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
-        The <Link href="/reviews/segway-navimow-i-series">Navimow i210 AWD</Link> is the same quarter-acre
-        class, rated {formatAcres(i210.acres)}, with network RTK and no antenna. The{" "}
-        <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is rated{" "}
+        If you want the same quarter acre with network RTK and no antenna, the{" "}
+        <Link href="/reviews/segway-navimow-i-series">Navimow i210 AWD</Link> is rated {formatAcres(i210.acres)}.
+        The <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is rated{" "}
         {formatAcres(mini.acres, false)} and climbs to {mini.slope}%, with a taller cut.
       </p>
       <Faq
         items={[
           {
             q: "Why are there two cutting-height ranges?",
-            a: "The English technical data for the Q110H says 40–80 mm (1.57–3.15 in). The CE manual for the Q105 and Q110 says 20–60 mm. They are not averaged.",
+            a: "They name different models, so they aren't averaged. The English technical data for the Q110H says 40–80 mm (1.57–3.15 in). The CE manual for the Q105 and Q110 says 20–60 mm.",
           },
           {
             q: "Will it mow under trees?",
-            a: "It is an RTK-led mower. Canopy over the path is a reason to compare a LiDAR model. The under-trees page makes that split.",
+            a: "Maybe not. It's an RTK-led mower, so canopy over the path is a reason to compare a LiDAR model. The under-trees page makes that split.",
           },
           {
             q: "How wide a gate does it need?",
-            a: "The manual’s width is 16.54 in for the body. A minimum gap is not published, so the passage gauge will not invent one.",
+            a: "The manual's width is 16.54 in for the body. A minimum gap isn't published, so the passage gauge won't invent one.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="Q1 series English technical data naming the Q110H, and the CE manual for the Q105 and Q110, both read Oct 13, 2026."
-        threads="r/Roborock and r/roboticLawnmowers were checked. No thread named the US Q110H."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Manual and listing rechecked Oct 13, 2026."
+        manuals="The Q1 series English technical data names the Q110H, and the CE manual covers the Q105 and Q110. Both were read on Oct 13, 2026."
+        threads="We read r/Roborock and r/roboticLawnmowers. No thread named the US Q110H."
+        questions="No manufacturer has answered questions yet."
+        specsLine="Manual and listing read on Oct 13, 2026."
       />
       <EndLinks
         pageType="review"

@@ -40,10 +40,10 @@ export default function WorthItPage() {
       disclosure
     >
       <p className="measure">
-        A robot mower is worth considering when the lawn sits inside a current model’s rated area and slope,
-        the published cut reaches the height you keep, and you still plan to trim the edges. It is a poor buy
-        for the yards in the list below. Lawn-service prices vary too much by area to give a payback date.
-        Compare a year of your own service bills with the mower's cost-to-own figure.
+        Yes, if your lawn sits inside a current model's rated area and slope,
+        the published cut reaches the height you keep, and you'll still trim the edges. It's a poor buy
+        for the yards in the list below. Lawn-service prices vary too much by town to name a payback date.
+        We'd compare a year of your own service bills with the mower's cost-to-own figure.
       </p>
       <CtaCluster>
         <ProductLink
@@ -57,70 +57,70 @@ export default function WorthItPage() {
       <YardPhoto id="photo-worth-it" />
       <h2>A yard that can use one</h2>
       <p className="measure">
-        Take an open acre with banks inside {publishedSlope(x430.slope, x430.degrees)}. The Navimow X430 is
-        rated {formatAcres(x430.acres)} and cuts {specText(x430.specs.cuttingHeight)}.{" "}
+        If you've got an open acre and the banks stay inside {publishedSlope(x430.slope, x430.degrees)}, we'd start with the Navimow X430. It's
+        rated {formatAcres(x430.acres)} and the cut is {specText(x430.specs.cuttingHeight)}.{" "}
         <ComfortableFor rated={x430.acres} /> The longer write-up is the{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <SlopeMarginNote />
       <p className="measure">
-        Take a smaller lawn under trees. The LUBA 3 AWD 3000 is rated {formatAcres(luba.acres, false)} and adds
-        LiDAR to network RTK. The standard cut is {specText(luba.specs.cuttingHeight)}, which is short of a
-        4 inch St. Augustine lawn. <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
+        If your lawn is smaller and sits under trees, we'd look at the LUBA 3 AWD 3000. It's rated {formatAcres(luba.acres, false)} and it adds
+        LiDAR on top of network RTK. The standard cut is {specText(luba.specs.cuttingHeight)}, which is short of a
+        4 inch St. Augustine lawn, so if you keep it that tall, this cut won't reach it. <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
         <Link href="/best/robot-mower-under-trees">Which robot mower under trees?</Link>
       </p>
       <h2>Who should not buy one yet</h2>
       <ul className="grid gap-3 pl-5">
-        <li>Sandy soil, or a lawn that stays wet. Heavy machines rut soft ground and get stuck.</li>
+        <li>Sandy soil, or a lawn that stays wet. Heavy machines rut soft ground and get stuck, so we'd wait.</li>
         <li>
-          Heavy canopy over most of the lawn, unless the model is LiDAR or vision-led and you accept some
+          Heavy canopy over most of your lawn, unless the model is LiDAR or vision-led and you're fine with some
           hand mowing. <Link href="/best/robot-mower-under-trees">The under-trees page</Link> is the comparison.
         </li>
         <li>
-          Steep banks past every model’s boundary figure. A rise of 4 ft over 10 ft is 40%.{" "}
+          Steep banks past every model's boundary figure. A rise of 4 ft over 10 ft is 40%.{" "}
           <Link href="/best/robot-mower-for-hills">Convert your bank</Link> before you treat a headline slope
-          as the edge.
+          as the edge of your lawn.
         </li>
         <li>
-          An unfenced front yard on a busy street, if theft is a real worry.{" "}
+          An unfenced front yard on a busy street, if theft is a real worry for you.{" "}
           <Link href="/guides/robot-mower-theft-protection">What the listings actually say about theft</Link>.
         </li>
         <li>
-          A lawn kept taller or shorter than the model’s published cut. Standard St. Augustine is often kept
+          A lawn you keep taller or shorter than the model's published cut. Standard St. Augustine is often kept
           at 3.5–4 inches. A Texas Bermuda home lawn is often kept near 1–2 inches.{" "}
           <Link href="/best/robot-mower-st-augustine">St. Augustine heights</Link> and{" "}
           <Link href="/best/robot-mower-bermuda">Bermuda heights</Link>.
         </li>
-        <li>Anyone who expects zero string trimming. Edges, beds, and fence lines still need a trimmer.</li>
+        <li>Honestly, if you expect zero string trimming, we'd say not yet. Edges, beds, and fence lines still need a trimmer.</li>
       </ul>
       <h2>What we can and can't tell you</h2>
       <p className="measure">
-        Owner threads mention hours saved. That is not a dollar payback, and it is not a count of all owners.
-        Subscription fees that are published live on the{" "}
-        <Link href="/guides/robot-mower-cost-to-own">cost-to-own guide</Link>. Where a maker does not state a
+        We can say whether the specs fit your yard, and we can't name a dollar payback. Owner threads mention hours saved, but that's not a dollar figure, and it's not a count of every owner.
+        Published subscription fees live on the{" "}
+        <Link href="/guides/robot-mower-cost-to-own">cost-to-own guide</Link>. Where a maker doesn't state a
         price, that guide says Not published.
       </p>
       <p className="measure">
-        The <Link href="/tools/mower-finder">finder</Link> leaves a model off the list when the rated area or
-        the slope does not clear the yard. A missing row there is a reason to wait, not a reason to stretch
+        The <Link href="/tools/mower-finder">finder</Link> skips a model when the rated area or
+        the slope doesn't clear your yard. If a model isn't listed, that's a reason to wait, not a reason to stretch
         a rating.
       </p>
       <Faq
         items={[
           {
             q: "Will it replace a lawn service?",
-            a: "Lawn-service prices vary too much by area to give a payback date. Compare a year of your own service bills with the mower's cost-to-own figure.",
+            a: "We can't name a payback date, because lawn-service prices vary too much by town. We'd compare a year of your own bills with the mower's cost-to-own figure.",
           },
           {
             q: "Do I still trim by hand?",
-            a: "Yes. None of these pages treats a robot mower as a replacement for string trimming along edges and beds.",
+            a: "Yes. You'd still trim by hand along the edges and the beds. A robot mower doesn't replace a string trimmer.",
           },
           {
             q: "What if the lawn is split by the house?",
             a: (
               <>
-                For two zones, follow <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>,
-                then check the side passage. The front-and-back guide is the walkthrough.
+                If the house splits your lawn, follow <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>,
+                then measure the side passage. The front-and-back guide walks you through it.
               </>
             ),
           },

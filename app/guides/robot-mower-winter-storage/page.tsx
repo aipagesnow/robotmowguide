@@ -40,9 +40,9 @@ export default function WinterGuide() {
       whatChanged="October 13, 2026: added the RockNeo Q110H, the mower whose manual prints a storage temperature."
     >
       <p className="measure">
-        Use the storage temperature in that model’s manual. The only one in our spec set is the RockNeo
+        We'd use the storage temperature in that model's manual. The only one in our spec set is the RockNeo
         Q110H: {storage}. The same manual gives that band for the battery. No charge percent is published on
-        the pages used here.{" "}
+        the pages we read.{" "}
         <SourceLine ids={["q110h-manual"]} checked={RECHECKED} />
       </p>
       <Disclosure />
@@ -59,23 +59,23 @@ export default function WinterGuide() {
       <SeasonsDiagram />
       <h2>What the Q110H manual actually prints</h2>
       <p className="measure">
-        Storage is {storage}. That is −20–55°C, with 10–35°C recommended, written here in Fahrenheit as the
-        manual’s English technical data gives it. The{" "}
+        Storage is {storage}. That's −20–55°C, with 10–35°C recommended, written here in Fahrenheit as the
+        manual's English technical data gives it. The{" "}
         <Link href="/reviews/roborock-rockneo-q110h">Q110H review</Link> keeps a separate cutting-height
-        conflict. This storage line comes only from the technical data that names the Q110H.{" "}
+        mismatch. This storage figure comes only from the technical data that names the Q110H.{" "}
         <SourceLine ids={["q110h-manual"]} checked={RECHECKED} />
       </p>
       <h2>The other US pages do not include a checklist</h2>
       <p className="measure">
-        Checked Oct 13, 2026: the Mammotion LUBA 3, MOVA LiDAX, Navimow, and Dreame US pages already used for
-        specs on this site do not include a winter storage checklist. If you own one of them, use that
-        model’s manual.{" "}
+        As of Oct 13, 2026, the Mammotion LUBA 3, MOVA LiDAX, Navimow, and Dreame US pages we read for
+        specs don't include a winter storage checklist. Honestly, if you own one of them, use that
+        model's manual.{" "}
         <SourceLine ids={["mammotion-luba3", "mova-2000", "mova-3000", "navimow-x4", "navimow-i-series", "dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>A garage is not a positioning claim</h2>
       <p className="measure">
-        Store the mower where the manual’s temperature fits. A garage is a temperature question, not a
-        positioning claim. Sky along the mowing path is covered in{" "}
+        No. We'd store your mower where the manual's temperature fits. A garage only answers the temperature question.
+        A satellite fix is a different question. Sky along the mowing path is covered in{" "}
         <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision</Link>. An antenna still needs open
         sky, and the mower still needs a fix along the grass.
       </p>
@@ -83,15 +83,15 @@ export default function WinterGuide() {
         items={[
           {
             q: "Can I leave the mower out all winter?",
-            a: "The pages checked for this guide do not answer that. The Q110H manual prints a storage temperature of −4°F to 131°F, with 50–95°F recommended. Follow the manual for the model you own.",
+            a: "The pages we read for this guide don't answer that. The Q110H manual prints a storage temperature of −4°F to 131°F, with 50–95°F recommended. We'd follow the manual for the model you own.",
           },
           {
             q: "What charge should the battery sit at?",
-            a: "Not published on the pages used here.",
+            a: "Not published on the pages we read.",
           },
           {
             q: "Does the dock stay outside?",
-            a: "The US pages in the source list do not say whether the dock stays outside.",
+            a: "The US pages in the source list don't say whether the dock stays outside. We'd follow the manual for the model you own.",
           },
         ]}
       />
@@ -99,9 +99,9 @@ export default function WinterGuide() {
         scope="group"
         sources={sources.map((id) => ({ id }))}
         manuals="The Q110H English technical data, read Oct 13, 2026, is the only storage-temperature source."
-        threads="No winter owner threads were used. Owner reports stay on the reviews."
+        threads="No winter owner threads are included. Owner reports stay on the reviews."
         questions="No manufacturer questions have been answered yet."
-        specsLine="Q110H storage temperature checked Oct 13, 2026. The other brand pages were checked Oct 10, 2026, and they do not include a winter checklist."
+        specsLine="Q110H storage temperature checked Oct 13, 2026. The other brand pages were checked Oct 10, 2026, and they don't include a winter checklist."
       />
       <h2>Sources</h2>
       <ul className="grid gap-2 pl-5">

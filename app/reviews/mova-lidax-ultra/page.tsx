@@ -56,18 +56,18 @@ export default function MovaReview() {
       path="/reviews/mova-lidax-ultra"
       crumbs={crumbs}
       updated={RECHECKED}
-      whatChanged="October 13, 2026: first published. The three amazon.com titles were rechecked the same day."
+      whatChanged="October 13, 2026: first published. The three amazon.com titles were read the same day."
       disclosure
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        Start with the 2000 for an open half acre and banks inside {publishedSlope(m2000.slope, m2000.degrees)}.
-        It is LiDAR and vision, with no RTK antenna. Move to the 3000 AWD when the bank is the reason you are
-        shopping: that row is {m3000.slope}% and {formatAcres(m3000.acres)}.
+        If you've got an open half acre and banks inside {publishedSlope(m2000.slope, m2000.degrees)}, start
+        with the 2000. It's LiDAR and vision, with no RTK antenna. Move to the 3000 AWD when the bank is why
+        you're shopping: that model is {m3000.slope}% and {formatAcres(m3000.acres)}.
       </p>
       <p className="measure">
-        Few owner reports exist yet. Two independent threads are linked below. Other posts say MOVA provided
-        the mower, so they are not counted as ordinary owner reports.
+        Few owner reports exist yet, so we'd treat it as a newer name. Two independent threads are linked
+        below. Other posts say MOVA provided the mower, so they aren't ordinary owner reports.
       </p>
       <CtaCluster>
         <ProductLink
@@ -100,7 +100,7 @@ export default function MovaReview() {
           {
             label: "Paths",
             value: specText(m2000.specs.passage),
-            detail: "The 2000 listing says it handles paths of that width. It is not a measured body width.",
+            detail: "The 2000 listing says it handles paths of that width. It isn't a measured body width, so measure the opening yourself.",
           },
           {
             label: "Navigation",
@@ -110,7 +110,7 @@ export default function MovaReview() {
           {
             label: "After year one",
             value: "A yearly GPS fee, amount not repeated here",
-            detail: "Wirecutter reports a fee after the first year. 4G on the 3000 AWD is described as free for 3 years.",
+            detail: "Wirecutter reports a fee after the first year. 4G on the 3000 AWD is free for 3 years.",
           },
         ]}
       />
@@ -118,14 +118,14 @@ export default function MovaReview() {
         family={family}
         pageType="review"
         differences={{
-          "LiDAX Ultra 1000": `Rated ${formatAcres(m1000.acres)}. Slope ${publishedSlope(m1000.slope, m1000.degrees)}. Cut ${specText(m1000.specs.cuttingHeight)}.`,
-          "LiDAX Ultra 2000": `The model this review follows. Rated ${formatAcres(m2000.acres)}. Listing path figure ${specText(m2000.specs.passage)}.`,
-          "LiDAX Ultra 3000 AWD": `Rated ${formatAcres(m3000.acres)}. AWD. Slope ${publishedSlope(m3000.slope, m3000.degrees)}. Cut width ${specText(m3000.specs.cuttingWidth)}.`,
+          "LiDAX Ultra 1000": `The smaller yard. Rated ${formatAcres(m1000.acres)}. Slope ${publishedSlope(m1000.slope, m1000.degrees)}. Cut ${specText(m1000.specs.cuttingHeight)}.`,
+          "LiDAX Ultra 2000": `The one we'd start with. Rated ${formatAcres(m2000.acres)}. The listing's path figure is ${specText(m2000.specs.passage)}.`,
+          "LiDAX Ultra 3000 AWD": `The steep one. Rated ${formatAcres(m3000.acres)}. AWD. Slope ${publishedSlope(m3000.slope, m3000.degrees)}. Cut width ${specText(m3000.specs.cuttingWidth)}.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="LiDAX Ultra 2000, unless a row names another size. Listing titles rechecked Oct 13, 2026."
+        caption="LiDAX Ultra 2000, unless a line names another size. Listing titles read on Oct 13, 2026."
         rows={[
           {
             label: "Rated area",
@@ -146,7 +146,7 @@ export default function MovaReview() {
             value: publishedSlope(m3000.slope, m3000.degrees),
             sources: ["mova-3000"],
             checked: SPEC_CHECKED,
-            note: "Do not copy this percent onto the 1000 or the 2000.",
+            note: "Don't put this percent on the 1000 or the 2000.",
           },
           {
             label: "Navigation",
@@ -167,7 +167,7 @@ export default function MovaReview() {
             sources: ["amz-mova-2000"],
             checked: "2026-10-13",
             href: "/guides/robot-mower-front-and-back-yard",
-            note: "Listing bullet. Not a body-width measurement.",
+            note: "That's a listing bullet, not a body-width measurement.",
           },
           {
             label: "3000 AWD cut width",
@@ -185,26 +185,27 @@ export default function MovaReview() {
       />
       <h2>Which size matches the lawn</h2>
       <p className="measure">
-        A quarter acre lines up with the 1000, rated {formatAcres(m1000.acres)}. A half acre lines up with
-        the 2000, rated {formatAcres(m2000.acres, false)}. <ComfortableFor rated={m2000.acres} /> The 3000 AWD
-        is rated {formatAcres(m3000.acres, false)}, and MOVA's US product page notes a dual map of that area
-        times two.{" "}
+        Match the mower to the lawn you actually have. A quarter acre lines up with the 1000, rated{" "}
+        {formatAcres(m1000.acres)}. A half acre lines up with the 2000, rated {formatAcres(m2000.acres, false)}.{" "}
+        <ComfortableFor rated={m2000.acres} /> The 3000 AWD is rated {formatAcres(m3000.acres, false)}, and
+        MOVA's US product page notes a dual map of that area times two.{" "}
         <Link href="/best/robot-mower-half-acre">Half-acre picks</Link>.{" "}
         <SourceLine ids={["mova-2000", "mova-3000"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Slope is not shared across the three</h2>
       <p className="measure">
-        The 1000 and the 2000 publish {m2000.slope}%. The 3000 AWD publishes {m3000.slope}%, a rise of{" "}
-        {risePer10Ft(m3000.slope)}. A steep bank is a reason to leave the 2000, not a reason to assume it
-        climbs like the AWD. <SourceLine ids={["mova-2000", "mova-3000"]} checked={SPEC_CHECKED} />
+        Slope isn't shared across the three. The 1000 and the 2000 publish {m2000.slope}%. The 3000 AWD
+        publishes {m3000.slope}%, a rise of {risePer10Ft(m3000.slope)}. A steep bank is a reason to leave the
+        2000, not a reason to assume it climbs like the AWD.{" "}
+        <SourceLine ids={["mova-2000", "mova-3000"]} checked={SPEC_CHECKED} />
       </p>
       <SlopeMarginNote />
       <h2>LiDAR, and a path the listing names</h2>
       <p className="measure">
-        The 2000 listing describes 360° 3D LiDAR and AI vision, with no wire and no RTK. The same listing
-        says it handles {specText(m2000.specs.passage)} paths. Use that figure in the{" "}
-        <Link href="/guides/robot-mower-front-and-back-yard">passage gauge</Link>, and measure the opening
-        yourself. <SourceLine ids={["amz-mova-2000"]} checked="2026-10-13" />
+        The 2000 finds its way with LiDAR, and the listing names a path width. It describes 360° 3D LiDAR and
+        AI vision, with no wire and no RTK. The same listing says it handles {specText(m2000.specs.passage)}{" "}
+        paths. Use that figure in the <Link href="/guides/robot-mower-front-and-back-yard">passage gauge</Link>,
+        and measure the opening yourself. <SourceLine ids={["amz-mova-2000"]} checked="2026-10-13" />
       </p>
       <OwnerReports
         intro="In the 2 owner threads we read in October 2026:"
@@ -229,38 +230,40 @@ export default function MovaReview() {
       </ul>
       <SupportOutlook brand="MOVA" />
       <p className="measure">
-        Wirecutter reports a yearly GPS fee after year one for the 2000. The amount stays on that review. The
-        3000 AWD page says 4G is free for 3 years. <SourceLine ids={["wirecutter", "mova-3000"]} checked={SPEC_CHECKED} />
+        After year one, Wirecutter reports a yearly GPS fee for the 2000, and the amount stays on that review.
+        The 3000 AWD page says 4G is free for 3 years.{" "}
+        <SourceLine ids={["wirecutter", "mova-3000"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
-        The <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro 2500</Link> is rated{" "}
-        {formatAcres(dreame.acres)} and {dreame.slope}%, also on LiDAR, with a steeper published slope than the
-        Ultra 2000. The <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link> adds network RTK at{" "}
+        If you want a steeper LiDAR mower, the{" "}
+        <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro 2500</Link> is rated {formatAcres(dreame.acres)}{" "}
+        and {dreame.slope}%, with a steeper published slope than the Ultra 2000. The{" "}
+        <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD 3000</Link> adds network RTK at{" "}
         {formatAcres(luba.acres, false)}.
       </p>
       <Faq
         items={[
           {
             q: "Which LiDAX Ultra is the half-acre mower?",
-            a: "The 2000 is rated 0.5 acre. With heavy trees or two zones, that rating is no longer a comfortable fit for a full half acre. The size guide shows how that is worked out.",
+            a: "The 2000 is rated 0.5 acre. With heavy trees or two zones, that rating is no longer a comfortable fit for a full half acre. The size guide shows how we size.",
           },
           {
             q: "Do I need the 3000 AWD for a hill?",
-            a: "The 1000 and 2000 publish 45%. The 3000 AWD publishes 80% (38.6°). The hills page labels whether a maker says interior or boundary.",
+            a: "If the hill is steep, yes. The 1000 and 2000 publish 45%. The 3000 AWD publishes 80% (38.6°). The hills page labels whether a maker says interior or boundary.",
           },
           {
             q: "Are there many owner reports?",
-            a: "Few owner reports exist yet. This page links two independent threads and leaves out posts that say MOVA provided the mower.",
+            a: "Few owner reports exist yet. We link two independent threads and leave out posts that say MOVA provided the mower.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="No MOVA owner's manual was in the source list."
-        threads="Two independent owner threads, June 2026 and April 2026. Provided-unit posts were not counted."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Listing titles rechecked Oct 13, 2026. Brand pages checked Oct 10, 2026."
+        manuals="No MOVA owner's manual was in the sources we used."
+        threads="Two independent owner threads, June 2026 and April 2026. Posts that say MOVA provided the mower stay out of that count."
+        questions="No manufacturer has answered questions yet."
+        specsLine="Listing titles read on Oct 13, 2026. Brand pages checked Oct 10, 2026."
       />
       <EndLinks
         pageType="review"

@@ -41,10 +41,10 @@ export default function TheftGuide() {
       disclosure
     >
       <p className="measure">
-        Buy a published lock or alarm when the mower will sit on a street-visible lawn. In this set, the MOVA
+        We'd start with a published lock or alarm if the mower will sit on a street-visible lawn. In this set, the MOVA
         LiDAX Ultra 3000 AWD states location tracking, an off-map alarm, AirTag compatibility, and a PIN
-        lock. Several other current models do not state a theft feature at all. A fence and a garage still
-        matter, because a radio feature is not a lock on the mower.
+        lock. To be fair, several other current models don't state a theft feature at all. A fence and a garage still
+        matter, because a radio feature isn't a lock on the mower.
       </p>
       <CtaCluster>
         <ProductLink
@@ -60,7 +60,7 @@ export default function TheftGuide() {
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Theft and tracking lines checked with the model specs. A blank in the sources is not filled in.</caption>
+          <caption>Theft and tracking lines from the model specs. A blank in the sources isn't filled in.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -104,7 +104,7 @@ export default function TheftGuide() {
               </th>
               <td>
                 Not published. Connectivity on the manual is {specText(wr147.specs.connectivity)}. No PIN or
-                GPS claim is published.
+                GPS claim is published, so we wouldn't assume one.
               </td>
               <td>
                 <SourceLine ids={["worx-wr147-manual"]} checked={SPEC_CHECKED} />
@@ -116,7 +116,7 @@ export default function TheftGuide() {
               </th>
               <td>
                 Not published as a theft feature. Network RTK on this model needs Wi-Fi or 4G. Connect+ is
-                free for 1 year on the X430.
+                free for 1 year on the X430, and that isn't a lock.
               </td>
               <td>
                 <SourceLine ids={["navimow-x4"]} checked={SPEC_CHECKED} />
@@ -127,7 +127,7 @@ export default function TheftGuide() {
                 <Link href="/reviews/husqvarna-automower-iq">Automower iQ</Link>
               </th>
               <td>
-                Not published. Nothing on the Husqvarna US pages used here states that an iQ model keeps
+                Not published. Nothing on the Husqvarna US pages we read states that an iQ model keeps
                 reporting after the power is off.
               </td>
               <td>
@@ -140,7 +140,7 @@ export default function TheftGuide() {
               </th>
               <td>
                 A 4G anti-theft module is an optional add-on on the i110N. The price is Not published. That
-                line is not copied onto the i210 AWD.
+                line isn't copied onto the i210 AWD, so we wouldn't assume that model has it.
               </td>
               <td>
                 <SourceLine ids={["homedepot-i110n"]} checked={SPEC_CHECKED} />
@@ -151,30 +151,30 @@ export default function TheftGuide() {
       </div>
       <h2>What a street-visible yard changes</h2>
       <p className="measure">
-        An unfenced front yard next to a sidewalk is the case where a missing alarm matters. The{" "}
+        If your front yard is unfenced next to a sidewalk, a missing alarm matters. The{" "}
         <Link href="/guides/robot-mower-front-and-back-yard">front-and-back guide</Link> is about passage
-        width, not about a lock. Bring the mower in if the listing does not publish tracking. The{" "}
+        width, not a lock. We'd bring the mower in if the listing doesn't publish tracking. The{" "}
         <Link href="/guides/are-robot-mowers-worth-it">worth-it guide</Link> lists that yard as a reason to
         wait.
       </p>
       <p className="measure">
-        The X430 button is on the <Link href="/reviews/segway-navimow-x4">X4 review</Link> for buyers who
-        want the open-acre mower and accept that a theft line is Not published. The Q110H button is on its{" "}
+        The X430 link is on the <Link href="/reviews/segway-navimow-x4">X4 review</Link> if you
+        want the open-acre mower and accept that a theft line is Not published. The Q110H link is on its{" "}
         <Link href="/reviews/roborock-rockneo-q110h">review</Link>.
       </p>
       <Faq
         items={[
           {
             q: "Does Find My Landroid come with the WR340?",
-            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. The two lines disagree.",
+            a: "The amazon.com comparison chart marks it included. Wirecutter treats a GPS module as an extra. The two lines disagree, so we wouldn't pick one for you.",
           },
           {
             q: "Does the Automower iQ have GPS tracking?",
-            a: "Not published on the Husqvarna US pages used for this site. Husqvarna doesn't publish a PIN, an alarm, or a power-off report.",
+            a: "Not published on the Husqvarna US pages we read. Husqvarna doesn't publish a PIN, an alarm, or a power-off report.",
           },
           {
             q: "Is an AirTag the same as the maker’s tracking?",
-            a: "Only the MOVA Ultra 3000 AWD line in this table says AirTag compatible. That is the maker’s phrase. It is not a claim that an AirTag replaces a fence.",
+            a: "Only the MOVA Ultra 3000 AWD line in this table says AirTag compatible. That's the maker's phrase. It isn't a claim that an AirTag replaces a fence.",
           },
         ]}
       />

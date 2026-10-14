@@ -20,24 +20,24 @@ export default function AboutPage() {
       whatChanged="October 2026: first published."
     >
       <p className="measure">
-        RobotMowGuide helps a US homeowner match a robot lawn mower to a real yard: the area the maker rates,
-        the slope the maker publishes, and the navigation that yard can support. {PUBLISHER} publishes the
+        RobotMowGuide helps you match a robot mower to your US yard: how much grass the maker rates,
+        how steep a slope the maker publishes, and whether that navigation fits where you mow. {PUBLISHER} publishes the
         site.
       </p>
       <YardPhoto id="photo-about" />
       <p className="measure">
-        Reviews are research-based. We have not tested these mowers. There is no hands-on testing. Figures
-        come from manufacturer pages, listing text, and owner threads, each with a checked date.
+        The reviews are research. We haven't mowed with these ourselves. Figures
+        come from manufacturer pages, amazon.com product pages, and owner threads, and each one is dated.
       </p>
       <p className="measure">
-        “RobotMowGuide editors” means the people at {PUBLISHER} who research a page and check every figure
-        against the linked source before it is published or updated. The byline is not a pen name for one
+        "RobotMowGuide editors" means the people at {PUBLISHER} who read the sources and
+        match every figure to them before we publish or update. The byline isn't a pen name for one
         person.
       </p>
       <p className="measure">
         The first pages went up in October 2026. Write to{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> about a correction, a missing source, or a
-        model we should re-check.
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> if you've got a correction, a missing source, or a
+        model you think we should look at again.
       </p>
       <Related
         links={[

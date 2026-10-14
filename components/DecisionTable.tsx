@@ -26,11 +26,11 @@ export function DecisionTable() {
 
   return (
     <div className="table-scroll">
-      <p className="scroll-cue">Swipe sideways to read every column.</p>
+      <p className="scroll-cue">Swipe sideways to see every column.</p>
       <table className="data">
         <caption>
-          Wire-free matches for one zone. The slope column is the bank you enter, and this table treats that
-          bank as an interior limit. With heavy trees, a mower needs more rated area than your lawn (<Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>).
+          Wire-free matches for one zone. The slope column is the bank you enter, and we treat that
+          bank as the middle of the lawn, not the edge. With heavy trees, a mower needs more rated area than your lawn (<Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>).
         </caption>
         <thead>
           <tr>

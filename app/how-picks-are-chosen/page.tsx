@@ -24,73 +24,73 @@ export default function MethodPage() {
       whatChanged="October 13, 2026: names the licensed yard photographs."
     >
       <p className="measure">
-        A pick starts from the yard. We list each current model by the lawn size its maker rates, then
-        show the maximum slope that maker publishes. The work is research-based.
+        Every pick starts with your yard, not a brand. We line up each current mower by the lawn size its maker rates it for, then
+        show the steepest slope it's rated to climb. And to be upfront: it's all research. We haven't tested these mowers ourselves.
       </p>
       <YardPhoto id="photo-method" />
       <MethodDiagram />
       <h2>Sources</h2>
       <p className="measure">
-        Specs come from the maker’s US product page when one exists, and from the amazon.com listing text
-        when that page is the only place a figure appears. Listing links on the site are paid links. A source
-        line names the page and the date it was checked. An owner-report line links the thread or the
-        independent review it came from. If a manual was not in the source list, the page says so.
+        Specs come from the maker's US product page when one exists, and from the amazon.com page
+        when that's the only place a figure appears. Links to those Amazon pages are paid. Under the specs
+        you'll see the source and the date. An owner note links the thread or the
+        independent review it came from. If we didn't have the manual, we say so.
       </p>
       <h2>How we size picks</h2>
       <p className="measure">
-        Rated area is the maker’s number, shown in acres and, the first time, in square feet. One acre is
-        43,560 sq ft. Heavy trees or two zones use the rule of thumb in{" "}
-        <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. Where a maker publishes its own figure for a complex lawn, as Husqvarna does
-        for the 420 iQ, we give you that figure instead.
+        Rated area is the maker's number for the grass it can cover, in acres and, the first time, in square feet. One acre is
+        43,560 sq ft. If you've got heavy trees or two zones, use the rule of thumb in{" "}
+        <Link href="/guides/how-big-a-robot-mower-do-i-need#trees-or-two-zones">how we size</Link>. Where a maker publishes its own figure for a tricky lawn, as Husqvarna does
+        for the 420 iQ, we'd give you that figure instead.
       </p>
       <h2>The mower finder</h2>
       <p className="measure">
         The <Link href="/tools/mower-finder">mower finder</Link> uses the same current models as the ladder.
-        It leaves out superseded and discontinued models. A current model with no published slope is left
-        out, because the filter will not guess one.
+        Replaced and discontinued models aren't in it. If a current model has no published slope, it isn't included,
+        because we won't guess one for you.
       </p>
       <p className="measure">
-        Area: an open single lawn needs a rating at least as large as the lawn. Heavy trees, or more than
+        For area, an open lawn in one piece needs a rating at least as big as your grass. Heavy trees, or more than
         one zone, use the rule of thumb in <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>.
-        Slope: the published maximum has to be at least the steepest
+        For slope, the published maximum has to be at least the steepest
         slope you enter. If you mark that slope as an edge, and the model prints a lower boundary figure,
-        the row stays and the note says the boundary is lower. Heavy trees prefer LiDAR or vision. An
-        RTK-only model can still appear, with a note about satellite fix under canopy. A passage uses a
-        published body width or minimum gap. If that width is missing, the note says to check the manual.
-        If nothing fits, the result says nothing fits, including a lawn past every rated area.
+        it still shows up, and the note says the boundary is lower. Heavy trees favor LiDAR or a camera. An
+        RTK-only model can still appear, with a note about the satellite fix under the canopy. A side passage uses a
+        published body width or minimum gap. If that width is missing, the note says to read the manual.
+        If nothing fits, the result says so, including when your lawn is bigger than every rated area.
       </p>
       <h2>Slope</h2>
       <p className="measure">
-        Slope is shown as a percent and, when the maker publishes it, as degrees. The first time on a page it
-        also appears as rise over 10 ft.
+        You'll see slope as a percent and, when the maker publishes it, as degrees. The first time,
+        it's also the rise over 10 ft, so you can picture the bank.
       </p>
       <SlopeMarginNote />
       <h2>Owner reports</h2>
       <p className="measure">
-        Themes come from threads and independent reviews opened for the date on the page. Each theme
-        has a link. The count is the threads we read, not a percentage of all owners. We do not paraphrase
-        Amazon review text, and we do not print a score or a row of stars.
+        The themes come from owner threads and independent reviews, with the date we read them. Each theme
+        has a link. That count is the threads we read, not a percentage of all owners. We don't paraphrase
+        Amazon review text, and we don't print a score or a row of stars.
       </p>
       <h2>No scores</h2>
       <p className="measure">
-        There is no numeric score and no award line. A numbered tag on the ladder means
-        the model is one of the picks on the best-mowers page, which a reader can check against the yard.
+        You won't find a numeric score or an award line here. A numbered tag on the ladder means
+        that model is one of the picks on the best-mowers page, so you can match it to your yard.
       </p>
       <h2>Re-checks and corrections</h2>
       <p className="measure">
-        Specs are re-checked at least every 90 days, and again before a page is edited. The Updated date
-        changes only when the page changes. Send a correction to{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. If a figure was wrong, the page is updated
+        We go back over the specs at least every 90 days, and again before an edit. The Updated date
+        moves only when the words change. Send a correction to{" "}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. If a figure was wrong, we fix it
         and the Updated date moves.
       </p>
       <h2>Drafts and images</h2>
       <p className="measure">
-        Drafts are written with AI assistance. A person checks every figure against the linked source before
-        a page is published or updated.
+        Drafts are written with AI help. A person matches every figure to the linked source before
+        we publish or update.
       </p>
       <p className="measure">
-        Yard photographs are licensed photos from Pexels of real yards. They do not show a mower, and they
-        are not from a test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
+        The yard photographs are licensed photos from Pexels of real yards. They don't show a mower, and they
+        aren't from a mowing test. Credits: Curtis Adams, Stephen Leonardi, Ron Greenberg, Dominik Gryzbon, Get
         Lost Mike, James Anthony, Viktoria B., Clay Elliot, Pixabay, Max Vakhtbovych, Jonathan, Magda
         Ehlers, Dianne, Viaceslav Kat, Alexander F Ungerer, wr heustis, Al Rashed, Matheus Bertelli,
         hi room, and Anastasiya Pavlova, on Pexels.
@@ -99,18 +99,18 @@ export default function MethodPage() {
         items={[
           {
             q: "Do you test mowers on a lawn?",
-            a: "No. Reviews are research-based. We have not tested these mowers.",
+            a: "No. It's research. We haven't mowed with these ourselves.",
           },
           {
             q: "Why is a model missing?",
-            a: "The live pages cover five picks, ten family reviews, three head-to-head pages, the grass pages, and the finder. A model stays off a page until its specs are in the checked data.",
+            a: "A model isn't included until its specs are in and dated. What you'll find so far is five picks, ten family reviews, three head-to-head pages, the grass pages, and the finder.",
           },
           {
             q: "Who do I write about a wrong figure?",
             a: (
               <>
-                Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the page and the source you
-                are looking at.
+                Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the address and the source you're
+                looking at.
               </>
             ),
           },

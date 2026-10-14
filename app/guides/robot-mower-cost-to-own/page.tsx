@@ -62,10 +62,10 @@ export default function CostGuide() {
       disclosure
     >
       <p className="measure">
-        The only official yearly dollar figure in this set is Navimow Connect+ after the free period, $32.90
-        per year. Everything else is a free-period length, a one-time accessory, a secondary report, or Not
-        published. Amazon prices are not listed. No blade price, battery price, or electricity bill is
-        guessed.
+        For a yearly fee, the only official dollar figure here is Navimow Connect+ after the free period, $32.90
+        a year. Everything else is a free-period length, a one-time accessory, a secondary report, or Not
+        published. Amazon prices aren't listed. We don't guess a blade price, a battery price, or your electricity
+        bill.
       </p>
       <CtaCluster>
         <ProductLink
@@ -79,15 +79,15 @@ export default function CostGuide() {
       <YardPhoto id="photo-cost" />
       <h2>Published lines</h2>
       <p className="measure">
-        Checked Oct 10, 2026. A free period is not blended into the yearly fee. The X430 free period is 1
-        year and the X450 free period is 2 years. Those stay as one published string, not an average.{" "}
+        These are the published fees, and the good news is a free period stays separate from the yearly fee, as of Oct 10, 2026. The X430 free period is 1
+        year and the X450 free period is 2 years. We'd keep each one as published, not average them.{" "}
         <SourceLine ids={["navimow-x4"]} checked={SPEC_CHECKED} />
       </p>
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
           <caption>
-            Subscription and accessory lines. The yearly-sum column is Yes only for an official dollars-per-year
+            Subscription and accessory lines. The yearly-sum column is Yes only when there's an official dollars-per-year
             figure.
           </caption>
           <thead>
@@ -112,60 +112,60 @@ export default function CostGuide() {
       </div>
       <h2>Where two sources disagree</h2>
       <p className="measure">
-        MOVA’s Ultra 3000 AWD page says 4G is free for 3 years. Wirecutter, updated Aug 3, 2026, reports a
+        We'd plan on MOVA's Ultra 3000 AWD page, which says 4G is free for 3 years. Wirecutter, updated Aug 3, 2026, reports a
         GPS service of $50 per year after year 1. Both lines are in the table. The two GPS lines disagree, so
-        they are not averaged, and the $50 line is not in the official sum.{" "}
+        we wouldn't average them, and the $50 line isn't in the official sum.{" "}
         <SourceLine ids={["mova-3000", "wirecutter"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
-        Worx says lifetime RTK Cloud service at no extra cost. Find My Landroid is not settled: the amazon.com
+        We'd plan on Worx's line: lifetime RTK Cloud service at no extra cost. Find My Landroid isn't settled: the amazon.com
         comparison chart on the WR340 listing marks it included, and Wirecutter treats a GPS module as an
-        extra at about $100. The $100 line stays as reported. It is not added to a yearly total.{" "}
+        extra at about $100. We'd mention that $100 line as reported, once. It isn't added to a yearly total.{" "}
         <SourceLine ids={["worx-vision-cloud", "amz-wr340", "wirecutter"]} checked={RECHECKED} />
       </p>
       <p className="measure">
-        The Verge reported Automower Connect cellular as free for life. The Husqvarna US pages used for the
-        iQ specs do not state a cellular price, so that report is not an official fee.
+        The Verge reported Automower Connect cellular as free for life, and we'd treat that as a report, not a fee. The Husqvarna US pages used for the
+        iQ specs don't state a cellular price, so that report isn't an official fee.
         Blade prices are Not published.
       </p>
       <p className="measure">
-        Mammotion says a 4G subscription is required after the free 3 years on the LUBA 3 AWD and does not
-        state the price. That cell stays Not published. The LUBA mini 2 AWD page states 3 years of 4G data
-        and does not state a later price.
+        Mammotion says a 4G subscription is required after the free 3 years on the LUBA 3 AWD and doesn't
+        state the price. We'd plan on Not published for that fee. The LUBA mini 2 AWD page states 3 years of 4G data
+        and doesn't state a later price.
       </p>
       <p className="measure">
-        The MowGate is a one-time accessory at $449.99 on navimow.com, checked Oct 10, 2026. It is not a
-        yearly subscription. The Navimow i series calls a 4G anti-theft module an optional add-on and does
-        not publish a price. The RockNeo Q110H tracking module is sold separately, and the price was not
-        collected. The Worx Landroid M WR147 has no subscription row in this set.
+        The MowGate is a one-time accessory at $449.99 on navimow.com, as of Oct 10, 2026. It isn't a
+        yearly subscription. The Navimow i series calls a 4G anti-theft module an optional add-on and doesn't
+        publish a price. The RockNeo Q110H tracking module is sold separately, and we don't have a price for it.
+        The Worx Landroid M WR147 has no subscription in this set.
       </p>
       <h2>Five years, only from the published yearly fee</h2>
       <p className="measure">
-        Season length does not change these dollars. No line here is priced per month, and electricity is
-        left out because a battery watt-hour figure and a dock standby figure are not both published. The
-        mower’s own purchase price is also left off this page.
+        Five years here uses only the published yearly fee. Season length doesn't change these dollars. No line here is priced per month, and electricity isn't
+        included, because a battery watt-hour figure and a dock standby figure aren't both published. The
+        mower's own purchase price isn't in the yearly sum.
       </p>
       <p className="measure">
-        With the form left as it first appears, five years of the Connect+ fee, if it were charged every
-        year and the free period were ignored, is $164.50. That figure is $32.90 times 5. It is not a full
-        five-year cost, because blades, batteries, and the mower’s purchase price are Not published. A free
+        If you leave the form as it first appears, five years of the Connect+ fee, if it were charged every
+        year and the free period were ignored, is $164.50. That figure is $32.90 times 5. It isn't a full
+        five-year cost, because blades, batteries, and the mower's purchase price are Not published. A free
         year on the X430, or two free years on the X450, would make the paid span shorter. Those free years
-        are not subtracted here, because the two models do not share one free period.
+        aren't subtracted here, because the two models don't share one free period.
       </p>
       <CostCalculator rows={rows} />
       <Faq
         items={[
           {
             q: "Why does a cell say Not published?",
-            a: "The maker’s page did not state a number, or this site has not collected one. The cell stays Not published. It is not filled with a guess.",
+            a: "The maker's page didn't state a number, or we haven't collected one. The cell stays Not published. We don't fill it with a guess.",
           },
           {
             q: "Does the season length change the total?",
-            a: "No. None of these lines is priced per month. The month field is there so that limit is visible.",
+            a: "No. None of these lines is priced per month, so a longer season doesn't change the dollars. The month field is there so you can see that limit.",
           },
           {
             q: "Is $164.50 the five-year cost of an X430?",
-            a: "No. It is five years of the $32.90 Connect+ fee if that fee were charged every year. It skips the free period, the mower’s purchase price, blades, and electricity.",
+            a: "No. It's five years of the $32.90 Connect+ fee if that fee were charged every year. It skips the free period, the mower's purchase price, blades, and electricity.",
           },
         ]}
       />

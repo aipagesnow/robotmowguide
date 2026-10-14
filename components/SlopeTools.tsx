@@ -57,7 +57,7 @@ export function SlopeConverter({ candidates }: { candidates: Candidate[] }) {
         </label>
         <label className="flex min-h-11 items-center gap-2">
           <input type="checkbox" checked={atEdge} onChange={(event) => setAtEdge(event.target.checked)} />
-          This measurement is at the boundary, not the interior
+          This measurement is at the edge, not in the middle of the lawn
         </label>
         <button className="cta w-fit" type="submit">
           Convert
@@ -70,8 +70,8 @@ export function SlopeConverter({ candidates }: { candidates: Candidate[] }) {
               {result.percent.toFixed(1)}% · {formatDegrees(result.degrees)} · {result.rise}
             </p>
             <p className="measure">
-              Degrees and the rise are computed from the percent. Rise is 10 ft times the percent divided by
-              100. Degrees are the arctangent of percent divided by 100.
+              The degrees and the rise come from the percent you entered. Rise is 10 ft times that percent, divided by
+              100. Degrees are the arctangent of the percent divided by 100.
             </p>
             <ul className="grid gap-2 pl-5">
               {candidates.map((candidate) => {
@@ -84,23 +84,23 @@ export function SlopeConverter({ candidates }: { candidates: Candidate[] }) {
                 return (
                   <li key={candidate.id}>
                     {candidate.shortName}: published maximum {candidate.slope}%
-                    {typeof candidate.degrees === "number" ? ` (${formatDegrees(candidate.degrees)} published)` : " (degrees not published)"}
+                    {typeof candidate.degrees === "number" ? ` (${formatDegrees(candidate.degrees)} published)` : " (degrees aren't published)"}
                     , {risePer10Ft(candidate.slope)}.{" "}
-                    {separated ? "The note separates a boundary figure, so this maximum is the interior. " : ""}
-                    {interiorClear ? "The published maximum covers this slope." : "The published maximum is lower than this slope."}{" "}
+                    {separated ? "There's a separate edge figure, so this maximum is for the middle of the lawn. " : ""}
+                    {interiorClear ? "That published maximum covers your slope." : "That published maximum is lower than your slope."}{" "}
                     {boundary === undefined
-                      ? "No separate boundary figure is published."
-                      : `Boundary ${boundary}%, ${risePer10Ft(boundary)}, degrees not published. ${
-                          boundaryClear ? "The boundary figure covers this slope." : "The boundary figure is lower."
+                      ? "No separate edge figure is published."
+                      : `The edge is ${boundary}%, ${risePer10Ft(boundary)}, and degrees aren't published. ${
+                          boundaryClear ? "That edge figure covers your slope." : "That edge figure is lower than your slope."
                         }`}
-                    {edgeFlag ? " Flag: the bank is at the edge and the boundary figure is lower." : ""}
+                    {edgeFlag ? " Your bank is at the edge, and that edge figure is lower, so we'd plan on the lower number." : ""}
                   </li>
                 );
               })}
             </ul>
           </>
         ) : (
-          <p className="m-0">Enter a slope of zero or more.</p>
+          <p className="m-0">Enter a slope of zero or higher.</p>
         )}
       </div>
     </div>

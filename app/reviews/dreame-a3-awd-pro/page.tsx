@@ -28,7 +28,7 @@ const description =
   "The A3 AWD Pro 2500 is rated for 0.62 acre and 80% (38.7°), with LiDAR and no RTK. The 3500 and 5000 have no published slope.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The 2500 listing was opened again on Oct 13, 2026.";
+  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The 2500 listing was also read on Oct 13, 2026.";
 
 export const metadata: Metadata = pageMeta({
   title,
@@ -65,11 +65,11 @@ export default function DreameReview() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        The 2500 is the Dreame to read when the lawn is about {formatAcres(dreame.acres)}, the banks are
-        steep, and you want LiDAR instead of an RTK antenna. There is no RTK and no perimeter wire.
+        If your lawn is about {formatAcres(dreame.acres)}, the banks are steep, and you want LiDAR instead of
+        an RTK antenna, the 2500 is the Dreame we'd read. There's no RTK and no perimeter wire.
       </p>
       <p className="measure">
-        Skip it for a full acre, for a midday run in full Southern sun if the heat pauses in the owner
+        We'd skip it for a full acre, for a midday run in full Southern sun if the heat pauses in the owner
         threads match your summer, and for a tall cut if you leave the edge mode on.
       </p>
       <CtaCluster>
@@ -90,7 +90,7 @@ export default function DreameReview() {
             value: formatAcres(dreame.acres),
             detail: (
               <>
-                <ComfortableFor rated={dreame.acres} /> Dreame's US product page notes 2,500 m².
+                <ComfortableFor rated={dreame.acres} /> Dreame's US product page notes 2,500 m², which is the area behind that rating.
               </>
             ),
           },
@@ -101,17 +101,17 @@ export default function DreameReview() {
           {
             label: "Passage",
             value: "Not published",
-            detail: `Cutting width is ${specText(dreame.specs.cuttingWidth)}. That is the deck, not a minimum gap.`,
+            detail: `Cutting width is ${specText(dreame.specs.cuttingWidth)}. That's the deck, not a minimum gap, so measure your gate yourself.`,
           },
           {
             label: "Navigation",
             value: navigationLabel(family.navigation),
-            detail: "No RTK. Setup can use Bluetooth without Wi-Fi.",
+            detail: "No RTK. You can set it up with Bluetooth, and you don't need Wi-Fi for that.",
           },
           {
             label: "After 3 years",
             value: "4G Link becomes paid",
-            detail: "The price is not stated.",
+            detail: "Dreame doesn't say the price.",
           },
         ]}
       />
@@ -119,14 +119,14 @@ export default function DreameReview() {
         family={family}
         pageType="review"
         differences={{
-          "A3 AWD Pro 2500": "The model this review follows. LiDAR and vision. Slope is published on this row only.",
+          "A3 AWD Pro 2500": "The one we'd start with. LiDAR and vision. Slope is published for this model only.",
           "A3 AWD Pro 3500": `Rated ${d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d3500 ? specText(d3500.specs?.battery) : "Not published"}. Dreame doesn't publish a slope figure for the 3500.`,
-          "A3 AWD Pro 5000": `Rated ${d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d5000 ? specText(d5000.specs?.battery) : "Not published"}. Slope is not published on this row either.`,
+          "A3 AWD Pro 5000": `Rated ${d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d5000 ? specText(d5000.specs?.battery) : "Not published"}. Slope isn't published for this model either.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="A3 AWD Pro 2500 figures checked Oct 10, 2026. The listing was opened again on Oct 13, 2026 and still matched this model."
+        caption="A3 AWD Pro 2500 figures checked Oct 10, 2026. The listing was also read on Oct 13, 2026 and still matched this model."
         rows={[
           {
             label: "Rated area",
@@ -134,7 +134,7 @@ export default function DreameReview() {
             sources: ["dreame-a3", "amz-dreame-a3-2500"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "2,500 m².",
+            note: "That's 2,500 m² on Dreame's page.",
           },
           {
             label: "Max slope",
@@ -142,7 +142,7 @@ export default function DreameReview() {
             sources: ["dreame-a3"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: "38.7° is published for the 2500. It is not copied onto the 3500 or the 5000.",
+            note: "38.7° is published for the 2500. It isn't copied onto the 3500 or the 5000.",
           },
           {
             label: "Navigation",
@@ -156,7 +156,7 @@ export default function DreameReview() {
             value: specText(dreame.specs.cuttingWidth),
             sources: ["dreame-a3"],
             checked: SPEC_CHECKED,
-            note: "Dual disc.",
+            note: "Dual disc, so there are two cutting discs.",
           },
           {
             label: "Cutting height",
@@ -204,31 +204,34 @@ export default function DreameReview() {
       />
       <h2>Slope stays on the 2500 row</h2>
       <p className="measure">
-        The published slope is {slopeWithRise(dreame.slope, dreame.degrees)}. The 3500 is rated{" "}
+        The slope we'd plan on is {slopeWithRise(dreame.slope, dreame.degrees)}, and it isn't shared with the
+        larger models. The 3500 is rated{" "}
         {d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"} and the 5000 is
         rated {d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value), false) : "Not published"}.
-        Neither row publishes a slope, so neither inherits 80%.{" "}
+        Neither model publishes a slope, so neither inherits 80%.{" "}
         <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <SlopeMarginNote />
       <h2>The edge mode and a tall cut</h2>
       <p className="measure">
-        Dreame’s figure is {specText(dreame.specs.edgeCutting)}. Owner threads describe a border cut near 1.2
-        in that can scalp a lawn kept taller, and owners switch that mode off. Cutting height on the 2500
-        is {specText(dreame.specs.cuttingHeight)}. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
+        If you leave the edge mode on, Dreame's figure is {specText(dreame.specs.edgeCutting)}, and that's
+        the one to read for a tall cut. Owner threads describe a border cut near 1.2 in that can scalp a
+        lawn kept taller, and owners switch that mode off. Cutting height on the 2500 is{" "}
+        {specText(dreame.specs.cuttingHeight)}. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Heat, ruts, and canopy</h2>
       <p className="measure">
-        Drive is {specText(dreame.specs.drive)}. The threads below describe LiDAR heat pauses in direct sun
-        and in Florida heat, and they describe the wheels rutting wet turf and digging into sand. The same
-        set of reading includes a praise of mapping under tree canopy. That praise is one independent
-        review, not a count of owners. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
+        Heat, ruts, and canopy are the limits we'd weigh before you order. Drive is{" "}
+        {specText(dreame.specs.drive)}. The threads below describe LiDAR heat pauses in direct sun and in
+        Florida heat, and they describe the wheels rutting wet turf and digging into sand. The same reading
+        includes praise of mapping under tree canopy. That praise is one independent review, not a count of
+        owners. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
         intro="In the 2 owner threads we read in October 2026, and one independent review:"
         items={[
           {
-            text: "LiDAR overheats in direct sun and Florida heat, and the mower docks to cool.",
+            text: "Owners say the LiDAR overheats in direct sun and Florida heat, and the mower docks to cool.",
             href: "https://www.reddit.com/r/roboticLawnmowers/comments/1uoiicf/",
             linkLabel: "Thread on LiDAR heat",
           },
@@ -244,12 +247,12 @@ export default function DreameReview() {
             ],
           },
           {
-            text: "The all-wheel drive can rut wet turf and dig into sand.",
+            text: "Owners say the all-wheel drive can rut wet turf and dig into sand.",
             href: "https://www.reddit.com/r/roboticLawnmowers/comments/1uoiicf/",
             linkLabel: "Thread on ruts and sand",
           },
           {
-            text: "The Smart Lawn Bots piece praises mapping under tree canopy.",
+            text: "The Smart Lawn Bots piece praises mapping under tree canopy. That's one review, not a pile of owners.",
             href: "https://smartlawnbots.com/reviews/dreame-a3-awd-pro-3500-review/",
             linkLabel: "Smart Lawn Bots review",
           },
@@ -257,33 +260,33 @@ export default function DreameReview() {
       />
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
-        <li>A lawn at or above 1 acre. The 2500 is rated 0.62 acre. The 5000’s larger rating has no published slope.</li>
-        <li>Hot, full-sun yards where a midday run matters, if the heat pauses in the threads match your site.</li>
-        <li>Tall-cut lawns if the edge mode stays on.</li>
-        <li>Sandy soil or turf that stays wet.</li>
-        <li>Two separate areas if you do not want a second dock. Each map needs its own charging station.</li>
+        <li>If your lawn is at or above 1 acre, the 2500 is rated 0.62 acre. The 5000's larger rating has no published slope.</li>
+        <li>If your yard is hot and in full sun and a midday run matters, we'd skip it when the heat pauses in the threads match your place.</li>
+        <li>If you keep the grass tall and the edge mode stays on, it can scalp the border.</li>
+        <li>If your soil is sandy or the turf stays wet, owners report ruts.</li>
+        <li>If you've got two separate areas and you don't want a second dock, each map needs its own charging station.</li>
       </ul>
       <SupportOutlook brand="Dreame" />
       <p className="measure">
-        4G Link is included for 3 years, then paid. The price is not stated. Bluetooth setup does not need
-        Wi-Fi. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
+        4G Link is included for 3 years, then it becomes paid, and Dreame doesn't say the price. Bluetooth
+        setup doesn't need Wi-Fi. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two other yards</h2>
       <p className="measure">
-        The LUBA 3 AWD 3000 also uses LiDAR, and it adds network RTK. It is rated {formatAcres(luba.acres)}{" "}
-        and {luba.slope}%. The published degree on that row is 38.6°, not the Dreame 38.7°.{" "}
-        <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
+        If you want LiDAR plus network RTK, the LUBA 3 AWD 3000 is the comparison. It's rated{" "}
+        {formatAcres(luba.acres)} and {luba.slope}%. The published degree on that model is 38.6°, not the
+        Dreame 38.7°. <Link href="/reviews/mammotion-luba-3-awd">LUBA 3 AWD review</Link>.{" "}
         <Link href="/vs/navimow-x430-vs-luba-3-awd-3000">The X430 and the LUBA 3000, side by side</Link>.
       </p>
       <p className="measure">
-        The Navimow X430 is the open acre with network RTK and no LiDAR: {formatAcres(x430.acres)} and{" "}
+        If your acre is open, the Navimow X430 is network RTK and no LiDAR: {formatAcres(x430.acres)} and{" "}
         {x430.slope}%. <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.
       </p>
       <Faq
         items={[
           {
             q: "Will the 2500 mow an acre?",
-            a: "No. It is rated 0.62 acre, which is 2,500 m². The 5000 is rated 1.2 acre and does not publish a slope, so it is not the steep-acre model.",
+            a: "No. It's rated 0.62 acre, which is 2,500 m². The 5000 is rated 1.2 acre and doesn't publish a slope, so it isn't the steep-acre model.",
           },
           {
             q: "Does it need an RTK antenna?",
@@ -291,19 +294,19 @@ export default function DreameReview() {
           },
           {
             q: "What is the slope in degrees?",
-            a: "The 2500 page prints 80% and 38.7°. Rise is 8 ft over 10 ft. The 3500 and the 5000 have no published degrees.",
+            a: "It's 80% and 38.7° on the 2500 page. Rise is 8 ft over 10 ft. The 3500 and the 5000 have no published degrees.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="No owner's manual was in the source list for this page."
-        threads="Two owner threads and one independent review, read in October 2026."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Specs checked Oct 10, 2026. The 2500 listing was opened again on Oct 13, 2026."
+        manuals="No owner's manual was in the sources we used."
+        threads="We read two owner threads and one independent review in October 2026."
+        questions="No manufacturer has answered questions yet."
+        specsLine="Specs checked Oct 10, 2026. The 2500 listing was also read on Oct 13, 2026."
       />
       <h2>See these models</h2>
-      <p className="measure">The 2500 button is at the top of this page. The two comparisons:</p>
+      <p className="measure">The 2500 button is up top. The two comparisons:</p>
       <EndLinks
         pageType="review"
         links={[

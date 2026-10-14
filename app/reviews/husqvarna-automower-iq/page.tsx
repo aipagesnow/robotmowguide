@@ -27,7 +27,7 @@ const description =
   "The 420 iQ is rated for 1 acre systematic mowing and 45% slope, with 15% at the boundary. The 435X AWD is the wire model with a listing.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against Husqvarna US pages on Oct 10, 2026. The 435X AWD listing title was confirmed that day and was not opened again on Oct 13, 2026.";
+  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against Husqvarna US pages on Oct 10, 2026. The 435X AWD listing title was confirmed that day, and Oct 13, 2026 did not include a new read of it.";
 
 export const metadata: Metadata = pageMeta({
   title,
@@ -66,15 +66,15 @@ export default function IqReview() {
       status="Current in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        Read the 420 iQ for an open acre mowed in systematic passes. Husqvarna rates it{" "}
-        {formatAcres(iq.acres)} for systematic mowing and 0.5 acre for an irregular lawn, at{" "}
-        {publishedSlope(iq.slope, iq.degrees)}. {interiorOrBoundary(boundary)} The cut is{" "}
+        If you've got an open acre you mow in systematic passes, the 420 iQ is the Husqvarna we'd read.
+        Husqvarna rates it {formatAcres(iq.acres)} for systematic mowing and 0.5 acre for an irregular lawn,
+        at {publishedSlope(iq.slope, iq.degrees)}. {interiorOrBoundary(boundary)} The cut is{" "}
         {specText(iq.specs.cuttingHeight)}.
       </p>
       <p className="measure">
-        Look elsewhere for a steep bank at the edge, for heavy woods unless you add the wire the maker
+        We'd look elsewhere for a steep bank at the edge, for heavy woods unless you add the wire the maker
         allows, or if you need an amazon.com listing for an iQ model. The 435X AWD is the boundary-wire model
-        on this page, and it is the one with a button.
+        here, and it's the one with a button.
       </p>
       <CtaCluster>
         <ProductLink
@@ -101,7 +101,7 @@ export default function IqReview() {
             value: formatAcres(iq.acres),
             detail: (
               <>
-                The same page says 0.5 acre irregular and 1 acre systematic. The 410 iQ area note is ±20%.{" "}
+                The same Husqvarna page says 0.5 acre irregular and 1 acre systematic. The 410 iQ area note is ±20%.{" "}
                 <ComfortableFor rated={iq.acres} />
               </>
             ),
@@ -114,12 +114,12 @@ export default function IqReview() {
           {
             label: "Passage",
             value: "Not published",
-            detail: "Body width not published.",
+            detail: "Body width isn't published, so we can't tell you the gate width.",
           },
           {
             label: "Navigation",
             value: navigationLabel(family.navigation),
-            detail: "EPOS can run without a boundary wire. The wire remains an option.",
+            detail: "EPOS can run without a boundary wire. The wire is still an option if your sky is poor.",
           },
           {
             label: "Cut",
@@ -134,15 +134,15 @@ export default function IqReview() {
         differences={{
           "Automower 410 iQ": `Rated ${formatAcres(small.acres)} with a ±20% note, ${publishedSlope(small.slope, small.degrees)}, ${interiorOrBoundary(small.variant.ladder?.maxSlopePercent?.note)} Cut ${specText(small.specs.cuttingHeight)}. No confirmed amazon.com listing.`,
           "Automower 420 iQ":
-            "The model this review follows. 0.5 acre irregular or 1 acre systematic. 45% with 15% at the boundary. Cut 1–4 in. Warranty 4 years. No confirmed amazon.com listing.",
-          "Automower 440 iQ": `Rated ${formatAcres(big.acres)} and ${publishedSlope(big.slope, big.degrees)}. ${interiorOrBoundary(big.variant.ladder?.maxSlopePercent?.note)} Cut height is Not published on this row. No confirmed amazon.com listing.`,
+            "The one we'd start with. 0.5 acre if your lawn is irregular, or 1 acre if you mow in systematic passes. 45% with 15% at the boundary. Cut 1–4 in. Warranty 4 years. No confirmed amazon.com listing.",
+          "Automower 440 iQ": `Rated ${formatAcres(big.acres)} and ${publishedSlope(big.slope, big.degrees)}. ${interiorOrBoundary(big.variant.ladder?.maxSlopePercent?.note)} Cut height isn't published for this model. No confirmed amazon.com listing.`,
           "Automower 435 iQ AWD": `Rated ${formatAcres(awd.acres)} and ${publishedSlope(awd.slope, awd.degrees)}. ${interiorOrBoundary(awd.variant.ladder?.maxSlopePercent?.note)} Cut ${specText(awd.specs.cuttingHeight)}. No confirmed amazon.com listing.`,
-          "Automower 435X AWD (boundary wire)": `The wire model. Rated ${formatAcres(wire.acres)} and ${publishedSlope(wire.slope, wire.degrees)}. ${interiorOrBoundary(wire.variant.ladder?.maxSlopePercent?.note)} Cut ${specText(wire.specs.cuttingHeight)}. This row has the Amazon button.`,
+          "Automower 435X AWD (boundary wire)": `The wire model. Rated ${formatAcres(wire.acres)} and ${publishedSlope(wire.slope, wire.degrees)}. ${interiorOrBoundary(wire.variant.ladder?.maxSlopePercent?.note)} Cut ${specText(wire.specs.cuttingHeight)}. This one has the Amazon button.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="420 iQ figures checked Oct 10, 2026, unless a row names another model."
+        caption="420 iQ figures checked Oct 10, 2026, unless a line names another model."
         rows={[
           {
             label: "Rated area",
@@ -150,7 +150,7 @@ export default function IqReview() {
             sources: ["husq-420iq"],
             checked: SPEC_CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
-            note: "0.5 acre irregular / 1 acre systematic. That split is Husqvarna’s own figure, so use it rather than our trees-or-zones rule of thumb.",
+            note: "0.5 acre irregular / 1 acre systematic. That split is Husqvarna's own figure, so we'd use it rather than our trees-or-zones rule of thumb.",
           },
           {
             label: "Max slope",
@@ -173,7 +173,7 @@ export default function IqReview() {
             sources: ["husq-420iq"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-st-augustine",
-            note: "The 435 iQ AWD and the 435X AWD publish 1.2–2.8 in, which is a shorter top.",
+            note: "The 435 iQ AWD and the 435X AWD publish 1.2–2.8 in, which is a shorter top if you need a tall cut.",
           },
           {
             label: "Warranty",
@@ -192,35 +192,37 @@ export default function IqReview() {
       />
       <h2>The acre is two numbers</h2>
       <p className="measure">
-        Systematic mowing is the {formatAcres(iq.acres, false)} figure. An irregular lawn is the 0.5 acre
-        figure on the same page. The 410 iQ is rated {formatAcres(small.acres, false)} and prints ±20% on that
-        area. Heavy trees or two zones are a separate case on the size guide.{" "}
+        The acre is two numbers, and we'd use the one that matches your lawn. Systematic mowing is the{" "}
+        {formatAcres(iq.acres, false)} figure. An irregular lawn is the 0.5 acre figure on the same Husqvarna
+        page. The 410 iQ is rated {formatAcres(small.acres, false)} and prints ±20% on that area. Heavy trees
+        or two zones are a separate case on the size guide.{" "}
         <SourceLine ids={["husq-420iq", "husq-410iq"]} checked={SPEC_CHECKED} />
       </p>
       <h2>15% at the boundary</h2>
       <p className="measure">
-        The 410 iQ, 420 iQ, and 440 iQ publish {iq.slope}% and limit the boundary to 15%. A bank that is steep
-        only at the edge can miss the mower even when the middle of the lawn is gentler. The 435 iQ AWD and
-        the 435X AWD publish {awd.slope}% and 50% at the boundary. Degrees are not published on these rows.{" "}
+        The boundary is the limit that bites, not the headline slope. The 410 iQ, 420 iQ, and 440 iQ publish{" "}
+        {iq.slope}% and limit the boundary to 15%. A bank that's steep only at the edge can miss the mower
+        even when the middle of your lawn is gentler. The 435 iQ AWD and the 435X AWD publish {awd.slope}%
+        and 50% at the boundary. Degrees aren't published for these models.{" "}
         <SourceLine ids={["husq-420iq", "husq-435iq", "husq-435x"]} checked={SPEC_CHECKED} />
       </p>
       <SlopeMarginNote />
       <h2>Trees and the wire option</h2>
       <p className="measure">
-        EPOS is RTK. Owners report pauses under trees. The boundary wire is the option Husqvarna leaves on
-        these models when the sky is not enough. Radar and ultrasonic are not a substitute for a clear sky.{" "}
-        <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
+        If trees cover the path, EPOS can pause, because EPOS is RTK. Owners report pauses under trees. The
+        boundary wire is the option Husqvarna leaves on these models when the sky isn't enough. Radar and
+        ultrasonic aren't a substitute for a clear sky. <SourceLine ids={["husq-420iq"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
         intro="In the 4 owner threads we read in October 2026:"
         items={[
           {
-            text: "EPOS pauses and searches under trees, then stops.",
+            text: "Owners say EPOS pauses and searches under trees, then stops.",
             href: "https://www.reddit.com/r/automower/comments/1srq9ov/",
             linkLabel: "Thread on EPOS pauses under trees",
           },
           {
-            text: "EPOS lock and setup frustrations, in two threads. One of those also says US phone support fixed a setup problem in about 20 minutes.",
+            text: "Owners describe EPOS lock and setup frustrations, in two threads. One of those also says US phone support fixed a setup problem in about 20 minutes.",
             href: "https://www.reddit.com/r/automower/comments/1tnd090/",
             linkLabel: "Thread on EPOS lock",
             extra: [
@@ -231,7 +233,7 @@ export default function IqReview() {
             ],
           },
           {
-            text: "Reliable on open yards. A 2WD mower sticks in mud and mulch.",
+            text: "Owners call it reliable on open yards. A 2WD mower sticks in mud and mulch.",
             href: "https://www.reddit.com/r/automower/comments/1rnyfu6/",
             linkLabel: "Thread on open yards and mud",
           },
@@ -239,18 +241,18 @@ export default function IqReview() {
       />
       <h2>Running costs</h2>
       <p className="measure">
-        An official cellular price is Not published on the Husqvarna US pages used here. The Verge reported
-        Automower Connect as free for life. Blade prices are Not published. The{" "}
+        Husqvarna doesn't publish an official cellular price on the US pages we used. The Verge reported
+        Automower Connect as free for life. Blade prices aren't published. The{" "}
         <Link href="/guides/robot-mower-cost-to-own">cost-to-own guide</Link> keeps those lines out of the
-        yearly sum. A theft feature is Not published.
+        yearly sum. A theft feature isn't published either.
       </p>
       <h2>Honest limits</h2>
       <ul className="grid gap-2 pl-5">
-        <li>A steep edge. The 420 iQ boundary limit is 15%.</li>
-        <li>Heavy woods, unless you add the wire assist the maker describes.</li>
-        <li>An irregular lawn if you only read the 1 acre systematic figure.</li>
-        <li>A buyer who needs an amazon.com listing for an iQ model. Those four rows stay on the plain no-link line.</li>
-        <li>A St. Augustine lawn that needs a 4 inch cut on the 435 iQ AWD or the 435X AWD. Those two top out at 2.8 in.</li>
+        <li>If the steep part is at the edge, the 420 iQ boundary limit is 15%.</li>
+        <li>If your yard is heavy woods, you'd need the wire assist the maker describes.</li>
+        <li>If your lawn is irregular, don't stop at the 1 acre systematic figure.</li>
+        <li>If you need an amazon.com listing for an iQ model, those four stay on the plain no-link line.</li>
+        <li>If your St. Augustine needs a 4 inch cut, the 435 iQ AWD and the 435X AWD top out at 2.8 in.</li>
       </ul>
       <h2>Support outlook</h2>
       <p className="measure">
@@ -266,12 +268,12 @@ export default function IqReview() {
       </p>
       <p className="measure">
         The 410 iQ, 420 iQ, 440 iQ, and 435 iQ AWD had no confirmed amazon.com listing on Oct 10, 2026. The
-        435X AWD listing title was confirmed that day. It was not opened again on Oct 13, 2026.
+        435X AWD listing title was confirmed that day. Oct 13, 2026 did not include a new read of it.
       </p>
       <h2>Another open acre</h2>
       <p className="measure">
-        The Navimow X430 is rated {formatAcres(x430.acres)} and {x430.slope}%, with a confirmed listing. It
-        doesn't publish a separate 15% boundary figure.{" "}
+        If you want another open acre with a listing, the Navimow X430 is rated {formatAcres(x430.acres)} and{" "}
+        {x430.slope}%. It doesn't publish a separate 15% boundary figure.{" "}
         <Link href="/reviews/segway-navimow-x4">Navimow X4 review</Link>.{" "}
         <Link href="/vs/worx-vision-cloud-wr340-vs-navimow-x430">WR340 vs X430</Link> is the vision comparison
         on the same acre.
@@ -280,7 +282,7 @@ export default function IqReview() {
         items={[
           {
             q: "Why is there no Amazon button on the 420 iQ?",
-            a: "There was no confirmed amazon.com listing for that exact model at the Oct 10, 2026 check. The 435X AWD is the row with a button.",
+            a: "There was no confirmed amazon.com listing for that exact model on Oct 10, 2026. The 435X AWD is the one with a button.",
           },
           {
             q: "Is 1 acre the irregular-lawn rating?",
@@ -288,20 +290,20 @@ export default function IqReview() {
           },
           {
             q: "Can it climb 45% at the property line?",
-            a: "The 420 iQ publishes 45% and 15% at the boundary. The 435 iQ AWD and the 435X AWD publish 70% and 50% at the boundary.",
+            a: "No. The 420 iQ publishes 45% and 15% at the boundary. The 435 iQ AWD and the 435X AWD publish 70% and 50% at the boundary.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="Specs on this page come from Husqvarna US model pages, not from a third-party manual site."
-        threads="Four owner threads, read in October 2026."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Specs checked Oct 10, 2026. The 435X AWD listing was not opened again on Oct 13, 2026."
+        manuals="These specs come from Husqvarna US model pages, not from a third-party manual site."
+        threads="We read four owner threads in October 2026."
+        questions="No manufacturer has answered questions yet."
+        specsLine="Specs checked Oct 10, 2026. The 435X AWD listing was not part of the Oct 13, 2026 read."
       />
       <h2>See these models</h2>
       <p className="measure">
-        The 420 iQ stays on the plain no-link line. The 435X AWD button is the listing we could confirm.
+        The 420 iQ doesn't have an Amazon link we could confirm. The 435X AWD button is the listing we could confirm.
       </p>
       <EndLinks
         pageType="review"

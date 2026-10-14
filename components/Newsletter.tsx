@@ -14,16 +14,16 @@ export function Newsletter() {
         const data = new FormData(event.currentTarget);
         const email = String(data.get("email") || "").trim();
         const body = email
-          ? `Please write when a newsletter starts. My email is ${email}.`
-          : "Please write when a newsletter starts.";
-        setNote(`This form does not add you to a list. Your email app can send the note to ${CONTACT_EMAIL}.`);
+          ? `I'd like a note when a newsletter starts. My email is ${email}.`
+          : "I'd like a note when a newsletter starts.";
+        setNote(`This form doesn't add you to a list. Your email app can send the note to ${CONTACT_EMAIL}.`);
         window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Newsletter note")}&body=${encodeURIComponent(body)}`;
       }}
     >
       <p className="label">Newsletter</p>
       <p className="m-0 max-w-[66ch] text-[0.95rem]">
-        There is no mailing list yet. Email {CONTACT_EMAIL} if you want a note when one starts. Sending this
-        form opens your email app. It does not add you to a list.
+        There's no mailing list yet. Email {CONTACT_EMAIL} if you'd like a note when one starts. Sending this
+        form opens your email app. It doesn't add you to a list.
       </p>
       <div className="mt-2 flex flex-wrap gap-2">
         <label className="sr-only" htmlFor="newsletter-email">

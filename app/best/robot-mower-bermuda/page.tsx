@@ -44,7 +44,7 @@ export default function BermudaPage() {
       disclosure
     >
       <p className="measure">
-        For a Bermuda home lawn kept near 1 inch, start with a published low cut at or under 1.5 inches. The
+        If you keep a Bermuda home lawn near 1 inch, we'd start with a published low cut at or under 1.5 inches. The
         Navimow X430 goes to {specText(x430.specs.cuttingHeight)}. The standard LUBA 3 AWD 3000 goes to{" "}
         {specText(luba.specs.cuttingHeight)}. The Automower 420 iQ goes to {specText(iq.specs.cuttingHeight)}.
         High-cut models that start at 2.2 inches stay above the short Bermuda band.
@@ -84,26 +84,26 @@ export default function BermudaPage() {
       />
       <p className="measure">
         <Link href="/tools/mower-finder">Not sure? Answer five questions</Link>. The 420 iQ also publishes a
-        1 inch low cut, and that model has no Amazon button on its review.
+        1 inch low cut, and there's no Amazon button for it on its review.
       </p>
       <YardPhoto id="photo-bermuda" />
       <h2>What the extension services print</h2>
       <p className="measure">
-        NC State’s Bermuda calendar gives a wide band of 5/8 to 2.5 inches, says heights below 1 inch need a
+        NC State's Bermuda calendar gives a wide band of 5/8 to 2.5 inches, says heights below 1 inch need a
         reel mower and level ground, and says most lawns are kept between 1 and 2.5 inches. The same calendar
         also says Bermuda performs best at 3/4 to 1 inch with a reel mower, and that it should be kept
-        shorter than 2.25 inches. Those lines sit together. They are not collapsed into one number.{" "}
+        shorter than 2.25 inches. Those lines sit together. We wouldn't mash them into one number.{" "}
         <a href="https://content.ces.ncsu.edu/bermudagrass-lawn-maintenance-calendar">
           Bermudagrass Lawn Maintenance Calendar, NC State
         </a>
-        , checked Oct 13, 2026. NC State’s shorter mowing table lists bermudagrass at 0.75–2 inches.{" "}
+        , as of Oct 13, 2026. NC State's shorter mowing table lists bermudagrass at 0.75–2 inches.{" "}
         <a href="https://content.ces.ncsu.edu/caring-for-your-lawn-and-the-environment">
           Caring for Your Lawn and the Environment
         </a>
         .
       </p>
       <p className="measure">
-        Texas A&M AgriLife’s home-lawn calendar says the recommended height for bermudagrass home lawns is 1
+        Texas A&M AgriLife's home-lawn calendar says the recommended height for bermudagrass home lawns is 1
         to 2 inches with a rotary mower, and that hybrid golf and sports turf can go under 1 inch with a reel
         mower.{" "}
         <a href="https://agrilifeextension.tamu.edu/library/landscaping/bermudagrass-home-lawn-management-calendar/">
@@ -114,30 +114,30 @@ export default function BermudaPage() {
         <a href="https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Turf-Cutting-height.pdf">
           Mowing Recommendations for Warm-Season Turfgrasses, ESC-052
         </a>
-        . The 1–2 inch calendar and the 1.5–3 inch table disagree. Both are printed here.
+        . We'd plan on the range that matches your lawn. The 1–2 inch calendar and the 1.5–3 inch table disagree, so keep both in mind.
       </p>
       <GrassChart focus="bermuda" />
       <h2>High-cut rows are the mismatch</h2>
       <p className="measure">
-        The LUBA 3 high-cut row is {specText(high.specs?.cuttingHeight)}. The LUBA mini 2 1500H is the same
-        2.2–4.0 inch band. A lawn kept at 1 inch never enters that range. The Navimow i210 AWD starts at 2.0
+        The LUBA 3 high-cut version is {specText(high.specs?.cuttingHeight)}. The LUBA mini 2 1500H is the same
+        2.2–4.0 inch band. If you keep the lawn at 1 inch, it never enters that range. The Navimow i210 AWD starts at 2.0
         inches, which is only the top of the Texas A&M 1–2 inch home-lawn line. The 435X AWD low cut is{" "}
-        {specText(wire.specs.cuttingHeight)}, so it can reach a short Bermuda lawn, and it needs boundary
+        {specText(wire.specs.cuttingHeight)}, so it can reach a short Bermuda lawn, and you'll need boundary
         wire.
       </p>
       <Faq
         items={[
           {
             q: "Is a minimum cut height a problem for Bermuda?",
-            a: "Yes, when the mower cannot go low enough. A 2.2 inch minimum misses a lawn kept at 1 to 1.5 inches. A 0.75 or 1.0 inch minimum can reach it.",
+            a: "Yes, when the mower can't go low enough. A 2.2 inch minimum misses a lawn you keep at 1 to 1.5 inches. A 0.75 or 1.0 inch minimum can reach it.",
           },
           {
             q: "Can I use a St. Augustine height on Bermuda?",
-            a: "The extension pages treat them as different grasses. Standard St. Augustine is the tall band. Bermuda home lawns are the short band. One mower can cover both only if its published range includes both.",
+            a: "We'd treat them as different grasses, the way the extension pages do. Standard St. Augustine is the tall band. Bermuda home lawns are the short band. One mower can cover both only if its published range includes both.",
           },
           {
             q: "Which Texas A&M number should I use?",
-            a: "Use the range that matches your lawn. The home-lawn calendar says 1 to 2 inches. ESC-052 says 1.5 to 3 inches for common Bermuda lawns.",
+            a: "We'd use the range that matches your lawn. The home-lawn calendar says 1 to 2 inches. ESC-052 says 1.5 to 3 inches for common Bermuda lawns.",
           },
         ]}
       />
@@ -145,9 +145,9 @@ export default function BermudaPage() {
         scope="group"
         sources={researched.map((id) => ({ id }))}
         manuals="Cutting heights are the figures already on each review."
-        threads="No new owner threads were opened for this page."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Grass pages checked Oct 13, 2026. Mower cuts checked Oct 10, 2026."
+        threads="No new owner threads on the grass heights."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Grass pages as of Oct 13, 2026. Mower cuts as of Oct 10, 2026."
       />
       <h2>Sources</h2>
       <ul className="grid gap-2 pl-5">

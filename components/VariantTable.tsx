@@ -25,7 +25,7 @@ function slopeCell(variant: Variant): string {
 function statusCell(family: Family, variant: Variant): string {
   const date = formatDate(variant.statusDate || family.statusDate);
   if (variant.status === "superseded") {
-    return `Replaced by a newer model but still sold as of ${date}. Current model on this page: ${family.primaryVariant}.`;
+    return `Replaced by a newer model but still sold as of ${date}. Current model: ${family.primaryVariant}.`;
   }
   if (variant.status === "discontinued") {
     return `No longer sold as of ${date}.`;
@@ -55,7 +55,7 @@ export function VariantTable({
       <h2>Variants</h2>
       <CtaCluster>
         <div className="table-scroll">
-          <p className="scroll-cue">Swipe sideways to read every column.</p>
+          <p className="scroll-cue">Swipe sideways to see every column.</p>
           <table className="data">
             <caption>
               {family.family} variants. Area and slope checked {formatDate(family.statusDate)}.

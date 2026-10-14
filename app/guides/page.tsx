@@ -31,8 +31,8 @@ export default function GuidesIndex() {
       disclosure
     >
       <p className="measure">
-        These guides answer a yard question before they name a mower. Specs they cite were checked on Oct 10,
-        2026, except where a page names a later check.
+        These guides answer a question about your yard before they name a mower. The specs we cite were read on Oct 10,
+        2026, unless that guide names a later date.
       </p>
       <CtaCluster>
         <ProductLink
@@ -48,46 +48,46 @@ export default function GuidesIndex() {
         <li>
           <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
           <p className="m-0">
-            Rated acres, square feet, and the rule of thumb for heavy trees and two zones.
+            You size it to the grass you mow, with a rule of thumb if you've got heavy trees or two zones.
           </p>
         </li>
         <li>
           <Link href="/guides/rtk-vs-lidar-vs-vision">RTK, LiDAR, or vision: which navigation fits your yard</Link>
           <p className="m-0">
-            Boundary wire, an antenna, network RTK, and LiDAR or a camera, and what makes each one fail.
+            We'd match wire, an antenna, network RTK, LiDAR, or a camera to your yard, and say what makes each one fail.
           </p>
         </li>
         <li>
           <Link href="/guides/fcc-robot-mower-ban">Are robot mowers banned in the US? The 2026 FCC rule, tracked</Link>
           <p className="m-0">
-            What the July 28, 2026 Covered List change does, and does not do, for mowers already on sale.
+            No, not if yours is already on sale. The July 28, 2026 change is about new models.
           </p>
         </li>
         <li>
           <Link href="/guides/robot-mower-winter-storage">How do I store a robot mower for winter?</Link>
           <p className="m-0">
-            The Q110H storage temperature, and the US pages that do not include a winter checklist.
+            We'd follow the Q110H storage temperature, because the other US pages don't include a winter checklist.
           </p>
         </li>
         <li>
           <Link href="/guides/robot-mower-front-and-back-yard">Can one robot mower do the front yard and the back yard?</Link>
           <p className="m-0">
-            A zones map and a passage-width gauge that compares your opening with published figures.
+            Often yes, if your side opening is wide enough. We'd measure it against the published widths.
           </p>
         </li>
         <li>
           <Link href="/guides/robot-mower-cost-to-own">What does a robot mower cost to own?</Link>
           <p className="m-0">
-            Published subscription lines. Missing prices stay Not published. No Amazon prices.
+            It's the fees the makers publish. Missing prices stay Not published, and Amazon prices aren't listed.
           </p>
         </li>
         <li>
           <Link href="/guides/are-robot-mowers-worth-it">Are robot mowers worth it?</Link>
-          <p className="m-0">Who a current model can suit, and who should not buy one yet.</p>
+          <p className="m-0">For some yards, yes. For the yards on that guide, we'd wait.</p>
         </li>
         <li>
           <Link href="/guides/robot-mower-theft-protection">How do I keep a robot mower from being stolen?</Link>
-          <p className="m-0">PIN, alarm, and tracking lines that are published, and the models that leave theft blank.</p>
+          <p className="m-0">We'd use a published PIN, alarm, or tracker, and notice which models leave theft blank.</p>
         </li>
       </ul>
       <Related

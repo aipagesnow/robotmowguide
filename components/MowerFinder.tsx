@@ -67,7 +67,7 @@ export function MowerFinder({ candidates }: { candidates: Candidate[] }) {
               </select>
             </label>
           </div>
-          <p className="m-0 text-[0.95rem]">Lot minus house, drive, and beds. Leave the three boxes blank to use the area as mowable lawn.</p>
+          <p className="m-0 text-[0.95rem]">Your lot minus the house, the drive, and the beds. Leave the three boxes blank if that number is already the grass you mow.</p>
           <div className="flex flex-wrap gap-2">
             <label className="grid gap-1 text-[0.95rem]">
               House sq ft
@@ -104,7 +104,7 @@ export function MowerFinder({ candidates }: { candidates: Candidate[] }) {
           </p>
           <label className="flex min-h-11 items-center gap-2">
             <input type="checkbox" checked={slopeAtEdge} onChange={(event) => setSlopeAtEdge(event.target.checked)} />
-            This steepest spot is at an edge, not in the middle of the lawn
+            This steepest spot is at an edge, not in the middle of your lawn
           </label>
         </fieldset>
         <fieldset className="grid gap-2">

@@ -45,37 +45,37 @@ export default function SmallYardPage() {
       disclosure
     >
       <p className="measure">
-        A small yard here means about a quarter acre of grass, {formatAcres(0.25)}, up to the mini 2’s{" "}
+        If your yard is small, we mean about a quarter acre of grass, {formatAcres(0.25)}, up to the mini 2's{" "}
         {formatAcres(mini.acres, false)}. The i210 AWD is the open quarter acre with no antenna. The Q110H is the
-        other quarter-acre RTK mower, with a shorter cut. The mini 2 1500H is the step up when the bank is
-        steep or the grass is kept tall.
+        other quarter-acre RTK mower, with a shorter cut. The mini 2 1500H is the step up when your bank is
+        steep or you keep the grass tall.
       </p>
       <QuickPick
         pageType="best_for"
         items={[
           {
-            yard: "Open quarter acre, no antenna",
+            yard: "An open quarter acre, and no antenna in your yard",
             model: "Navimow i210 AWD",
             href: "/reviews/segway-navimow-i-series",
             asin: i210.variant.asin,
             productSlug: i210.family.slug,
           },
           {
-            yard: "Open quarter acre, cut to 3.15 in",
+            yard: "An open quarter acre, with a cut to 3.15 in",
             model: "RockNeo Q110H",
             href: "/reviews/roborock-rockneo-q110h",
             asin: q.variant.asin,
             productSlug: q.family.slug,
           },
           {
-            yard: "Up to 0.37 acre, steep or tall grass",
+            yard: "Up to 0.37 acre if it's steep or the grass is tall",
             model: "LUBA mini 2 AWD 1500H",
             href: "/reviews/mammotion-luba-mini-2-awd",
             asin: mini.variant.asin,
             productSlug: mini.family.slug,
           },
           {
-            yard: "Quarter acre on LiDAR",
+            yard: "A quarter acre if you want LiDAR",
             model: "LiDAX Ultra 1000",
             href: "/reviews/mova-lidax-ultra",
             asin: mova.variant.asin,
@@ -88,7 +88,7 @@ export default function SmallYardPage() {
       <div className="table-scroll">
         <p className="scroll-cue">Swipe sideways to read every column.</p>
         <table className="data">
-          <caption>Current models around a quarter acre. The WR147 is the boundary-wire row. The i105N is not in this table.</caption>
+          <caption>Current models around a quarter acre. The WR147 is the boundary-wire mower. The i105N isn't in the list below.</caption>
           <thead>
             <tr>
               <th scope="col">Model</th>
@@ -149,47 +149,47 @@ export default function SmallYardPage() {
       </div>
       <h2>Leave the previous i1 off the short list</h2>
       <p className="measure">
-        The i105N is rated {formatAcres(i105.acres, false)} and is marked superseded. It still has its own listing.
-        It is not a current pick on this page. The i110N is the other previous-generation row, and it has no
+        We'd leave the i105N off your short list. It's rated {formatAcres(i105.acres, false)} and it's marked superseded. It still has its own listing.
+        The i110N is the other previous-generation model, and it has no
         confirmed listing. Both stay on the{" "}
         <Link href="/reviews/segway-navimow-i-series">i series review</Link>.{" "}
         <SourceLine ids={["amz-i105n", "amz-i210"]} checked="2026-10-13" />
       </p>
       <SlopeMarginNote />
       <p className="measure">
-        The Q110H’s 24.2° was calculated from 45% and is labeled that way on its review. The mini 2 publishes{" "}
-        {mini.slope}%. A bank past 45% is a reason to leave the i210 and the Q110H.{" "}
+        The Q110H's 24.2° was worked out from 45% and is labeled that way on its review. The mini 2 publishes{" "}
+        {mini.slope}%. If your bank is past 45%, we'd leave the i210 and the Q110H.{" "}
         <Link href="/best/robot-mower-for-hills">Hills page</Link>.{" "}
         <SourceLine ids={["navimow-ces26", "q110h-manual", "mammotion-mini2"]} checked={SPEC_CHECKED} />
       </p>
       <p className="measure">
         Few owner reports exist yet for the LiDAX Ultra, and few exist yet for the US Q110H. The mini 2 has
-        a short owner record, including a report of turns tearing thin sandy grass. Read those pages before
-        you use a button.
+        a short owner record, including a report of turns tearing thin sandy grass. We'd read those reviews before
+        you order.
       </p>
       <Faq
         items={[
           {
             q: "What counts as a small yard?",
-            a: "About a quarter acre of grass, up to 0.37 acre for the mini 2. A half acre of grass is the next page, not this one.",
+            a: "About a quarter acre of grass, up to 0.37 acre for the mini 2. A half acre of grass is the next guide, not this one.",
           },
           {
             q: "Can I buy the i105N from this list?",
-            a: "No. It is the previous generation. The i series review keeps its own button.",
+            a: "No. It's the previous generation. The i series review keeps its own button.",
           },
           {
             q: "Which small mower cuts tall grass?",
-            a: "The mini 2 1500H listing says 2.2–4.0 in. The Q110H manual line is 1.57–3.15 in. The i210 listing says 2–3.6 in.",
+            a: "If you want a tall cut, the mini 2 1500H listing says 2.2–4.0 in. The Q110H manual line is 1.57–3.15 in. The i210 listing says 2–3.6 in.",
           },
         ]}
       />
       <ResearchedBox
         scope="group"
         sources={sources.map((id) => ({ id }))}
-        manuals="The Q110H English technical data was read Oct 13, 2026. The other rows use brand pages and listings."
-        threads="Owner threads are on the linked reviews. MOVA and the Q110H have few."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="Listing titles rechecked Oct 13, 2026."
+        manuals="The Q110H English technical data is as of Oct 13, 2026. The other models use brand pages and listings."
+        threads="Owner threads are on the linked reviews. MOVA and the Q110H have few so far."
+        questions="No manufacturer has answered a question yet."
+        specsLine="Listing titles also read on Oct 13, 2026."
       />
       <Related
         links={[

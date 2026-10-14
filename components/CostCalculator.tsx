@@ -70,22 +70,22 @@ export function CostCalculator({ rows }: { rows: CostRow[] }) {
         </label>
       </div>
       <p className="measure m-0">
-        Season length does not change the dollars. No published line on this page is priced per month, and
-        electricity is left out because battery watt-hours and a standby figure are not both published.
+        Season length doesn't change the dollars. Nothing published here is priced per month, and
+        we leave electricity out because battery watt-hours and a standby figure aren't both published.
       </p>
       <div aria-live="polite" className="grid gap-2">
         <ul className="grid gap-2 pl-5">
           {mine.map((row) => (
             <li key={row.item}>
               {row.item}: {moneyText(row)}
-              {row.confidence.startsWith("official") ? "" : " (as reported; not in the yearly sum)"}
+              {row.confidence.startsWith("official") ? "" : " (as reported, so it isn't in the yearly sum)"}
             </li>
           ))}
         </ul>
         <p className="measure m-0">
           {yearly.length
-            ? `If the published yearly fee applied in every one of the ${years} years, ${LABELS[family]} would be $${yearlySum.toFixed(2)} a year, or $${(yearlySum * years).toFixed(2)} over that span. A free period is a separate line and is not subtracted, because it is not the same length on every model. The sum skips one-time accessories and any line that is Not published or only as reported. Blades are Not published, so this is not a full five-year cost.`
-            : `No official yearly price is published for ${LABELS[family]}. The total stays Not published.`}
+            ? `If the published yearly fee applied in every one of the ${years} years, ${LABELS[family]} would be $${yearlySum.toFixed(2)} a year, or $${(yearlySum * years).toFixed(2)} over that span. A free period is listed on its own and isn't subtracted, because it isn't the same length on every model. The sum skips one-time accessories and any line that is Not published or only as reported. Blades are Not published, so this isn't a full five-year cost.`
+            : `No official yearly price is published for ${LABELS[family]}. We'd leave the total as Not published.`}
         </p>
       </div>
     </form>

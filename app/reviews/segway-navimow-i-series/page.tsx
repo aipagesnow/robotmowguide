@@ -62,17 +62,19 @@ export default function ISeriesReview() {
       status="On sale in the US as of Oct 10, 2026."
     >
       <p className="measure">
-        The Navimow i210 AWD replaced the i105N and i110N in October 2026. The i210 AWD is all-wheel drive and
-        rated {publishedSlope(i210.slope, i210.degrees)}. The i105N is rated {formatAcres(i105.acres)} at{" "}
-        {i105.slope}%, and the i110N is rated {formatAcres(i110.acres, false)} at {i110.slope}%.
+        If you're looking at the i series now, the Navimow i210 AWD replaced the i105N and i110N in October
+        2026. The i210 AWD is all-wheel drive and rated {publishedSlope(i210.slope, i210.degrees)}. The i105N
+        is rated {formatAcres(i105.acres)} at {i105.slope}%, and the i110N is rated{" "}
+        {formatAcres(i110.acres, false)} at {i110.slope}%.
       </p>
       <p className="measure">
-        Read the i210 AWD for a quarter acre and banks inside {i210.slope}%. It
-        is three-wheel all-wheel drive, with network RTK and vision, and no antenna to mount. The i206 AWD
-        is the smaller current sibling, rated {formatAcres(i206.acres)}.
+        If you've got a quarter acre and banks inside {i210.slope}%, the i210 AWD is the one we'd read. It's
+        three-wheel all-wheel drive, with network RTK and vision, and no antenna to mount. The i206 AWD is
+        the smaller current sibling, rated {formatAcres(i206.acres)}.
       </p>
       <p className="measure">
-        The i105N and the i110N are the previous generation. The i110N has no confirmed amazon.com listing.
+        The i105N and the i110N are the previous generation. The i110N has no confirmed amazon.com listing,
+        so we wouldn't order that one by mistake.
       </p>
       <CtaCluster>
         <ProductLink
@@ -99,12 +101,12 @@ export default function ISeriesReview() {
           {
             label: "Passage",
             value: "Not published",
-            detail: "Body width for the i210 is not published.",
+            detail: "Body width for the i210 isn't published, so we can't tell you a gate width.",
           },
           {
             label: "Navigation",
             value: navigationLabel(family.navigation),
-            detail: "Network RTK and vision. The i1 models use an antenna kit.",
+            detail: "Network RTK and vision. The i1 models use an antenna kit. The current model doesn't.",
           },
           {
             label: "Cut",
@@ -117,15 +119,15 @@ export default function ISeriesReview() {
         family={family}
         pageType="review"
         differences={{
-          "Navimow i210 AWD": `Current lead. Rated ${formatAcres(i210.acres)}. Network RTK, no antenna. Cut ${specText(i210.specs.cuttingHeight)}.`,
-          "Navimow i206 AWD": `Current, smaller. Rated ${formatAcres(i206.acres)}. No bare listing confirmed, so this row has no button.`,
-          "Navimow i105N (previous generation)": `Previous generation. Rated ${formatAcres(i105.acres)}. Slope note: 10% at the boundary. Its own listing.`,
-          "Navimow i110N (previous generation)": `Previous generation. Rated ${formatAcres(i110.acres)}. Front-wheel drive and an antenna kit. No confirmed listing.`,
+          "Navimow i210 AWD": `The current model we'd look at. Rated ${formatAcres(i210.acres)}. Network RTK, no antenna. Cut ${specText(i210.specs.cuttingHeight)}.`,
+          "Navimow i206 AWD": `Current and smaller. Rated ${formatAcres(i206.acres)}. No bare listing confirmed, so there's no button.`,
+          "Navimow i105N (previous generation)": `Previous generation. Rated ${formatAcres(i105.acres)}. Slope note: 10% at the boundary. It has its own listing.`,
+          "Navimow i110N (previous generation)": `Previous generation. Rated ${formatAcres(i110.acres)}. Front-wheel drive and an antenna kit. No confirmed listing yet.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="Navimow i210 AWD, except rows that name an i1 model. The i210 and i105N titles were rechecked Oct 13, 2026."
+        caption="Navimow i210 AWD, except where a line names an i1 model. The i210 and i105N titles were also read on Oct 13, 2026."
         rows={[
           {
             label: "i210 rated area",
@@ -153,7 +155,7 @@ export default function ISeriesReview() {
             value: specText(i210.specs.cuttingHeight),
             sources: ["amz-i210"],
             checked: "2026-10-13",
-            note: "From the listing title.",
+            note: "That's from the listing title.",
           },
           {
             label: "i210 drive",
@@ -166,38 +168,41 @@ export default function ISeriesReview() {
             value: publishedSlope(i110.slope, i110.degrees),
             sources: ["navimow-i110"],
             checked: SPEC_CHECKED,
-            note: "The Navimow page also says 10% (6°) at the boundary. That boundary figure is not the interior.",
+            note: "The Navimow page also says 10% (6°) at the boundary. That boundary figure isn't the interior slope.",
           },
           {
             label: "i110N cut",
             value: `${specText(i110.specs.cuttingWidth)} wide, ${specText(i110.specs.cuttingHeight)} high`,
             sources: ["navimow-i110"],
             checked: SPEC_CHECKED,
-            note: "Previous generation. Manual height adjustment.",
+            note: "Previous generation, and you adjust the height by hand.",
           },
         ]}
       />
       <h2>Current i2, previous i1</h2>
       <p className="measure">
-        The i210 is the quarter-acre AWD. The i206 is rated {formatAcres(i206.acres)} at the same {i206.slope}%
-        slope, and its bare ASIN is empty, so the variant table does not borrow the i210 button. The i105N is
-        rated {formatAcres(i105.acres, false)}. The i110N is rated {formatAcres(i110.acres, false)} and is front-wheel drive
-        with an antenna kit. Amazon’s i105N listing is still that model. The family note says Amazon points
-        at the i206 AWD as a newer version. <SourceLine ids={["amz-i210", "amz-i105n", "navimow-i110"]} checked="2026-10-13" />
+        The current model is the one we'd buy, and the older pair is the previous generation. The i210 is the
+        quarter-acre AWD. The i206 is rated {formatAcres(i206.acres)} at the same {i206.slope}% slope, and its
+        bare ASIN is empty, so it doesn't borrow the i210 button. The i105N is rated{" "}
+        {formatAcres(i105.acres, false)}. The i110N is rated {formatAcres(i110.acres, false)} and is front-wheel
+        drive with an antenna kit. Amazon's i105N listing is still that model. The family note says Amazon
+        points at the i206 AWD as a newer version.{" "}
+        <SourceLine ids={["amz-i210", "amz-i105n", "navimow-i110"]} checked="2026-10-13" />
       </p>
       <h2>Slope, including the boundary note on the i1</h2>
       <p className="measure">
-        {i210.slope}%, a rise of {risePer10Ft(i210.slope)}. The i110N publishes {i110.slope}%, and the Navimow
-        page says 10% at the boundary. Do not treat 30% as the edge figure.{" "}
-        <Link href="/best/robot-mower-for-hills">Hills converter</Link>.{" "}
+        The slope we'd plan on is {i210.slope}%, a rise of {risePer10Ft(i210.slope)}. The i110N
+        publishes {i110.slope}%, and the Navimow page says 10% at the boundary. Don't treat 30% as the edge
+        figure. <Link href="/best/robot-mower-for-hills">Hills converter</Link>.{" "}
         <SourceLine ids={["navimow-ces26", "navimow-i110"]} checked={SPEC_CHECKED} />
       </p>
       <SlopeMarginNote />
       <h2>Trees and the antenna the i2 dropped</h2>
       <p className="measure">
-        The i210 does not use an antenna. Network RTK still needs cell service, and canopy over the path
-        weakens a satellite fix. The i110N positioning line is an EFLS antenna kit plus a camera. Heavy tree
-        cover is on the skip list for this family. <Link href="/best/robot-mower-under-trees">Under trees</Link>.{" "}
+        The i210 doesn't use an antenna, which is the change if you were looking at the older models.
+        Network RTK still needs cell service, and canopy over the path weakens a satellite fix. The i110N
+        positioning line is an EFLS antenna kit plus a camera. Heavy tree cover is a reason we'd skip this
+        family. <Link href="/best/robot-mower-under-trees">Under trees</Link>.{" "}
         <SourceLine ids={["navimow-ces26", "navimow-i110"]} checked={SPEC_CHECKED} />
       </p>
       <OwnerReports
@@ -215,45 +220,46 @@ export default function ISeriesReview() {
         {family.notFor?.map((item) => (
           <li key={item}>{item}</li>
         ))}
-        <li>The i1 rows are previous generation. Do not buy one by using the i210 button.</li>
+        <li>The i1 models are the previous generation. Don't buy one by using the i210 button.</li>
       </ul>
       <SupportOutlook brand="Segway Navimow" />
       <p className="measure">
-        The i105N and i110N are the previous generation. They are still sold, and they are not the lead.
+        The i105N and i110N are the previous generation. They're still sold, and they aren't the one we'd
+        start with.
       </p>
       <p className="measure">
-        A fee after a free data period is not published for the i210. The i110N page says a 4G anti-theft
+        A fee after a free data period isn't published for the i210. The i110N page says a 4G anti-theft
         module is an optional add-on. <SourceLine ids={["homedepot-i110n"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Two neighbors on the ladder</h2>
       <p className="measure">
-        The <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H</Link> is the other quarter-acre RTK
-        mower, rated {formatAcres(q.acres)}, with a shorter US cut. The{" "}
-        <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is the step up in area
-        and slope, rated {formatAcres(mini.acres, false)} and {mini.slope}%.
+        If you want the other quarter-acre RTK mower, the{" "}
+        <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H</Link> is rated {formatAcres(q.acres)}, with
+        a shorter US cut. The <Link href="/reviews/mammotion-luba-mini-2-awd">LUBA mini 2 AWD 1500H</Link> is
+        the step up in area and slope, rated {formatAcres(mini.acres, false)} and {mini.slope}%.
       </p>
       <Faq
         items={[
           {
             q: "Is the i105N the mower to buy?",
-            a: "It is the previous generation. The variant table says so, and it keeps its own button. The current lead is the i210 AWD.",
+            a: "No. It's the previous generation, and it keeps its own button. The current lead is the i210 AWD.",
           },
           {
             q: "Why does the i110N have no button?",
-            a: "No amazon.com title we checked named the i110N exactly. The row uses the plain no-link line instead of the i210 listing.",
+            a: "No amazon.com title named the i110N exactly. That model uses the plain no-link line instead of the i210 listing.",
           },
           {
             q: "Does the i210 need an antenna?",
-            a: "The CES note and the listing describe network RTK and vision, with no antenna. The i110N is the row that includes an antenna kit.",
+            a: "No. The CES note and the listing describe network RTK and vision, with no antenna. The i110N is the model that includes an antenna kit.",
           },
         ]}
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="No i210 owner's manual was in the source list. i110N figures are from the Navimow US page."
-        threads="One Navimow owner thread, re-opened for this page."
-        questions="No manufacturer questions have been answered yet."
-        specsLine="i210 and i105N titles rechecked Oct 13, 2026. Other specs checked Oct 10, 2026."
+        manuals="No i210 owner's manual was in the sources. i110N figures are from the Navimow US page."
+        threads="One Navimow owner thread, from the sources we read."
+        questions="No manufacturer has answered questions yet."
+        specsLine="i210 and i105N titles read on Oct 13, 2026. Other specs checked Oct 10, 2026."
       />
       <EndLinks
         pageType="review"
