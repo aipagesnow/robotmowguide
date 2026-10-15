@@ -1,6 +1,6 @@
 export const SITE_NAME = "RobotMowGuide";
 export const PUBLISHER = "Aivora Digital";
-export const CONTACT_EMAIL = "hello@robotmowguide.com";
+export const CONTACT_EMAIL = "vora+robotmow@mail.grokbot.com";
 export const PUBLISHED = "2026-10-13";
 export const SPEC_CHECKED = "2026-10-10";
 export const FCC_TABLE_CHECKED = "2026-10-09";

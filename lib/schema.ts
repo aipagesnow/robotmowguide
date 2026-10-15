@@ -49,7 +49,7 @@ export function homeSchema() {
       name: SITE_NAME,
       url: SITE_URL,
       logo: `${SITE_URL}/icon.png`,
-      email: "hello@robotmowguide.com",
+      email: "vora+robotmow@mail.grokbot.com",
     },
     {
       "@context": "https://schema.org",
