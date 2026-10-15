@@ -55,6 +55,7 @@ function decode(text) {
 
 function neutralize(text) {
   return text
+    .replace(/vora\+robotmow@mail\.grokbot\.com/gi, " ")
     .replace(/aivora/gi, " ")
     .replace(/have not tested/gi, " ")
     .replace(/haven['’]t tested/gi, " ")
