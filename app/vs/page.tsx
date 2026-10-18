@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
-import { CtaCluster, Related } from "@/components/Blocks";
+import { CtaCluster, Faq, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import { SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
@@ -73,6 +73,22 @@ export default function VsIndex() {
         Both are rated {formatAcres(worx.acres, false)}. For a gentler acre we'd pick the WR340, which publishes {worx.slope}%. The X430 publishes{" "}
         {x430.slope}%, and that's the one we'd pick if your banks are steeper.
       </p>
+      <Faq
+        items={[
+          {
+            q: "Which head-to-head should I read?",
+            a: "Pick the one with the two models you're torn between. If you're not there yet, the mower finder asks about your yard and names a short list first.",
+          },
+          {
+            q: "Why do you compare rated acres and slope first?",
+            a: "Because they decide whether a mower can do your yard at all. A mower rated under your lawn size, or under your steepest bank, won't be the right pick however good the rest looks.",
+          },
+          {
+            q: "Have you tested these mowers side by side?",
+            a: "No, it's research. We haven't mowed with these ourselves. Each comparison uses the maker specs and the sources linked on the page.",
+          },
+        ]}
+      />
       <Related
         links={[
           { href: "/best", label: "Best robot lawn mowers for US yards" },

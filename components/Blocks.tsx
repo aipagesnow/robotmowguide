@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { absoluteUrl } from "@/lib/site";
 import { ProductLink } from "@/components/ProductLink";
 import type { PageType, Placement } from "@/lib/amazon";
 import { formatDate } from "@/lib/format";
@@ -97,6 +99,20 @@ export type QuickPickItem = {
 export function QuickPick({ items, pageType }: { items: QuickPickItem[]; pageType: PageType }) {
   return (
     <section className="sheet" aria-label="Quick picks" data-cta-cluster="true">
+      {pageType === "best" || pageType === "best_for" ? (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: items.map((item, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: item.model,
+              ...(item.href.startsWith("/") ? { url: absoluteUrl(item.href) } : {}),
+            })),
+          }}
+        />
+      ) : null}
       <div className="px-3 pt-3">
         <PaidLinks />
       </div>

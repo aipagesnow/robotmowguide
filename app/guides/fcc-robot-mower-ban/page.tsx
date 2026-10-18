@@ -267,6 +267,10 @@ export default function FccPage() {
             a: "Yes, if the model was already authorized. The fact sheet says the update doesn't prohibit import, sale, or use of those models.",
           },
           {
+            q: "What does the FCC rule mean if I already own a robot mower?",
+            a: "You can keep using it. The fact sheet says the update doesn't prohibit the use of models that were already authorized, and DA 26-789 says they may get security and compatibility updates at least until January 1, 2029.",
+          },
+          {
             q: "Will my mower keep getting updates?",
             a: "DA 26-789 says your already-authorized mower may receive security and compatibility updates at least until January 1, 2029. It doesn't promise hardware changes, and it doesn't set the rule after that date.",
           },

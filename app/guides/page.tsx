@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { YardPhoto } from "@/components/YardPhoto";
-import { CtaCluster, Related } from "@/components/Blocks";
+import { CtaCluster, Faq, Related } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
 import { modelFacts } from "@/lib/products";
 import { pageMeta } from "@/lib/metadata";
@@ -90,6 +90,26 @@ export default function GuidesIndex() {
           <p className="m-0">We'd use a published PIN, alarm, or tracker, and notice which models leave theft blank.</p>
         </li>
       </ul>
+      <Faq
+        items={[
+          {
+            q: "Which guide should I read first?",
+            a: "Start with how big a robot mower you need, because the size comes from the grass you actually mow. Then read the navigation guide to match RTK, LiDAR, or a camera to your yard. Those two answer most of the buying question.",
+          },
+          {
+            q: "Are robot mowers banned in the US?",
+            a: "No, not if the model's already on sale. The July 28, 2026 FCC change is about new models. Our FCC tracker keeps the dates and documents in one place.",
+          },
+          {
+            q: "Can one robot mower handle my front and back yard?",
+            a: "Often yes, if the side opening between them is wide enough for the mower to pass. The front and back yard guide has the published widths to measure against.",
+          },
+          {
+            q: "Have you tested these mowers?",
+            a: "No, it's research. We haven't mowed with these ourselves. The guides use maker specs, the owner threads we link to, and the published US pages.",
+          },
+        ]}
+      />
       <Related
         links={[
           { href: "/best", label: "Best robot lawn mowers for US yards" },
