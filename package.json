@@ -4,10 +4,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/ship-scan.mjs",
+    "postbuild": "node scripts/ship-scan.mjs && node scripts/keeper-check.mjs",
     "start": "next start",
     "scan": "node scripts/ship-scan.mjs",
-    "icons": "node scripts/build-icons.mjs"
+    "icons": "node scripts/build-icons.mjs",
+    "indexnow:ping": "node scripts/indexnow-ping.mjs",
+    "proof:live": "node scripts/post-deploy-proof.mjs",
+    "check:keeper": "node scripts/keeper-check.mjs"
   },
   "dependencies": {
     "next": "^15.5.4",
