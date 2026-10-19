@@ -154,6 +154,7 @@ export default function RtkGuide() {
       <Related
         links={[
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
+          { href: "/guides/fcc-robot-mower-ban", label: "Are robot mowers banned in the US? The 2026 FCC rule" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
