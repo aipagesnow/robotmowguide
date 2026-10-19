@@ -130,6 +130,7 @@ export default function WorthItPage() {
         links={[
           { href: "/guides/how-big-a-robot-mower-do-i-need", label: "How big a robot mower do I need?" },
           { href: "/guides/robot-mower-cost-to-own", label: "What does a robot mower cost to own?" },
+          { href: "/guides/fcc-robot-mower-ban", label: "Are robot mowers banned in the US? The 2026 FCC rule" },
           { href: "/guides/robot-mower-front-and-back-yard", label: "Front yard and back yard" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },

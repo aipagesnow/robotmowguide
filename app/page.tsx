@@ -199,6 +199,10 @@ export default function HomePage() {
         </section>
         <section>
           <h2>Guides</h2>
+          <p className="measure">
+            Worried about the 2026 FCC rule? Mowers already on sale can still be sold and used, and{" "}
+            <Link href="/guides/fcc-robot-mower-ban">here's what the FCC rule does and doesn't change</Link>.
+          </p>
           <ul className="grid gap-3 pl-5">
             <li>
               <Link href="/guides/how-big-a-robot-mower-do-i-need">How big a robot mower do I need?</Link>
