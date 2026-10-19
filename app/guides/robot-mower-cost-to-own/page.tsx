@@ -172,6 +172,7 @@ export default function CostGuide() {
       <Related
         links={[
           { href: "/guides/are-robot-mowers-worth-it", label: "Are robot mowers worth it?" },
+          { href: "/guides/fcc-robot-mower-ban", label: "Are robot mowers banned in the US? The 2026 FCC rule" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },
           { href: "/guides/robot-mower-theft-protection", label: "Robot mower theft protection" },

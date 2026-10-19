@@ -53,8 +53,10 @@ export default function FccPage() {
       factCheck={FACT}
     >
       <p className="measure">
-        No. If your robot mower is already on sale, it can still be sold and used. The July 2026 FCC rule only affects new
-        models that haven't been authorized yet.
+        Short answer: no. If a robot mower model was already FCC-authorized before the July 28, 2026 rule, it can still
+        be imported, sold and used, and the one in your yard may keep getting security and compatibility updates at least
+        until January 1, 2029. The rule only stops new models that haven't been authorized yet, unless they get a
+        Conditional Approval.
       </p>
       <p className="measure">
         If you're buying a mower now, these current models have a confirmed amazon.com listing.
