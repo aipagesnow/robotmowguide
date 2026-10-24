@@ -11,6 +11,7 @@ type Props = {
   pageType: PageType;
 };
 
+/** Client-safe: uses the server-built href as-is. Do not rebuild from ASIN + env here. */
 export function AmazonCta({
   href,
   label,
