@@ -11,11 +11,12 @@ import { specText } from "@/lib/speak";
 import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "How do I store a robot mower for winter?";
+const seoTitle = "How to store a robot mower for winter";
 const description =
   "The only storage temperature in our spec set is the RockNeo Q110H manual. Other US pages we used do not include a winter checklist.";
 
 export const metadata: Metadata = pageMeta({
-  title,
+  title: seoTitle,
   description,
   path: "/guides/robot-mower-winter-storage",
 });

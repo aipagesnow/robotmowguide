@@ -10,6 +10,7 @@ import { FCC_COVERED_LIST, FCC_DA_26_789, FCC_SEARCH, FCC_TABLE_CHECKED, RECHECK
 import { formatDate } from "@/lib/format";
 
 const title = "Are robot mowers banned in the US? The 2026 FCC rule, tracked";
+const seoTitle = "FCC robot mower ban: what buyers need to know";
 const description =
   "What the July 28, 2026 FCC Covered List change does and does not do for robot mowers already on sale in the US.";
 
@@ -28,7 +29,7 @@ const HUSQ =
 const ANSCER_PAGE = "https://www.fcc.gov/document/fcc-announces-conditional-approvals-certain-robots";
 
 export const metadata: Metadata = pageMeta({
-  title,
+  title: seoTitle,
   description,
   path: "/guides/fcc-robot-mower-ban",
 });
