@@ -26,9 +26,34 @@ async function get(url) {
   }
 }
 
-const sm = await get(`${site}/sitemap.xml`);
+function locsFromXml(text) {
+  return [...text.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
+}
+
+/** Expand a sitemap index into page URLs; pass through a legacy single URLSET. */
+async function pageUrlsFromSitemap(site, get) {
+  const sm = await get(`${site}/sitemap.xml`);
+  if (sm.status !== 200) return { status: sm.status, urls: [], text: sm.text };
+  const top = locsFromXml(sm.text);
+  if (/<sitemapindex[\s>]/i.test(sm.text)) {
+    const urls = [];
+    for (const child of top) {
+      const r = await get(child);
+      if (r.status !== 200) {
+        return { status: r.status, urls: [], text: sm.text, failedChild: child };
+      }
+      urls.push(...locsFromXml(r.text));
+    }
+    return { status: 200, urls, text: sm.text };
+  }
+  return { status: 200, urls: top, text: sm.text };
+}
+
+const smResult = await pageUrlsFromSitemap(site, get);
+const sm = { status: smResult.status, text: smResult.text };
 if (sm.status !== 200) { console.error(`sitemap returned ${sm.status}`); process.exit(1); }
-const urls = [...sm.text.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
+if (smResult.failedChild) { console.error(`child sitemap ${smResult.failedChild} -> ${smResult.status}`); process.exit(1); }
+const urls = smResult.urls;
 
 const old = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, "utf8")) : {};
 const now = {};
