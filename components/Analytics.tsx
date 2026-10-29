@@ -1,6 +1,6 @@
 "use client";
 
-import Script from "next/script";
+import { consentScript } from "./consent-script";
 import { useEffect } from "react";
 
 type Props = { gaId?: string };
@@ -36,18 +36,5 @@ export function Analytics({ gaId }: Props) {
 
   if (!gaId || !/^G-[A-Z0-9]+$/.test(gaId)) return null;
 
-  return (
-    <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-      <Script id="ga4" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${gaId}');
-        `}
-      </Script>
-    </>
-  );
+  return <script id="ga4-consent" dangerouslySetInnerHTML={{ __html: consentScript(gaId) }} />;
 }
