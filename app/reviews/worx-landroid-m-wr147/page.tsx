@@ -27,7 +27,7 @@ const description =
   "The WR147 is rated for 0.25 acre and 35% (20°). It follows a boundary wire and detects obstacles with a bump sensor.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The WR147 amazon.com listing was also read on Oct 13, 2026.";
+  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The WR147 amazon.com listing was also read on Oct 13, 2026.";
 
 export const metadata: Metadata = pageMeta({
   title,

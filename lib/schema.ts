@@ -1,4 +1,4 @@
-import { PUBLISHER, SITE_NAME, SITE_URL, absoluteUrl, type Crumb } from "@/lib/site";
+import { BRAND_NAME, PUBLISHER, SITE_URL, absoluteUrl, type Crumb } from "@/lib/site";
 
 export function articleSchema(input: {
   title: string;
@@ -17,7 +17,7 @@ export function articleSchema(input: {
     mainEntityOfPage: absoluteUrl(input.path),
     author: {
       "@type": "Organization",
-      name: "RobotMowGuide editors",
+      name: `${BRAND_NAME} editors`,
       url: absoluteUrl("/about"),
     },
     publisher: {
@@ -46,7 +46,7 @@ export function homeSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: SITE_NAME,
+      name: BRAND_NAME,
       url: SITE_URL,
       logo: `${SITE_URL}/icon.png`,
       email: "vora+robotmow@mail.grokbot.com",
@@ -54,7 +54,7 @@ export function homeSchema() {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: SITE_NAME,
+      name: BRAND_NAME,
       url: SITE_URL,
       publisher: {
         "@type": "Organization",

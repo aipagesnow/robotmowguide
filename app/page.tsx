@@ -72,7 +72,7 @@ export default function HomePage() {
           <div className="home-hero-copy">
             <h1>{title}</h1>
             <p className="home-meta-short">
-              By the RobotMowGuide editors · Updated {formatDate(PUBLISHED)} ·{" "}
+              By the Robot Mow Guide editors · Updated {formatDate(PUBLISHED)} ·{" "}
               <Link href="/how-picks-are-chosen">How picks are chosen</Link>
             </p>
             <MetaRow updated={PUBLISHED} />

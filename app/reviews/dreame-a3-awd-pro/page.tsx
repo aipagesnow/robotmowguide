@@ -28,7 +28,7 @@ const description =
   "The A3 AWD Pro 2500 is rated for 0.62 acre and 80% (38.7°), with LiDAR and no RTK. The 3500 and 5000 have no published slope.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The 2500 listing was also read on Oct 13, 2026.";
+  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The 2500 listing was also read on Oct 13, 2026.";
 
 export const metadata: Metadata = pageMeta({
   title,

@@ -15,7 +15,7 @@ const description =
   "What the July 28, 2026 FCC Covered List change does and does not do for robot mowers already on sale in the US.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. FCC documents read again on Oct 13, 2026. The Covered List appendix date cited here is Oct 9, 2026.";
+  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. FCC documents read again on Oct 13, 2026. The Covered List appendix date cited here is Oct 9, 2026.";
 
 const FAQ_URL = "https://www.fcc.gov/covered-list-faqs-robots-inverters";
 const FACT_SHEET = "https://docs.fcc.gov/public/attachments/DOC-423682A1.pdf";

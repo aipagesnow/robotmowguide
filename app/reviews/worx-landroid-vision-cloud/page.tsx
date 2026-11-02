@@ -28,7 +28,7 @@ const description =
   "The WR340 is rated for 1 acre and 30% (17°). The WR344 is the 4WD sibling at 84%. What the listings do and do not settle.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The WR310, WR340, and WR344 listings were also read on Oct 13, 2026.";
+  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The WR310, WR340, and WR344 listings were also read on Oct 13, 2026.";
 
 export const metadata: Metadata = pageMeta({
   title,

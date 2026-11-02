@@ -39,7 +39,7 @@ export function MetaRow({
   return (
     <div className="meta-row measure">
       <p className="m-0">
-        By the <Link href="/about">RobotMowGuide editors</Link>
+        By the <Link href="/about">Robot Mow Guide editors</Link>
       </p>
       <p className="m-0">{factCheck}</p>
       <p className="dim m-0">Updated {formatDate(updated)}</p>

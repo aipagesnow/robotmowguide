@@ -27,7 +27,7 @@ const description =
   "The 420 iQ is rated for 1 acre systematic mowing and 45% slope, with 15% at the boundary. The 435X AWD is the wire model with a listing.";
 
 const FACT =
-  "Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against Husqvarna US pages on Oct 10, 2026. The 435X AWD listing title was confirmed that day, and Oct 13, 2026 did not include a new read of it.";
+  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against Husqvarna US pages on Oct 10, 2026. The 435X AWD listing title was confirmed that day, and Oct 13, 2026 did not include a new read of it.";
 
 export const metadata: Metadata = pageMeta({
   title,

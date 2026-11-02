@@ -15,7 +15,7 @@ export function pageMeta(input: {
       description: input.description,
       url: input.path,
       type: input.type || "article",
-      siteName: "RobotMowGuide",
+      siteName: "Robot Mow Guide",
     },
     twitter: {
       card: "summary_large_image",

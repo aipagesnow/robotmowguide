@@ -1,4 +1,6 @@
 export const SITE_NAME = "RobotMowGuide";
+// Brand name for schema, og:site_name and bylines. SITE_NAME stays as-is because it feeds the title template.
+export const BRAND_NAME = "Robot Mow Guide";
 export const PUBLISHER = "Aivora Digital";
 export const CONTACT_EMAIL = "vora+robotmow@mail.grokbot.com";
 export const PUBLISHED = "2026-10-13";
@@ -29,7 +31,7 @@ export const DISCLOSURE_SENTENCE = "As an Amazon Associate I earn from qualifyin
 export const NO_LINK_LINE =
   "There's no Amazon link for this model yet because we couldn't confirm a current amazon.com listing for this exact version.";
 
-export const FACT_CHECK = `Edited and fact-checked by the RobotMowGuide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026.`;
+export const FACT_CHECK = `Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026.`;
 
 export const FCC_SEARCH = "https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm";
 export const FCC_DA_26_789 = "https://docs.fcc.gov/public/attachments/DA-26-789A1.pdf";
