@@ -48,6 +48,8 @@ export function homeSchema() {
       "@type": "Organization",
       name: BRAND_NAME,
       url: SITE_URL,
+      description:
+        "Robot lawn mower reviews and buying guides for US yards, comparing navigation type, slope handling and lawn size from published specs and owner reports.",
       logo: `${SITE_URL}/icon.png`,
       email: "vora+robotmow@mail.grokbot.com",
     },
