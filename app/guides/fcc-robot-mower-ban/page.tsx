@@ -10,9 +10,9 @@ import { FCC_COVERED_LIST, FCC_DA_26_789, FCC_SEARCH, FCC_TABLE_CHECKED, RECHECK
 import { formatDate } from "@/lib/format";
 
 const title = "Are robot mowers banned in the US? The 2026 FCC rule, tracked";
-const seoTitle = "FCC robot mower ban: what buyers need to know";
+const seoTitle = "Robot mower ban: what the FCC rule does";
 const description =
-  "What the July 28, 2026 FCC Covered List change does and does not do for robot mowers already on sale in the US.";
+  "The July 28, 2026 FCC Covered List change is not a recall or a sales ban on already authorized robot mowers. What it means if you own one, or still want to buy.";
 
 const FACT =
   "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. FCC documents read again on Oct 13, 2026. The Covered List appendix date cited here is Oct 9, 2026.";
@@ -266,6 +266,26 @@ export default function FccPage() {
       <Faq
         items={[
           {
+            q: "Why is this called a ban?",
+            a: (
+              <>
+                People search “robot mower ban” because the Covered List stops new covered models from getting FCC equipment authorization, which new devices generally need before they can be imported, marketed or sold in the US. It is not a product recall, and it is not a sales ban on models the FCC had already authorized. The{" "}
+                <a href={FAQ_URL}>FCC FAQ</a> and the{" "}
+                <a href={FACT_SHEET}>July 28, 2026 fact sheet</a> are the official wording. This page is also not about local wildlife or night-mowing rules, or rules outside the US.
+              </>
+            ),
+          },
+          {
+            q: "Is this an FCC Part 15 or Wi-Fi interference rule?",
+            a: (
+              <>
+                No. This page is about the FCC Covered List and equipment authorization, not about Part 15 radio-interference rules. Part 15 is a separate set of rules for radio-frequency devices, including limits on harmful interference. See the{" "}
+                <a href={FAQ_URL}>Covered List FAQ</a> and the FCC’s{" "}
+                <a href="https://www.fcc.gov/oet/ea/rfdevice">equipment authorization page for RF devices</a>. This article does not assess whether a mower interferes with Wi-Fi.
+              </>
+            ),
+          },
+          {
             q: "Can I still buy a robot mower?",
             a: "Yes, if the model was already authorized. The fact sheet says the update doesn't prohibit import, sale, or use of those models.",
           },
@@ -297,6 +317,11 @@ export default function FccPage() {
       />
       <h2>Changelog</h2>
       <ul className="grid gap-2 pl-5">
+        <li>
+          November 11, 2026: title and description tightened for the “robot mower ban” search. Added FAQs
+          on why it is called a ban, and that this is not a Part 15 or Wi-Fi interference rule. The FCC
+          document dates cited on this page are unchanged.
+        </li>
         <li>
           October 13, 2026: first written up. The Covered List appendix date cited is October 9, 2026.
           The FAQ page date cited is October 2, 2026. Links are here for three current models that already
