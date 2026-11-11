@@ -28,6 +28,11 @@ export const INDEXNOW_KEY = "2b3fd7045f9cfd3978efbb9fb48e8fc1";
 
 export const DISCLOSURE_SENTENCE = "As an Amazon Associate I earn from qualifying purchases.";
 
+/** Listings that exist on amazon.com but have no offer. No link is built; this note shows instead. */
+export const AMAZON_UNAVAILABLE: Record<string, string> = {
+  B0GT5CBH8H: "Currently unavailable on Amazon US (checked 11 Nov 2026).",
+};
+
 export const NO_LINK_LINE =
   "There's no Amazon link for this model yet because we couldn't confirm a current amazon.com listing for this exact version.";
 

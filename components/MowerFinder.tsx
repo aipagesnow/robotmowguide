@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AmazonCta } from "@/components/AmazonCta";
 import { PaidLinks } from "@/components/Blocks";
 import { matchMowers, percentFromDegrees, percentFromRise, type Candidate, type FinderInput } from "@/lib/match";
-import { NO_LINK_LINE } from "@/lib/site";
+import { AMAZON_UNAVAILABLE, NO_LINK_LINE } from "@/lib/site";
 
 function track(step: string) {
   if (typeof window.gtag !== "function") return;
@@ -166,6 +166,8 @@ export function MowerFinder({ candidates }: { candidates: Candidate[] }) {
                   placement="finder"
                   pageType="tool"
                 />
+              ) : match.candidate.asin && AMAZON_UNAVAILABLE[match.candidate.asin] ? (
+                <p className="paid m-0">{AMAZON_UNAVAILABLE[match.candidate.asin]}</p>
               ) : match.candidate.asin ? null : (
                 <p className="paid m-0">{NO_LINK_LINE}</p>
               )}

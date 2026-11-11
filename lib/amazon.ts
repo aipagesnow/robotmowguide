@@ -1,3 +1,5 @@
+import { AMAZON_UNAVAILABLE } from "@/lib/site";
+
 const TAG = process.env.AMAZON_ASSOCIATE_TAG;
 
 if (process.env.VERCEL_ENV === "production" && !TAG) {
@@ -20,6 +22,7 @@ export type PageType = "home" | "best" | "best_for" | "review" | "vs" | "guide" 
 
 export function amazonHref(asin: string | null | undefined, status?: string | null): string | null {
   if (!asin || status === "discontinued") return null;
+  if (AMAZON_UNAVAILABLE[asin]) return null;
   if (!TAG) return null;
   if (!/^[A-Z0-9]{10}$/.test(asin)) return null;
   if (!/^[A-Za-z0-9-]+$/.test(TAG)) return null;

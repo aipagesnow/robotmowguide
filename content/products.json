@@ -119,10 +119,10 @@
       "accessed": "2026-10-10"
     },
     "amz-mini2-1500h": {
-      "url": "https://www.amazon.com/dp/B0GL7WVJK2",
-      "title": "amazon.com listing B0GL7WVJK2",
+      "url": "https://www.amazon.com/dp/B0FCYJB4ZR",
+      "title": "amazon.com listing B0FCYJB4ZR",
       "method": "fetched",
-      "accessed": "2026-10-10"
+      "accessed": "2026-11-11"
     },
     "navimow-i110": {
       "url": "https://navimow.com/products/navimow-i110",
@@ -1380,13 +1380,13 @@
             }
           },
           "asin": "B0GT5CBH8H",
-          "asinStatus": "verified",
+          "asinStatus": "unavailable",
           "asinCheck": {
             "asin": "B0GT5CBH8H",
-            "checked": "2026-10-13",
+            "checked": "2026-11-11",
             "url": "https://www.amazon.com/dp/B0GT5CBH8H",
             "titleAtCheck": "DREAME LiDAR 2500 Robot Lawn Mower A3 AWD Pro ...",
-            "note": "Rechecked Oct 13, 2026. Listing is the A3 AWD Pro 2500."
+            "note": "Nov 11, 2026 with a US (10001) delivery address: Currently unavailable, no featured offers. No other A3 AWD Pro 2500 listing found on amazon.com. ASIN kept for the record; lib/site.ts AMAZON_UNAVAILABLE stops any link and shows the unavailable note."
           },
           "manufacturerListPrice": {
             "usd": 1699.99,
@@ -1602,14 +1602,14 @@
               "checked": "2026-10-10"
             }
           },
-          "asin": "B0GL7WVJK2",
+          "asin": "B0FCYJB4ZR",
           "asinStatus": "verified",
           "asinCheck": {
-            "asin": "B0GL7WVJK2",
-            "checked": "2026-10-13",
-            "url": "https://www.amazon.com/dp/B0GL7WVJK2",
-            "titleAtCheck": "Mammotion LUBA mini 2 1500H Robot Lawn Mower, 0.37 Acre ... Cutting Height 2.2\"-4.0\"",
-            "note": "Rechecked Oct 13, 2026. Title still names the LUBA mini 2 1500H, 0.37 acre, cutting height 2.2–4.0 in."
+            "asin": "B0FCYJB4ZR",
+            "checked": "2026-11-11",
+            "url": "https://www.amazon.com/dp/B0FCYJB4ZR",
+            "titleAtCheck": "(2026 NEW) Mammotion LUBA mini 2 AWD 1500H Robot Lawn Mower, for 0.37 Acres, 360° LiDAR+Dual-Camera AI Vision, 80% Slope, DropMow, 20 Multi-Zone Management",
+            "note": "Checked Nov 11, 2026 with a US (10001) delivery address: In Stock, sold by Mammotion Technology. Model number LUBA mini 2 1500H-1, High Version; 0.37 acre, 80% slope, 20 zones, cutting height 2.2–4.0 in, cutting width 7.9 in, all matching the specs on this site. Replaces B0GL7WVJK2, which showed Currently unavailable with no offers on Nov 11, 2026."
           },
           "manufacturerListPrice": {
             "usd": 1999,
