@@ -1,4 +1,5 @@
 import routes from "@/content/routes.json";
+import { families } from "@/lib/products";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
 
 export const BASE = SITE_URL.replace(/\/$/, "");
@@ -118,4 +119,60 @@ export function coreUrlset(): string {
 }
 export function indexXml(): string {
   return sitemapIndexXml(CHILD_SITEMAP_PATHS, BASE);
+}
+
+export type SitemapLink = { href: string; label: string };
+export type SitemapGroup = { heading: string; links: SitemapLink[] };
+
+const LABELS: Record<string, string> = {
+  "/": "Home",
+  "/reviews": "Reviews",
+  "/guides": "Guides",
+  "/best": "Best robot mowers",
+  "/vs": "Comparisons",
+  "/tools/mower-finder": "Mower finder",
+  "/about": "About",
+  "/how-picks-are-chosen": "How picks are chosen",
+  "/affiliate-disclosure": "Affiliate disclosure",
+  "/privacy": "Privacy",
+  "/sitemap": "All pages",
+};
+
+function titleCaseSlug(slug: string): string {
+  return slug
+    .split("-")
+    .map((word) => {
+      if (word.toLowerCase() === "vs") return "vs";
+      if (word.toLowerCase() === "rtk") return "RTK";
+      if (word.toLowerCase() === "fcc") return "FCC";
+      if (word.toUpperCase() === word && word.length <= 4) return word;
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
+function labelFor(path: string): string {
+  if (LABELS[path]) return LABELS[path];
+  const review = path.match(/^\/reviews\/(.+)$/);
+  if (review) {
+    const family = families.find((item) => item.slug === review[1]);
+    if (family) return family.family;
+  }
+  const slug = path.split("/").filter(Boolean).pop();
+  return slug ? titleCaseSlug(slug) : path;
+}
+
+function linksFor(paths: string[]): SitemapLink[] {
+  return paths.map((href) => ({ href, label: labelFor(href) }));
+}
+
+/** Grouped indexable pages for the HTML sitemap. Same set as the XML sitemaps. */
+export function htmlSitemapGroups(): SitemapGroup[] {
+  return [
+    { heading: "Reviews", links: linksFor(reviewsPaths()) },
+    { heading: "Guides", links: linksFor(guidesPaths()) },
+    { heading: "Best of", links: linksFor(bestPaths()) },
+    { heading: "Comparisons", links: linksFor(vsPaths()) },
+    { heading: "This site", links: linksFor(corePaths()) },
+  ];
 }

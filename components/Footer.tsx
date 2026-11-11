@@ -11,6 +11,8 @@ export function Footer() {
           <Link href="/how-picks-are-chosen">How picks are chosen</Link>
           <Link href="/affiliate-disclosure">Affiliate disclosure</Link>
           <Link href="/privacy">Privacy</Link>
+          <Link href="/sitemap">All pages</Link>
+          <a href="/sitemap.xml">XML sitemap</a>
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         </nav>
         <p className="m-0 max-w-[66ch] text-[0.95rem]">
