@@ -10,6 +10,7 @@ export function ArticleFrame({
   path,
   crumbs,
   updated = PUBLISHED,
+  published = PUBLISHED,
   whatChanged: _whatChanged,
   disclosure = false,
   extra,
@@ -22,6 +23,7 @@ export function ArticleFrame({
   path: string;
   crumbs?: Crumb[];
   updated?: string;
+  published?: string;
   whatChanged?: string;
   disclosure?: boolean;
   extra?: unknown;
@@ -31,7 +33,7 @@ export function ArticleFrame({
 }) {
   return (
     <article className="wrap py-8">
-      <JsonLd data={articleSchema({ title, description, path, published: PUBLISHED, modified: updated })} />
+      <JsonLd data={articleSchema({ title, description, path, published, modified: updated })} />
       {crumbs ? <JsonLd data={breadcrumbSchema(crumbs)} /> : null}
       {extra ? <JsonLd data={extra} /> : null}
       {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}

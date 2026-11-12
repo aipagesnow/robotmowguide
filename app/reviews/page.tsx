@@ -88,8 +88,8 @@ export default function ReviewsIndex() {
       </h2>
       <p className="measure">
         If you want LiDAR and vision, and no RTK antenna, the 2500 is the Dreame we'd start with. It's rated{" "}
-        {formatAcres(dreame.acres, false)} and {dreame.slope}%. Dreame doesn't publish a slope figure for the
-        3500 or the 5000, so we wouldn't assume those climb the same bank.
+        {formatAcres(dreame.acres, false)} and {dreame.slope}%. The 3500 amazon.com listing gives the same
+        80%. There is no model-specific slope figure for the 5000, so we wouldn't assume it climbs the same bank.
       </p>
       <h2>
         <Link href="/reviews/segway-navimow-i-series">Navimow i series</Link>

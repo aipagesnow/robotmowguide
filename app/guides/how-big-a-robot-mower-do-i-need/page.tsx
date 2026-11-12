@@ -180,8 +180,9 @@ export default function SizeGuide() {
         {dreame3500 ? formatAcres(Number(dreame3500.ladder?.ratedAreaAcres?.value), false) : "Not published"},
         and the 5000 is rated{" "}
         {dreame5000 ? formatAcres(Number(dreame5000.ladder?.ratedAreaAcres?.value), false) : "Not published"}.
-        Dreame doesn't publish a slope for the 3500 or the 5000, so we wouldn't guess one for your hill.{" "}
-        <SourceLine ids={["dreame-a3"]} checked="2026-10-10" />
+        The 3500 amazon.com listing gives 80% (38.7°). There is no model-specific slope for the 5000, so we
+        wouldn&apos;t guess one for your hill.{" "}
+        <SourceLine ids={["dreame-a3", "amz-dreame-a3-3500"]} checked="2026-11-12" />
       </p>
       <h2>What this means when you choose</h2>
       <ul className="grid gap-3 pl-5">

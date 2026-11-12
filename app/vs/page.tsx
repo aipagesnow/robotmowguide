@@ -22,6 +22,8 @@ export default function VsIndex() {
   const luba = modelFacts("mammotion-luba-3-awd", "LUBA 3 AWD 3000");
   const dreame = modelFacts("dreame-a3-awd-pro", "A3 AWD Pro 2500");
   const worx = modelFacts("worx-landroid-vision-cloud", "Landroid Vision Cloud WR340 (1 acre, 2WD)");
+  const mini = modelFacts("mammotion-luba-mini-2-awd", "LUBA mini 2 AWD 1500H (high-cut)");
+  const dreame3500 = modelFacts("dreame-a3-awd-pro", "A3 AWD Pro 3500");
 
   return (
     <ArticleFrame
@@ -37,7 +39,7 @@ export default function VsIndex() {
       disclosure
     >
       <p className="measure">
-        We've got three comparisons up. Each one puts two current models on the same questions about your yard.
+        We've got four comparisons up. Each one puts two current models on the same questions about your yard.
       </p>
       <CtaCluster>
         <ProductLink
@@ -72,6 +74,14 @@ export default function VsIndex() {
       <p className="measure">
         Both are rated {formatAcres(worx.acres, false)}. For a gentler acre we'd pick the WR340, which publishes {worx.slope}%. The X430 publishes{" "}
         {x430.slope}%, and that's the one we'd pick if your banks are steeper.
+      </p>
+      <h2>
+        <Link href="/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500">LUBA mini 2 AWD 1500H vs Dreame A3 AWD Pro 3500</Link>
+      </h2>
+      <p className="measure">
+        The LUBA mini 2 1500H is rated {formatAcres(mini.acres, false)} and the Dreame 3500 is rated{" "}
+        {formatAcres(dreame3500.acres, false)}, so lawn size usually decides it. The page also explains how each one
+        cuts the edge on a lawn kept tall.
       </p>
       <Faq
         items={[

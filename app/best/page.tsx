@@ -400,8 +400,8 @@ export default function BestPage() {
           {d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value), false) : "Not published"} with a{" "}
           {d3500 ? specText(d3500.specs?.battery) : "Not published"} battery. The 5000 is rated{" "}
           {d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value), false) : "Not published"} with a{" "}
-          {d5000 ? specText(d5000.specs?.battery) : "Not published"} battery. Dreame doesn't publish a slope
-          figure for the 3500 or the 5000.
+          {d5000 ? specText(d5000.specs?.battery) : "Not published"} battery. The 3500 amazon.com listing gives
+          80% (38.7°), checked Nov 12, 2026. There is no model-specific slope figure for the 5000.
         </p>
         <h3>Who it is not for</h3>
         <p className="measure">

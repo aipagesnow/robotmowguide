@@ -136,6 +136,7 @@ const LABELS: Record<string, string> = {
   "/affiliate-disclosure": "Affiliate disclosure",
   "/privacy": "Privacy",
   "/sitemap": "All pages",
+  "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500": "LUBA mini 2 AWD 1500H vs Dreame A3 AWD Pro 3500",
 };
 
 function titleCaseSlug(slug: string): string {

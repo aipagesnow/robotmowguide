@@ -19,7 +19,7 @@
       "ownerReports are themes with links, never counts of Amazon reviews and never Amazon star ratings. Re-open each thread before quoting.",
       "notFor feeds the 'Who it's not for' block."
     ],
-    "verifiedAsinCount": 17,
+    "verifiedAsinCount": 18,
     "fcc": "Every family here was listed for sale in the US at the Oct 10, 2026 check. The Jul 28, 2026 FCC Covered List update blocks new foreign-produced models, not models that already hold FCC authorization; those may get security and compatibility updates until at least Jan 1, 2029 (DA 26-789). Husqvarna is the only robot-mower brand with a Conditional Approval (Sep 9, 2026). If a page states that a specific model is authorized, look up its FCC ID first (https://apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm). See docs/FCC_RULE_FACTS.md.",
     "schemaVersion": 2,
     "structure": "One record per model family (one review page per family). Each family lists variants; each variant carries its own ladder figures, specs, ASIN and status. The primaryVariant drives the ladder position and the primary CTA.",
@@ -122,7 +122,7 @@
       "url": "https://www.amazon.com/dp/B0FCYJB4ZR",
       "title": "amazon.com listing B0FCYJB4ZR",
       "method": "fetched",
-      "accessed": "2026-11-11"
+      "accessed": "2026-11-12"
     },
     "navimow-i110": {
       "url": "https://navimow.com/products/navimow-i110",
@@ -413,6 +413,12 @@
       "title": "Smart Lawn Bots, Dreame A3 AWD Pro 3500 review (evidence synthesis)",
       "method": "research-pack",
       "accessed": "2026-10-10"
+    },
+    "amz-dreame-a3-3500": {
+      "url": "https://www.amazon.com/dp/B0GR8TQHV9",
+      "title": "amazon.com listing B0GR8TQHV9",
+      "method": "fetched",
+      "accessed": "2026-11-12"
     }
   },
   "products": [
@@ -1404,23 +1410,121 @@
               "value": 0.87,
               "unit": "acre",
               "src": [
+                "dreame-a3",
+                "amz-dreame-a3-3500"
+              ],
+              "checked": "2026-11-12",
+              "note": "3,500 m²"
+            },
+            "maxSlopePercent": {
+              "value": 80,
+              "unit": "%",
+              "src": [
+                "amz-dreame-a3-3500",
                 "dreame-a3"
               ],
-              "checked": "2026-10-10",
-              "note": "3,500 m²"
+              "checked": "2026-11-12",
+              "note": "The 3500 amazon.com listing states 38.7° (80%); Dreame's spec table gives 80% (38.7°) for the A3 AWD Pro series"
+            },
+            "maxSlopeDegrees": {
+              "value": 38.7,
+              "unit": "deg",
+              "src": [
+                "amz-dreame-a3-3500",
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12"
             }
           },
           "specs": {
+            "positioning": {
+              "value": "360° 3D LiDAR + binocular AI vision; no RTK and no perimeter wire",
+              "src": [
+                "dreame-a3",
+                "amz-dreame-a3-3500"
+              ],
+              "checked": "2026-11-12"
+            },
+            "cuttingWidth": {
+              "value": 15.8,
+              "unit": "in",
+              "src": [
+                "dreame-a3",
+                "amz-dreame-a3-3500"
+              ],
+              "checked": "2026-11-12",
+              "note": "40 cm, two floating discs"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.9",
+              "unit": "in",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12",
+              "note": "3–10 cm on Dreame's spec table; the amazon.com listing rounds this to 1–4 in"
+            },
+            "edgeCutting": {
+              "value": "EdgeMaster 2.0: the discs extend outward at the edge; under 1.2 in (3 cm) from the boundary in auto mode (Dreame figure)",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12"
+            },
+            "obstacleClearance": {
+              "value": 2.2,
+              "unit": "in",
+              "src": [
+                "dreame-a3",
+                "amz-dreame-a3-3500"
+              ],
+              "checked": "2026-11-12"
+            },
             "battery": {
               "value": "7.5 Ah",
               "src": [
                 "dreame-a3"
               ],
-              "checked": "2026-10-10"
+              "checked": "2026-11-12"
+            },
+            "zones": {
+              "value": "100 zones, 100 no-go areas and 50 paths",
+              "src": [
+                "amz-dreame-a3-3500"
+              ],
+              "checked": "2026-11-12"
+            },
+            "maps": {
+              "value": "Dual-map support",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12"
+            },
+            "bodySize": {
+              "value": "740 × 532 × 325 mm (about 29.1 × 20.9 × 12.8 in)",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12"
+            },
+            "connectivity": {
+              "value": "4G Link service included for 3 years, then paid",
+              "src": [
+                "dreame-a3"
+              ],
+              "checked": "2026-11-12"
             }
           },
-          "asin": null,
-          "asinStatus": "unverified"
+          "asin": "B0GR8TQHV9",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "asin": "B0GR8TQHV9",
+            "checked": "2026-11-12",
+            "url": "https://www.amazon.com/dp/B0GR8TQHV9",
+            "titleAtCheck": "DREAME LiDAR 3500 Robot Lawn Mower A3 AWD Pro Wire Free No RTK, 4WD for 38.7° Slopes, Dual AI Vision Robotic Lawn Mowers,Dual-Disc Cutting 15.8\" Width, Smart Zero-Edge, App Control for 0.87 Acre",
+            "note": "Checked Nov 12, 2026 with a US (10001) delivery address: In Stock, ships from Amazon, sold by Dreame Technology HK Limited. Model number A3 AWD Pro 3500. 0.87 acre, 38.7° (80%), 15.8 in width match Dreame's US page."
+          }
         },
         {
           "model": "A3 AWD Pro 5000",
@@ -1489,7 +1593,8 @@
         "/reviews/dreame-a3-awd-pro",
         "/best/robot-mower-under-trees",
         "/best/robot-mower-half-acre",
-        "/vs/dreame-a3-awd-pro-vs-luba-3-awd"
+        "/vs/dreame-a3-awd-pro-vs-luba-3-awd",
+        "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500"
       ]
     },
     {
@@ -1606,10 +1711,10 @@
           "asinStatus": "verified",
           "asinCheck": {
             "asin": "B0FCYJB4ZR",
-            "checked": "2026-11-11",
+            "checked": "2026-11-12",
             "url": "https://www.amazon.com/dp/B0FCYJB4ZR",
             "titleAtCheck": "(2026 NEW) Mammotion LUBA mini 2 AWD 1500H Robot Lawn Mower, for 0.37 Acres, 360° LiDAR+Dual-Camera AI Vision, 80% Slope, DropMow, 20 Multi-Zone Management",
-            "note": "Checked Nov 11, 2026 with a US (10001) delivery address: In Stock, sold by Mammotion Technology. Model number LUBA mini 2 1500H-1, High Version; 0.37 acre, 80% slope, 20 zones, cutting height 2.2–4.0 in, cutting width 7.9 in, all matching the specs on this site. Replaces B0GL7WVJK2, which showed Currently unavailable with no offers on Nov 11, 2026."
+            "note": "Rechecked Nov 12, 2026 with a US (10001) delivery address: In Stock, ships from and sold by Mammotion Technology. Model number LUBA mini 2 1500H-1, High Version; 0.37 acre, 80% slope, 20 zones, cutting height 2.2–4.0 in, cutting width 7.9 in. First checked Nov 11, 2026, replacing B0GL7WVJK2 (Currently unavailable)."
           },
           "manufacturerListPrice": {
             "usd": 1999,
@@ -1676,7 +1781,8 @@
         "/reviews/mammotion-luba-mini-2-awd",
         "/best/robot-mower-small-yard",
         "/best/robot-mower-for-hills",
-        "/best/robot-mower-st-augustine"
+        "/best/robot-mower-st-augustine",
+        "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500"
       ]
     },
     {

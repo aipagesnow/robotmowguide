@@ -25,7 +25,7 @@ import { RECHECKED, SPEC_CHECKED } from "@/lib/site";
 
 const title = "Dreame A3 AWD Pro review: LiDAR on a steep half acre";
 const description =
-  "The A3 AWD Pro 2500 is rated for 0.62 acre and 80% (38.7°), with LiDAR and no RTK. The 3500 and 5000 have no published slope.";
+  "The A3 AWD Pro 2500 is rated for 0.62 acre and 80% (38.7°), with LiDAR and no RTK. The 3500 listing gives the same slope.";
 
 const FACT =
   "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Oct 10, 2026. The 2500 listing was also read on Oct 13, 2026.";
@@ -119,8 +119,8 @@ export default function DreameReview() {
         family={family}
         pageType="review"
         differences={{
-          "A3 AWD Pro 2500": "The one we'd start with. LiDAR and vision. Slope is published for this model only.",
-          "A3 AWD Pro 3500": `Rated ${d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d3500 ? specText(d3500.specs?.battery) : "Not published"}. Dreame doesn't publish a slope figure for the 3500.`,
+          "A3 AWD Pro 2500": "The one we'd start with. LiDAR and vision. Slope is published for this model and the 3500.",
+          "A3 AWD Pro 3500": `Rated ${d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d3500 ? specText(d3500.specs?.battery) : "Not published"}. The 3500 amazon.com listing gives the same 80% (38.7°).`,
           "A3 AWD Pro 5000": `Rated ${d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d5000 ? specText(d5000.specs?.battery) : "Not published"}. Slope isn't published for this model either.`,
         }}
       />
@@ -142,7 +142,7 @@ export default function DreameReview() {
             sources: ["dreame-a3"],
             checked: SPEC_CHECKED,
             href: "/best/robot-mower-for-hills",
-            note: "38.7° is published for the 2500. It isn't copied onto the 3500 or the 5000.",
+            note: "38.7° is published for the 2500, and the 3500 amazon.com listing gives the same figure. It isn't copied onto the 5000.",
           },
           {
             label: "Navigation",
@@ -202,14 +202,14 @@ export default function DreameReview() {
           },
         ]}
       />
-      <h2>Slope stays on the 2500 row</h2>
+      <h2>Slope on the 2500 and the larger models</h2>
       <p className="measure">
-        The slope we'd plan on is {slopeWithRise(dreame.slope, dreame.degrees)}, and it isn't shared with the
-        larger models. The 3500 is rated{" "}
+        The slope we'd plan on is {slopeWithRise(dreame.slope, dreame.degrees)} on the 2500. The 3500 is rated{" "}
         {d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"} and the 5000 is
         rated {d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value), false) : "Not published"}.
-        Neither model publishes a slope, so neither inherits 80%.{" "}
-        <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
+        The 3500 amazon.com listing gives the same 80% (38.7°), checked Nov 12, 2026. The 5000 doesn&apos;t
+        have a model-specific slope figure here, so it doesn&apos;t inherit 80%.{" "}
+        <SourceLine ids={["dreame-a3", "amz-dreame-a3-3500"]} checked="2026-11-12" />
       </p>
       <SlopeMarginNote />
       <h2>The edge mode and a tall cut</h2>
@@ -294,7 +294,7 @@ export default function DreameReview() {
           },
           {
             q: "What is the slope in degrees?",
-            a: "It's 80% and 38.7° on the 2500 page. Rise is 8 ft over 10 ft. The 3500 and the 5000 have no published degrees.",
+            a: "It's 80% and 38.7° on the 2500 page. Rise is 8 ft over 10 ft. The 3500 amazon.com listing gives the same 38.7°. The 5000 has no model-specific degrees.",
           },
         ]}
       />
