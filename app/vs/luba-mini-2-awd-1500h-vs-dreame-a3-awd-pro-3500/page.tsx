@@ -29,14 +29,14 @@ export default function VsPage() {
       topic: "Rated area",
       m: formatAcres(mini.acres),
       d: formatAcres(dreame.acres),
-      better: `This decides most purchases. The mini 2 suits a lawn up to about ${formatAcres(realisticAcres(mini.acres), false)} with trees or two zones. Above that, the Dreame is the one of these two that covers it.`,
+      better: `Lawn size decides most purchases between these two. The mini 2 suits a lawn up to about ${formatAcres(realisticAcres(mini.acres), false)} with trees or two zones. Above that, the Dreame is the one of these two that covers it.`,
     },
     {
       topic: "Edge cutting",
       m: specText(mini.specs.edgeCutting),
       d: specText(dreame.specs.edgeCutting),
       better:
-        "The Dreame gets closer on paper. Owners report that its edge mode cuts the border low, so on a lawn kept tall most switch it off and trim by hand instead.",
+        "On the published figures, the Dreame gets closer. Owners report that its edge mode cuts the border low, so on a lawn kept tall most switch it off and trim by hand instead.",
     },
     {
       topic: "Cutting height",
@@ -55,7 +55,7 @@ export default function VsPage() {
       topic: "Slope",
       m: publishedSlope(mini.slope, mini.degrees),
       d: publishedSlope(dreame.slope, dreame.degrees),
-      better: "Either. Both publish an 80% maximum.",
+      better: "Either one. Both publish an 80% maximum.",
     },
     {
       topic: "Narrow paths",

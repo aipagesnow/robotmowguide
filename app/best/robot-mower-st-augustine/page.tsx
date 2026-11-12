@@ -165,6 +165,7 @@ export default function StAugustinePage() {
           { href: "/best/robot-mower-bermuda", label: "Which robot mower for Bermuda grass?" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/husqvarna-automower-iq", label: "Automower iQ review" },
+          { href: "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500", label: "Edge cutting on a tall lawn: LUBA mini 2 vs Dreame A3 AWD Pro 3500" },
           { href: "/best", label: "Best robot lawn mowers for US yards" },
         ]}
       />

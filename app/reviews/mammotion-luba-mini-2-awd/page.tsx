@@ -292,6 +292,7 @@ export default function MiniReview() {
           { href: "/best/robot-mower-small-yard", label: "Which robot mower for a small yard?" },
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
+          { href: "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500", label: "LUBA mini 2 vs Dreame A3 AWD Pro 3500: edges and lawn size" },
         ]}
       />
     </ArticleFrame>
