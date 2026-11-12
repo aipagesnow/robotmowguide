@@ -3,11 +3,10 @@ import Link from "next/link";
 import { ArticleFrame } from "@/components/ArticleFrame";
 import { EndLinks, Faq, OwnerReports, Related, ResearchedBox, SourceLine } from "@/components/Blocks";
 import { ProductLink } from "@/components/ProductLink";
-import { ComfortableFor, SlopeMarginNote } from "@/components/VoiceBits";
 import { pageMeta } from "@/lib/metadata";
 import { formatAcres, realisticAcres } from "@/lib/format";
 import { modelFacts } from "@/lib/products";
-import { publishedSlope, specText } from "@/lib/speak";
+import { specText } from "@/lib/speak";
 
 const PATH = "/vs/luba-mini-2-awd-1500h-vs-dreame-a3-awd-pro-3500";
 const CHECKED = "2026-11-12";
@@ -29,21 +28,21 @@ export default function VsPage() {
       topic: "Rated area",
       m: formatAcres(mini.acres),
       d: formatAcres(dreame.acres),
-      better: `Lawn size decides most purchases between these two. The mini 2 suits a lawn up to about ${formatAcres(realisticAcres(mini.acres), false)} with trees or two zones. Above that, the Dreame is the one of these two that covers it.`,
+      better: "Lawn size decides most purchases between these two. The mini 2 suits a lawn up to about a third of an acre. Above that, the Dreame is the one that covers it.",
     },
     {
       topic: "Edge cutting",
       m: specText(mini.specs.edgeCutting),
       d: specText(dreame.specs.edgeCutting),
       better:
-        "On the published figures, the Dreame gets closer. Owners report that its edge mode cuts the border low, so on a lawn kept tall most switch it off and trim by hand instead.",
+        "On the published figures, the Dreame gets closer. On a tall lawn, owners report a problem with the edge mode. See How each one cuts the edge.",
     },
     {
       topic: "Cutting height",
       m: specText(mini.specs.cuttingHeight),
       d: specText(dreame.specs.cuttingHeight),
       better:
-        "The mini 2 1500H for St. Augustine or fescue kept tall. The Dreame if you want to cut shorter than 2.2 in, for example Bermuda or zoysia.",
+        "Choose the mini 2 1500H for St. Augustine or fescue kept tall. Choose the Dreame if you want to cut shorter than 2.2 in, for example Bermuda or zoysia.",
     },
     {
       topic: "Cutting width",
@@ -53,15 +52,15 @@ export default function VsPage() {
     },
     {
       topic: "Slope",
-      m: publishedSlope(mini.slope, mini.degrees),
-      d: publishedSlope(dreame.slope, dreame.degrees),
+      m: `${mini.slope}%`,
+      d: `${dreame.slope}%`,
       better: "Either one. Both publish an 80% maximum.",
     },
     {
       topic: "Narrow paths",
       m: "Mammotion says it mows 27 in paths.",
       d: "No path width published. The body is about 20.9 in wide.",
-      better: "The mini 2, because it has a published path figure.",
+      better: "The mini 2, because Mammotion publishes a 27 in path figure. Dreame does not publish one, even though its body is narrower than 27 in.",
     },
   ];
 
@@ -82,15 +81,20 @@ export default function VsPage() {
       disclosure
     >
       <p className="measure">
-        Both of these mowers use LiDAR and vision with no RTK antenna, but they are sized for different
-        lawns. The LUBA mini 2 AWD 1500H is rated {formatAcres(mini.acres, false)}. The
-        Dreame A3 AWD Pro 3500 is rated {formatAcres(dreame.acres, false)}, more than twice the area.
+        These two mowers are built for different lawn sizes. The LUBA mini 2 AWD 1500H is rated{" "}
+        {formatAcres(mini.acres, false)} on an open lawn. The Dreame A3 AWD Pro 3500 is rated{" "}
+        {formatAcres(dreame.acres, false)} on an open lawn, more than twice the area. Both find their way with a
+        laser scanner (LiDAR) and cameras, so they do not need an RTK satellite antenna.
+      </p>
+      <p className="measure">
+        The 1500H is the high-cut version of the mini 2. AWD means all-wheel drive, and both of these mowers
+        have it.
       </p>
       <p className="measure">
         If your lawn is about a third of an acre or less, the mini 2 is the better fit, especially if you keep the
-        grass tall. If your lawn is bigger than that, the mini 2 is too small, and the Dreame 3500 is the one of
-        these two to look at. Edge cutting is the main difference after size, and neither mower removes the string
-        trimmer job.
+        grass tall. If your lawn is bigger than that, the mini 2 is too small, and the Dreame 3500 is the one that
+        fits. Edge cutting is the main difference after size, and neither mower removes the need for a string
+        trimmer.
       </p>
       <div data-cta-cluster="true" className="grid gap-2">
         <p className="paid m-0">
@@ -144,14 +148,16 @@ export default function VsPage() {
 
       <h2>Start with your lawn size</h2>
       <p className="measure">
-        The mini 2 1500H is rated {formatAcres(mini.acres)}. <ComfortableFor rated={mini.acres} />
+        The mini 2 1500H is rated {formatAcres(mini.acres)}. With trees or two zones, it is comfortable for
+        about a third of an acre.{" "}
+        <Link href="/guides/how-big-a-robot-mower-do-i-need">how we size</Link>
       </p>
       <p className="measure">
         The Dreame 3500 is rated {formatAcres(dreame.acres)}. Using the same rule, it is comfortable for about{" "}
         {formatAcres(realisticAcres(dreame.acres), false)} with trees or two zones.
       </p>
       <p className="measure">
-        So for a lawn between about {formatAcres(realisticAcres(mini.acres), false)} and{" "}
+        So for a lawn between about a third of an acre and{" "}
         {formatAcres(realisticAcres(dreame.acres), false)}, only the Dreame fits. For a small lawn, the Dreame
         will cover it, but you would be paying for area you don&apos;t use, and it is a bigger machine with twice
         the cutting width. Dreame lists the body at about 29.1 in long and 20.9 in wide, and it doesn&apos;t
@@ -168,14 +174,14 @@ export default function VsPage() {
         under 1.2 in in auto mode. On the published figures, the Dreame cuts closer to the edge.
       </p>
       <p className="measure">
-        Owner reports change that picture for lawns kept tall. Several Dreame A3 owners report that EdgeMaster cuts
+        Owner reports are less favourable on lawns kept tall. Several Dreame A3 owners report that EdgeMaster cuts
         the border strip at a fixed low height of about 1.2 in, whatever height you set for the rest of the lawn.
         On St. Augustine or fescue kept around 3.5 in, that leaves a visibly scalped band, and one 3500 owner
         reports blade damage where gravel sits at the base of the grass by a road. Most of these owners turn the
         mode off. Dreame doesn&apos;t publish an edge gap for mowing with it off, so expect more trimming.
       </p>
       <p className="measure">
-        Mini 2 owners describe a more ordinary result. The edge disc gets close, but there are still a few
+        Mini 2 owners say the edge disc gets close, but there are still a few
         spots to trim by hand, usually in narrow areas. In one thread from March 2026, owners said that after an
         update they could no longer find the setting that lets the edge disc run over the boundary, and the
         mower left a larger uncut strip around the lawn. The thread doesn&apos;t say whether a later update
@@ -183,7 +189,7 @@ export default function VsPage() {
         <SourceLine ids={["mammotion-mini2", "dreame-a3"]} checked={CHECKED} />
       </p>
       <p className="measure">
-        In practice, if you keep the grass short and your edges are clean borders like a driveway or a path
+        If you keep the grass short and your edges are clean borders, such as a driveway or a path
         without loose gravel, the Dreame&apos;s edge mode is more likely to help. If you keep the grass tall, the mini 2 is the safer choice
         for the edges, but plan on some trimming with either mower. The{" "}
         <Link href="/best/robot-mower-st-augustine">St. Augustine page</Link> covers tall-cut lawns in more detail.
@@ -197,17 +203,19 @@ export default function VsPage() {
       </p>
       <p className="measure">
         The Dreame cuts {specText(dreame.specs.cuttingHeight)} (3–10 cm on Dreame&apos;s spec table). That covers
-        both short warm-season grass and most tall-cut lawns, as long as you leave the edge mode off on a tall
-        lawn.{" "}
+        both short warm-season grass and most tall-cut lawns.{" "}
         <SourceLine ids={["amz-mini2-1500h", "dreame-a3"]} checked={CHECKED} />
       </p>
 
       <h2>Slope, battery and zones</h2>
       <p className="measure">
-        Both publish an 80% maximum slope. Mammotion gives 38.6° for the mini 2, and the 3500 listing gives 38.7°
-        for the Dreame, so there is nothing to choose between them on a bank.
+        Both publish an 80% maximum slope, so there is nothing to choose between them on a bank.
       </p>
-      <SlopeMarginNote />
+      <p className="measure">
+        Makers usually publish one maximum slope and don&apos;t say whether it applies in the middle of your lawn
+        or at the edge. If your bank runs into a bed or a fence, leave some margin, because edges are usually
+        harder.
+      </p>
       <p className="measure">
         The mini 2 has a {specText(mini.specs.battery)} battery and manages up to {specText(mini.specs.zones)}.
         The Dreame 3500 has a {specText(dreame.specs.battery)} battery, and its listing allows up to 100 zones,
@@ -262,7 +270,8 @@ export default function VsPage() {
         <li>
           Choose the Dreame A3 AWD Pro 3500 if your lawn is bigger than about a third of an acre. It is
           comfortable for about 0.7 acre with trees or two zones, and rated 0.87 acre on an open lawn. It is also
-          the one of these two for grass kept shorter than 2.2 in. If you keep it tall, expect to leave EdgeMaster off. The{" "}
+          the pick of these two for grass kept shorter than 2.2 in. If you keep the grass tall, see the edge
+          section before you rely on EdgeMaster. The{" "}
           <Link href="/reviews/dreame-a3-awd-pro">Dreame A3 AWD Pro review</Link> also covers heat pauses and
           rutting reported by owners.
         </li>
@@ -277,11 +286,11 @@ export default function VsPage() {
         items={[
           {
             q: "Which one cuts closer to the edge?",
-            a: "On the published figures, the Dreame. Dreame rates its edge gap at under 1.2 in, and Mammotion says the mini 2 mows to about 2.1 in from walls. Owners report that the Dreame edge mode cuts the border low, so on a tall lawn many switch it off.",
+            a: "On the published figures, the Dreame. Dreame rates its edge gap at under 1.2 in, and Mammotion says the mini 2 mows to about 2.1 in from walls. On a tall lawn, see How each one cuts the edge.",
           },
           {
             q: "Will either one replace my string trimmer?",
-            a: "No. Owners of both mowers still trim narrow areas and a few small spots by hand. The edge features reduce the job but don't remove it.",
+            a: "No. Owners of both mowers still trim narrow areas and a few small spots by hand. The edge features reduce how much you have to trim, but they don't remove the trimmer.",
           },
           {
             q: "Is the Dreame 3500 too big for a quarter-acre lawn?",
@@ -289,7 +298,7 @@ export default function VsPage() {
           },
           {
             q: "Which one is better for St. Augustine?",
-            a: "The mini 2 1500H, because its 2.2–4.0 in range is aimed at grass kept tall. The Dreame can also cut at 3.9 in, but its edge mode scalps a tall lawn according to owners, so you would leave it off.",
+            a: "The mini 2 1500H, because its 2.2–4.0 in range is aimed at grass kept tall. The Dreame can also cut at 3.9 in; see the edge section for what owners report on tall lawns.",
           },
         ]}
       />

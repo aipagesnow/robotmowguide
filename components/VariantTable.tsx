@@ -45,10 +45,12 @@ export function VariantTable({
   family,
   differences,
   pageType,
+  caption,
 }: {
   family: Family;
   differences: Record<string, string>;
   pageType: PageType;
+  caption?: string;
 }) {
   return (
     <section>
@@ -58,7 +60,7 @@ export function VariantTable({
           <p className="scroll-cue">Swipe sideways to see every column.</p>
           <table className="data">
             <caption>
-              {family.family} variants. Area and slope checked {formatDate(family.statusDate)}.
+              {caption ?? `${family.family} variants. Area and slope checked ${formatDate(family.statusDate)}.`}
             </caption>
             <thead>
               <tr>

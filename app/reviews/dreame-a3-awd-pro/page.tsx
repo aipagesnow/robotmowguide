@@ -58,7 +58,7 @@ export default function DreameReview() {
       description={description}
       path="/reviews/dreame-a3-awd-pro"
       crumbs={crumbs}
-      updated={RECHECKED}
+      updated="2026-11-12"
       whatChanged="October 13, 2026: first published. Linked the comparison with the LUBA 3 AWD 3000."
       factCheck={FACT}
       disclosure
@@ -118,9 +118,10 @@ export default function DreameReview() {
       <VariantTable
         family={family}
         pageType="review"
+        caption="A3 AWD Pro variants. Area and slope checked Oct 10, 2026; the 3500 and its amazon.com listing rechecked Nov 12, 2026."
         differences={{
-          "A3 AWD Pro 2500": "The one we'd start with. LiDAR and vision. Slope is published for this model and the 3500.",
-          "A3 AWD Pro 3500": `Rated ${d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d3500 ? specText(d3500.specs?.battery) : "Not published"}. The 3500 amazon.com listing gives the same 80% (38.7°).`,
+          "A3 AWD Pro 2500": "Currently unavailable on Amazon US (checked Nov 11, 2026). LiDAR and vision. Slope is published for this model and the 3500.",
+          "A3 AWD Pro 3500": `In stock on Amazon US when checked on Nov 12, 2026, so this is the size you can buy there now. Rated ${d3500 ? formatAcres(Number(d3500.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d3500 ? specText(d3500.specs?.battery) : "Not published"}.`,
           "A3 AWD Pro 5000": `Rated ${d5000 ? formatAcres(Number(d5000.ladder?.ratedAreaAcres?.value)) : "Not published"}. Battery ${d5000 ? specText(d5000.specs?.battery) : "Not published"}. Slope isn't published for this model either.`,
         }}
       />
@@ -214,9 +215,9 @@ export default function DreameReview() {
       <SlopeMarginNote />
       <h2>The edge mode and a tall cut</h2>
       <p className="measure">
-        If you leave the edge mode on, Dreame's figure is {specText(dreame.specs.edgeCutting)}, and that's
-        the one to read for a tall cut. Owner threads describe a border cut near 1.2 in that can scalp a
-        lawn kept taller, and owners switch that mode off. Cutting height on the 2500 is{" "}
+        In its edge mode, Dreame says the cutting discs extend outward at the edge and stay less than 1.2 in
+        from the boundary in auto mode. Owner threads describe the same mode cutting the border strip at about
+        1.2 in high, which can scalp a lawn kept taller, and owners switch that mode off. Cutting height on the 2500 is{" "}
         {specText(dreame.specs.cuttingHeight)}. <SourceLine ids={["dreame-a3"]} checked={SPEC_CHECKED} />
       </p>
       <h2>Heat, ruts, and canopy</h2>

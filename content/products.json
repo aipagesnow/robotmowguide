@@ -1424,7 +1424,7 @@
                 "dreame-a3"
               ],
               "checked": "2026-11-12",
-              "note": "The 3500 amazon.com listing states 38.7° (80%); Dreame's spec table gives 80% (38.7°) for the A3 AWD Pro series"
+              "note": "From the 3500 amazon.com listing and Dreame's series spec table"
             },
             "maxSlopeDegrees": {
               "value": 38.7,
@@ -1524,7 +1524,9 @@
             "url": "https://www.amazon.com/dp/B0GR8TQHV9",
             "titleAtCheck": "DREAME LiDAR 3500 Robot Lawn Mower A3 AWD Pro Wire Free No RTK, 4WD for 38.7° Slopes, Dual AI Vision Robotic Lawn Mowers,Dual-Disc Cutting 15.8\" Width, Smart Zero-Edge, App Control for 0.87 Acre",
             "note": "Checked Nov 12, 2026 with a US (10001) delivery address: In Stock, ships from Amazon, sold by Dreame Technology HK Limited. Model number A3 AWD Pro 3500. 0.87 acre, 38.7° (80%), 15.8 in width match Dreame's US page."
-          }
+          },
+          "status": "current",
+          "statusDate": "2026-11-12"
         },
         {
           "model": "A3 AWD Pro 5000",

@@ -13,7 +13,7 @@ import { RECHECKED } from "@/lib/site";
 
 const title = "Robot mower head-to-head comparisons";
 const description =
-  "Side-by-side comparisons: X430 against LUBA 3000, Dreame 2500 against LUBA 3000, and WR340 against X430.";
+  "Side-by-side comparisons: X430 against LUBA 3000, Dreame 2500 against LUBA 3000, WR340 against X430, and LUBA mini 2 against Dreame 3500.";
 
 export const metadata: Metadata = pageMeta({ title, description, path: "/vs" });
 

@@ -214,7 +214,6 @@ export default function MiniReview() {
         covers your path. <Link href="/best/robot-mower-under-trees">Mowing under trees</Link>.{" "}
         <SourceLine ids={["mammotion-mini2"]} checked={SPEC_CHECKED} />
       </p>
-      <h2>What owners report</h2>
       <OwnerReports
         intro="In the 2 owner threads we read in October 2026:"
         items={[
