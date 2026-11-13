@@ -6,6 +6,8 @@ import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -53,6 +55,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <AmazonClicks />
         <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );
