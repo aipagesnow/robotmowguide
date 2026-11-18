@@ -18,15 +18,17 @@ import { ProductLink } from "@/components/ProductLink";
 import { SpecTable } from "@/components/SpecTable";
 import { VariantTable } from "@/components/VariantTable";
 import { pageMeta } from "@/lib/metadata";
-import { formatAcres, risePer10Ft } from "@/lib/format";
+import { formatAcres, formatDate, risePer10Ft } from "@/lib/format";
 import { modelFacts, navigationLabel } from "@/lib/products";
 import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 
 const PATH = "/reviews/ecovacs-goat-a3000-lidar-pro";
-const CHECKED = "2026-11-18";
+// SHIP DAY: set PUBLISHED to the push date (YYYY-MM-DD) and match content/routes.json lastmod.
+// CHECKED is the date of the last ECOVACS spec read and amazon.com stock read. If you re-check on ship day, set it to that date too.
 const PUBLISHED = "2026-11-18";
-const FACT =
-  "Edited and fact-checked by the Robot Mow Guide editors at Aivora Digital. Specs checked against manufacturer pages on Nov 18, 2026.";
+const CHECKED = "2026-11-18";
+const CHECKED_TEXT = formatDate(CHECKED);
+const FACT = `Fact-checked at Aivora Digital. Specs checked against ECOVACS US pages and the manual on ${CHECKED_TEXT}.`;
 
 const title = "GOAT A3000 LiDAR PRO review: robot mower with an edge trimmer";
 const description =
@@ -67,22 +69,23 @@ export default function GoatA3000Review() {
       description={description}
       path={PATH}
       crumbs={crumbs}
-      updated={CHECKED}
+      updated={PUBLISHED > CHECKED ? PUBLISHED : CHECKED}
       published={PUBLISHED}
       factCheck={FACT}
       disclosure
-      status="On sale in the US as of Nov 18, 2026."
+      status={`On sale in the US as of ${CHECKED_TEXT}.`}
     >
       <p className="measure">
         Short answer: if you want a robot mower that trims its own edges on a lawn up to about three-quarters of
         an acre, the GOAT A3000 LiDAR PRO is worth a look. Unlike the other mowers we cover, it has a string
-        trimmer built into the side. It's rated for {formatAcres(a3000.acres)} and slopes up to {publishedSlope(a3000.slope, a3000.degrees)}, and it
+        trimmer built into the side. It's rated for {formatAcres(a3000.acres, false)} (3,000 m², about 32,300 sq ft) and slopes up to {publishedSlope(a3000.slope, a3000.degrees)}, and it
         finds its way with LiDAR, so there's no boundary wire and no RTK antenna.
       </p>
       <p className="measure">
         Here's the catch: the trimmer cuts closest along hard edges the mower can see, like a wall, a fence or a
         paver edge. Around flower beds and trees you've marked as no-go zones, owners report gaps of several
-        inches. So we'd plan on it shrinking your trimming, not ending it.
+        inches. So we'd plan on it shrinking your trimming, not ending it. Two of the three owners we read rate the trimmer
+        poorly or have stopped using it.
       </p>
       <CtaCluster>
         <ProductLink
@@ -99,7 +102,7 @@ export default function GoatA3000Review() {
         rows={[
           {
             label: "Rated area",
-            value: formatAcres(a3000.acres),
+            value: `${formatAcres(a3000.acres, false)} (about 32,300 sq ft)`,
             detail: (
               <>
                 <ComfortableFor rated={a3000.acres} /> ECOVACS rates it in metric as 3,000 m². The A2000 is{" "}
@@ -115,7 +118,7 @@ export default function GoatA3000Review() {
           {
             label: "Edges",
             value: "Side string trimmer, 7.1 in wide",
-            detail: "Blade edge mowing leaves about 2 in. The trimmer is rated to about 0 in.",
+            detail: "Blade edge mowing leaves about 2 in. ECOVACS says the trimmer cuts right up to the edge.",
           },
           {
             label: "Paths",
@@ -139,13 +142,13 @@ export default function GoatA3000Review() {
         The trimmer is a small string head on the right side of the mower, and it runs as its own job. In the app
         you mark which edges to trim, and the mower runs them as a separate task or on its own schedule. ECOVACS
         lists the trimmer as 7.1 in (18 cm) wide, spinning at 8,500 rpm. The main blades mow to about 2 in (5 cm) from an edge, and
-        the trimmer is meant to take that last strip down to about zero.{" "}
+        the trimmer is meant to take that last strip right up to the edge.{" "}
         <SourceLine ids={["ecovacs-a3000-lidar", "ecovacs-a-lidar-manual", "9to5-goat-a3000"]} checked={CHECKED} />
       </p>
       <p className="measure">
         Two things are worth knowing before you count on it. The trimmer is loud, rated at 82 dB(A) against 62 for
         mowing, so you'll want trim jobs at a time your neighbors won't mind. And it stops when it senses a person
-        nearby. The manual says to stay at least 6.5 ft (2 m) away while it runs, so if your kids play out there,
+        nearby. The manual says to stay at least 6.6 ft (2 m) away while it runs, so if your kids play out there,
         schedule trimming for when they're inside.{" "}
         <SourceLine ids={["ecovacs-a3000-lidar", "ecovacs-a-lidar-manual"]} checked={CHECKED} />
       </p>
@@ -171,12 +174,12 @@ export default function GoatA3000Review() {
             linkLabel: "Two-week A3000 Pro thread",
           },
           {
-            text: "An A3000 Pro owner, about six weeks in, reports around 6 in of uncut grass along no-go zones after remapping, and has stopped using the trimmer.",
+            text: "An A3000 Pro owner reports around 6 in of uncut grass along no-go zones, even after remapping, and has stopped using the trimmer.",
             href: "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1vmjbd6/",
             linkLabel: "No-go zone thread",
           },
           {
-            text: "An A3000 LiDAR owner says they get a cut as close as RTK models by placing solid blocks the mower can see, rather than relying on a mapped boundary.",
+            text: "An A3000 LiDAR owner (possibly the non-PRO model, without the trimmer) gets a closer cut by placing solid blocks the mower can see than along a line drawn in the app.",
             href: "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1v9wbdu/",
             linkLabel: "Trim distance thread",
           },
@@ -185,19 +188,19 @@ export default function GoatA3000Review() {
       <VariantTable
         family={family}
         pageType="review"
-        caption="Both models share the same body, trimmer and manual. Amazon listings checked Nov 18, 2026."
+        caption={`Both models share the same body, trimmer and manual. Amazon listings checked ${CHECKED_TEXT}.`}
         differences={{
-          "GOAT A3000 LiDAR PRO": `The three-quarter-acre model. Rated ${formatAcres(a3000.acres)}. 7.5 Ah battery, up to 160 min per charge.`,
-          "GOAT A2000 LiDAR PRO": `The half-acre model. Rated ${formatAcres(a2000.acres)}. Same slope and trimmer. 3.0 Ah battery, up to 50 min per charge.`,
+          "GOAT A3000 LiDAR PRO": `The three-quarter-acre model. Rated ${formatAcres(a3000.acres, false)} (3,000 m²). 7.5 Ah battery, up to 160 min of mowing per charge, about 70 min to recharge.`,
+          "GOAT A2000 LiDAR PRO": `The half-acre model. Rated ${formatAcres(a2000.acres, false)} (2,000 m²). Same slope and trimmer. 3.0 Ah battery, up to 50 min of mowing per charge, about 50 min to recharge.`,
         }}
       />
       <h2>Specs we checked</h2>
       <SpecTable
-        caption="GOAT A3000 LiDAR PRO, unless a line names the A2000. Specs from the ECOVACS US product page and owner's manual, checked Nov 18, 2026."
+        caption={`GOAT A3000 LiDAR PRO, unless a line names the A2000. Specs from the ECOVACS US product page and owner's manual, checked ${CHECKED_TEXT}.`}
         rows={[
           {
             label: "Rated area",
-            value: `${formatAcres(a3000.acres)}, 3,000 m²`,
+            value: `${formatAcres(a3000.acres, false)}, 3,000 m² (about 32,300 sq ft)`,
             sources: ["ecovacs-a-lidar-manual"],
             checked: CHECKED,
             href: "/guides/how-big-a-robot-mower-do-i-need",
@@ -321,7 +324,7 @@ export default function GoatA3000Review() {
         items={[
           {
             q: "Does a robot mower with an edge trimmer replace my string trimmer?",
-            a: "Not completely. ECOVACS rates the trimmer to about 0 in from an edge, and a BGR reviewer says it took over most of their trimming. Owners report gaps around no-go zones, so keep a string trimmer for beds and trees.",
+            a: "Not completely. ECOVACS says the trimmer cuts right up to the edge, and a BGR reviewer says it took over most of their trimming. Owners report gaps around no-go zones, so keep a string trimmer for beds and trees.",
           },
           {
             q: "Is the GOAT A3000 LiDAR PRO wire-free?",
@@ -339,10 +342,10 @@ export default function GoatA3000Review() {
       />
       <ResearchedBox
         sources={sources.map((id) => ({ id }))}
-        manuals="The GOAT A2000/A3000 LiDAR PRO instruction manual (ECOVACS US, PDF)."
+        manuals="The ECOVACS manual in that list is the main source for the area, passage and weight figures."
         threads="Three owner threads from r/ECOVACSGOATFamily, March to August 2026, each from a different owner."
-        questions="No manufacturer has answered questions yet."
-        specsLine="ECOVACS US product pages and manual checked Nov 18, 2026. Amazon listings checked the same day."
+        questions="We haven't contacted ECOVACS."
+        specsLine={`ECOVACS US product pages and manual checked ${CHECKED_TEXT}. Amazon listings checked the same day.`}
       />
       <EndLinks
         pageType="review"

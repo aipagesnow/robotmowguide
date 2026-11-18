@@ -2798,7 +2798,7 @@
           "note": "A3000 Pro owner, Mar 2026"
         },
         {
-          "theme": "About six weeks in: leaves around 6 in of uncut grass along no-go zones; gave up on the trimmer",
+          "theme": "Leaves around 6 in of uncut grass along no-go zones, even after remapping; gave up on the trimmer",
           "src": [
             "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1vmjbd6/"
           ],
@@ -2889,7 +2889,7 @@
               "checked": "2026-11-18"
             },
             "edgeCutting": {
-              "value": "Blade edge mowing about 2 in (5 cm); blade cross-boundary 0; trimmer about 0",
+              "value": "Blade edge mowing about 2 in (5 cm); blade cross-boundary 0; trimmer right up to the edge (ECOVACS: ~0 cm)",
               "src": [
                 "ecovacs-a3000-lidar",
                 "ecovacs-a2000-lidar"
