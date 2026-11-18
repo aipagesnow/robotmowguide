@@ -158,6 +158,7 @@ export default function RtkGuide() {
           { href: "/reviews/mammotion-luba-3-awd", label: "LUBA 3 AWD review" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/reviews/ecovacs-goat-a3000-lidar-pro", label: "GOAT A3000 LiDAR PRO review" },
           { href: "/reviews/worx-landroid-vision-cloud", label: "Worx Landroid Vision Cloud review" },
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/best/robot-mower-under-trees", label: "Which robot mower under trees?" },

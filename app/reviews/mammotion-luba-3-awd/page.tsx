@@ -346,6 +346,7 @@ export default function LubaReview() {
           { href: "/best/robot-mower-for-hills", label: "What robot mower can climb my yard?" },
           { href: "/reviews/segway-navimow-x4", label: "Navimow X4 review" },
           { href: "/reviews/dreame-a3-awd-pro", label: "Dreame A3 AWD Pro review" },
+          { href: "/reviews/ecovacs-goat-a3000-lidar-pro", label: "GOAT A3000 LiDAR PRO review (edge trimmer)" },
           { href: "/vs/navimow-x430-vs-luba-3-awd-3000", label: "Navimow X430 vs LUBA 3 AWD 3000" },
           { href: "/vs/dreame-a3-awd-pro-vs-luba-3-awd", label: "Dreame A3 AWD Pro 2500 vs LUBA 3 AWD 3000" },
           { href: "/guides/rtk-vs-lidar-vs-vision", label: "RTK, LiDAR, or vision" },

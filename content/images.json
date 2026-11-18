@@ -904,6 +904,22 @@
       "attribution": "Photo by Max Vakhtbovych on Pexels"
     },
     {
+      "id": "card-goat-a3000",
+      "kind": "photo",
+      "pages": [
+        "/reviews/ecovacs-goat-a3000-lidar-pro"
+      ],
+      "round": 3,
+      "status": "not-made",
+      "source": "grok-imagine",
+      "files": [],
+      "alt": "A back lawn bordered by a straight paver path and a wooden fence, with a mulch bed along one side",
+      "iptcDigitalSourceType": "trainedAlgorithmicMedia",
+      "checkedBy": null,
+      "checkedOn": null,
+      "notes": "REVIEW-ADD 18 Nov 2026. Not made yet; renders nothing until approved."
+    },
+    {
       "id": "plate-husqvarna-iq",
       "kind": "diagram",
       "pages": [

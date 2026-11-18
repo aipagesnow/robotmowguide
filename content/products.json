@@ -419,6 +419,41 @@
       "title": "amazon.com listing B0GR8TQHV9",
       "method": "fetched",
       "accessed": "2026-11-12"
+    },
+    "ecovacs-a3000-lidar": {
+      "url": "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a3000-lidar-pro",
+      "title": "GOAT A3000 LiDAR PRO, ECOVACS US",
+      "accessed": "2026-11-18"
+    },
+    "ecovacs-a2000-lidar": {
+      "url": "https://www.ecovacs.com/us/shop/goat-robotic-lawn-mower/goat-a2000-lidar-pro",
+      "title": "GOAT A2000 LiDAR PRO, ECOVACS US",
+      "accessed": "2026-11-18"
+    },
+    "ecovacs-a-lidar-manual": {
+      "url": "https://site-static.ecovacs.com/upload/us/file/support/2026/02/11/075033_8248$GOATA3000LiDARPROInstructionManual.pdf",
+      "title": "GOAT A2000/A3000 LiDAR PRO instruction manual (PDF), ECOVACS US",
+      "accessed": "2026-11-18"
+    },
+    "amz-goat-a3000-lidar": {
+      "url": "https://www.amazon.com/dp/B0GGYYQLXL",
+      "title": "ECOVACS Goat A3000 LiDAR PRO, amazon.com",
+      "accessed": "2026-11-18"
+    },
+    "amz-goat-a2000-lidar": {
+      "url": "https://www.amazon.com/dp/B0GGZQTY2N",
+      "title": "ECOVACS Goat A2000 LiDAR PRO, amazon.com",
+      "accessed": "2026-11-18"
+    },
+    "bgr-goat-a3000": {
+      "url": "https://www.bgr.com/2168359/ecovacs-goat-a3000-lidar-pro-review/",
+      "title": "Ecovacs GOAT A3000 LiDAR Pro review, BGR",
+      "accessed": "2026-11-18"
+    },
+    "9to5-goat-a3000": {
+      "url": "https://9to5google.com/2026/04/17/review-ecovacs-a3000-pro-robot-mower-has-a-weed-eater-now/",
+      "title": "Ecovacs A3000 Pro review, 9to5Google (Apr 17, 2026)",
+      "accessed": "2026-11-18"
     }
   },
   "products": [
@@ -2728,6 +2763,363 @@
             "note": "ECOVACS US list price. Do not show on product pages."
           },
           "variantNote": "RTK version (antenna), not the O1000 LiDAR PRO."
+        }
+      ],
+      "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."
+    },
+    {
+      "id": "ecovacs-goat-a3000-lidar-pro",
+      "slug": "ecovacs-goat-a3000-lidar-pro",
+      "brand": "ECOVACS",
+      "displayName": "ECOVACS GOAT A3000 LiDAR PRO",
+      "boundary": "wire-free",
+      "navigation": [
+        "lidar",
+        "tof",
+        "vision"
+      ],
+      "watchOuts": [
+        "Trimmer edges depend on boundary setup; owners report gaps around no-go zones",
+        "50% slope limit inside the lawn; 20% on a virtual boundary",
+        "Needs 2.4 GHz home Wi-Fi; 4G is an add-on module"
+      ],
+      "pageType": "family-review",
+      "family": "ECOVACS GOAT A3000 LiDAR PRO",
+      "status": "current",
+      "statusDate": "2026-11-18",
+      "statusNote": "US LiDAR PRO line: O1000 (separate body), A2000 and A3000 (same body and manual). Page leads with the A3000; the A2000 is the half-acre variant.",
+      "ownerReports": [
+        {
+          "theme": "About two weeks in: the mower itself is great, the string trimmer doesn't work well",
+          "src": [
+            "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1rxvsjj/"
+          ],
+          "tone": "mixed",
+          "note": "A3000 Pro owner, Mar 2026"
+        },
+        {
+          "theme": "About six weeks in: leaves around 6 in of uncut grass along no-go zones; gave up on the trimmer",
+          "src": [
+            "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1vmjbd6/"
+          ],
+          "tone": "issue",
+          "note": "A3000 Pro owner, Aug 2026 (same owner also posts in 1v9wbdu; counted once)"
+        },
+        {
+          "theme": "An A3000 LiDAR owner gets a closer edge where the mower can see a solid edge in real time than along a mapped line",
+          "src": [
+            "https://www.reddit.com/r/ECOVACSGOATFamily/comments/1v9wbdu/"
+          ],
+          "tone": "mixed",
+          "note": "Jul 2026"
+        }
+      ],
+      "notFor": [
+        "If your edges are mostly no-go zones around beds and trees, owners report gaps of several inches, so keep the string trimmer.",
+        "If part of your lawn is steeper than 50%, we'd look at an AWD mower rated for more.",
+        "If your Wi-Fi doesn't reach the yard, plan on the 4G module, because the manual says home Wi-Fi is required."
+      ],
+      "primaryVariant": "GOAT A3000 LiDAR PRO",
+      "variants": [
+        {
+          "model": "GOAT A3000 LiDAR PRO",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.75,
+              "unit": "acre",
+              "src": [
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "Maker: 3,000 m² (3/4 acre)"
+            },
+            "maxSlopePercent": {
+              "value": 50,
+              "unit": "%",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "20% on a virtual boundary"
+            },
+            "maxSlopeDegrees": {
+              "value": 27,
+              "unit": "deg",
+              "src": [
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            }
+          },
+          "specs": {
+            "positioning": {
+              "value": "HoloScope 360 dual LiDAR (360° rotating LiDAR + 3D-ToF) with an AI camera; no wire, no RTK antenna",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "amz-goat-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "cuttingHeight": {
+              "value": "1.2–3.5",
+              "unit": "in",
+              "src": [
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18",
+              "note": "30–90 mm, 7 settings, set in the app"
+            },
+            "cuttingWidth": {
+              "value": 13,
+              "unit": "in",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "33 cm, two blade discs"
+            },
+            "trimmer": {
+              "value": "TruEdge side string trimmer, 7.1 in (18 cm) wide, 8,500 rpm",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "edgeCutting": {
+              "value": "Blade edge mowing about 2 in (5 cm); blade cross-boundary 0; trimmer about 0",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a2000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "narrowestPath": {
+              "value": 2.95,
+              "unit": "ft",
+              "src": [
+                "ecovacs-a-lidar-manual",
+                "ecovacs-a2000-lidar"
+              ],
+              "checked": "2026-11-18",
+              "note": "0.9 m minimum passage"
+            },
+            "bodyWidth": {
+              "value": 22.95,
+              "unit": "in",
+              "src": [
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18",
+              "note": "583 mm with the trimmer brush; 540 mm without"
+            },
+            "runtime": {
+              "value": 160,
+              "unit": "min per charge",
+              "src": [
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "chargeTime": {
+              "value": 70,
+              "unit": "min",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "battery": {
+              "value": "7.5 Ah, 32 V platform",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "waterproofing": {
+              "value": "IPX6 mower, IPX4 station",
+              "src": [
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "noise": {
+              "value": "62 dB(A) mowing, 82 dB(A) trimming (sound power)",
+              "src": [
+                "ecovacs-a3000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "weight": {
+              "value": 40.3,
+              "unit": "lb",
+              "src": [
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "connectivity": {
+              "value": "Wi-Fi (2.4 GHz) and Bluetooth; 4G needs the optional Cellular Module Pro",
+              "src": [
+                "ecovacs-a-lidar-manual",
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "theft": {
+              "value": "PIN code on the mower; lift sensor",
+              "src": [
+                "ecovacs-a-lidar-manual",
+                "ecovacs-a3000-lidar"
+              ],
+              "checked": "2026-11-18"
+            }
+          },
+          "asin": "B0GGYYQLXL",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B0GGYYQLXL",
+            "checked": "2026-11-18",
+            "titleAtCheck": "ECOVACS Goat A3000 LiDAR PRO Robotic Lawn Mower, Dual LiDAR Navigation",
+            "stockNote": "In Stock, US 10001, ships from Amazon.com, Add to Cart enabled (18 Nov 2026)"
+          },
+          "manufacturerListPrice": {
+            "value": 2499.99,
+            "unit": "usd",
+            "src": [
+              "ecovacs-a3000-lidar"
+            ],
+            "checked": "2026-11-18",
+            "note": "ECOVACS US list price. Do not show on product pages."
+          },
+          "status": "current",
+          "statusDate": "2026-11-18"
+        },
+        {
+          "model": "GOAT A2000 LiDAR PRO",
+          "ladder": {
+            "ratedAreaAcres": {
+              "value": 0.5,
+              "unit": "acre",
+              "src": [
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "Maker: 2,000 m² (1/2 acre)"
+            },
+            "maxSlopePercent": {
+              "value": 50,
+              "unit": "%",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "20% on a virtual boundary"
+            },
+            "maxSlopeDegrees": {
+              "value": 27,
+              "unit": "deg",
+              "src": [
+                "ecovacs-a2000-lidar"
+              ],
+              "checked": "2026-11-18"
+            }
+          },
+          "specs": {
+            "cuttingHeight": {
+              "value": "1.2–3.5",
+              "unit": "in",
+              "src": [
+                "ecovacs-a2000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "cuttingWidth": {
+              "value": 13,
+              "unit": "in",
+              "src": [
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18",
+              "note": "33 cm"
+            },
+            "trimmer": {
+              "value": "Same TruEdge side trimmer",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "narrowestPath": {
+              "value": 2.95,
+              "unit": "ft",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "runtime": {
+              "value": 50,
+              "unit": "min per charge",
+              "src": [
+                "ecovacs-a2000-lidar"
+              ],
+              "checked": "2026-11-18"
+            },
+            "chargeTime": {
+              "value": 50,
+              "unit": "min",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "battery": {
+              "value": "3.0 Ah, 32 V platform",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            },
+            "weight": {
+              "value": 39.2,
+              "unit": "lb",
+              "src": [
+                "ecovacs-a2000-lidar",
+                "ecovacs-a-lidar-manual"
+              ],
+              "checked": "2026-11-18"
+            }
+          },
+          "asin": "B0GGZQTY2N",
+          "asinStatus": "verified",
+          "asinCheck": {
+            "url": "https://www.amazon.com/dp/B0GGZQTY2N",
+            "checked": "2026-11-18",
+            "titleAtCheck": "ECOVACS Goat A2000 LiDAR PRO Robot Lawn Mower, Dual LiDAR Navigation",
+            "stockNote": "In Stock (only 1 left), US 10001, ships from Amazon (18 Nov 2026)"
+          },
+          "manufacturerListPrice": {
+            "value": 1999.99,
+            "unit": "usd",
+            "src": [
+              "ecovacs-a2000-lidar"
+            ],
+            "checked": "2026-11-18",
+            "note": "ECOVACS US list price. Do not show on product pages."
+          },
+          "status": "current",
+          "statusDate": "2026-11-18"
         }
       ],
       "supportOutlook": "Covered by the FCC update waiver to at least Jan 1, 2029; the brand has no Conditional Approval for new models (FCC table, Oct 9, 2026)."

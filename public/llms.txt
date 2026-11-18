@@ -27,6 +27,7 @@ RobotMowGuide is a US guide to choosing a robot lawn mower, ranked by the lawn s
 - [RockNeo Q110H review](https://robotmowguide.com/reviews/roborock-rockneo-q110h)
 - [Worx Landroid M WR147 review](https://robotmowguide.com/reviews/worx-landroid-m-wr147)
 - [Husqvarna Automower iQ review](https://robotmowguide.com/reviews/husqvarna-automower-iq)
+- [ECOVACS GOAT A3000 LiDAR PRO review](https://robotmowguide.com/reviews/ecovacs-goat-a3000-lidar-pro)
 - [Dreame 2500 vs LUBA 3000](https://robotmowguide.com/vs/dreame-a3-awd-pro-vs-luba-3-awd)
 - [WR340 vs X430](https://robotmowguide.com/vs/worx-vision-cloud-wr340-vs-navimow-x430)
 - [How big a robot mower do I need?](https://robotmowguide.com/guides/how-big-a-robot-mower-do-i-need)

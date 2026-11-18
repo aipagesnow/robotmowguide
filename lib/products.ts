@@ -181,6 +181,7 @@ const REVIEW_HREF: Record<string, string> = {
   "segway-navimow-i2-awd": "/reviews/segway-navimow-i-series",
   "worx-landroid-m-wr147": "/reviews/worx-landroid-m-wr147",
   "husqvarna-automower-iq": "/reviews/husqvarna-automower-iq",
+  "ecovacs-goat-a3000-lidar-pro": "/reviews/ecovacs-goat-a3000-lidar-pro",
 };
 
 export function reviewHref(familyId: string): string | undefined {

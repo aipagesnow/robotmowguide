@@ -829,6 +829,7 @@ export default function BestPage() {
           { href: "/reviews/segway-navimow-i-series", label: "Navimow i series review" },
           { href: "/reviews/mammotion-luba-mini-2-awd", label: "LUBA mini 2 AWD review" },
           { href: "/reviews/mova-lidax-ultra", label: "MOVA LiDAX Ultra review" },
+          { href: "/reviews/ecovacs-goat-a3000-lidar-pro", label: "GOAT A3000 LiDAR PRO review (edge trimmer)" },
           { href: "/reviews/roborock-rockneo-q110h", label: "RockNeo Q110H review" },
           { href: "/reviews/worx-landroid-m-wr147", label: "Worx Landroid M WR147 review" },
           { href: "/reviews/husqvarna-automower-iq", label: "Automower iQ review" },

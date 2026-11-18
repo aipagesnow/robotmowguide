@@ -26,6 +26,7 @@ export default function ReviewsIndex() {
   const mini = modelFacts("mammotion-luba-mini-2-awd", "LUBA mini 2 AWD 1500H (high-cut)");
   const mova = modelFacts("mova-lidax-ultra", "LiDAX Ultra 2000");
   const mova3000 = modelFacts("mova-lidax-ultra", "LiDAX Ultra 3000 AWD");
+  const goat = modelFacts("ecovacs-goat-a3000-lidar-pro", "GOAT A3000 LiDAR PRO");
   const q110 = modelFacts("roborock-rockneo-q110h", "RockNeo Q110H");
   const wr147 = modelFacts("worx-landroid-m-wr147", "Landroid M WR147");
   const iq = modelFacts("husqvarna-automower-iq", "Automower 420 iQ");
@@ -115,6 +116,14 @@ export default function ReviewsIndex() {
         {formatAcres(mova.acres, false)} and {mova.slope}%. Few owner reports exist yet. The 3000 AWD is the
         one rated {formatAcres(mova3000.acres, false)} and {mova3000.slope}% when the bank is why you're
         shopping.
+      </p>
+      <h2>
+        <Link href="/reviews/ecovacs-goat-a3000-lidar-pro">ECOVACS GOAT A3000 LiDAR PRO</Link>
+      </h2>
+      <p className="measure">
+        If edges are what you're tired of, this one has a string trimmer built into the side. It's rated{" "}
+        {formatAcres(goat.acres, false)} and {goat.slope}%. Owners report gaps around no-go zones, so we'd still
+        keep a trimmer for beds and trees.
       </p>
       <h2>
         <Link href="/reviews/roborock-rockneo-q110h">RockNeo Q110H</Link>
