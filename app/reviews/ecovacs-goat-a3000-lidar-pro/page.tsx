@@ -25,8 +25,8 @@ import { publishedSlope, slopeWithRise, specText } from "@/lib/speak";
 const PATH = "/reviews/ecovacs-goat-a3000-lidar-pro";
 // SHIP DAY: set PUBLISHED to the push date (YYYY-MM-DD) and match content/routes.json lastmod.
 // CHECKED is the date of the last ECOVACS spec read and amazon.com stock read. If you re-check on ship day, set it to that date too.
-const PUBLISHED = "2026-11-18";
-const CHECKED = "2026-11-18";
+const PUBLISHED = "2026-11-26";
+const CHECKED = "2026-11-26";
 const CHECKED_TEXT = formatDate(CHECKED);
 const FACT = `Fact-checked at Aivora Digital. Specs checked against ECOVACS US pages and the manual on ${CHECKED_TEXT}.`;
 
